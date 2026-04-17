@@ -73,7 +73,7 @@ function Callout({ children }: { children: React.ReactNode }) {
 
 export default function ResearchPage() {
   return (
-    <article className="pb-24">
+    <article className="pb-24 max-w-3xl mx-auto">
 
       {/* Title block */}
       <div className="max-w-2xl mb-10">
