@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "totalOccupations": 19,
+    "avgAIOE": 54.2,
+    "pctDisplacementDominant": 42
+  },
+  "exposureDistribution": [
+    { "bin": "0–10",  "count": 0 },
+    { "bin": "10–20", "count": 1 },
+    { "bin": "20–30", "count": 1 },
+    { "bin": "30–40", "count": 2 },
+    { "bin": "40–50", "count": 3 },
+    { "bin": "50–60", "count": 4 },
+    { "bin": "60–70", "count": 4 },
+    { "bin": "70–80", "count": 3 },
+    { "bin": "80–90", "count": 1 },
+    { "bin": "90–100","count": 0 }
+  ],
+  "wageScatter": [
+    { "occupation": "Software Engineer",       "aioe": 82, "wage": 124000, "industry": "Technology",  "employment": 1850000 },
+    { "occupation": "Data Scientist",           "aioe": 79, "wage": 108000, "industry": "Technology",  "employment": 168000  },
+    { "occupation": "Financial Analyst",        "aioe": 74, "wage": 96000,  "industry": "Finance",     "employment": 296000  },
+    { "occupation": "Radiologist",              "aioe": 71, "wage": 339000, "industry": "Healthcare",  "employment": 28000   },
+    { "occupation": "Lawyer",                   "aioe": 68, "wage": 127000, "industry": "Legal",       "employment": 813000  },
+    { "occupation": "Copywriter",               "aioe": 73, "wage": 62000,  "industry": "Media",       "employment": 146000  },
+    { "occupation": "Paralegal",                "aioe": 65, "wage": 52000,  "industry": "Legal",       "employment": 330000  },
+    { "occupation": "Registered Nurse",         "aioe": 38, "wage": 77000,  "industry": "Healthcare",  "employment": 3130000 },
+    { "occupation": "Physician",                "aioe": 42, "wage": 229000, "industry": "Healthcare",  "employment": 756000  },
+    { "occupation": "Accountant",               "aioe": 72, "wage": 77000,  "industry": "Finance",     "employment": 1430000 },
+    { "occupation": "HR Specialist",            "aioe": 61, "wage": 64000,  "industry": "Business",    "employment": 730000  },
+    { "occupation": "Bookkeeper",               "aioe": 78, "wage": 45000,  "industry": "Finance",     "employment": 1700000 },
+    { "occupation": "Data Entry Clerk",         "aioe": 84, "wage": 36000,  "industry": "Business",    "employment": 198000  },
+    { "occupation": "Customer Service Rep",     "aioe": 76, "wage": 38000,  "industry": "Business",    "employment": 2850000 },
+    { "occupation": "Market Research Analyst",  "aioe": 70, "wage": 68000,  "industry": "Business",    "employment": 792000  },
+    { "occupation": "Civil Engineer",           "aioe": 44, "wage": 88000,  "industry": "Engineering", "employment": 329000  },
+    { "occupation": "Electrician",              "aioe": 22, "wage": 60000,  "industry": "Trades",      "employment": 739000  },
+    { "occupation": "Plumber",                  "aioe": 18, "wage": 58000,  "industry": "Trades",      "employment": 480000  },
+    { "occupation": "Teacher (K-12)",           "aioe": 35, "wage": 61000,  "industry": "Education",   "employment": 3200000 }
+  ],
+  "modelCorrelations": [
+    { "modelA": "AIOE",          "modelB": "Frey-Osborne", "r": 0.79 },
+    { "modelA": "AIOE",          "modelB": "RTI",          "r": 0.71 },
+    { "modelA": "AIOE",          "modelB": "Eloundou",     "r": 0.88 },
+    { "modelA": "AIOE",          "modelB": "Observed",     "r": 0.83 },
+    { "modelA": "Frey-Osborne",  "modelB": "RTI",          "r": 0.74 },
+    { "modelA": "Frey-Osborne",  "modelB": "Eloundou",     "r": 0.75 },
+    { "modelA": "Frey-Osborne",  "modelB": "Observed",     "r": 0.68 },
+    { "modelA": "RTI",           "modelB": "Eloundou",     "r": 0.69 },
+    { "modelA": "RTI",           "modelB": "Observed",     "r": 0.65 },
+    { "modelA": "Eloundou",      "modelB": "Observed",     "r": 0.91 }
+  ],
+  "olsResults": {
+    "equation": "ln(wage) = α + β₁·AIOE + β₂·RTI + β₃·ATE + δ·X + ε",
+    "coefficients": [
+      { "variable": "AIOE",         "beta": 0.31,  "se": 0.09, "significant": true,  "label": "AI Occupational Exposure" },
+      { "variable": "RTI",          "beta": -0.18, "se": 0.06, "significant": true,  "label": "Routine Task Intensity" },
+      { "variable": "ATE",          "beta": -0.22, "se": 0.08, "significant": true,  "label": "Agentic Task Exposure" },
+      { "variable": "Education",    "beta": 0.44,  "se": 0.07, "significant": true,  "label": "Education Requirement" },
+      { "variable": "Employment",   "beta": -0.04, "se": 0.03, "significant": false, "label": "Log Employment" }
+    ],
+    "rSquared": 0.61,
+    "n": 19
+  },
+  "literatureTimeline": [
+    { "year": 2003, "authors": "Autor, Levy & Murnane", "contribution": "Routine Task Intensity (RTI) framework" },
+    { "year": 2013, "authors": "Frey & Osborne",        "contribution": "Automation probability (702 occupations)" },
+    { "year": 2018, "authors": "Felten, Raj & Seamans", "contribution": "AIOE — ability-weighted AI exposure index" },
+    { "year": 2020, "authors": "Webb",                  "contribution": "Patent-task text similarity measure" },
+    { "year": 2022, "authors": "Acemoglu & Restrepo",   "contribution": "Task-based framework: displacement vs. reinstatement" },
+    { "year": 2023, "authors": "Eloundou et al.",       "contribution": "GPTs are GPTs — LLM task exposure tiers E0/E1/E2" },
+    { "year": 2023, "authors": "Korinek & Suh",         "contribution": "AGI scenario macromodel: Tool AI → Strong AGI" },
+    { "year": 2024, "authors": "Fenoaltea et al.",      "contribution": "AI Startup Exposure (AISE) — VC investment-based index" },
+    { "year": 2025, "authors": "Chopra et al.",         "contribution": "Iceberg Index — 13,000 AI tools mapped to O*NET skills" },
+    { "year": 2025, "authors": "Humlum & Vestergaard",  "contribution": "Null result: zero wage/hours effect in Danish admin data" },
+    { "year": 2026, "authors": "Gupta & Kumar",         "contribution": "Agentic Task Exposure (ATE) — workflow-level displacement" },
+    { "year": 2026, "authors": "Massenkoff & McCrory",  "contribution": "Observed Exposure — actual Claude usage data" }
+  ]
+}

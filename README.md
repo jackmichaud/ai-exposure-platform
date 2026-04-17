@@ -1,28 +1,50 @@
-# AI Exposure Platform
+# React + TypeScript + Vite
 
-Interactive web application visualizing how occupations are exposed to AI disruption, featuring AI agent debates on realistic adoption scenarios.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Features
+Currently, two official plugins are available:
 
-- **Heatmap Dashboard** — Ranks occupations by AI exposure, filterable by industry, wage, education, and timeline
-- **Occupation Profiles** — Automation risk, augmentation potential, skill impact, wage effects, and task-level breakdowns with comparisons to similar roles
-- **Agent Debate Arena** — Three to four AI personas (optimist, realist, skeptic, worker advocate) debate selected scenarios, producing summaries with recommendations and forecasts
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Tech Stack
+## Expanding the ESLint configuration
 
-- **React** + **Tailwind CSS** — Interface and styling
-- **D3.js** — Data visualization (heatmaps, charts, gauges)
-- **Claude API** — Powers the Agent Debate Arena
-- **Vite** — Build tooling
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-## Getting Started
+- Configure the top-level `parserOptions` property like this:
 
-See [docs/guides/getting-started.md](docs/guides/getting-started.md) for setup instructions.
+```js
+export default tseslint.config({
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
+```
 
-## Documentation
+- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
+- Optionally add `...tseslint.configs.stylisticTypeChecked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
-See [docs/README.md](docs/README.md) for a full index of all specs and guides.
+```js
+// eslint.config.js
+import react from 'eslint-plugin-react'
 
-## License
-
-TBD
+export default tseslint.config({
+  // Set the react version
+  settings: { react: { version: '18.3' } },
+  plugins: {
+    // Add the react plugin
+    react,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended rules
+    ...react.configs.recommended.rules,
+    ...react.configs['jsx-runtime'].rules,
+  },
+})
+```
