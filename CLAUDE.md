@@ -19,6 +19,8 @@ When working on a feature, read the relevant spec first:
 
 | Task | Read |
 |------|------|
+| Economic research plan (2-page doc) | `docs/research/research-plan-spec.md` |
+| Economic research web page | `docs/features/economic-research-page.md` |
 | Dashboard / heatmap | `docs/features/dashboard-overview.md` |
 | Occupation detail page | `docs/features/occupation-profile.md` |
 | Agent debate arena | `docs/features/agent-debate-arena.md` |
@@ -50,6 +52,7 @@ When working on a feature, read the relevant spec first:
 - Dev setup: `docs/guides/getting-started.md`
 - Adding new industries/occupations: `docs/guides/adding-an-industry.md`
 - Running and interpreting debates: `docs/guides/running-a-debate.md`
+- Implementation plan (Phase 0 — research): `docs/guides/implementation-plan-phase0.md`
 - Implementation plan (Phases 1-3): `docs/guides/implementation-plan.md`
 - Implementation plan (Phases 4-5): `docs/guides/implementation-plan-part2.md`
 
@@ -66,20 +69,30 @@ When working on a feature, read the relevant spec first:
 
 ## Implementation Order
 
-### Phase 1: Data + Static UI
-1. Type definitions (`src/types/`)
-2. Static JSON data files (`src/data/`)
-3. Data access layer (`src/api/dataApi.ts`)
-4. Dashboard page with heatmap
-5. Occupation profile page with charts
+### Phase 0: Economic Research (do first)
+1. Deep literature research (6 papers, equations, data sources)
+2. Compile 2-page academic research plan → `docs/research/research-plan.md`
+3. **Human approval gate** — do not proceed until approved
+
+### Phase 0b: Research Web Page (after approval)
+4. Research data JSON (`src/data/researchFindings.json`)
+5. KaTeX integration + `Equation.tsx` component
+6. `/research` page with charts, equations, full report
+
+### Phase 1: Data + Static UI (informed by Phase 0)
+7. Type definitions (`src/types/`)
+8. Static JSON data files (`src/data/`)
+9. Data access layer (`src/api/dataApi.ts`)
+10. Dashboard page with heatmap
+11. Occupation profile page with charts
 
 ### Phase 2: Interactivity
-6. Filter context and controls
-7. Responsive layout across breakpoints
-8. Chart interactions (hover, tooltips, animations)
+12. Filter context and controls
+13. Responsive layout across breakpoints
+14. Chart interactions (hover, tooltips, animations)
 
 ### Phase 3: Debate Engine
-9. Claude API client and serverless proxy
-10. Persona prompt construction
-11. Debate orchestration and streaming UI
-12. Synthesis generation and display
+15. Claude API client and serverless proxy
+16. Persona prompt construction
+17. Debate orchestration and streaming UI
+18. Synthesis generation and display

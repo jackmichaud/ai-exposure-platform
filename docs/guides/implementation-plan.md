@@ -1,6 +1,10 @@
 # Implementation Plan — Phases 1-3
 
-Step-by-step build order. Each task lists files to create, docs to read first, and acceptance criteria. Tasks within a phase are sequential; phases depend on previous phases. For Phases 4-5, see [implementation-plan-part2.md](implementation-plan-part2.md).
+Step-by-step build order. Each task lists files to create, docs to read first, and acceptance criteria. Tasks within a phase are sequential; phases depend on previous phases.
+
+> **Start here**: Complete **Phase 0** (economic research plan + approval) and **Phase 0b** (research web page) before beginning Phase 1. See [implementation-plan-phase0.md](implementation-plan-phase0.md).
+
+For Phases 4-5, see [implementation-plan-part2.md](implementation-plan-part2.md).
 
 ## Phase 1: Foundation (Types + Data + Data API)
 

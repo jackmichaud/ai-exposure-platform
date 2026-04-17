@@ -9,6 +9,12 @@
 | [architecture/project-structure.md](architecture/project-structure.md) | Source directory layout and naming conventions |
 | [architecture/state-management.md](architecture/state-management.md) | Client-side state approach and patterns |
 
+## Research
+
+| Document | Description |
+|----------|-------------|
+| [research/research-plan-spec.md](research/research-plan-spec.md) | Spec for the 2-page academic research plan (sections, equations, approval gate) |
+
 ## Features
 
 | Document | Description |
@@ -16,6 +22,7 @@
 | [features/dashboard-overview.md](features/dashboard-overview.md) | Heatmap dashboard spec, filters, and interactions |
 | [features/occupation-profile.md](features/occupation-profile.md) | Occupation detail view with charts and comparisons |
 | [features/agent-debate-arena.md](features/agent-debate-arena.md) | AI debate feature, user flow, and streaming UI |
+| [features/economic-research-page.md](features/economic-research-page.md) | Deep economic research page with equations, charts, and full report |
 
 ## Data
 
@@ -59,11 +66,14 @@
 | [guides/getting-started.md](guides/getting-started.md) | Dev setup, environment variables, running locally |
 | [guides/adding-an-industry.md](guides/adding-an-industry.md) | How to add new industries and occupations |
 | [guides/running-a-debate.md](guides/running-a-debate.md) | Running and interpreting agent debates |
+| [guides/implementation-plan-phase0.md](guides/implementation-plan-phase0.md) | Build order Phase 0 (economic research plan) and Phase 0b (research web page) |
 | [guides/implementation-plan.md](guides/implementation-plan.md) | Build order Phases 1-3 (foundation, pages, interactivity) |
 | [guides/implementation-plan-part2.md](guides/implementation-plan-part2.md) | Build order Phases 4-5 (debate engine, polish) |
 
 ## Quick Reference by Task
 
+- **Economic research plan** → `research/research-plan-spec.md`
+- **Economic research page** → `features/economic-research-page.md`
 - **Adding a chart** → `ui/charts.md`, then the relevant feature spec
 - **Modifying a persona** → `agents/personas.md` + `agents/prompt-templates.md`
 - **Changing debate flow** → `agents/debate-protocol.md`
