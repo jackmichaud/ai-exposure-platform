@@ -11,7 +11,7 @@ An interactive web app that visualizes how occupations are exposed to AI disrupt
 **Prerequisites:** Node.js 18+, a [Vercel CLI](https://vercel.com/docs/cli) install (`npm i -g vercel`), and an Anthropic API key.
 
 ```bash
-git clone <repo>
+git clone https://github.com/jackmichaud/ai-exposure-platform.git
 cd ai-exposure-platform
 npm install
 ```
