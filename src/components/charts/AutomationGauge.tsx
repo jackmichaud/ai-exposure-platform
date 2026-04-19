@@ -70,7 +70,12 @@ export default function AutomationGauge({ score, label }: Props) {
   }, [clampedScore])
 
   return (
-    <svg viewBox="0 0 200 120" className="w-full max-w-xs mx-auto">
+    <svg
+      viewBox="0 0 200 120"
+      className="w-full max-w-xs mx-auto"
+      role="img"
+      aria-label={`${label}: ${Math.round(clampedScore)} out of 100`}
+    >
       {/* Background zones */}
       <path d={greenPath} fill="#059669" fillOpacity={0.25} transform={`translate(${CX},${CY})`} />
       <path d={amberPath} fill="#D97706" fillOpacity={0.25} transform={`translate(${CX},${CY})`} />

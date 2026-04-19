@@ -8,6 +8,12 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
+- **Phase 5 — Polish and Ship**
+  - `src/components/ErrorBoundary.tsx` — React class-based error boundary; wraps all routes; shows inline error message + "Try again" reset + back-to-dashboard link; accepts optional `fallback` prop for custom fallback UI
+  - `src/pages/NotFound.tsx` — 404 page with large monospace "404", descriptive message, and back-to-dashboard link
+  - Updated `src/App.tsx` — `React.lazy` code-splitting for ResearchPage, DebateArena, OccupationProfile; `Suspense` boundary with spinner fallback; `ErrorBoundary` wrapping all routes; wildcard `path="*"` route pointing to NotFound
+  - Updated `src/components/charts/AutomationGauge.tsx` — added `role="img"` and `aria-label` to SVG for screen reader accessibility
+
 - **Phase 4 — Debate Engine**
   - `api/debate.ts` — Vercel Edge Function SSE proxy; streams Claude API responses as `data: { token }` events; CORS headers; graceful error forwarding
   - `.env.example` — documents server-side `CLAUDE_API_KEY` variable

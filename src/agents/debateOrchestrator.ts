@@ -2,7 +2,7 @@ import type { Dispatch } from 'react'
 import type { DebateAction, PersonaId, DebateRound, DebateSummary } from '../types'
 import { getOccupation, getIndustries } from '../api/dataApi'
 import { streamTurn } from '../api/claudeClient'
-import { PERSONA_ORDER, PERSONAS } from './personas'
+import { PERSONA_ORDER } from './personas'
 import {
   buildSystemPrompt,
   buildRound1Prompt,
@@ -138,25 +138,6 @@ export function parseSynthesis(text: string): DebateSummary {
     }
 
     return bullets
-  }
-
-  function extractParagraphSection(heading: RegExp): string {
-    let inSection = false
-    const collected: string[] = []
-
-    for (const line of lines) {
-      if (heading.test(line)) {
-        inSection = true
-        continue
-      }
-      if (inSection && /^\s*\d+\.\s/.test(line)) break
-      if (inSection) {
-        const trimmed = line.trim()
-        if (trimmed.length > 0) collected.push(trimmed)
-      }
-    }
-
-    return collected.join(' ')
   }
 
   // Risk assessment: look for level keyword in the Risk Assessment section
