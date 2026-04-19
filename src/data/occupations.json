@@ -13,15 +13,15 @@
         "name": "Patient Assessment",
         "description": "Conduct physical and psychological assessments, vital signs monitoring, and intake evaluations to establish baseline patient status.",
         "category": "physical",
-        "timeWeight": 0.30,
+        "timeWeight": 0.3,
         "llmExposureTier": "E1",
-        "automationRisk": 33,
+        "automationRisk": 25,
         "augmentationPotential": 62,
         "automationSubScores": {
-          "routineness": 12,
-          "dataIntensity": 16,
-          "physicalBottleneck": 3,
-          "socialBottleneck": 2
+          "routineness": 10,
+          "dataIntensity": 12,
+          "physicalBottleneck": 2,
+          "socialBottleneck": 1
         },
         "augmentationSubScores": {
           "informationSynthesis": 20,
@@ -37,12 +37,12 @@
         "category": "physical",
         "timeWeight": 0.25,
         "llmExposureTier": "E1",
-        "automationRisk": 30,
+        "automationRisk": 22,
         "augmentationPotential": 45,
         "automationSubScores": {
-          "routineness": 18,
-          "dataIntensity": 10,
-          "physicalBottleneck": 2,
+          "routineness": 14,
+          "dataIntensity": 8,
+          "physicalBottleneck": 0,
           "socialBottleneck": 0
         },
         "augmentationSubScores": {
@@ -59,13 +59,13 @@
         "category": "cognitive",
         "timeWeight": 0.25,
         "llmExposureTier": "E2",
-        "automationRisk": 55,
+        "automationRisk": 42,
         "augmentationPotential": 72,
         "automationSubScores": {
-          "routineness": 16,
-          "dataIntensity": 20,
-          "physicalBottleneck": 10,
-          "socialBottleneck": 9
+          "routineness": 12,
+          "dataIntensity": 16,
+          "physicalBottleneck": 8,
+          "socialBottleneck": 6
         },
         "augmentationSubScores": {
           "informationSynthesis": 22,
@@ -79,7 +79,7 @@
         "name": "Patient & Family Education",
         "description": "Counsel patients and families on diagnoses, discharge instructions, medications, and self-care routines to improve adherence and outcomes.",
         "category": "interpersonal",
-        "timeWeight": 0.20,
+        "timeWeight": 0.2,
         "llmExposureTier": "E1",
         "automationRisk": 20,
         "augmentationPotential": 73,
@@ -131,19 +131,24 @@
     ],
     "exposureScore": {
       "overall": 62,
-      "automationRisk": 35,
+      "automationRisk": 28,
       "augmentationPotential": 62,
-      "netDisplacement": -27,
+      "netDisplacement": -34,
       "complementarityScore": 74,
       "routineTaskIntensity": -0.8,
       "timeline": "mid-term",
       "wageEffect": 8,
       "confidence": "medium"
     },
-    "bottleneckTaskIds": ["rn-patient-education", "rn-medication-admin"],
-    "similarOccupationIds": ["physical-therapist", "radiologist"]
+    "bottleneckTaskIds": [
+      "rn-patient-education",
+      "rn-medication-admin"
+    ],
+    "similarOccupationIds": [
+      "physical-therapist",
+      "radiologist"
+    ]
   },
-
   {
     "id": "radiologist",
     "title": "Radiologist",
@@ -158,12 +163,12 @@
         "name": "Diagnostic Image Interpretation",
         "description": "Systematically review radiological images to identify abnormalities, classify findings, and generate differential diagnoses across imaging modalities.",
         "category": "cognitive",
-        "timeWeight": 0.50,
+        "timeWeight": 0.5,
         "llmExposureTier": "E2",
-        "automationRisk": 78,
-        "augmentationPotential": 80,
+        "automationRisk": 84,
+        "augmentationPotential": 85,
         "automationSubScores": {
-          "routineness": 18,
+          "routineness": 24,
           "dataIntensity": 25,
           "physicalBottleneck": 20,
           "socialBottleneck": 15
@@ -172,7 +177,7 @@
           "informationSynthesis": 24,
           "decisionSupport": 25,
           "creativeLeverage": 14,
-          "productivityMultiplier": 17
+          "productivityMultiplier": 22
         }
       },
       {
@@ -183,7 +188,7 @@
         "timeWeight": 0.25,
         "llmExposureTier": "E2",
         "automationRisk": 82,
-        "augmentationPotential": 78,
+        "augmentationPotential": 81,
         "automationSubScores": {
           "routineness": 20,
           "dataIntensity": 23,
@@ -191,7 +196,7 @@
           "socialBottleneck": 17
         },
         "augmentationSubScores": {
-          "informationSynthesis": 22,
+          "informationSynthesis": 25,
           "decisionSupport": 20,
           "creativeLeverage": 18,
           "productivityMultiplier": 18
@@ -224,7 +229,7 @@
         "name": "Quality Assurance & Peer Review",
         "description": "Review discrepant cases, participate in peer review programs, and audit AI-assisted reads to maintain diagnostic accuracy standards.",
         "category": "cognitive",
-        "timeWeight": 0.10,
+        "timeWeight": 0.1,
         "llmExposureTier": "E1",
         "automationRisk": 42,
         "augmentationPotential": 65,
@@ -285,10 +290,15 @@
       "wageEffect": -10,
       "confidence": "high"
     },
-    "bottleneckTaskIds": ["rad-clinical-consult", "rad-qa-protocols"],
-    "similarOccupationIds": ["registered-nurse", "medical-coder"]
+    "bottleneckTaskIds": [
+      "rad-clinical-consult",
+      "rad-qa-protocols"
+    ],
+    "similarOccupationIds": [
+      "registered-nurse",
+      "medical-coder"
+    ]
   },
-
   {
     "id": "medical-coder",
     "title": "Medical Coder",
@@ -303,21 +313,21 @@
         "name": "Diagnostic & Procedure Code Assignment",
         "description": "Review physician notes, operative reports, and discharge summaries to assign accurate ICD-10-CM and CPT codes reflecting documented diagnoses and services.",
         "category": "cognitive",
-        "timeWeight": 0.50,
+        "timeWeight": 0.5,
         "llmExposureTier": "E2",
-        "automationRisk": 90,
-        "augmentationPotential": 68,
+        "automationRisk": 93,
+        "augmentationPotential": 50,
         "automationSubScores": {
           "routineness": 24,
           "dataIntensity": 24,
           "physicalBottleneck": 23,
-          "socialBottleneck": 19
+          "socialBottleneck": 22
         },
         "augmentationSubScores": {
-          "informationSynthesis": 22,
-          "decisionSupport": 20,
+          "informationSynthesis": 14,
+          "decisionSupport": 12,
           "creativeLeverage": 10,
-          "productivityMultiplier": 16
+          "productivityMultiplier": 14
         }
       },
       {
@@ -327,19 +337,19 @@
         "category": "cognitive",
         "timeWeight": 0.25,
         "llmExposureTier": "E2",
-        "automationRisk": 82,
-        "augmentationPotential": 72,
+        "automationRisk": 84,
+        "augmentationPotential": 48,
         "automationSubScores": {
-          "routineness": 20,
+          "routineness": 22,
           "dataIntensity": 22,
           "physicalBottleneck": 22,
           "socialBottleneck": 18
         },
         "augmentationSubScores": {
-          "informationSynthesis": 24,
-          "decisionSupport": 20,
-          "creativeLeverage": 12,
-          "productivityMultiplier": 16
+          "informationSynthesis": 14,
+          "decisionSupport": 14,
+          "creativeLeverage": 10,
+          "productivityMultiplier": 10
         }
       },
       {
@@ -350,7 +360,7 @@
         "timeWeight": 0.15,
         "llmExposureTier": "E1",
         "automationRisk": 72,
-        "augmentationPotential": 65,
+        "augmentationPotential": 50,
         "automationSubScores": {
           "routineness": 20,
           "dataIntensity": 20,
@@ -358,10 +368,10 @@
           "socialBottleneck": 14
         },
         "augmentationSubScores": {
-          "informationSynthesis": 22,
-          "decisionSupport": 18,
+          "informationSynthesis": 16,
+          "decisionSupport": 14,
           "creativeLeverage": 10,
-          "productivityMultiplier": 15
+          "productivityMultiplier": 10
         }
       },
       {
@@ -369,10 +379,10 @@
         "name": "Claim Denial Management",
         "description": "Investigate denied claims, identify coding errors or documentation gaps, prepare appeals, and communicate with payers to resolve reimbursement disputes.",
         "category": "cognitive",
-        "timeWeight": 0.10,
+        "timeWeight": 0.1,
         "llmExposureTier": "E1",
         "automationRisk": 60,
-        "augmentationPotential": 58,
+        "augmentationPotential": 48,
         "automationSubScores": {
           "routineness": 16,
           "dataIntensity": 18,
@@ -380,10 +390,10 @@
           "socialBottleneck": 10
         },
         "augmentationSubScores": {
-          "informationSynthesis": 18,
-          "decisionSupport": 16,
+          "informationSynthesis": 14,
+          "decisionSupport": 12,
           "creativeLeverage": 12,
-          "productivityMultiplier": 12
+          "productivityMultiplier": 10
         }
       }
     ],
@@ -422,18 +432,23 @@
     "exposureScore": {
       "overall": 84,
       "automationRisk": 84,
-      "augmentationPotential": 68,
-      "netDisplacement": 16,
+      "augmentationPotential": 50,
+      "netDisplacement": 34,
       "complementarityScore": 42,
       "routineTaskIntensity": 1.4,
       "timeline": "near-term",
       "wageEffect": -25,
       "confidence": "high"
     },
-    "bottleneckTaskIds": ["mc-denial-management", "mc-compliance-audit"],
-    "similarOccupationIds": ["radiologist", "insurance-adjuster"]
+    "bottleneckTaskIds": [
+      "mc-denial-management",
+      "mc-compliance-audit"
+    ],
+    "similarOccupationIds": [
+      "radiologist",
+      "insurance-adjuster"
+    ]
   },
-
   {
     "id": "physical-therapist",
     "title": "Physical Therapist",
@@ -454,9 +469,9 @@
         "augmentationPotential": 22,
         "automationSubScores": {
           "routineness": 8,
-          "dataIntensity": 5,
-          "physicalBottleneck": 1,
-          "socialBottleneck": -2
+          "dataIntensity": 4,
+          "physicalBottleneck": 0,
+          "socialBottleneck": 0
         },
         "augmentationSubScores": {
           "informationSynthesis": 5,
@@ -470,15 +485,15 @@
         "name": "Therapeutic Exercise Prescription",
         "description": "Design, instruct, and progress individualized exercise programs targeting strength, flexibility, balance, and functional mobility deficits.",
         "category": "cognitive",
-        "timeWeight": 0.30,
+        "timeWeight": 0.3,
         "llmExposureTier": "E1",
-        "automationRisk": 35,
+        "automationRisk": 16,
         "augmentationPotential": 55,
         "automationSubScores": {
-          "routineness": 12,
-          "dataIntensity": 12,
-          "physicalBottleneck": 5,
-          "socialBottleneck": 6
+          "routineness": 6,
+          "dataIntensity": 6,
+          "physicalBottleneck": 2,
+          "socialBottleneck": 2
         },
         "augmentationSubScores": {
           "informationSynthesis": 18,
@@ -492,15 +507,15 @@
         "name": "Patient Evaluation & Goal Setting",
         "description": "Administer functional outcome measures, gait analysis, and strength assessments; establish measurable goals with patients and families.",
         "category": "interpersonal",
-        "timeWeight": 0.20,
+        "timeWeight": 0.2,
         "llmExposureTier": "E1",
-        "automationRisk": 28,
+        "automationRisk": 14,
         "augmentationPotential": 45,
         "automationSubScores": {
-          "routineness": 10,
-          "dataIntensity": 12,
-          "physicalBottleneck": 3,
-          "socialBottleneck": 3
+          "routineness": 6,
+          "dataIntensity": 6,
+          "physicalBottleneck": 1,
+          "socialBottleneck": 1
         },
         "augmentationSubScores": {
           "informationSynthesis": 15,
@@ -516,19 +531,19 @@
         "category": "cognitive",
         "timeWeight": 0.15,
         "llmExposureTier": "E2",
-        "automationRisk": 60,
-        "augmentationPotential": 68,
+        "automationRisk": 14,
+        "augmentationPotential": 78,
         "automationSubScores": {
-          "routineness": 18,
-          "dataIntensity": 18,
-          "physicalBottleneck": 15,
-          "socialBottleneck": 9
+          "routineness": 5,
+          "dataIntensity": 5,
+          "physicalBottleneck": 2,
+          "socialBottleneck": 2
         },
         "augmentationSubScores": {
-          "informationSynthesis": 20,
-          "decisionSupport": 18,
-          "creativeLeverage": 14,
-          "productivityMultiplier": 16
+          "informationSynthesis": 22,
+          "decisionSupport": 20,
+          "creativeLeverage": 18,
+          "productivityMultiplier": 18
         }
       }
     ],
@@ -566,19 +581,24 @@
     ],
     "exposureScore": {
       "overall": 45,
-      "automationRisk": 26,
+      "automationRisk": 14,
       "augmentationPotential": 45,
-      "netDisplacement": -19,
+      "netDisplacement": -31,
       "complementarityScore": 65,
       "routineTaskIntensity": -1.2,
       "timeline": "long-term",
       "wageEffect": 10,
       "confidence": "medium"
     },
-    "bottleneckTaskIds": ["pt-manual-therapy", "pt-patient-eval"],
-    "similarOccupationIds": ["registered-nurse", "k12-teacher"]
+    "bottleneckTaskIds": [
+      "pt-manual-therapy",
+      "pt-patient-eval"
+    ],
+    "similarOccupationIds": [
+      "registered-nurse",
+      "k12-teacher"
+    ]
   },
-
   {
     "id": "financial-analyst",
     "title": "Financial Analyst",
@@ -595,13 +615,13 @@
         "category": "cognitive",
         "timeWeight": 0.35,
         "llmExposureTier": "E2",
-        "automationRisk": 72,
+        "automationRisk": 78,
         "augmentationPotential": 80,
         "automationSubScores": {
-          "routineness": 20,
+          "routineness": 23,
           "dataIntensity": 24,
           "physicalBottleneck": 18,
-          "socialBottleneck": 10
+          "socialBottleneck": 13
         },
         "augmentationSubScores": {
           "informationSynthesis": 22,
@@ -615,12 +635,12 @@
         "name": "Market Research & Intelligence Synthesis",
         "description": "Aggregate and interpret macroeconomic data, industry reports, earnings transcripts, and news flow to identify investment signals.",
         "category": "cognitive",
-        "timeWeight": 0.30,
+        "timeWeight": 0.3,
         "llmExposureTier": "E2",
-        "automationRisk": 75,
+        "automationRisk": 78,
         "augmentationPotential": 78,
         "automationSubScores": {
-          "routineness": 18,
+          "routineness": 21,
           "dataIntensity": 25,
           "physicalBottleneck": 20,
           "socialBottleneck": 12
@@ -637,7 +657,7 @@
         "name": "Client Reporting & Presentation",
         "description": "Prepare investment committee memos, board presentations, and client-facing reports communicating portfolio performance and strategic recommendations.",
         "category": "cognitive",
-        "timeWeight": 0.20,
+        "timeWeight": 0.2,
         "llmExposureTier": "E2",
         "automationRisk": 62,
         "augmentationPotential": 72,
@@ -720,10 +740,15 @@
       "wageEffect": 12,
       "confidence": "high"
     },
-    "bottleneckTaskIds": ["fa-stakeholder-advisory", "fa-client-reporting"],
-    "similarOccupationIds": ["accountant", "data-scientist"]
+    "bottleneckTaskIds": [
+      "fa-stakeholder-advisory",
+      "fa-client-reporting"
+    ],
+    "similarOccupationIds": [
+      "accountant",
+      "data-scientist"
+    ]
   },
-
   {
     "id": "loan-officer",
     "title": "Loan Officer",
@@ -738,21 +763,21 @@
         "name": "Credit Underwriting & Risk Assessment",
         "description": "Analyze credit bureau reports, income statements, debt-to-income ratios, and collateral value to determine loan eligibility and pricing.",
         "category": "cognitive",
-        "timeWeight": 0.40,
+        "timeWeight": 0.4,
         "llmExposureTier": "E2",
-        "automationRisk": 88,
-        "augmentationPotential": 55,
+        "automationRisk": 92,
+        "augmentationPotential": 44,
         "automationSubScores": {
           "routineness": 24,
           "dataIntensity": 25,
-          "physicalBottleneck": 22,
-          "socialBottleneck": 17
+          "physicalBottleneck": 24,
+          "socialBottleneck": 19
         },
         "augmentationSubScores": {
-          "informationSynthesis": 18,
-          "decisionSupport": 20,
-          "creativeLeverage": 8,
-          "productivityMultiplier": 9
+          "informationSynthesis": 12,
+          "decisionSupport": 12,
+          "creativeLeverage": 10,
+          "productivityMultiplier": 10
         }
       },
       {
@@ -760,7 +785,7 @@
         "name": "Loan Application Processing",
         "description": "Collect and verify applicant documentation, enter data into loan origination systems, order appraisals, and track workflow milestones.",
         "category": "cognitive",
-        "timeWeight": 0.30,
+        "timeWeight": 0.3,
         "llmExposureTier": "E2",
         "automationRisk": 85,
         "augmentationPotential": 42,
@@ -782,10 +807,10 @@
         "name": "Client Consultation & Product Guidance",
         "description": "Meet with prospective borrowers, explain loan products and terms, gather financial goals, and match clients to suitable financing solutions.",
         "category": "interpersonal",
-        "timeWeight": 0.20,
+        "timeWeight": 0.2,
         "llmExposureTier": "E1",
         "automationRisk": 45,
-        "augmentationPotential": 52,
+        "augmentationPotential": 46,
         "automationSubScores": {
           "routineness": 12,
           "dataIntensity": 15,
@@ -793,10 +818,10 @@
           "socialBottleneck": 6
         },
         "augmentationSubScores": {
-          "informationSynthesis": 16,
-          "decisionSupport": 16,
+          "informationSynthesis": 14,
+          "decisionSupport": 14,
           "creativeLeverage": 10,
-          "productivityMultiplier": 10
+          "productivityMultiplier": 8
         }
       },
       {
@@ -804,20 +829,20 @@
         "name": "Regulatory Compliance & Reporting",
         "description": "Ensure loan files comply with RESPA, TILA, HMDA, and fair lending requirements; generate mandatory disclosures and audit-ready documentation.",
         "category": "cognitive",
-        "timeWeight": 0.10,
+        "timeWeight": 0.1,
         "llmExposureTier": "E2",
-        "automationRisk": 80,
-        "augmentationPotential": 50,
+        "automationRisk": 87,
+        "augmentationPotential": 46,
         "automationSubScores": {
-          "routineness": 22,
-          "dataIntensity": 20,
-          "physicalBottleneck": 22,
-          "socialBottleneck": 16
+          "routineness": 25,
+          "dataIntensity": 22,
+          "physicalBottleneck": 23,
+          "socialBottleneck": 17
         },
         "augmentationSubScores": {
-          "informationSynthesis": 18,
-          "decisionSupport": 14,
-          "creativeLeverage": 8,
+          "informationSynthesis": 14,
+          "decisionSupport": 12,
+          "creativeLeverage": 10,
           "productivityMultiplier": 10
         }
       }
@@ -857,18 +882,23 @@
     "exposureScore": {
       "overall": 80,
       "automationRisk": 80,
-      "augmentationPotential": 50,
-      "netDisplacement": 30,
+      "augmentationPotential": 44,
+      "netDisplacement": 36,
       "complementarityScore": 38,
       "routineTaskIntensity": 1.2,
       "timeline": "near-term",
       "wageEffect": -18,
       "confidence": "high"
     },
-    "bottleneckTaskIds": ["lo-client-consultation", "lo-compliance-reporting"],
-    "similarOccupationIds": ["insurance-adjuster", "accountant"]
+    "bottleneckTaskIds": [
+      "lo-client-consultation",
+      "lo-compliance-reporting"
+    ],
+    "similarOccupationIds": [
+      "insurance-adjuster",
+      "accountant"
+    ]
   },
-
   {
     "id": "accountant",
     "title": "Accountant",
@@ -883,12 +913,12 @@
         "name": "Bookkeeping & Transaction Processing",
         "description": "Record journal entries, reconcile bank statements, manage accounts payable and receivable, and maintain accurate general ledger balances.",
         "category": "cognitive",
-        "timeWeight": 0.30,
+        "timeWeight": 0.3,
         "llmExposureTier": "E2",
-        "automationRisk": 88,
+        "automationRisk": 83,
         "augmentationPotential": 50,
         "automationSubScores": {
-          "routineness": 25,
+          "routineness": 20,
           "dataIntensity": 24,
           "physicalBottleneck": 23,
           "socialBottleneck": 16
@@ -905,7 +935,7 @@
         "name": "Financial Statement Preparation",
         "description": "Compile income statements, balance sheets, and cash flow statements in accordance with GAAP or IFRS; prepare management reports and variance analyses.",
         "category": "cognitive",
-        "timeWeight": 0.30,
+        "timeWeight": 0.3,
         "llmExposureTier": "E2",
         "automationRisk": 78,
         "augmentationPotential": 72,
@@ -1010,10 +1040,15 @@
       "wageEffect": -8,
       "confidence": "high"
     },
-    "bottleneckTaskIds": ["acct-advisory", "acct-tax-compliance"],
-    "similarOccupationIds": ["financial-analyst", "loan-officer"]
+    "bottleneckTaskIds": [
+      "acct-advisory",
+      "acct-tax-compliance"
+    ],
+    "similarOccupationIds": [
+      "financial-analyst",
+      "loan-officer"
+    ]
   },
-
   {
     "id": "insurance-adjuster",
     "title": "Insurance Adjuster",
@@ -1030,19 +1065,19 @@
         "category": "cognitive",
         "timeWeight": 0.35,
         "llmExposureTier": "E1",
-        "automationRisk": 62,
-        "augmentationPotential": 65,
+        "automationRisk": 78,
+        "augmentationPotential": 80,
         "automationSubScores": {
-          "routineness": 16,
-          "dataIntensity": 20,
-          "physicalBottleneck": 14,
-          "socialBottleneck": 12
+          "routineness": 22,
+          "dataIntensity": 24,
+          "physicalBottleneck": 18,
+          "socialBottleneck": 14
         },
         "augmentationSubScores": {
-          "informationSynthesis": 22,
-          "decisionSupport": 20,
-          "creativeLeverage": 10,
-          "productivityMultiplier": 13
+          "informationSynthesis": 25,
+          "decisionSupport": 25,
+          "creativeLeverage": 14,
+          "productivityMultiplier": 16
         }
       },
       {
@@ -1050,20 +1085,20 @@
         "name": "Damage Valuation & Estimation",
         "description": "Use estimating software and cost databases to compute repair or replacement values for property losses; review medical bills and calculate injury settlements.",
         "category": "cognitive",
-        "timeWeight": 0.30,
+        "timeWeight": 0.3,
         "llmExposureTier": "E2",
-        "automationRisk": 78,
-        "augmentationPotential": 60,
+        "automationRisk": 83,
+        "augmentationPotential": 68,
         "automationSubScores": {
-          "routineness": 20,
-          "dataIntensity": 24,
-          "physicalBottleneck": 18,
-          "socialBottleneck": 16
+          "routineness": 23,
+          "dataIntensity": 25,
+          "physicalBottleneck": 20,
+          "socialBottleneck": 15
         },
         "augmentationSubScores": {
-          "informationSynthesis": 20,
-          "decisionSupport": 18,
-          "creativeLeverage": 10,
+          "informationSynthesis": 22,
+          "decisionSupport": 22,
+          "creativeLeverage": 12,
           "productivityMultiplier": 12
         }
       },
@@ -1094,7 +1129,7 @@
         "name": "Policy Coverage Analysis",
         "description": "Interpret policy language, exclusions, and endorsements to determine whether a claim is covered and the applicable limits and deductibles.",
         "category": "cognitive",
-        "timeWeight": 0.10,
+        "timeWeight": 0.1,
         "llmExposureTier": "E2",
         "automationRisk": 70,
         "augmentationPotential": 68,
@@ -1146,8 +1181,8 @@
     ],
     "exposureScore": {
       "overall": 68,
-      "automationRisk": 62,
-      "augmentationPotential": 62,
+      "automationRisk": 68,
+      "augmentationPotential": 68,
       "netDisplacement": 0,
       "complementarityScore": 58,
       "routineTaskIntensity": 0.4,
@@ -1155,10 +1190,15 @@
       "wageEffect": -5,
       "confidence": "medium"
     },
-    "bottleneckTaskIds": ["ia-settlement-negotiation", "ia-claim-investigation"],
-    "similarOccupationIds": ["loan-officer", "medical-coder"]
+    "bottleneckTaskIds": [
+      "ia-settlement-negotiation",
+      "ia-claim-investigation"
+    ],
+    "similarOccupationIds": [
+      "loan-officer",
+      "medical-coder"
+    ]
   },
-
   {
     "id": "software-developer",
     "title": "Software Developer",
@@ -1173,21 +1213,21 @@
         "name": "Feature Development & Implementation",
         "description": "Translate product requirements into working code across frontend and backend layers; conduct code reviews and mentor junior developers.",
         "category": "cognitive",
-        "timeWeight": 0.40,
+        "timeWeight": 0.4,
         "llmExposureTier": "E2",
-        "automationRisk": 65,
-        "augmentationPotential": 82,
+        "automationRisk": 42,
+        "augmentationPotential": 77,
         "automationSubScores": {
-          "routineness": 16,
-          "dataIntensity": 18,
-          "physicalBottleneck": 20,
-          "socialBottleneck": 11
+          "routineness": 10,
+          "dataIntensity": 12,
+          "physicalBottleneck": 12,
+          "socialBottleneck": 8
         },
         "augmentationSubScores": {
           "informationSynthesis": 22,
           "decisionSupport": 20,
           "creativeLeverage": 22,
-          "productivityMultiplier": 18
+          "productivityMultiplier": 13
         }
       },
       {
@@ -1197,13 +1237,13 @@
         "category": "cognitive",
         "timeWeight": 0.25,
         "llmExposureTier": "E1",
-        "automationRisk": 42,
+        "automationRisk": 32,
         "augmentationPotential": 68,
         "automationSubScores": {
-          "routineness": 8,
-          "dataIntensity": 14,
-          "physicalBottleneck": 12,
-          "socialBottleneck": 8
+          "routineness": 6,
+          "dataIntensity": 12,
+          "physicalBottleneck": 8,
+          "socialBottleneck": 6
         },
         "augmentationSubScores": {
           "informationSynthesis": 20,
@@ -1217,15 +1257,15 @@
         "name": "Debugging & Performance Optimization",
         "description": "Diagnose defects through log analysis, profilers, and root-cause investigation; optimize bottlenecks in latency, memory, and throughput.",
         "category": "cognitive",
-        "timeWeight": 0.20,
+        "timeWeight": 0.2,
         "llmExposureTier": "E2",
-        "automationRisk": 58,
+        "automationRisk": 30,
         "augmentationPotential": 72,
         "automationSubScores": {
-          "routineness": 14,
-          "dataIntensity": 20,
-          "physicalBottleneck": 14,
-          "socialBottleneck": 10
+          "routineness": 8,
+          "dataIntensity": 12,
+          "physicalBottleneck": 6,
+          "socialBottleneck": 4
         },
         "augmentationSubScores": {
           "informationSynthesis": 22,
@@ -1241,13 +1281,13 @@
         "category": "interpersonal",
         "timeWeight": 0.15,
         "llmExposureTier": "E1",
-        "automationRisk": 30,
+        "automationRisk": 26,
         "augmentationPotential": 52,
         "automationSubScores": {
-          "routineness": 6,
-          "dataIntensity": 10,
-          "physicalBottleneck": 10,
-          "socialBottleneck": 4
+          "routineness": 4,
+          "dataIntensity": 8,
+          "physicalBottleneck": 8,
+          "socialBottleneck": 6
         },
         "augmentationSubScores": {
           "informationSynthesis": 16,
@@ -1291,19 +1331,24 @@
     ],
     "exposureScore": {
       "overall": 70,
-      "automationRisk": 54,
+      "automationRisk": 35,
       "augmentationPotential": 70,
-      "netDisplacement": -16,
+      "netDisplacement": -35,
       "complementarityScore": 82,
       "routineTaskIntensity": 0.2,
       "timeline": "near-term",
       "wageEffect": 15,
       "confidence": "high"
     },
-    "bottleneckTaskIds": ["sd-architecture-design", "sd-collaboration"],
-    "similarOccupationIds": ["data-scientist", "qa-tester"]
+    "bottleneckTaskIds": [
+      "sd-architecture-design",
+      "sd-collaboration"
+    ],
+    "similarOccupationIds": [
+      "data-scientist",
+      "qa-tester"
+    ]
   },
-
   {
     "id": "data-scientist",
     "title": "Data Scientist",
@@ -1320,19 +1365,19 @@
         "category": "cognitive",
         "timeWeight": 0.35,
         "llmExposureTier": "E2",
-        "automationRisk": 60,
-        "augmentationPotential": 78,
+        "automationRisk": 35,
+        "augmentationPotential": 62,
         "automationSubScores": {
-          "routineness": 14,
-          "dataIntensity": 22,
-          "physicalBottleneck": 14,
-          "socialBottleneck": 10
+          "routineness": 8,
+          "dataIntensity": 16,
+          "physicalBottleneck": 8,
+          "socialBottleneck": 3
         },
         "augmentationSubScores": {
-          "informationSynthesis": 22,
-          "decisionSupport": 22,
-          "creativeLeverage": 18,
-          "productivityMultiplier": 16
+          "informationSynthesis": 20,
+          "decisionSupport": 20,
+          "creativeLeverage": 12,
+          "productivityMultiplier": 10
         }
       },
       {
@@ -1340,15 +1385,15 @@
         "name": "Data Wrangling & Feature Engineering",
         "description": "Clean, transform, and engineer features from raw structured and unstructured data sources; build and maintain data pipelines for model training.",
         "category": "cognitive",
-        "timeWeight": 0.30,
+        "timeWeight": 0.3,
         "llmExposureTier": "E2",
-        "automationRisk": 70,
+        "automationRisk": 38,
         "augmentationPotential": 65,
         "automationSubScores": {
-          "routineness": 18,
-          "dataIntensity": 24,
-          "physicalBottleneck": 18,
-          "socialBottleneck": 10
+          "routineness": 10,
+          "dataIntensity": 18,
+          "physicalBottleneck": 8,
+          "socialBottleneck": 2
         },
         "augmentationSubScores": {
           "informationSynthesis": 20,
@@ -1362,15 +1407,15 @@
         "name": "Insight Communication & Storytelling",
         "description": "Translate complex analytical findings into clear narratives, dashboards, and recommendations for non-technical stakeholders and decision-makers.",
         "category": "cognitive",
-        "timeWeight": 0.20,
+        "timeWeight": 0.2,
         "llmExposureTier": "E2",
-        "automationRisk": 55,
+        "automationRisk": 25,
         "augmentationPotential": 72,
         "automationSubScores": {
-          "routineness": 12,
-          "dataIntensity": 18,
-          "physicalBottleneck": 16,
-          "socialBottleneck": 9
+          "routineness": 6,
+          "dataIntensity": 12,
+          "physicalBottleneck": 5,
+          "socialBottleneck": 2
         },
         "augmentationSubScores": {
           "informationSynthesis": 22,
@@ -1386,19 +1431,19 @@
         "category": "cognitive",
         "timeWeight": 0.15,
         "llmExposureTier": "E1",
-        "automationRisk": 42,
-        "augmentationPotential": 65,
+        "automationRisk": 18,
+        "augmentationPotential": 62,
         "automationSubScores": {
-          "routineness": 8,
-          "dataIntensity": 18,
-          "physicalBottleneck": 10,
-          "socialBottleneck": 6
+          "routineness": 4,
+          "dataIntensity": 10,
+          "physicalBottleneck": 3,
+          "socialBottleneck": 1
         },
         "augmentationSubScores": {
           "informationSynthesis": 22,
           "decisionSupport": 20,
-          "creativeLeverage": 14,
-          "productivityMultiplier": 9
+          "creativeLeverage": 12,
+          "productivityMultiplier": 8
         }
       }
     ],
@@ -1436,19 +1481,24 @@
     ],
     "exposureScore": {
       "overall": 65,
-      "automationRisk": 60,
+      "automationRisk": 32,
       "augmentationPotential": 65,
-      "netDisplacement": -5,
+      "netDisplacement": -33,
       "complementarityScore": 80,
       "routineTaskIntensity": 0.3,
       "timeline": "near-term",
       "wageEffect": 18,
       "confidence": "high"
     },
-    "bottleneckTaskIds": ["ds-research-experimentation", "ds-insight-communication"],
-    "similarOccupationIds": ["software-developer", "financial-analyst"]
+    "bottleneckTaskIds": [
+      "ds-research-experimentation",
+      "ds-insight-communication"
+    ],
+    "similarOccupationIds": [
+      "software-developer",
+      "financial-analyst"
+    ]
   },
-
   {
     "id": "it-support-specialist",
     "title": "IT Support Specialist",
@@ -1463,12 +1513,12 @@
         "name": "Help Desk Ticket Resolution",
         "description": "Triage and resolve Level 1 and Level 2 support tickets covering password resets, software errors, connectivity problems, and hardware faults.",
         "category": "cognitive",
-        "timeWeight": 0.40,
+        "timeWeight": 0.4,
         "llmExposureTier": "E2",
-        "automationRisk": 72,
-        "augmentationPotential": 65,
+        "automationRisk": 69,
+        "augmentationPotential": 68,
         "automationSubScores": {
-          "routineness": 22,
+          "routineness": 19,
           "dataIntensity": 18,
           "physicalBottleneck": 18,
           "socialBottleneck": 14
@@ -1477,7 +1527,7 @@
           "informationSynthesis": 22,
           "decisionSupport": 18,
           "creativeLeverage": 10,
-          "productivityMultiplier": 15
+          "productivityMultiplier": 18
         }
       },
       {
@@ -1507,10 +1557,10 @@
         "name": "User Training & Documentation",
         "description": "Train end users on new software and policies; write and maintain knowledge base articles, FAQs, and IT procedure guides.",
         "category": "interpersonal",
-        "timeWeight": 0.20,
+        "timeWeight": 0.2,
         "llmExposureTier": "E2",
         "automationRisk": 50,
-        "augmentationPotential": 62,
+        "augmentationPotential": 64,
         "automationSubScores": {
           "routineness": 14,
           "dataIntensity": 12,
@@ -1519,7 +1569,7 @@
         },
         "augmentationSubScores": {
           "informationSynthesis": 18,
-          "decisionSupport": 14,
+          "decisionSupport": 16,
           "creativeLeverage": 16,
           "productivityMultiplier": 14
         }
@@ -1590,10 +1640,15 @@
       "wageEffect": -12,
       "confidence": "medium"
     },
-    "bottleneckTaskIds": ["its-user-training", "its-monitoring"],
-    "similarOccupationIds": ["software-developer", "qa-tester"]
+    "bottleneckTaskIds": [
+      "its-user-training",
+      "its-monitoring"
+    ],
+    "similarOccupationIds": [
+      "software-developer",
+      "qa-tester"
+    ]
   },
-
   {
     "id": "qa-tester",
     "title": "QA Tester",
@@ -1610,19 +1665,19 @@
         "category": "cognitive",
         "timeWeight": 0.35,
         "llmExposureTier": "E2",
-        "automationRisk": 88,
-        "augmentationPotential": 72,
+        "automationRisk": 92,
+        "augmentationPotential": 54,
         "automationSubScores": {
-          "routineness": 22,
+          "routineness": 23,
           "dataIntensity": 22,
           "physicalBottleneck": 22,
-          "socialBottleneck": 22
+          "socialBottleneck": 25
         },
         "augmentationSubScores": {
-          "informationSynthesis": 20,
-          "decisionSupport": 18,
-          "creativeLeverage": 16,
-          "productivityMultiplier": 18
+          "informationSynthesis": 16,
+          "decisionSupport": 12,
+          "creativeLeverage": 12,
+          "productivityMultiplier": 14
         }
       },
       {
@@ -1630,21 +1685,21 @@
         "name": "Manual & Exploratory Testing",
         "description": "Execute manual test cases, perform exploratory testing to uncover edge cases, and validate UI/UX against acceptance criteria and accessibility standards.",
         "category": "cognitive",
-        "timeWeight": 0.30,
+        "timeWeight": 0.3,
         "llmExposureTier": "E2",
-        "automationRisk": 82,
-        "augmentationPotential": 60,
+        "automationRisk": 88,
+        "augmentationPotential": 40,
         "automationSubScores": {
-          "routineness": 22,
+          "routineness": 25,
           "dataIntensity": 20,
-          "physicalBottleneck": 22,
-          "socialBottleneck": 18
+          "physicalBottleneck": 24,
+          "socialBottleneck": 19
         },
         "augmentationSubScores": {
-          "informationSynthesis": 18,
-          "decisionSupport": 16,
-          "creativeLeverage": 14,
-          "productivityMultiplier": 12
+          "informationSynthesis": 10,
+          "decisionSupport": 10,
+          "creativeLeverage": 10,
+          "productivityMultiplier": 10
         }
       },
       {
@@ -1652,21 +1707,21 @@
         "name": "Defect Tracking & Triage",
         "description": "Log, reproduce, prioritize, and track defects in Jira; write detailed bug reports with steps to reproduce, expected versus actual behavior, and severity assessments.",
         "category": "cognitive",
-        "timeWeight": 0.20,
+        "timeWeight": 0.2,
         "llmExposureTier": "E2",
-        "automationRisk": 78,
-        "augmentationPotential": 65,
+        "automationRisk": 80,
+        "augmentationPotential": 50,
         "automationSubScores": {
           "routineness": 20,
           "dataIntensity": 22,
           "physicalBottleneck": 20,
-          "socialBottleneck": 16
+          "socialBottleneck": 18
         },
         "augmentationSubScores": {
-          "informationSynthesis": 20,
-          "decisionSupport": 18,
-          "creativeLeverage": 14,
-          "productivityMultiplier": 13
+          "informationSynthesis": 14,
+          "decisionSupport": 14,
+          "creativeLeverage": 12,
+          "productivityMultiplier": 10
         }
       },
       {
@@ -1677,7 +1732,7 @@
         "timeWeight": 0.15,
         "llmExposureTier": "E1",
         "automationRisk": 48,
-        "augmentationPotential": 62,
+        "augmentationPotential": 45,
         "automationSubScores": {
           "routineness": 12,
           "dataIntensity": 16,
@@ -1685,10 +1740,10 @@
           "socialBottleneck": 8
         },
         "augmentationSubScores": {
-          "informationSynthesis": 20,
-          "decisionSupport": 18,
-          "creativeLeverage": 14,
-          "productivityMultiplier": 10
+          "informationSynthesis": 14,
+          "decisionSupport": 14,
+          "creativeLeverage": 10,
+          "productivityMultiplier": 7
         }
       }
     ],
@@ -1727,18 +1782,23 @@
     "exposureScore": {
       "overall": 82,
       "automationRisk": 82,
-      "augmentationPotential": 66,
-      "netDisplacement": 16,
+      "augmentationPotential": 48,
+      "netDisplacement": 34,
       "complementarityScore": 48,
-      "routineTaskIntensity": 1.0,
+      "routineTaskIntensity": 1,
       "timeline": "near-term",
       "wageEffect": -15,
       "confidence": "high"
     },
-    "bottleneckTaskIds": ["qa-test-planning", "qa-defect-management"],
-    "similarOccupationIds": ["software-developer", "it-support-specialist"]
+    "bottleneckTaskIds": [
+      "qa-test-planning",
+      "qa-defect-management"
+    ],
+    "similarOccupationIds": [
+      "software-developer",
+      "it-support-specialist"
+    ]
   },
-
   {
     "id": "k12-teacher",
     "title": "K-12 Teacher",
@@ -1753,21 +1813,21 @@
         "name": "Direct Classroom Instruction",
         "description": "Deliver lessons using varied instructional strategies, facilitate discussions, differentiate for diverse learners, and maintain an engaging classroom environment.",
         "category": "interpersonal",
-        "timeWeight": 0.40,
+        "timeWeight": 0.4,
         "llmExposureTier": "E1",
-        "automationRisk": 22,
-        "augmentationPotential": 55,
+        "automationRisk": 14,
+        "augmentationPotential": 27,
         "automationSubScores": {
-          "routineness": 8,
-          "dataIntensity": 8,
-          "physicalBottleneck": 8,
-          "socialBottleneck": -2
+          "routineness": 6,
+          "dataIntensity": 4,
+          "physicalBottleneck": 2,
+          "socialBottleneck": 2
         },
         "augmentationSubScores": {
-          "informationSynthesis": 16,
-          "decisionSupport": 14,
-          "creativeLeverage": 14,
-          "productivityMultiplier": 11
+          "informationSynthesis": 8,
+          "decisionSupport": 8,
+          "creativeLeverage": 6,
+          "productivityMultiplier": 5
         }
       },
       {
@@ -1777,13 +1837,13 @@
         "category": "cognitive",
         "timeWeight": 0.25,
         "llmExposureTier": "E2",
-        "automationRisk": 52,
+        "automationRisk": 18,
         "augmentationPotential": 72,
         "automationSubScores": {
-          "routineness": 14,
-          "dataIntensity": 14,
-          "physicalBottleneck": 16,
-          "socialBottleneck": 8
+          "routineness": 6,
+          "dataIntensity": 6,
+          "physicalBottleneck": 4,
+          "socialBottleneck": 2
         },
         "augmentationSubScores": {
           "informationSynthesis": 22,
@@ -1797,15 +1857,15 @@
         "name": "Student Assessment & Grading",
         "description": "Administer formative and summative assessments, grade student work, track progress in gradebooks, and use data to inform instructional adjustments.",
         "category": "cognitive",
-        "timeWeight": 0.20,
+        "timeWeight": 0.2,
         "llmExposureTier": "E2",
-        "automationRisk": 58,
+        "automationRisk": 16,
         "augmentationPotential": 65,
         "automationSubScores": {
-          "routineness": 16,
-          "dataIntensity": 18,
-          "physicalBottleneck": 16,
-          "socialBottleneck": 8
+          "routineness": 6,
+          "dataIntensity": 6,
+          "physicalBottleneck": 3,
+          "socialBottleneck": 1
         },
         "augmentationSubScores": {
           "informationSynthesis": 20,
@@ -1821,13 +1881,13 @@
         "category": "interpersonal",
         "timeWeight": 0.15,
         "llmExposureTier": "E1",
-        "automationRisk": 18,
+        "automationRisk": 12,
         "augmentationPotential": 42,
         "automationSubScores": {
-          "routineness": 6,
-          "dataIntensity": 8,
-          "physicalBottleneck": 6,
-          "socialBottleneck": -2
+          "routineness": 4,
+          "dataIntensity": 4,
+          "physicalBottleneck": 2,
+          "socialBottleneck": 2
         },
         "augmentationSubScores": {
           "informationSynthesis": 12,
@@ -1871,19 +1931,24 @@
     ],
     "exposureScore": {
       "overall": 48,
-      "automationRisk": 35,
+      "automationRisk": 15,
       "augmentationPotential": 48,
-      "netDisplacement": -13,
+      "netDisplacement": -33,
       "complementarityScore": 68,
       "routineTaskIntensity": -0.6,
       "timeline": "mid-term",
       "wageEffect": 5,
       "confidence": "medium"
     },
-    "bottleneckTaskIds": ["k12-instruction", "k12-family-engagement"],
-    "similarOccupationIds": ["college-professor", "instructional-designer"]
+    "bottleneckTaskIds": [
+      "k12-instruction",
+      "k12-family-engagement"
+    ],
+    "similarOccupationIds": [
+      "college-professor",
+      "instructional-designer"
+    ]
   },
-
   {
     "id": "college-professor",
     "title": "College Professor",
@@ -1900,13 +1965,13 @@
         "category": "interpersonal",
         "timeWeight": 0.35,
         "llmExposureTier": "E1",
-        "automationRisk": 25,
+        "automationRisk": 16,
         "augmentationPotential": 55,
         "automationSubScores": {
-          "routineness": 8,
-          "dataIntensity": 8,
-          "physicalBottleneck": 8,
-          "socialBottleneck": 1
+          "routineness": 5,
+          "dataIntensity": 5,
+          "physicalBottleneck": 4,
+          "socialBottleneck": 2
         },
         "augmentationSubScores": {
           "informationSynthesis": 18,
@@ -1922,19 +1987,19 @@
         "category": "cognitive",
         "timeWeight": 0.35,
         "llmExposureTier": "E2",
-        "automationRisk": 48,
-        "augmentationPotential": 72,
+        "automationRisk": 24,
+        "augmentationPotential": 50,
         "automationSubScores": {
-          "routineness": 8,
-          "dataIntensity": 20,
-          "physicalBottleneck": 12,
-          "socialBottleneck": 8
+          "routineness": 6,
+          "dataIntensity": 12,
+          "physicalBottleneck": 4,
+          "socialBottleneck": 2
         },
         "augmentationSubScores": {
-          "informationSynthesis": 24,
-          "decisionSupport": 20,
-          "creativeLeverage": 16,
-          "productivityMultiplier": 12
+          "informationSynthesis": 20,
+          "decisionSupport": 14,
+          "creativeLeverage": 10,
+          "productivityMultiplier": 6
         }
       },
       {
@@ -1942,15 +2007,15 @@
         "name": "Student Advising & Mentorship",
         "description": "Advise students on course selection, career pathways, and research opportunities; mentor thesis and dissertation students through their academic journeys.",
         "category": "interpersonal",
-        "timeWeight": 0.20,
+        "timeWeight": 0.2,
         "llmExposureTier": "E1",
-        "automationRisk": 20,
+        "automationRisk": 14,
         "augmentationPotential": 42,
         "automationSubScores": {
-          "routineness": 6,
-          "dataIntensity": 8,
-          "physicalBottleneck": 6,
-          "socialBottleneck": 0
+          "routineness": 4,
+          "dataIntensity": 6,
+          "physicalBottleneck": 2,
+          "socialBottleneck": 2
         },
         "augmentationSubScores": {
           "informationSynthesis": 14,
@@ -1964,15 +2029,15 @@
         "name": "Curriculum Development & Assessment Design",
         "description": "Design course syllabi, develop learning outcomes, create assessments, and evaluate instructional effectiveness through student performance data.",
         "category": "cognitive",
-        "timeWeight": 0.10,
+        "timeWeight": 0.1,
         "llmExposureTier": "E2",
-        "automationRisk": 55,
+        "automationRisk": 12,
         "augmentationPotential": 68,
         "automationSubScores": {
-          "routineness": 14,
-          "dataIntensity": 16,
-          "physicalBottleneck": 16,
-          "socialBottleneck": 9
+          "routineness": 4,
+          "dataIntensity": 4,
+          "physicalBottleneck": 2,
+          "socialBottleneck": 2
         },
         "augmentationSubScores": {
           "informationSynthesis": 22,
@@ -2016,19 +2081,24 @@
     ],
     "exposureScore": {
       "overall": 52,
-      "automationRisk": 35,
+      "automationRisk": 18,
       "augmentationPotential": 52,
-      "netDisplacement": -17,
+      "netDisplacement": -34,
       "complementarityScore": 72,
       "routineTaskIntensity": -0.5,
       "timeline": "mid-term",
       "wageEffect": 8,
       "confidence": "medium"
     },
-    "bottleneckTaskIds": ["cp-student-advising", "cp-teaching"],
-    "similarOccupationIds": ["k12-teacher", "instructional-designer"]
+    "bottleneckTaskIds": [
+      "cp-student-advising",
+      "cp-teaching"
+    ],
+    "similarOccupationIds": [
+      "k12-teacher",
+      "instructional-designer"
+    ]
   },
-
   {
     "id": "instructional-designer",
     "title": "Instructional Designer",
@@ -2045,18 +2115,18 @@
         "category": "cognitive",
         "timeWeight": 0.35,
         "llmExposureTier": "E2",
-        "automationRisk": 65,
-        "augmentationPotential": 72,
+        "automationRisk": 64,
+        "augmentationPotential": 63,
         "automationSubScores": {
-          "routineness": 16,
+          "routineness": 15,
           "dataIntensity": 16,
           "physicalBottleneck": 18,
           "socialBottleneck": 15
         },
         "augmentationSubScores": {
-          "informationSynthesis": 20,
-          "decisionSupport": 16,
-          "creativeLeverage": 20,
+          "informationSynthesis": 17,
+          "decisionSupport": 13,
+          "creativeLeverage": 17,
           "productivityMultiplier": 16
         }
       },
@@ -2111,19 +2181,19 @@
         "category": "cognitive",
         "timeWeight": 0.15,
         "llmExposureTier": "E2",
-        "automationRisk": 70,
-        "augmentationPotential": 55,
+        "automationRisk": 63,
+        "augmentationPotential": 45,
         "automationSubScores": {
-          "routineness": 18,
-          "dataIntensity": 22,
-          "physicalBottleneck": 18,
+          "routineness": 14,
+          "dataIntensity": 21,
+          "physicalBottleneck": 16,
           "socialBottleneck": 12
         },
         "augmentationSubScores": {
-          "informationSynthesis": 18,
-          "decisionSupport": 16,
+          "informationSynthesis": 14,
+          "decisionSupport": 12,
           "creativeLeverage": 10,
-          "productivityMultiplier": 11
+          "productivityMultiplier": 9
         }
       }
     ],
@@ -2170,10 +2240,15 @@
       "wageEffect": 2,
       "confidence": "medium"
     },
-    "bottleneckTaskIds": ["id-needs-analysis", "id-assessment-design"],
-    "similarOccupationIds": ["k12-teacher", "college-professor"]
+    "bottleneckTaskIds": [
+      "id-needs-analysis",
+      "id-assessment-design"
+    ],
+    "similarOccupationIds": [
+      "k12-teacher",
+      "college-professor"
+    ]
   },
-
   {
     "id": "assembly-line-worker",
     "title": "Assembly Line Worker",
@@ -2191,18 +2266,18 @@
         "timeWeight": 0.45,
         "llmExposureTier": "E0",
         "automationRisk": 88,
-        "augmentationPotential": 15,
+        "augmentationPotential": 12,
         "automationSubScores": {
-          "routineness": 24,
-          "dataIntensity": 8,
-          "physicalBottleneck": 30,
-          "socialBottleneck": 26
+          "routineness": 25,
+          "dataIntensity": 13,
+          "physicalBottleneck": 25,
+          "socialBottleneck": 25
         },
         "augmentationSubScores": {
           "informationSynthesis": 3,
           "decisionSupport": 4,
-          "creativeLeverage": 3,
-          "productivityMultiplier": 5
+          "creativeLeverage": 2,
+          "productivityMultiplier": 3
         }
       },
       {
@@ -2232,15 +2307,15 @@
         "name": "Materials Handling & Line Replenishment",
         "description": "Transport raw materials and components to workstations using carts and hoists; maintain inventory of fasteners and consumables on the production line.",
         "category": "physical",
-        "timeWeight": 0.20,
+        "timeWeight": 0.2,
         "llmExposureTier": "E0",
         "automationRisk": 85,
         "augmentationPotential": 12,
         "automationSubScores": {
           "routineness": 23,
-          "dataIntensity": 8,
-          "physicalBottleneck": 28,
-          "socialBottleneck": 26
+          "dataIntensity": 12,
+          "physicalBottleneck": 25,
+          "socialBottleneck": 25
         },
         "augmentationSubScores": {
           "informationSynthesis": 2,
@@ -2254,15 +2329,15 @@
         "name": "Production Documentation",
         "description": "Record production counts, downtime events, and defect codes in digital or paper-based production logs at end of each shift.",
         "category": "cognitive",
-        "timeWeight": 0.10,
+        "timeWeight": 0.1,
         "llmExposureTier": "E1",
-        "automationRisk": 75,
+        "automationRisk": 89,
         "augmentationPotential": 38,
         "automationSubScores": {
-          "routineness": 22,
-          "dataIntensity": 18,
-          "physicalBottleneck": 20,
-          "socialBottleneck": 15
+          "routineness": 25,
+          "dataIntensity": 24,
+          "physicalBottleneck": 22,
+          "socialBottleneck": 18
         },
         "augmentationSubScores": {
           "informationSynthesis": 12,
@@ -2315,10 +2390,15 @@
       "wageEffect": -35,
       "confidence": "high"
     },
-    "bottleneckTaskIds": ["alw-quality-check", "alw-documentation"],
-    "similarOccupationIds": ["cnc-machine-operator", "quality-control-inspector"]
+    "bottleneckTaskIds": [
+      "alw-quality-check",
+      "alw-documentation"
+    ],
+    "similarOccupationIds": [
+      "cnc-machine-operator",
+      "quality-control-inspector"
+    ]
   },
-
   {
     "id": "quality-control-inspector",
     "title": "Quality Control Inspector",
@@ -2333,15 +2413,15 @@
         "name": "Visual & Dimensional Inspection",
         "description": "Examine products using calipers, gauges, and optical comparators; identify surface defects, dimensional out-of-tolerance conditions, and assembly errors.",
         "category": "physical",
-        "timeWeight": 0.40,
+        "timeWeight": 0.4,
         "llmExposureTier": "E1",
-        "automationRisk": 72,
+        "automationRisk": 75,
         "augmentationPotential": 48,
         "automationSubScores": {
-          "routineness": 22,
-          "dataIntensity": 16,
+          "routineness": 25,
+          "dataIntensity": 17,
           "physicalBottleneck": 18,
-          "socialBottleneck": 16
+          "socialBottleneck": 15
         },
         "augmentationSubScores": {
           "informationSynthesis": 14,
@@ -2357,10 +2437,10 @@
         "category": "cognitive",
         "timeWeight": 0.25,
         "llmExposureTier": "E2",
-        "automationRisk": 70,
+        "automationRisk": 72,
         "augmentationPotential": 65,
         "automationSubScores": {
-          "routineness": 20,
+          "routineness": 22,
           "dataIntensity": 22,
           "physicalBottleneck": 16,
           "socialBottleneck": 12
@@ -2377,7 +2457,7 @@
         "name": "Nonconformance Reporting",
         "description": "Create and track nonconformance reports (NCRs), coordinate with engineering and production on root cause analysis and corrective action plans.",
         "category": "cognitive",
-        "timeWeight": 0.20,
+        "timeWeight": 0.2,
         "llmExposureTier": "E2",
         "automationRisk": 65,
         "augmentationPotential": 60,
@@ -2460,10 +2540,15 @@
       "wageEffect": -10,
       "confidence": "medium"
     },
-    "bottleneckTaskIds": ["qci-supplier-audit", "qci-ncr-documentation"],
-    "similarOccupationIds": ["assembly-line-worker", "industrial-engineer"]
+    "bottleneckTaskIds": [
+      "qci-supplier-audit",
+      "qci-ncr-documentation"
+    ],
+    "similarOccupationIds": [
+      "assembly-line-worker",
+      "industrial-engineer"
+    ]
   },
-
   {
     "id": "industrial-engineer",
     "title": "Industrial Engineer",
@@ -2478,21 +2563,21 @@
         "name": "Process Analysis & Work Study",
         "description": "Conduct time-motion studies, value stream mapping, and process capability analyses to identify inefficiencies and quantify improvement opportunities.",
         "category": "cognitive",
-        "timeWeight": 0.30,
+        "timeWeight": 0.3,
         "llmExposureTier": "E2",
-        "automationRisk": 62,
-        "augmentationPotential": 72,
+        "automationRisk": 22,
+        "augmentationPotential": 55,
         "automationSubScores": {
-          "routineness": 16,
-          "dataIntensity": 22,
-          "physicalBottleneck": 14,
-          "socialBottleneck": 10
+          "routineness": 6,
+          "dataIntensity": 10,
+          "physicalBottleneck": 4,
+          "socialBottleneck": 2
         },
         "augmentationSubScores": {
-          "informationSynthesis": 24,
-          "decisionSupport": 22,
+          "informationSynthesis": 16,
+          "decisionSupport": 14,
           "creativeLeverage": 12,
-          "productivityMultiplier": 14
+          "productivityMultiplier": 13
         }
       },
       {
@@ -2502,19 +2587,19 @@
         "category": "cognitive",
         "timeWeight": 0.25,
         "llmExposureTier": "E2",
-        "automationRisk": 55,
-        "augmentationPotential": 75,
+        "automationRisk": 20,
+        "augmentationPotential": 55,
         "automationSubScores": {
-          "routineness": 12,
-          "dataIntensity": 22,
-          "physicalBottleneck": 12,
-          "socialBottleneck": 9
+          "routineness": 4,
+          "dataIntensity": 10,
+          "physicalBottleneck": 4,
+          "socialBottleneck": 2
         },
         "augmentationSubScores": {
-          "informationSynthesis": 22,
-          "decisionSupport": 24,
-          "creativeLeverage": 14,
-          "productivityMultiplier": 15
+          "informationSynthesis": 14,
+          "decisionSupport": 16,
+          "creativeLeverage": 13,
+          "productivityMultiplier": 12
         }
       },
       {
@@ -2524,13 +2609,13 @@
         "category": "interpersonal",
         "timeWeight": 0.25,
         "llmExposureTier": "E1",
-        "automationRisk": 35,
+        "automationRisk": 20,
         "augmentationPotential": 55,
         "automationSubScores": {
-          "routineness": 8,
-          "dataIntensity": 12,
-          "physicalBottleneck": 8,
-          "socialBottleneck": 7
+          "routineness": 4,
+          "dataIntensity": 8,
+          "physicalBottleneck": 4,
+          "socialBottleneck": 4
         },
         "augmentationSubScores": {
           "informationSynthesis": 16,
@@ -2544,15 +2629,15 @@
         "name": "Capacity Planning & Scheduling",
         "description": "Develop production schedules, model capacity constraints, and perform demand-supply matching to optimize equipment utilization and on-time delivery.",
         "category": "cognitive",
-        "timeWeight": 0.20,
+        "timeWeight": 0.2,
         "llmExposureTier": "E2",
-        "automationRisk": 68,
+        "automationRisk": 26,
         "augmentationPotential": 70,
         "automationSubScores": {
-          "routineness": 18,
-          "dataIntensity": 24,
-          "physicalBottleneck": 14,
-          "socialBottleneck": 12
+          "routineness": 8,
+          "dataIntensity": 12,
+          "physicalBottleneck": 4,
+          "socialBottleneck": 2
         },
         "augmentationSubScores": {
           "informationSynthesis": 20,
@@ -2596,19 +2681,24 @@
     ],
     "exposureScore": {
       "overall": 58,
-      "automationRisk": 55,
+      "automationRisk": 22,
       "augmentationPotential": 58,
-      "netDisplacement": -3,
+      "netDisplacement": -36,
       "complementarityScore": 70,
       "routineTaskIntensity": 0.1,
       "timeline": "mid-term",
       "wageEffect": 10,
       "confidence": "medium"
     },
-    "bottleneckTaskIds": ["ie-lean-kaizen", "ie-process-analysis"],
-    "similarOccupationIds": ["quality-control-inspector", "data-scientist"]
+    "bottleneckTaskIds": [
+      "ie-lean-kaizen",
+      "ie-process-analysis"
+    ],
+    "similarOccupationIds": [
+      "quality-control-inspector",
+      "data-scientist"
+    ]
   },
-
   {
     "id": "cnc-machine-operator",
     "title": "CNC Machine Operator",
@@ -2623,14 +2713,14 @@
         "name": "Machine Setup & Tooling",
         "description": "Install tooling, set work offsets, load G-code programs, configure cutting parameters, and verify setup with trial runs before production.",
         "category": "physical",
-        "timeWeight": 0.30,
+        "timeWeight": 0.3,
         "llmExposureTier": "E1",
-        "automationRisk": 65,
+        "automationRisk": 68,
         "augmentationPotential": 52,
         "automationSubScores": {
-          "routineness": 18,
+          "routineness": 20,
           "dataIntensity": 14,
-          "physicalBottleneck": 18,
+          "physicalBottleneck": 19,
           "socialBottleneck": 15
         },
         "augmentationSubScores": {
@@ -2645,7 +2735,7 @@
         "name": "Production Run Monitoring",
         "description": "Monitor machine operation during production runs, watch for tool wear, chatter, or surface finish anomalies, and make minor in-cycle adjustments.",
         "category": "physical",
-        "timeWeight": 0.30,
+        "timeWeight": 0.3,
         "llmExposureTier": "E0",
         "automationRisk": 72,
         "augmentationPotential": 35,
@@ -2669,10 +2759,10 @@
         "category": "physical",
         "timeWeight": 0.25,
         "llmExposureTier": "E1",
-        "automationRisk": 68,
+        "automationRisk": 69,
         "augmentationPotential": 48,
         "automationSubScores": {
-          "routineness": 20,
+          "routineness": 21,
           "dataIntensity": 18,
           "physicalBottleneck": 16,
           "socialBottleneck": 14
@@ -2692,7 +2782,7 @@
         "timeWeight": 0.15,
         "llmExposureTier": "E2",
         "automationRisk": 72,
-        "augmentationPotential": 68,
+        "augmentationPotential": 59,
         "automationSubScores": {
           "routineness": 16,
           "dataIntensity": 22,
@@ -2700,9 +2790,9 @@
           "socialBottleneck": 16
         },
         "augmentationSubScores": {
-          "informationSynthesis": 20,
-          "decisionSupport": 20,
-          "creativeLeverage": 14,
+          "informationSynthesis": 16,
+          "decisionSupport": 16,
+          "creativeLeverage": 13,
           "productivityMultiplier": 14
         }
       }
@@ -2750,7 +2840,13 @@
       "wageEffect": -12,
       "confidence": "medium"
     },
-    "bottleneckTaskIds": ["cnc-machine-setup", "cnc-program-editing"],
-    "similarOccupationIds": ["assembly-line-worker", "quality-control-inspector"]
+    "bottleneckTaskIds": [
+      "cnc-machine-setup",
+      "cnc-program-editing"
+    ],
+    "similarOccupationIds": [
+      "assembly-line-worker",
+      "quality-control-inspector"
+    ]
   }
 ]
