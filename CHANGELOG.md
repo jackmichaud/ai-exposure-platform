@@ -8,6 +8,23 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
+- **Phase 2 — Static Pages**
+  - `src/components/layout/Sidebar.tsx` — NEW; `hidden lg:flex` sidebar with NavLink active states
+  - `src/components/charts/utils/createColorScale.ts` — D3 RdYlBu sequential scale (high=red, low=blue)
+  - `src/components/charts/utils/formatScore.ts` — `formatScore`, `formatWage`, `formatWageShort`, `getTextColor`
+  - `src/components/charts/utils/createTooltip.ts` — D3 tooltip factory
+  - `src/components/charts/HeatmapChart.tsx` — D3 heatmap with per-industry columns, hover tooltip, click navigation, mobile card-list fallback
+  - `src/components/charts/AutomationGauge.tsx` — semi-circle SVG gauge with D3 arc paths, colored zones, animated needle
+  - `src/components/charts/SkillImpactBar.tsx` — grouped skill bars (gained/displaced/transformed), Tailwind-only
+  - `src/components/charts/WageProjection.tsx` — current vs projected wage with directional arrow
+  - `src/components/OccupationComparison.tsx` — similar occupation mini-cards linked to profiles
+  - `src/components/TaskBreakdown.tsx` — sortable table (desktop) + card list (mobile) with risk color tinting
+  - `src/pages/OccupationProfile.tsx` — full profile page: header with score badge, sub-scores grid, 2/3+1/3 layout, task breakdown, Start Debate CTA
+  - Updated `src/App.tsx` — added `/occupation/:id` route
+  - Updated `src/components/layout/Header.tsx` — added mobile hamburger with slide-in drawer
+  - Updated `src/components/layout/PageShell.tsx` — flex layout with sidebar + main content
+  - Updated `src/pages/Dashboard.tsx` — full heatmap dashboard with industry, timeline, and education filters
+
 - `src/api/dataApi.ts` — Data access layer with `getIndustries()`, `getOccupations(filters?)`, `getOccupation(id)`, `getSimilarOccupations(id, limit)`, and `getFilterOptions()`; filtering by industry, wage range, education level, and timeline; sorting by exposure, wage, or name; similar occupations from pre-computed IDs with same-industry fallback
 
 - `src/data/industries.json` — Static data for all 5 industries (Healthcare, Finance & Insurance, Technology, Education, Manufacturing) with id, name, description, and occupationCount

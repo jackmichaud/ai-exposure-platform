@@ -4,6 +4,7 @@ import PageShell from './components/layout/PageShell'
 import Dashboard from './pages/Dashboard'
 import ResearchPage from './pages/ResearchPage'
 import DebateArena from './pages/DebateArena'
+import OccupationProfile from './pages/OccupationProfile'
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
             <Route path="/" element={<Dashboard />} />
             <Route path="/research" element={<ResearchPage />} />
             <Route path="/debate" element={<DebateArena />} />
+            <Route path="/occupation/:id" element={<OccupationProfile />} />
           </Routes>
         </PageShell>
       </div>

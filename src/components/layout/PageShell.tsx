@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import Sidebar from './Sidebar'
 
 interface Props {
   children: ReactNode
@@ -6,8 +7,9 @@ interface Props {
 
 export default function PageShell({ children }: Props) {
   return (
-    <main className="max-w-7xl mx-auto px-6 py-8">
-      {children}
-    </main>
+    <div className="flex max-w-7xl mx-auto">
+      <Sidebar />
+      <main className="flex-1 min-w-0 px-6 py-8">{children}</main>
+    </div>
   )
 }
