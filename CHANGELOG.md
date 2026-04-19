@@ -8,6 +8,21 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
+- **Phase 4 — Debate Engine**
+  - `api/debate.ts` — Vercel Edge Function SSE proxy; streams Claude API responses as `data: { token }` events; CORS headers; graceful error forwarding
+  - `.env.example` — documents server-side `CLAUDE_API_KEY` variable
+  - `vite.config.ts` — added dev proxy: `/api` → `http://localhost:3000` for `vercel dev` compatibility
+  - `src/api/claudeClient.ts` — `streamTurn()` async generator; POSTs to `/api/debate`, reads SSE stream, yields tokens; retry on 429 with exponential backoff (1s/2s/4s, max 3 attempts); 30s timeout per attempt via `AbortSignal.timeout`; respects caller `AbortSignal`
+  - `src/context/DebateContext.tsx` — `DebateProvider` + `useDebateContext()` hook; reducer handles `START_DEBATE`, `SET_SPEAKER`, `APPEND_TOKEN`, `COMPLETE_TURN`, `SET_SUMMARY`, `SET_STATUS`, `SET_ERROR`; `APPEND_TOKEN` creates or updates the matching round entry
+  - `src/agents/personas.ts` — `PERSONAS` array and `PERSONA_ORDER` with metadata (id, name, shortName, icon, Tailwind border/bg/text color classes) for all four debate personas
+  - `src/agents/promptBuilder.ts` — `buildSystemPrompt()`, `buildRound1Prompt()`, `buildRound2Prompt()`, `buildRound3Prompt()`, `buildSynthesisPrompt()`, `formatPriorResponses()`; exact prompt text from `docs/agents/prompt-templates.md`
+  - `src/agents/debateOrchestrator.ts` — `runDebate()` orchestrates 3 rounds × 4 personas sequentially; streams each turn via `streamTurn()`; dispatches all actions; parses synthesis with `parseSynthesis()` which extracts structured sections via regex
+  - `src/components/PersonaPanel.tsx` — card with colored top border; typing indicator (3 animated dots) when speaker hasn't started; streaming cursor when text is flowing; rounds badge; scrollable response body
+  - `src/components/DebateControls.tsx` — status-driven UI: idle shows occupation name + Start button; debating shows round progress bar + current speaker + Cancel; summarizing shows spinner; complete shows badge + New Debate; error shows message + Retry
+  - `src/components/DebateSummaryPanel.tsx` — renders streaming synthesis during summarizing; full 6-section structured view when complete (Key Takeaways, Risk Assessment with color-coded badge, Recommendations, Projected Changes grid, Agreement/Disagreement lists)
+  - `src/pages/DebateArena.tsx` — full replacement; occupation selector (grouped by industry) with summary card; pre-selects from `?occupation=` URL param; `AbortController` ref for cancellation; derives `currentRound` and per-persona response from reducer state; 2×2 `PersonaPanel` grid
+  - Updated `src/App.tsx` — wrapped routes with `<DebateProvider>` inside `<FilterProvider>`
+
 - **Phase 3 — FilterContext, Responsive Polish, Chart Animations**
   - `src/context/FilterContext.tsx` — NEW; `FilterProvider` + `useFilterContext()` hook; hydrates state from URL search params on mount; syncs back to URL only on `/` route; supports `industry`, `education`, `timeline`, `sortBy`, `wageMin`, `wageMax` params for shareable links
   - `src/components/filters/IndustryFilter.tsx` — NEW; pill-style industry toggle buttons reading from context; toggle off by re-clicking active pill

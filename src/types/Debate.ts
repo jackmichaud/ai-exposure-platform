@@ -27,12 +27,13 @@ export interface DebateState {
   rounds: DebateRound[];
   currentSpeaker: PersonaId | null;
   summary: DebateSummary | null;
+  errorMessage: string | null;
 }
 
 export type DebateAction =
   | { type: "START_DEBATE"; payload: { occupationId: string } }
   | { type: "SET_SPEAKER"; payload: PersonaId | null }
-  | { type: "APPEND_TOKEN"; payload: { personaId: PersonaId; token: string } }
+  | { type: "APPEND_TOKEN"; payload: { personaId: PersonaId; token: string; round: 1 | 2 | 3 } }
   | { type: "COMPLETE_TURN"; payload: { personaId: PersonaId; round: number } }
   | { type: "SET_SUMMARY"; payload: DebateSummary }
   | { type: "SET_STATUS"; payload: DebateState["status"] }
