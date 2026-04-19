@@ -147,7 +147,7 @@ export default function TaskBreakdown({ tasks }: Props) {
           return (
             <div
               key={task.id}
-              className="bg-slate-800 rounded-lg p-3"
+              className="bg-slate-800 rounded-lg p-3 transition-all duration-150 hover:shadow-md"
               style={{ borderLeft: `3px solid ${riskColor}` }}
             >
               <div className="flex items-start justify-between gap-2">

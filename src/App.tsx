@@ -5,21 +5,24 @@ import Dashboard from './pages/Dashboard'
 import ResearchPage from './pages/ResearchPage'
 import DebateArena from './pages/DebateArena'
 import OccupationProfile from './pages/OccupationProfile'
+import { FilterProvider } from './context/FilterContext'
 
 export default function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-slate-950">
-        <Header />
-        <PageShell>
-          <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/research" element={<ResearchPage />} />
-            <Route path="/debate" element={<DebateArena />} />
-            <Route path="/occupation/:id" element={<OccupationProfile />} />
-          </Routes>
-        </PageShell>
-      </div>
+      <FilterProvider>
+        <div className="min-h-screen bg-slate-950">
+          <Header />
+          <PageShell>
+            <Routes>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/research" element={<ResearchPage />} />
+              <Route path="/debate" element={<DebateArena />} />
+              <Route path="/occupation/:id" element={<OccupationProfile />} />
+            </Routes>
+          </PageShell>
+        </div>
+      </FilterProvider>
     </BrowserRouter>
   )
 }

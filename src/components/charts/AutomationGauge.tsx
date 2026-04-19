@@ -1,3 +1,4 @@
+import { useRef, useEffect } from 'react'
 import * as d3 from 'd3'
 import { scoreToColor } from './utils/createColorScale'
 
@@ -31,12 +32,8 @@ export default function AutomationGauge({ score, label }: Props) {
   const clampedScore = Math.max(0, Math.min(100, score))
   const scoreAngle = scoreToAngle(clampedScore)
   const fillColor = scoreToColor(clampedScore)
-  const needleLen = R_INNER - 10
-  const angle = scoreAngle
-  const needleX = CX + needleLen * Math.sin(angle)
-  const needleY = CY - needleLen * Math.cos(angle)
 
-  // Background zone arcs (0=left=-π/2, 100=right=+π/2)
+  // Background zone arcs
   const greenStart = GAUGE_START
   const greenEnd = scoreToAngle(30)
   const amberStart = greenEnd
@@ -51,6 +48,27 @@ export default function AutomationGauge({ score, label }: Props) {
   // Value arc from 0 (left) to score
   const valuePath = buildArc(GAUGE_START, scoreAngle)
 
+  // Needle ref for D3 animation
+  const needleRef = useRef<SVGLineElement>(null)
+
+  useEffect(() => {
+    if (!needleRef.current) return
+
+    const angle = scoreToAngle(clampedScore)
+    const len = R_INNER - 10
+
+    d3.select(needleRef.current)
+      .attr('x1', CX)
+      .attr('y1', CY)
+      .attr('x2', CX)
+      .attr('y2', CY - len) // start pointing straight up (score ~50)
+      .transition()
+      .duration(800)
+      .ease(d3.easeElasticOut)
+      .attr('x2', CX + len * Math.sin(angle))
+      .attr('y2', CY - len * Math.cos(angle))
+  }, [clampedScore])
+
   return (
     <svg viewBox="0 0 200 120" className="w-full max-w-xs mx-auto">
       {/* Background zones */}
@@ -61,12 +79,13 @@ export default function AutomationGauge({ score, label }: Props) {
       {/* Value arc */}
       <path d={valuePath} fill={fillColor} transform={`translate(${CX},${CY})`} />
 
-      {/* Needle */}
+      {/* Needle — animated via useRef */}
       <line
+        ref={needleRef}
         x1={CX}
         y1={CY}
-        x2={needleX}
-        y2={needleY}
+        x2={CX}
+        y2={CY - (R_INNER - 10)}
         stroke="#F1F5F9"
         strokeWidth={3}
         strokeLinecap="round"

@@ -28,6 +28,7 @@ export default function HeatmapChart({ data, industries, onCellClick }: Props) {
   const svgRef = useRef<SVGSVGElement>(null)
   const { width: containerWidth } = useContainerSize(containerRef)
   const [tooltip, setTooltip] = useState<TooltipState | null>(null)
+  const isFirstRender = useRef<boolean>(true)
 
   const colorScale = createColorScale()
 
@@ -36,7 +37,12 @@ export default function HeatmapChart({ data, industries, onCellClick }: Props) {
     if (!data.length || !industries.length) return
 
     const svg = d3.select(svgRef.current)
-    svg.selectAll('*').remove()
+    const firstRender = isFirstRender.current
+
+    if (firstRender) {
+      // Full redraw on first render
+      svg.selectAll('*').remove()
+    }
 
     const numCols = industries.length
     const colGap = 8
@@ -56,6 +62,11 @@ export default function HeatmapChart({ data, industries, onCellClick }: Props) {
     const svgHeight = COL_HEADER_H + maxRows * (CELL_H + CELL_GAP)
 
     svg.attr('height', svgHeight)
+
+    if (!firstRender) {
+      // Data update: transition fill colors of existing cells, rebuild if structure changed
+      svg.selectAll('*').remove()
+    }
 
     // Column headers
     industries.forEach((ind, colIdx) => {
@@ -88,7 +99,16 @@ export default function HeatmapChart({ data, industries, onCellClick }: Props) {
             ? occ.title.slice(0, maxTitleChars - 1) + '…'
             : occ.title
 
-        const g = svg.append('g').style('cursor', 'pointer')
+        // Calculate stagger delay: capped at 400ms
+        const delay = firstRender ? Math.min((colIdx * maxRows + rowIdx) * 20, 400) : 0
+
+        const g = svg
+          .append('g')
+          .attr('class', 'cell')
+          .style('cursor', 'pointer')
+          .attr('tabindex', 0)
+          .attr('role', 'button')
+          .attr('aria-label', `${occ.title}, ${ind.name}, exposure score ${Math.round(score)}, ${formatWage(occ.medianWage)}`)
 
         const rect = g
           .append('rect')
@@ -97,7 +117,22 @@ export default function HeatmapChart({ data, industries, onCellClick }: Props) {
           .attr('width', colW)
           .attr('height', CELL_H)
           .attr('rx', 6)
-          .attr('fill', fillColor)
+
+        if (firstRender) {
+          // Start invisible, then fade in with stagger
+          g.style('opacity', 0)
+          rect.attr('fill', fillColor)
+          g.transition()
+            .delay(delay)
+            .duration(400)
+            .ease(d3.easeCubicOut)
+            .style('opacity', 1)
+        } else {
+          // Transition fill color on data update
+          g.style('opacity', 1)
+          rect
+            .attr('fill', fillColor)
+        }
 
         g.append('text')
           .attr('x', x + 8)
@@ -118,6 +153,10 @@ export default function HeatmapChart({ data, industries, onCellClick }: Props) {
           .text(Math.round(score).toString())
 
         g.on('mouseenter', (event: MouseEvent) => {
+          // Dim all other cells
+          svg.selectAll<SVGGElement, unknown>('g.cell').style('opacity', 0.3)
+          d3.select<SVGGElement, unknown>(event.currentTarget as SVGGElement).style('opacity', 1)
+
           rect
             .attr('stroke', '#F1F5F9')
             .attr('stroke-width', 2)
@@ -149,6 +188,12 @@ export default function HeatmapChart({ data, industries, onCellClick }: Props) {
         })
 
         g.on('mouseleave', () => {
+          // Restore all cells
+          svg.selectAll<SVGGElement, unknown>('g.cell')
+            .transition()
+            .duration(150)
+            .style('opacity', 1)
+
           rect.attr('stroke', null).attr('stroke-width', null)
           setTooltip(null)
         })
@@ -156,8 +201,18 @@ export default function HeatmapChart({ data, industries, onCellClick }: Props) {
         g.on('click', () => {
           onCellClick(occ.id)
         })
+
+        // Keyboard: space/enter triggers click
+        g.on('keydown', (event: KeyboardEvent) => {
+          if (event.key === ' ' || event.key === 'Enter') {
+            event.preventDefault()
+            onCellClick(occ.id)
+          }
+        })
       })
     })
+
+    isFirstRender.current = false
   }, [data, industries, containerWidth])
 
   const isMobile = containerWidth > 0 && containerWidth < MOBILE_BREAKPOINT
@@ -183,7 +238,7 @@ export default function HeatmapChart({ data, industries, onCellClick }: Props) {
                 <div
                   key={occ.id}
                   onClick={() => onCellClick(occ.id)}
-                  className="flex items-center justify-between bg-slate-800 rounded-lg px-4 py-3 cursor-pointer hover:bg-slate-700 transition-colors"
+                  className="flex items-center justify-between bg-slate-800 rounded-lg px-4 py-3 cursor-pointer hover:bg-slate-700 transition-all duration-150 hover:shadow-md"
                 >
                   <div className="min-w-0">
                     <p className="text-sm font-medium text-slate-100 truncate">{occ.title}</p>
@@ -203,7 +258,34 @@ export default function HeatmapChart({ data, industries, onCellClick }: Props) {
       )}
 
       {data.length > 0 && !isMobile && (
-        <svg ref={svgRef} width="100%" className="overflow-visible" />
+        <svg ref={svgRef} width="100%" className="overflow-visible" role="img" aria-label="AI exposure heatmap by industry" />
+      )}
+
+      {/* Screen reader alternative table */}
+      {data.length > 0 && !isMobile && (
+        <table className="sr-only" aria-label="AI exposure data table">
+          <thead>
+            <tr>
+              <th scope="col">Occupation</th>
+              <th scope="col">Industry</th>
+              <th scope="col">Exposure Score</th>
+              <th scope="col">Median Wage</th>
+            </tr>
+          </thead>
+          <tbody>
+            {data.map((occ) => {
+              const ind = industries.find((i) => i.id === occ.industryId)
+              return (
+                <tr key={occ.id}>
+                  <td>{occ.title}</td>
+                  <td>{ind?.name ?? occ.industryId}</td>
+                  <td>{Math.round(occ.exposureScore.overall)}</td>
+                  <td>{formatWage(occ.medianWage)}</td>
+                </tr>
+              )
+            })}
+          </tbody>
+        </table>
       )}
 
       {tooltip && (

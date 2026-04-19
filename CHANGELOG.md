@@ -8,6 +8,22 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
+- **Phase 3 — FilterContext, Responsive Polish, Chart Animations**
+  - `src/context/FilterContext.tsx` — NEW; `FilterProvider` + `useFilterContext()` hook; hydrates state from URL search params on mount; syncs back to URL only on `/` route; supports `industry`, `education`, `timeline`, `sortBy`, `wageMin`, `wageMax` params for shareable links
+  - `src/components/filters/IndustryFilter.tsx` — NEW; pill-style industry toggle buttons reading from context; toggle off by re-clicking active pill
+  - `src/components/filters/TimelineToggle.tsx` — NEW; near/mid/long-term toggle buttons with indigo active state; toggle off to null
+  - `src/components/filters/EducationFilter.tsx` — NEW; styled `<select>` for education level; "All levels" option clears filter
+  - `src/components/filters/WageRangeSlider.tsx` — NEW; dual range sliders (min/max) with `$Xk–$Yk` labels; dispatches on `mouseup`/`touchend` to avoid excessive re-renders
+  - `src/components/filters/FilterBar.tsx` — NEW; composes all four filter components; shows result count with `(filtered)` when active; conditional Clear button
+  - Updated `src/pages/Dashboard.tsx` — replaced all local `useState` filter logic with `useFilterContext()`; replaced inline filter bar with `<FilterBar />`; filtering/sorting driven by context state
+  - Updated `src/App.tsx` — wrapped routes with `FilterProvider` (inside `BrowserRouter` for hook access)
+  - Updated `src/components/OccupationComparison.tsx` — mobile accordion with `max-height` CSS transition (300ms ease); hidden by default on mobile, always visible on `lg+`; toggle button with animated chevron
+  - Updated `src/components/charts/HeatmapChart.tsx` — entry animation (400ms, staggered 20ms per cell, capped at 400ms); hover dimming of non-hovered cells (150ms restore); keyboard accessibility (`tabIndex`, `role="button"`, `aria-label`, space/enter keydown); visually-hidden `<table>` for screen readers; `transition-all duration-150 hover:shadow-md` on mobile cards
+  - Updated `src/components/charts/AutomationGauge.tsx` — needle elastic animation on mount/score change via `useRef` + D3 `easeElasticOut` (800ms); initial position at straight-up (score 50) transitioning to actual score
+  - Updated `src/components/TaskBreakdown.tsx` — added `transition-all duration-150 hover:shadow-md` to mobile task cards
+
+### Changed
+
 - **Phase 2 — Static Pages**
   - `src/components/layout/Sidebar.tsx` — NEW; `hidden lg:flex` sidebar with NavLink active states
   - `src/components/charts/utils/createColorScale.ts` — D3 RdYlBu sequential scale (high=red, low=blue)
