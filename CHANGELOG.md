@@ -8,6 +8,8 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
+- `src/api/dataApi.ts` — Data access layer with `getIndustries()`, `getOccupations(filters?)`, `getOccupation(id)`, `getSimilarOccupations(id, limit)`, and `getFilterOptions()`; filtering by industry, wage range, education level, and timeline; sorting by exposure, wage, or name; similar occupations from pre-computed IDs with same-industry fallback
+
 - `src/data/industries.json` — Static data for all 5 industries (Healthcare, Finance & Insurance, Technology, Education, Manufacturing) with id, name, description, and occupationCount
 - `src/data/occupations.json` — Complete static dataset of 19 occupations across all 5 industries; each occupation includes 3–4 tasks with full automation/augmentation sub-scores (4×0–25 each), task time weights summing to 1.0, 4–5 skills with impact classification, a complete ExposureScore (overall, automationRisk, augmentationPotential, netDisplacement, complementarityScore, RTI, timeline, wageEffect, confidence), bottleneckTaskIds, and similarOccupationIds; all weighted averages and displacement direction classifications are mathematically verified
 
