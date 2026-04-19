@@ -2848,5 +2848,1421 @@
       "assembly-line-worker",
       "quality-control-inspector"
     ]
+  },
+  {
+    "id": "procurement-analyst",
+    "title": "Procurement Analyst",
+    "industryId": "defense",
+    "socCode": "13-1023",
+    "medianWage": 78000,
+    "educationLevel": "bachelor",
+    "description": "Analyze defense procurement requirements, evaluate vendor proposals, ensure regulatory compliance with FAR/DFARS, and manage contract documentation for military acquisitions.",
+    "tasks": [
+      {
+        "id": "pa-vendor-evaluation",
+        "name": "Vendor Proposal Evaluation",
+        "description": "Review and score contractor proposals against technical and cost criteria, applying source selection procedures.",
+        "category": "cognitive",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E2",
+        "automationRisk": 55,
+        "augmentationPotential": 72,
+        "automationSubScores": {
+          "routineness": 16,
+          "dataIntensity": 20,
+          "physicalBottleneck": 10,
+          "socialBottleneck": 9
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 22,
+          "decisionSupport": 22,
+          "creativeLeverage": 14,
+          "productivityMultiplier": 14
+        }
+      },
+      {
+        "id": "pa-compliance-review",
+        "name": "Regulatory Compliance Review",
+        "description": "Ensure procurement actions comply with FAR, DFARS, and agency-specific regulations; document compliance determinations.",
+        "category": "cognitive",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E2",
+        "automationRisk": 62,
+        "augmentationPotential": 70,
+        "automationSubScores": {
+          "routineness": 20,
+          "dataIntensity": 22,
+          "physicalBottleneck": 12,
+          "socialBottleneck": 8
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 22,
+          "decisionSupport": 20,
+          "creativeLeverage": 12,
+          "productivityMultiplier": 16
+        }
+      },
+      {
+        "id": "pa-contract-documentation",
+        "name": "Contract Documentation & Reporting",
+        "description": "Draft contract modifications, solicitations, and required reporting; maintain procurement records in government systems.",
+        "category": "cognitive",
+        "timeWeight": 0.30,
+        "llmExposureTier": "E2",
+        "automationRisk": 65,
+        "augmentationPotential": 75,
+        "automationSubScores": {
+          "routineness": 22,
+          "dataIntensity": 20,
+          "physicalBottleneck": 14,
+          "socialBottleneck": 9
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 22,
+          "decisionSupport": 20,
+          "creativeLeverage": 14,
+          "productivityMultiplier": 19
+        }
+      },
+      {
+        "id": "pa-market-research",
+        "name": "Market Research & Price Analysis",
+        "description": "Conduct market surveys, analyze pricing trends, and determine fair and reasonable pricing for government acquisitions.",
+        "category": "cognitive",
+        "timeWeight": 0.20,
+        "llmExposureTier": "E2",
+        "automationRisk": 50,
+        "augmentationPotential": 68,
+        "automationSubScores": {
+          "routineness": 14,
+          "dataIntensity": 18,
+          "physicalBottleneck": 10,
+          "socialBottleneck": 8
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 22,
+          "decisionSupport": 20,
+          "creativeLeverage": 12,
+          "productivityMultiplier": 14
+        }
+      }
+    ],
+    "skills": [
+      { "id": "pa-sk-far-knowledge", "name": "FAR/DFARS Regulatory Knowledge", "impact": "transformed", "relevance": 92 },
+      { "id": "pa-sk-data-analysis", "name": "Quantitative Data Analysis", "impact": "transformed", "relevance": 85 },
+      { "id": "pa-sk-negotiation", "name": "Vendor Negotiation", "impact": "gained", "relevance": 70 },
+      { "id": "pa-sk-documentation", "name": "Contract Documentation", "impact": "displaced", "relevance": 88 }
+    ],
+    "exposureScore": {
+      "overall": 72,
+      "automationRisk": 59,
+      "augmentationPotential": 72,
+      "netDisplacement": -13,
+      "complementarityScore": 60,
+      "routineTaskIntensity": 0.6,
+      "timeline": "near-term",
+      "wageEffect": 5,
+      "confidence": "high"
+    },
+    "bottleneckTaskIds": ["pa-vendor-evaluation"],
+    "similarOccupationIds": ["financial-analyst", "program-analyst", "insurance-underwriter"]
+  },
+  {
+    "id": "naval-shipbuilder",
+    "title": "Naval Shipbuilder",
+    "industryId": "defense",
+    "socCode": "47-2221",
+    "medianWage": 62000,
+    "educationLevel": "high-school",
+    "description": "Fabricate, assemble, and repair structural components of naval vessels including hull sections, decking, and bulkheads using welding, cutting, and heavy equipment.",
+    "tasks": [
+      {
+        "id": "nsb-structural-fabrication",
+        "name": "Structural Fabrication & Welding",
+        "description": "Cut, shape, and weld steel plates, frames, and structural components to precise specifications for ship hulls and superstructures.",
+        "category": "physical",
+        "timeWeight": 0.40,
+        "llmExposureTier": "E0",
+        "automationRisk": 22,
+        "augmentationPotential": 25,
+        "automationSubScores": {
+          "routineness": 10,
+          "dataIntensity": 4,
+          "physicalBottleneck": 4,
+          "socialBottleneck": 4
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 5,
+          "decisionSupport": 8,
+          "creativeLeverage": 5,
+          "productivityMultiplier": 7
+        }
+      },
+      {
+        "id": "nsb-assembly",
+        "name": "Module & Block Assembly",
+        "description": "Assemble large ship sections from prefabricated modules, coordinating fit-up and alignment with rigging and crane operations.",
+        "category": "physical",
+        "timeWeight": 0.30,
+        "llmExposureTier": "E0",
+        "automationRisk": 20,
+        "augmentationPotential": 28,
+        "automationSubScores": {
+          "routineness": 8,
+          "dataIntensity": 4,
+          "physicalBottleneck": 4,
+          "socialBottleneck": 4
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 6,
+          "decisionSupport": 10,
+          "creativeLeverage": 5,
+          "productivityMultiplier": 7
+        }
+      },
+      {
+        "id": "nsb-quality-inspection",
+        "name": "Quality Inspection & Blueprint Reading",
+        "description": "Interpret engineering drawings and specifications; perform dimensional checks and quality inspections on completed work.",
+        "category": "cognitive",
+        "timeWeight": 0.20,
+        "llmExposureTier": "E1",
+        "automationRisk": 28,
+        "augmentationPotential": 38,
+        "automationSubScores": {
+          "routineness": 12,
+          "dataIntensity": 8,
+          "physicalBottleneck": 4,
+          "socialBottleneck": 4
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 10,
+          "decisionSupport": 14,
+          "creativeLeverage": 6,
+          "productivityMultiplier": 8
+        }
+      },
+      {
+        "id": "nsb-safety-maintenance",
+        "name": "Safety Compliance & Tool Maintenance",
+        "description": "Follow shipyard safety protocols, maintain welding equipment and tools, and participate in safety training and hazard identification.",
+        "category": "physical",
+        "timeWeight": 0.10,
+        "llmExposureTier": "E0",
+        "automationRisk": 18,
+        "augmentationPotential": 22,
+        "automationSubScores": {
+          "routineness": 8,
+          "dataIntensity": 4,
+          "physicalBottleneck": 3,
+          "socialBottleneck": 3
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 5,
+          "decisionSupport": 7,
+          "creativeLeverage": 4,
+          "productivityMultiplier": 6
+        }
+      }
+    ],
+    "skills": [
+      { "id": "nsb-sk-welding", "name": "Structural Welding", "impact": "transformed", "relevance": 95 },
+      { "id": "nsb-sk-blueprint", "name": "Blueprint & CAD Reading", "impact": "gained", "relevance": 80 },
+      { "id": "nsb-sk-rigging", "name": "Rigging & Crane Operations", "impact": "displaced", "relevance": 60 },
+      { "id": "nsb-sk-safety", "name": "Maritime Safety Protocols", "impact": "gained", "relevance": 75 }
+    ],
+    "exposureScore": {
+      "overall": 28,
+      "automationRisk": 22,
+      "augmentationPotential": 28,
+      "netDisplacement": -6,
+      "complementarityScore": 48,
+      "routineTaskIntensity": 1.2,
+      "timeline": "long-term",
+      "wageEffect": 2,
+      "confidence": "medium"
+    },
+    "bottleneckTaskIds": ["nsb-structural-fabrication", "nsb-assembly"],
+    "similarOccupationIds": ["cnc-machine-operator", "quality-control-inspector", "renewable-energy-technician"]
+  },
+  {
+    "id": "program-analyst",
+    "title": "Program Analyst",
+    "industryId": "defense",
+    "socCode": "13-1082",
+    "medianWage": 88000,
+    "educationLevel": "bachelor",
+    "description": "Analyze defense program performance, track budgets and schedules, prepare briefings and reports for program management offices, and identify risks and corrective actions.",
+    "tasks": [
+      {
+        "id": "pgma-performance-analysis",
+        "name": "Program Performance Analysis",
+        "description": "Analyze earned value management data, schedule variances, and cost performance indices to assess program health.",
+        "category": "cognitive",
+        "timeWeight": 0.30,
+        "llmExposureTier": "E2",
+        "automationRisk": 60,
+        "augmentationPotential": 78,
+        "automationSubScores": {
+          "routineness": 18,
+          "dataIntensity": 22,
+          "physicalBottleneck": 12,
+          "socialBottleneck": 8
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 24,
+          "decisionSupport": 22,
+          "creativeLeverage": 14,
+          "productivityMultiplier": 18
+        }
+      },
+      {
+        "id": "pgma-reporting",
+        "name": "Reporting & Briefing Preparation",
+        "description": "Draft status reports, executive briefings, Congressional budget justifications, and program review packages.",
+        "category": "cognitive",
+        "timeWeight": 0.30,
+        "llmExposureTier": "E2",
+        "automationRisk": 65,
+        "augmentationPotential": 80,
+        "automationSubScores": {
+          "routineness": 20,
+          "dataIntensity": 20,
+          "physicalBottleneck": 14,
+          "socialBottleneck": 11
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 22,
+          "decisionSupport": 20,
+          "creativeLeverage": 18,
+          "productivityMultiplier": 20
+        }
+      },
+      {
+        "id": "pgma-risk-management",
+        "name": "Risk & Issue Management",
+        "description": "Identify, assess, and track program risks; develop mitigation strategies and coordinate corrective actions with stakeholders.",
+        "category": "cognitive",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E2",
+        "automationRisk": 55,
+        "augmentationPotential": 72,
+        "automationSubScores": {
+          "routineness": 14,
+          "dataIntensity": 18,
+          "physicalBottleneck": 12,
+          "socialBottleneck": 11
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 20,
+          "decisionSupport": 22,
+          "creativeLeverage": 14,
+          "productivityMultiplier": 16
+        }
+      },
+      {
+        "id": "pgma-stakeholder-coordination",
+        "name": "Stakeholder Coordination",
+        "description": "Facilitate working-group meetings, coordinate across government and contractor teams, and manage information flow among program participants.",
+        "category": "interpersonal",
+        "timeWeight": 0.15,
+        "llmExposureTier": "E1",
+        "automationRisk": 30,
+        "augmentationPotential": 50,
+        "automationSubScores": {
+          "routineness": 8,
+          "dataIntensity": 8,
+          "physicalBottleneck": 8,
+          "socialBottleneck": 6
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 14,
+          "decisionSupport": 14,
+          "creativeLeverage": 10,
+          "productivityMultiplier": 12
+        }
+      }
+    ],
+    "skills": [
+      { "id": "pgma-sk-evm", "name": "Earned Value Management", "impact": "transformed", "relevance": 90 },
+      { "id": "pgma-sk-data-viz", "name": "Data Visualization & Reporting", "impact": "displaced", "relevance": 85 },
+      { "id": "pgma-sk-risk", "name": "Risk Management", "impact": "transformed", "relevance": 88 },
+      { "id": "pgma-sk-communication", "name": "Executive Communication", "impact": "gained", "relevance": 75 }
+    ],
+    "exposureScore": {
+      "overall": 73,
+      "automationRisk": 56,
+      "augmentationPotential": 73,
+      "netDisplacement": -17,
+      "complementarityScore": 61,
+      "routineTaskIntensity": 0.2,
+      "timeline": "near-term",
+      "wageEffect": 7,
+      "confidence": "high"
+    },
+    "bottleneckTaskIds": ["pgma-stakeholder-coordination"],
+    "similarOccupationIds": ["financial-analyst", "procurement-analyst", "data-scientist"]
+  },
+  {
+    "id": "defense-systems-engineer",
+    "title": "Defense Systems Engineer",
+    "industryId": "defense",
+    "socCode": "17-2199",
+    "medianWage": 115000,
+    "educationLevel": "master",
+    "description": "Design and integrate complex defense systems including weapons systems, C4ISR platforms, and autonomous vehicles; manage requirements, system architecture, and verification testing.",
+    "tasks": [
+      {
+        "id": "dse-requirements",
+        "name": "Requirements Analysis & Architecture",
+        "description": "Elicit, decompose, and allocate system requirements across hardware, software, and human interfaces; develop system architecture concepts.",
+        "category": "cognitive",
+        "timeWeight": 0.30,
+        "llmExposureTier": "E2",
+        "automationRisk": 42,
+        "augmentationPotential": 65,
+        "automationSubScores": {
+          "routineness": 10,
+          "dataIntensity": 16,
+          "physicalBottleneck": 8,
+          "socialBottleneck": 8
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 20,
+          "decisionSupport": 20,
+          "creativeLeverage": 14,
+          "productivityMultiplier": 11
+        }
+      },
+      {
+        "id": "dse-integration-testing",
+        "name": "System Integration & Testing",
+        "description": "Plan and execute integration tests across subsystems; analyze test data, identify failure modes, and resolve interface defects.",
+        "category": "cognitive",
+        "timeWeight": 0.30,
+        "llmExposureTier": "E2",
+        "automationRisk": 45,
+        "augmentationPotential": 60,
+        "automationSubScores": {
+          "routineness": 12,
+          "dataIntensity": 18,
+          "physicalBottleneck": 8,
+          "socialBottleneck": 7
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 18,
+          "decisionSupport": 20,
+          "creativeLeverage": 10,
+          "productivityMultiplier": 12
+        }
+      },
+      {
+        "id": "dse-trade-studies",
+        "name": "Trade Studies & Design Decisions",
+        "description": "Conduct technical trade studies comparing alternative design approaches; present recommendations and support milestone decision reviews.",
+        "category": "creative",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E2",
+        "automationRisk": 38,
+        "augmentationPotential": 62,
+        "automationSubScores": {
+          "routineness": 8,
+          "dataIntensity": 14,
+          "physicalBottleneck": 8,
+          "socialBottleneck": 8
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 18,
+          "decisionSupport": 22,
+          "creativeLeverage": 12,
+          "productivityMultiplier": 10
+        }
+      },
+      {
+        "id": "dse-safety-analysis",
+        "name": "Safety & Reliability Analysis",
+        "description": "Perform failure mode and effects analyses, hazard analyses, and reliability modeling; ensure compliance with safety certification standards.",
+        "category": "cognitive",
+        "timeWeight": 0.15,
+        "llmExposureTier": "E1",
+        "automationRisk": 38,
+        "augmentationPotential": 55,
+        "automationSubScores": {
+          "routineness": 10,
+          "dataIntensity": 16,
+          "physicalBottleneck": 6,
+          "socialBottleneck": 6
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 16,
+          "decisionSupport": 18,
+          "creativeLeverage": 10,
+          "productivityMultiplier": 11
+        }
+      }
+    ],
+    "skills": [
+      { "id": "dse-sk-mbse", "name": "Model-Based Systems Engineering", "impact": "transformed", "relevance": 95 },
+      { "id": "dse-sk-verification", "name": "Verification & Validation", "impact": "transformed", "relevance": 90 },
+      { "id": "dse-sk-safety", "name": "System Safety Analysis", "impact": "gained", "relevance": 85 },
+      { "id": "dse-sk-requirements", "name": "Requirements Management", "impact": "displaced", "relevance": 80 }
+    ],
+    "exposureScore": {
+      "overall": 61,
+      "automationRisk": 41,
+      "augmentationPotential": 61,
+      "netDisplacement": -20,
+      "complementarityScore": 60,
+      "routineTaskIntensity": -0.6,
+      "timeline": "mid-term",
+      "wageEffect": 10,
+      "confidence": "medium"
+    },
+    "bottleneckTaskIds": ["dse-safety-analysis", "dse-trade-studies"],
+    "similarOccupationIds": ["software-developer", "industrial-engineer", "program-analyst"]
+  },
+  {
+    "id": "intelligence-analyst",
+    "title": "Intelligence Analyst",
+    "industryId": "defense",
+    "socCode": "33-3021",
+    "medianWage": 95000,
+    "educationLevel": "bachelor",
+    "description": "Collect, analyze, and synthesize intelligence from multiple sources to produce actionable assessments; identify threats, patterns, and adversary intentions for national security decision-makers.",
+    "tasks": [
+      {
+        "id": "ia-data-collection",
+        "name": "Multi-Source Data Collection & Triage",
+        "description": "Ingest and prioritize intelligence from SIGINT, HUMINT, OSINT, and IMINT sources; assess source reliability and information credibility.",
+        "category": "cognitive",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E2",
+        "automationRisk": 68,
+        "augmentationPotential": 82,
+        "automationSubScores": {
+          "routineness": 20,
+          "dataIntensity": 24,
+          "physicalBottleneck": 12,
+          "socialBottleneck": 12
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 25,
+          "decisionSupport": 22,
+          "creativeLeverage": 16,
+          "productivityMultiplier": 19
+        }
+      },
+      {
+        "id": "ia-pattern-analysis",
+        "name": "Pattern & Link Analysis",
+        "description": "Identify patterns, associations, and anomalies in large datasets; map networks of actors, facilities, and activities.",
+        "category": "cognitive",
+        "timeWeight": 0.30,
+        "llmExposureTier": "E2",
+        "automationRisk": 72,
+        "augmentationPotential": 85,
+        "automationSubScores": {
+          "routineness": 20,
+          "dataIntensity": 25,
+          "physicalBottleneck": 14,
+          "socialBottleneck": 13
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 25,
+          "decisionSupport": 24,
+          "creativeLeverage": 18,
+          "productivityMultiplier": 18
+        }
+      },
+      {
+        "id": "ia-assessment-production",
+        "name": "Intelligence Assessment Production",
+        "description": "Draft finished intelligence products including threat assessments, situation reports, and intelligence estimates for senior policymakers.",
+        "category": "cognitive",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E2",
+        "automationRisk": 58,
+        "augmentationPotential": 78,
+        "automationSubScores": {
+          "routineness": 14,
+          "dataIntensity": 20,
+          "physicalBottleneck": 12,
+          "socialBottleneck": 12
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 24,
+          "decisionSupport": 22,
+          "creativeLeverage": 16,
+          "productivityMultiplier": 16
+        }
+      },
+      {
+        "id": "ia-briefing",
+        "name": "Leadership Briefing & Advising",
+        "description": "Deliver oral and written intelligence briefings to commanders and policymakers; answer questions and provide real-time analytical support.",
+        "category": "interpersonal",
+        "timeWeight": 0.20,
+        "llmExposureTier": "E1",
+        "automationRisk": 30,
+        "augmentationPotential": 50,
+        "automationSubScores": {
+          "routineness": 6,
+          "dataIntensity": 10,
+          "physicalBottleneck": 7,
+          "socialBottleneck": 7
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 14,
+          "decisionSupport": 16,
+          "creativeLeverage": 10,
+          "productivityMultiplier": 10
+        }
+      }
+    ],
+    "skills": [
+      { "id": "ia-sk-analytical", "name": "All-Source Analysis", "impact": "transformed", "relevance": 98 },
+      { "id": "ia-sk-data-mining", "name": "Data Mining & Pattern Recognition", "impact": "transformed", "relevance": 95 },
+      { "id": "ia-sk-writing", "name": "Intelligence Writing", "impact": "displaced", "relevance": 85 },
+      { "id": "ia-sk-critical-thinking", "name": "Critical & Structured Thinking", "impact": "gained", "relevance": 92 }
+    ],
+    "exposureScore": {
+      "overall": 76,
+      "automationRisk": 59,
+      "augmentationPotential": 76,
+      "netDisplacement": -17,
+      "complementarityScore": 62,
+      "routineTaskIntensity": -0.3,
+      "timeline": "near-term",
+      "wageEffect": 12,
+      "confidence": "high"
+    },
+    "bottleneckTaskIds": ["ia-briefing"],
+    "similarOccupationIds": ["data-scientist", "cybersecurity-analyst", "program-analyst"]
+  },
+  {
+    "id": "nuclear-engineer",
+    "title": "Nuclear Engineer",
+    "industryId": "energy",
+    "socCode": "17-2161",
+    "medianWage": 125000,
+    "educationLevel": "bachelor",
+    "description": "Design and analyze nuclear reactor systems, fuel cycles, and radiation shielding; develop safety analyses, support plant operations, and advance reactor technology for power generation or research.",
+    "tasks": [
+      {
+        "id": "ne-reactor-analysis",
+        "name": "Reactor Physics & Safety Analysis",
+        "description": "Model neutron flux distributions, thermal-hydraulics, and transient behavior; perform deterministic and probabilistic safety analyses.",
+        "category": "cognitive",
+        "timeWeight": 0.35,
+        "llmExposureTier": "E2",
+        "automationRisk": 42,
+        "augmentationPotential": 62,
+        "automationSubScores": {
+          "routineness": 10,
+          "dataIntensity": 18,
+          "physicalBottleneck": 8,
+          "socialBottleneck": 6
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 20,
+          "decisionSupport": 22,
+          "creativeLeverage": 10,
+          "productivityMultiplier": 10
+        }
+      },
+      {
+        "id": "ne-design-development",
+        "name": "System Design & Development",
+        "description": "Design reactor components, cooling systems, and containment structures; develop detailed engineering specifications and drawings.",
+        "category": "creative",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E2",
+        "automationRisk": 38,
+        "augmentationPotential": 58,
+        "automationSubScores": {
+          "routineness": 8,
+          "dataIntensity": 16,
+          "physicalBottleneck": 8,
+          "socialBottleneck": 6
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 16,
+          "decisionSupport": 18,
+          "creativeLeverage": 14,
+          "productivityMultiplier": 10
+        }
+      },
+      {
+        "id": "ne-regulatory-compliance",
+        "name": "Regulatory Compliance & Licensing",
+        "description": "Prepare license applications, safety analysis reports, and responses to NRC requests; ensure compliance with 10 CFR regulations.",
+        "category": "cognitive",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E2",
+        "automationRisk": 45,
+        "augmentationPotential": 55,
+        "automationSubScores": {
+          "routineness": 14,
+          "dataIntensity": 16,
+          "physicalBottleneck": 8,
+          "socialBottleneck": 7
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 18,
+          "decisionSupport": 16,
+          "creativeLeverage": 10,
+          "productivityMultiplier": 11
+        }
+      },
+      {
+        "id": "ne-plant-operations",
+        "name": "Plant Operations Support",
+        "description": "Support plant operators during startup, shutdown, and maintenance; troubleshoot anomalies and provide technical guidance.",
+        "category": "physical",
+        "timeWeight": 0.15,
+        "llmExposureTier": "E1",
+        "automationRisk": 28,
+        "augmentationPotential": 40,
+        "automationSubScores": {
+          "routineness": 8,
+          "dataIntensity": 10,
+          "physicalBottleneck": 5,
+          "socialBottleneck": 5
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 12,
+          "decisionSupport": 14,
+          "creativeLeverage": 6,
+          "productivityMultiplier": 8
+        }
+      }
+    ],
+    "skills": [
+      { "id": "ne-sk-reactor-physics", "name": "Reactor Physics & Neutronics", "impact": "transformed", "relevance": 98 },
+      { "id": "ne-sk-simulation", "name": "Simulation & Modeling", "impact": "transformed", "relevance": 90 },
+      { "id": "ne-sk-regulatory", "name": "NRC Regulatory Knowledge", "impact": "gained", "relevance": 88 },
+      { "id": "ne-sk-safety", "name": "Probabilistic Risk Assessment", "impact": "transformed", "relevance": 85 }
+    ],
+    "exposureScore": {
+      "overall": 56,
+      "automationRisk": 40,
+      "augmentationPotential": 56,
+      "netDisplacement": -16,
+      "complementarityScore": 58,
+      "routineTaskIntensity": -0.5,
+      "timeline": "long-term",
+      "wageEffect": 8,
+      "confidence": "medium"
+    },
+    "bottleneckTaskIds": ["ne-plant-operations", "ne-regulatory-compliance"],
+    "similarOccupationIds": ["environmental-engineer", "defense-systems-engineer", "industrial-engineer"]
+  },
+  {
+    "id": "climate-data-scientist",
+    "title": "Climate Data Scientist",
+    "industryId": "energy",
+    "socCode": "19-2041",
+    "medianWage": 92000,
+    "educationLevel": "doctoral",
+    "description": "Analyze large-scale climate datasets from satellites, sensors, and models to identify trends, build predictive models, and support climate policy and adaptation planning.",
+    "tasks": [
+      {
+        "id": "cds-model-development",
+        "name": "Climate Model Development & Validation",
+        "description": "Develop, tune, and validate statistical and machine learning models of climate systems; integrate outputs with physical simulation frameworks.",
+        "category": "cognitive",
+        "timeWeight": 0.30,
+        "llmExposureTier": "E2",
+        "automationRisk": 68,
+        "augmentationPotential": 88,
+        "automationSubScores": {
+          "routineness": 18,
+          "dataIntensity": 25,
+          "physicalBottleneck": 13,
+          "socialBottleneck": 12
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 24,
+          "decisionSupport": 24,
+          "creativeLeverage": 20,
+          "productivityMultiplier": 20
+        }
+      },
+      {
+        "id": "cds-data-pipeline",
+        "name": "Data Pipeline & Processing",
+        "description": "Build and maintain ETL pipelines for satellite, reanalysis, and sensor data; perform quality control and harmonization across data sources.",
+        "category": "cognitive",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E2",
+        "automationRisk": 72,
+        "augmentationPotential": 85,
+        "automationSubScores": {
+          "routineness": 22,
+          "dataIntensity": 25,
+          "physicalBottleneck": 13,
+          "socialBottleneck": 12
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 22,
+          "decisionSupport": 22,
+          "creativeLeverage": 18,
+          "productivityMultiplier": 23
+        }
+      },
+      {
+        "id": "cds-statistical-analysis",
+        "name": "Statistical Analysis & Trend Detection",
+        "description": "Apply time-series analysis, extreme-value statistics, and attribution methods to detect climate change signals and quantify uncertainty.",
+        "category": "cognitive",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E2",
+        "automationRisk": 65,
+        "augmentationPotential": 82,
+        "automationSubScores": {
+          "routineness": 18,
+          "dataIntensity": 22,
+          "physicalBottleneck": 13,
+          "socialBottleneck": 12
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 24,
+          "decisionSupport": 22,
+          "creativeLeverage": 18,
+          "productivityMultiplier": 18
+        }
+      },
+      {
+        "id": "cds-communication",
+        "name": "Research Communication & Policy Support",
+        "description": "Translate findings into accessible reports, visualizations, and policy briefs; present results to government and NGO stakeholders.",
+        "category": "creative",
+        "timeWeight": 0.20,
+        "llmExposureTier": "E2",
+        "automationRisk": 50,
+        "augmentationPotential": 74,
+        "automationSubScores": {
+          "routineness": 12,
+          "dataIntensity": 16,
+          "physicalBottleneck": 11,
+          "socialBottleneck": 11
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 20,
+          "decisionSupport": 18,
+          "creativeLeverage": 20,
+          "productivityMultiplier": 16
+        }
+      }
+    ],
+    "skills": [
+      { "id": "cds-sk-ml", "name": "Machine Learning & Statistical Modeling", "impact": "transformed", "relevance": 98 },
+      { "id": "cds-sk-programming", "name": "Python/R Scientific Programming", "impact": "displaced", "relevance": 92 },
+      { "id": "cds-sk-climate", "name": "Climate Science Domain Knowledge", "impact": "gained", "relevance": 95 },
+      { "id": "cds-sk-visualization", "name": "Scientific Visualization", "impact": "transformed", "relevance": 80 }
+    ],
+    "exposureScore": {
+      "overall": 83,
+      "automationRisk": 65,
+      "augmentationPotential": 83,
+      "netDisplacement": -18,
+      "complementarityScore": 64,
+      "routineTaskIntensity": -1.2,
+      "timeline": "near-term",
+      "wageEffect": 14,
+      "confidence": "high"
+    },
+    "bottleneckTaskIds": ["cds-communication"],
+    "similarOccupationIds": ["data-scientist", "environmental-engineer", "actuary"]
+  },
+  {
+    "id": "wildlife-biologist",
+    "title": "Wildlife Conservation Biologist",
+    "industryId": "energy",
+    "socCode": "19-1023",
+    "medianWage": 63000,
+    "educationLevel": "master",
+    "description": "Study wildlife populations, habitats, and ecosystems to inform conservation management; conduct field surveys, analyze population dynamics, and advise on land use and environmental policy.",
+    "tasks": [
+      {
+        "id": "wb-field-surveys",
+        "name": "Field Surveys & Data Collection",
+        "description": "Conduct wildlife population surveys using transects, trapping, camera traps, and remote sensing; collect biological samples in the field.",
+        "category": "physical",
+        "timeWeight": 0.35,
+        "llmExposureTier": "E0",
+        "automationRisk": 20,
+        "augmentationPotential": 35,
+        "automationSubScores": {
+          "routineness": 8,
+          "dataIntensity": 6,
+          "physicalBottleneck": 3,
+          "socialBottleneck": 3
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 8,
+          "decisionSupport": 10,
+          "creativeLeverage": 8,
+          "productivityMultiplier": 9
+        }
+      },
+      {
+        "id": "wb-population-analysis",
+        "name": "Population Dynamics Analysis",
+        "description": "Apply mark-recapture models, occupancy models, and survival analyses to estimate population size, trends, and viability.",
+        "category": "cognitive",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E2",
+        "automationRisk": 52,
+        "augmentationPotential": 72,
+        "automationSubScores": {
+          "routineness": 14,
+          "dataIntensity": 20,
+          "physicalBottleneck": 10,
+          "socialBottleneck": 8
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 22,
+          "decisionSupport": 20,
+          "creativeLeverage": 14,
+          "productivityMultiplier": 16
+        }
+      },
+      {
+        "id": "wb-habitat-assessment",
+        "name": "Habitat Assessment & GIS Mapping",
+        "description": "Evaluate habitat quality and connectivity; create GIS maps of species distributions, land cover, and habitat suitability models.",
+        "category": "cognitive",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E2",
+        "automationRisk": 45,
+        "augmentationPotential": 60,
+        "automationSubScores": {
+          "routineness": 12,
+          "dataIntensity": 18,
+          "physicalBottleneck": 8,
+          "socialBottleneck": 7
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 18,
+          "decisionSupport": 16,
+          "creativeLeverage": 12,
+          "productivityMultiplier": 14
+        }
+      },
+      {
+        "id": "wb-policy-reporting",
+        "name": "Conservation Planning & Policy Reporting",
+        "description": "Develop species management plans, write environmental impact assessments, and advise regulatory agencies and landowners on conservation practices.",
+        "category": "interpersonal",
+        "timeWeight": 0.15,
+        "llmExposureTier": "E1",
+        "automationRisk": 35,
+        "augmentationPotential": 52,
+        "automationSubScores": {
+          "routineness": 10,
+          "dataIntensity": 12,
+          "physicalBottleneck": 7,
+          "socialBottleneck": 6
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 16,
+          "decisionSupport": 14,
+          "creativeLeverage": 12,
+          "productivityMultiplier": 10
+        }
+      }
+    ],
+    "skills": [
+      { "id": "wb-sk-field", "name": "Field Survey & Sampling Methods", "impact": "transformed", "relevance": 95 },
+      { "id": "wb-sk-gis", "name": "GIS & Remote Sensing", "impact": "transformed", "relevance": 88 },
+      { "id": "wb-sk-stats", "name": "Population Statistics & Modeling", "impact": "transformed", "relevance": 85 },
+      { "id": "wb-sk-ecology", "name": "Ecological Theory & Conservation", "impact": "gained", "relevance": 92 }
+    ],
+    "exposureScore": {
+      "overall": 53,
+      "automationRisk": 36,
+      "augmentationPotential": 53,
+      "netDisplacement": -17,
+      "complementarityScore": 57,
+      "routineTaskIntensity": 0.1,
+      "timeline": "mid-term",
+      "wageEffect": 5,
+      "confidence": "medium"
+    },
+    "bottleneckTaskIds": ["wb-field-surveys"],
+    "similarOccupationIds": ["climate-data-scientist", "environmental-engineer", "data-scientist"]
+  },
+  {
+    "id": "environmental-engineer",
+    "title": "Environmental Engineer",
+    "industryId": "energy",
+    "socCode": "17-2081",
+    "medianWage": 96000,
+    "educationLevel": "bachelor",
+    "description": "Design systems to prevent, control, or remediate environmental hazards; conduct site assessments, develop remediation plans, and ensure regulatory compliance for industrial and government clients.",
+    "tasks": [
+      {
+        "id": "ee-site-assessment",
+        "name": "Environmental Site Assessment",
+        "description": "Conduct Phase I/II site assessments; collect soil, water, and air samples; characterize contamination extent and risk pathways.",
+        "category": "physical",
+        "timeWeight": 0.30,
+        "llmExposureTier": "E1",
+        "automationRisk": 35,
+        "augmentationPotential": 48,
+        "automationSubScores": {
+          "routineness": 10,
+          "dataIntensity": 12,
+          "physicalBottleneck": 7,
+          "socialBottleneck": 6
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 14,
+          "decisionSupport": 14,
+          "creativeLeverage": 8,
+          "productivityMultiplier": 12
+        }
+      },
+      {
+        "id": "ee-remediation-design",
+        "name": "Remediation System Design",
+        "description": "Design and optimize groundwater pump-and-treat systems, soil vapor extraction, and innovative remediation technologies for contaminated sites.",
+        "category": "creative",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E2",
+        "automationRisk": 45,
+        "augmentationPotential": 65,
+        "automationSubScores": {
+          "routineness": 10,
+          "dataIntensity": 16,
+          "physicalBottleneck": 10,
+          "socialBottleneck": 9
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 18,
+          "decisionSupport": 20,
+          "creativeLeverage": 14,
+          "productivityMultiplier": 13
+        }
+      },
+      {
+        "id": "ee-regulatory-reporting",
+        "name": "Regulatory Compliance & Reporting",
+        "description": "Prepare RCRA, CERCLA, and Clean Water Act compliance reports; write permit applications and respond to agency inquiries.",
+        "category": "cognitive",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E2",
+        "automationRisk": 58,
+        "augmentationPotential": 70,
+        "automationSubScores": {
+          "routineness": 18,
+          "dataIntensity": 18,
+          "physicalBottleneck": 12,
+          "socialBottleneck": 10
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 20,
+          "decisionSupport": 18,
+          "creativeLeverage": 14,
+          "productivityMultiplier": 18
+        }
+      },
+      {
+        "id": "ee-risk-assessment",
+        "name": "Human Health & Ecological Risk Assessment",
+        "description": "Quantify exposure pathways and toxicological risks; apply EPA risk assessment frameworks to determine cleanup levels and remedial goals.",
+        "category": "cognitive",
+        "timeWeight": 0.20,
+        "llmExposureTier": "E2",
+        "automationRisk": 52,
+        "augmentationPotential": 68,
+        "automationSubScores": {
+          "routineness": 14,
+          "dataIntensity": 18,
+          "physicalBottleneck": 10,
+          "socialBottleneck": 10
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 20,
+          "decisionSupport": 20,
+          "creativeLeverage": 12,
+          "productivityMultiplier": 16
+        }
+      }
+    ],
+    "skills": [
+      { "id": "ee-sk-remediation", "name": "Remediation Technology", "impact": "transformed", "relevance": 90 },
+      { "id": "ee-sk-regulatory", "name": "Environmental Regulatory Compliance", "impact": "transformed", "relevance": 92 },
+      { "id": "ee-sk-risk", "name": "Risk Assessment Methods", "impact": "transformed", "relevance": 85 },
+      { "id": "ee-sk-gis", "name": "GIS & Environmental Modeling", "impact": "gained", "relevance": 78 }
+    ],
+    "exposureScore": {
+      "overall": 62,
+      "automationRisk": 47,
+      "augmentationPotential": 62,
+      "netDisplacement": -15,
+      "complementarityScore": 58,
+      "routineTaskIntensity": 0.2,
+      "timeline": "mid-term",
+      "wageEffect": 7,
+      "confidence": "medium"
+    },
+    "bottleneckTaskIds": ["ee-site-assessment"],
+    "similarOccupationIds": ["nuclear-engineer", "industrial-engineer", "wildlife-biologist"]
+  },
+  {
+    "id": "renewable-energy-technician",
+    "title": "Renewable Energy Technician",
+    "industryId": "energy",
+    "socCode": "49-9081",
+    "medianWage": 52000,
+    "educationLevel": "associate",
+    "description": "Install, maintain, and repair wind turbines and solar photovoltaic systems; perform electrical and mechanical inspections, troubleshoot faults, and ensure safe operation of renewable generation assets.",
+    "tasks": [
+      {
+        "id": "ret-installation",
+        "name": "Equipment Installation & Commissioning",
+        "description": "Install solar panels, inverters, mounting structures, and wind turbine components; commission systems and verify grid interconnection requirements.",
+        "category": "physical",
+        "timeWeight": 0.35,
+        "llmExposureTier": "E0",
+        "automationRisk": 18,
+        "augmentationPotential": 28,
+        "automationSubScores": {
+          "routineness": 8,
+          "dataIntensity": 4,
+          "physicalBottleneck": 3,
+          "socialBottleneck": 3
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 6,
+          "decisionSupport": 8,
+          "creativeLeverage": 5,
+          "productivityMultiplier": 9
+        }
+      },
+      {
+        "id": "ret-maintenance",
+        "name": "Preventive & Corrective Maintenance",
+        "description": "Perform scheduled inspections, lubrication, blade inspections, and electrical testing; diagnose and repair mechanical and electrical faults.",
+        "category": "physical",
+        "timeWeight": 0.35,
+        "llmExposureTier": "E1",
+        "automationRisk": 22,
+        "augmentationPotential": 38,
+        "automationSubScores": {
+          "routineness": 10,
+          "dataIntensity": 6,
+          "physicalBottleneck": 3,
+          "socialBottleneck": 3
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 10,
+          "decisionSupport": 12,
+          "creativeLeverage": 6,
+          "productivityMultiplier": 10
+        }
+      },
+      {
+        "id": "ret-monitoring",
+        "name": "System Performance Monitoring",
+        "description": "Monitor SCADA dashboards and performance data; identify underperforming assets and escalate anomalies to engineering teams.",
+        "category": "cognitive",
+        "timeWeight": 0.20,
+        "llmExposureTier": "E1",
+        "automationRisk": 30,
+        "augmentationPotential": 45,
+        "automationSubScores": {
+          "routineness": 12,
+          "dataIntensity": 10,
+          "physicalBottleneck": 4,
+          "socialBottleneck": 4
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 14,
+          "decisionSupport": 14,
+          "creativeLeverage": 7,
+          "productivityMultiplier": 10
+        }
+      },
+      {
+        "id": "ret-safety",
+        "name": "Safety & Compliance Procedures",
+        "description": "Follow OSHA and NFPA 70E electrical safety protocols; complete lockout/tagout procedures, work permits, and safety documentation.",
+        "category": "physical",
+        "timeWeight": 0.10,
+        "llmExposureTier": "E0",
+        "automationRisk": 20,
+        "augmentationPotential": 25,
+        "automationSubScores": {
+          "routineness": 8,
+          "dataIntensity": 4,
+          "physicalBottleneck": 4,
+          "socialBottleneck": 4
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 6,
+          "decisionSupport": 8,
+          "creativeLeverage": 4,
+          "productivityMultiplier": 7
+        }
+      }
+    ],
+    "skills": [
+      { "id": "ret-sk-electrical", "name": "Electrical Systems & NEC", "impact": "transformed", "relevance": 90 },
+      { "id": "ret-sk-mechanical", "name": "Mechanical Maintenance", "impact": "displaced", "relevance": 75 },
+      { "id": "ret-sk-scada", "name": "SCADA & Remote Monitoring", "impact": "gained", "relevance": 85 },
+      { "id": "ret-sk-safety", "name": "Electrical Safety (NFPA 70E)", "impact": "gained", "relevance": 80 }
+    ],
+    "exposureScore": {
+      "overall": 35,
+      "automationRisk": 22,
+      "augmentationPotential": 35,
+      "netDisplacement": -13,
+      "complementarityScore": 52,
+      "routineTaskIntensity": 1.0,
+      "timeline": "long-term",
+      "wageEffect": 3,
+      "confidence": "medium"
+    },
+    "bottleneckTaskIds": ["ret-installation", "ret-maintenance"],
+    "similarOccupationIds": ["naval-shipbuilder", "cnc-machine-operator", "quality-control-inspector"]
+  },
+  {
+    "id": "pharmacist",
+    "title": "Pharmacist",
+    "industryId": "healthcare",
+    "socCode": "29-1051",
+    "medianWage": 132000,
+    "educationLevel": "doctoral",
+    "description": "Dispense prescription medications, counsel patients on drug therapies, identify drug interactions, collaborate with physicians on medication management, and oversee pharmacy operations.",
+    "tasks": [
+      {
+        "id": "pharm-dispensing",
+        "name": "Prescription Verification & Dispensing",
+        "description": "Review, verify, and process prescriptions; perform drug utilization review and check for contraindications, dosing errors, and interactions.",
+        "category": "cognitive",
+        "timeWeight": 0.30,
+        "llmExposureTier": "E2",
+        "automationRisk": 72,
+        "augmentationPotential": 78,
+        "automationSubScores": {
+          "routineness": 22,
+          "dataIntensity": 22,
+          "physicalBottleneck": 14,
+          "socialBottleneck": 14
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 24,
+          "decisionSupport": 24,
+          "creativeLeverage": 12,
+          "productivityMultiplier": 18
+        }
+      },
+      {
+        "id": "pharm-patient-counseling",
+        "name": "Patient Medication Counseling",
+        "description": "Counsel patients on medication use, side effects, adherence strategies, and lifestyle modifications; address patient concerns and questions.",
+        "category": "interpersonal",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E1",
+        "automationRisk": 28,
+        "augmentationPotential": 55,
+        "automationSubScores": {
+          "routineness": 6,
+          "dataIntensity": 8,
+          "physicalBottleneck": 7,
+          "socialBottleneck": 7
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 16,
+          "decisionSupport": 16,
+          "creativeLeverage": 10,
+          "productivityMultiplier": 13
+        }
+      },
+      {
+        "id": "pharm-mtm",
+        "name": "Medication Therapy Management",
+        "description": "Conduct comprehensive medication reviews for complex patients; optimize drug regimens, resolve drug therapy problems, and coordinate with care teams.",
+        "category": "cognitive",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E2",
+        "automationRisk": 50,
+        "augmentationPotential": 75,
+        "automationSubScores": {
+          "routineness": 12,
+          "dataIntensity": 18,
+          "physicalBottleneck": 10,
+          "socialBottleneck": 10
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 24,
+          "decisionSupport": 24,
+          "creativeLeverage": 14,
+          "productivityMultiplier": 13
+        }
+      },
+      {
+        "id": "pharm-operations",
+        "name": "Pharmacy Operations & Regulatory Compliance",
+        "description": "Manage inventory, supervise pharmacy technicians, maintain DEA schedule compliance, and ensure accreditation standards are met.",
+        "category": "cognitive",
+        "timeWeight": 0.20,
+        "llmExposureTier": "E2",
+        "automationRisk": 62,
+        "augmentationPotential": 65,
+        "automationSubScores": {
+          "routineness": 20,
+          "dataIntensity": 18,
+          "physicalBottleneck": 12,
+          "socialBottleneck": 12
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 18,
+          "decisionSupport": 18,
+          "creativeLeverage": 12,
+          "productivityMultiplier": 17
+        }
+      }
+    ],
+    "skills": [
+      { "id": "pharm-sk-pharmacotherapy", "name": "Pharmacotherapy & Drug Knowledge", "impact": "transformed", "relevance": 98 },
+      { "id": "pharm-sk-clinical", "name": "Clinical Decision Support", "impact": "transformed", "relevance": 92 },
+      { "id": "pharm-sk-counseling", "name": "Patient Counseling", "impact": "gained", "relevance": 88 },
+      { "id": "pharm-sk-dispensing", "name": "Prescription Processing", "impact": "displaced", "relevance": 70 }
+    ],
+    "exposureScore": {
+      "overall": 69,
+      "automationRisk": 53,
+      "augmentationPotential": 69,
+      "netDisplacement": -16,
+      "complementarityScore": 60,
+      "routineTaskIntensity": 0.4,
+      "timeline": "near-term",
+      "wageEffect": 4,
+      "confidence": "high"
+    },
+    "bottleneckTaskIds": ["pharm-patient-counseling", "pharm-mtm"],
+    "similarOccupationIds": ["registered-nurse", "nurse-practitioner", "actuary"]
+  },
+  {
+    "id": "nurse-practitioner",
+    "title": "Nurse Practitioner",
+    "industryId": "healthcare",
+    "socCode": "29-1171",
+    "medianWage": 121000,
+    "educationLevel": "master",
+    "description": "Provide advanced primary and specialty care including diagnosis, treatment, and disease management; prescribe medications, order and interpret diagnostic tests, and serve as a primary care provider.",
+    "tasks": [
+      {
+        "id": "np-diagnosis",
+        "name": "Clinical Diagnosis & Physical Examination",
+        "description": "Conduct comprehensive history and physical examinations; formulate differential diagnoses and develop diagnostic workup plans.",
+        "category": "physical",
+        "timeWeight": 0.30,
+        "llmExposureTier": "E1",
+        "automationRisk": 28,
+        "augmentationPotential": 58,
+        "automationSubScores": {
+          "routineness": 6,
+          "dataIntensity": 10,
+          "physicalBottleneck": 6,
+          "socialBottleneck": 6
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 18,
+          "decisionSupport": 20,
+          "creativeLeverage": 10,
+          "productivityMultiplier": 10
+        }
+      },
+      {
+        "id": "np-treatment-planning",
+        "name": "Treatment Planning & Prescribing",
+        "description": "Develop and implement individualized treatment plans; prescribe medications, therapies, and referrals; monitor treatment response.",
+        "category": "cognitive",
+        "timeWeight": 0.30,
+        "llmExposureTier": "E2",
+        "automationRisk": 45,
+        "augmentationPotential": 72,
+        "automationSubScores": {
+          "routineness": 10,
+          "dataIntensity": 16,
+          "physicalBottleneck": 10,
+          "socialBottleneck": 9
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 22,
+          "decisionSupport": 24,
+          "creativeLeverage": 12,
+          "productivityMultiplier": 14
+        }
+      },
+      {
+        "id": "np-chronic-disease",
+        "name": "Chronic Disease Management",
+        "description": "Monitor and manage patients with diabetes, hypertension, heart failure, and other chronic conditions; adjust therapies and coordinate specialist referrals.",
+        "category": "cognitive",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E2",
+        "automationRisk": 48,
+        "augmentationPotential": 70,
+        "automationSubScores": {
+          "routineness": 12,
+          "dataIntensity": 16,
+          "physicalBottleneck": 10,
+          "socialBottleneck": 10
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 22,
+          "decisionSupport": 22,
+          "creativeLeverage": 12,
+          "productivityMultiplier": 14
+        }
+      },
+      {
+        "id": "np-documentation",
+        "name": "Clinical Documentation & Care Coordination",
+        "description": "Document encounters in EHR, coordinate referrals and follow-ups, manage prior authorizations, and communicate with care team members.",
+        "category": "cognitive",
+        "timeWeight": 0.15,
+        "llmExposureTier": "E2",
+        "automationRisk": 55,
+        "augmentationPotential": 68,
+        "automationSubScores": {
+          "routineness": 16,
+          "dataIntensity": 18,
+          "physicalBottleneck": 11,
+          "socialBottleneck": 10
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 20,
+          "decisionSupport": 20,
+          "creativeLeverage": 12,
+          "productivityMultiplier": 16
+        }
+      }
+    ],
+    "skills": [
+      { "id": "np-sk-clinical", "name": "Advanced Clinical Assessment", "impact": "transformed", "relevance": 98 },
+      { "id": "np-sk-pharmacology", "name": "Advanced Pharmacology", "impact": "transformed", "relevance": 92 },
+      { "id": "np-sk-diagnosis", "name": "Differential Diagnosis", "impact": "transformed", "relevance": 90 },
+      { "id": "np-sk-patient-relationship", "name": "Therapeutic Patient Relationships", "impact": "gained", "relevance": 88 }
+    ],
+    "exposureScore": {
+      "overall": 67,
+      "automationRisk": 42,
+      "augmentationPotential": 67,
+      "netDisplacement": -25,
+      "complementarityScore": 63,
+      "routineTaskIntensity": -0.5,
+      "timeline": "mid-term",
+      "wageEffect": 9,
+      "confidence": "medium"
+    },
+    "bottleneckTaskIds": ["np-diagnosis", "np-chronic-disease"],
+    "similarOccupationIds": ["registered-nurse", "pharmacist", "physical-therapist"]
   }
 ]

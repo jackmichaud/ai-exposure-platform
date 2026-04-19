@@ -8,6 +8,10 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
+- **Data Expansion — Defense & Environmental/Energy industries**
+  - `src/data/industries.json` — added "Defense & National Security" and "Environmental & Energy" industries; updated Healthcare occupationCount from 4 → 6
+  - `src/data/occupations.json` — 12 new occupations: Procurement Analyst, Naval Shipbuilder, Program Analyst, Defense Systems Engineer, Intelligence Analyst (Defense); Nuclear Engineer, Climate Data Scientist, Wildlife Conservation Biologist, Environmental Engineer, Renewable Energy Technician (Environmental & Energy); Pharmacist, Nurse Practitioner (Healthcare); full task-level sub-scores, skills, exposure scores, and cross-references
+
 - **Phase 5 — Polish and Ship**
   - `src/components/ErrorBoundary.tsx` — React class-based error boundary; wraps all routes; shows inline error message + "Try again" reset + back-to-dashboard link; accepts optional `fallback` prop for custom fallback UI
   - `src/pages/NotFound.tsx` — 404 page with large monospace "404", descriptive message, and back-to-dashboard link

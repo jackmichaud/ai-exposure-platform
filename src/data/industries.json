@@ -3,7 +3,7 @@
     "id": "healthcare",
     "name": "Healthcare",
     "description": "Medical services, patient care, and health system operations",
-    "occupationCount": 4
+    "occupationCount": 6
   },
   {
     "id": "finance",
@@ -28,5 +28,17 @@
     "name": "Manufacturing",
     "description": "Industrial production, assembly, quality control, and engineering",
     "occupationCount": 4
+  },
+  {
+    "id": "defense",
+    "name": "Defense & National Security",
+    "description": "Military systems, procurement, program management, and intelligence analysis",
+    "occupationCount": 5
+  },
+  {
+    "id": "energy",
+    "name": "Environmental & Energy",
+    "description": "Energy systems, environmental science, conservation, and climate research",
+    "occupationCount": 5
   }
 ]
