@@ -1,0 +1,32 @@
+[
+  {
+    "id": "healthcare",
+    "name": "Healthcare",
+    "description": "Medical services, patient care, and health system operations",
+    "occupationCount": 4
+  },
+  {
+    "id": "finance",
+    "name": "Finance & Insurance",
+    "description": "Banking, investment, lending, and insurance services",
+    "occupationCount": 4
+  },
+  {
+    "id": "technology",
+    "name": "Technology",
+    "description": "Software development, data science, and IT infrastructure",
+    "occupationCount": 4
+  },
+  {
+    "id": "education",
+    "name": "Education",
+    "description": "K-12 schools, higher education, and instructional design",
+    "occupationCount": 3
+  },
+  {
+    "id": "manufacturing",
+    "name": "Manufacturing",
+    "description": "Industrial production, assembly, quality control, and engineering",
+    "occupationCount": 4
+  }
+]

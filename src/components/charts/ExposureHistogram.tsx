@@ -45,7 +45,7 @@ export default function ExposureHistogram({ data }: Props) {
       .attr('class', 'grid')
       .call(d3.axisLeft(y).ticks(4).tickSize(-innerW).tickFormat(() => ''))
       .call(g => g.select('.domain').remove())
-      .call(g => g.selectAll('line').attr('stroke', '#E5E7EB').attr('stroke-dasharray', '3,3'))
+      .call(g => g.selectAll('line').attr('stroke', '#334155').attr('stroke-dasharray', '3,3'))
 
     // Bars
     g.selectAll('rect')
@@ -66,14 +66,14 @@ export default function ExposureHistogram({ data }: Props) {
     g.append('g')
       .attr('transform', `translate(0,${innerH})`)
       .call(d3.axisBottom(x).tickSize(0))
-      .call(g => g.select('.domain').attr('stroke', '#E5E7EB'))
-      .call(g => g.selectAll('text').attr('dy', '1em').style('font-size', '11px').style('fill', '#6B7280'))
+      .call(g => g.select('.domain').attr('stroke', '#475569'))
+      .call(g => g.selectAll('text').attr('dy', '1em').style('font-size', '11px').style('fill', '#94A3B8'))
 
     // Y axis
     g.append('g')
       .call(d3.axisLeft(y).ticks(4))
       .call(g => g.select('.domain').remove())
-      .call(g => g.selectAll('text').style('font-size', '11px').style('fill', '#6B7280'))
+      .call(g => g.selectAll('text').style('font-size', '11px').style('fill', '#94A3B8'))
       .call(g => g.selectAll('line').remove())
 
   }, [data, width])

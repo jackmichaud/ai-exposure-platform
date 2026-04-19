@@ -48,7 +48,7 @@ export default function WageScatterPlot({ data }: Props) {
     // Gridlines
     g.append('g').call(d3.axisLeft(y).ticks(5).tickSize(-innerW).tickFormat(() => ''))
       .call(g => g.select('.domain').remove())
-      .call(g => g.selectAll('line').attr('stroke', '#E5E7EB').attr('stroke-dasharray', '3,3'))
+      .call(g => g.selectAll('line').attr('stroke', '#334155').attr('stroke-dasharray', '3,3'))
 
     // Regression line
     const xMean = d3.mean(data, d => d.aioe)!
@@ -61,7 +61,7 @@ export default function WageScatterPlot({ data }: Props) {
     g.append('line')
       .attr('x1', x(x1)).attr('x2', x(x2))
       .attr('y1', y(slope * x1 + intercept)).attr('y2', y(slope * x2 + intercept))
-      .attr('stroke', '#6B7280').attr('stroke-width', 1.5).attr('stroke-dasharray', '6,3').attr('opacity', 0.6)
+      .attr('stroke', '#64748B').attr('stroke-width', 1.5).attr('stroke-dasharray', '6,3').attr('opacity', 0.6)
 
     // Dots
     g.selectAll('circle')
@@ -108,20 +108,20 @@ export default function WageScatterPlot({ data }: Props) {
     // Axes
     g.append('g').attr('transform', `translate(0,${innerH})`)
       .call(d3.axisBottom(x).ticks(5))
-      .call(g => g.select('.domain').attr('stroke', '#E5E7EB'))
-      .call(g => g.selectAll('text').style('font-size', '11px').style('fill', '#6B7280'))
+      .call(g => g.select('.domain').attr('stroke', '#475569'))
+      .call(g => g.selectAll('text').style('font-size', '11px').style('fill', '#94A3B8'))
 
     g.append('g').call(d3.axisLeft(y).ticks(5).tickFormat(v => `$${+v / 1000}k`))
       .call(g => g.select('.domain').remove())
-      .call(g => g.selectAll('text').style('font-size', '11px').style('fill', '#6B7280'))
+      .call(g => g.selectAll('text').style('font-size', '11px').style('fill', '#94A3B8'))
       .call(g => g.selectAll('line').remove())
 
     // Axis labels
     g.append('text').attr('x', innerW / 2).attr('y', innerH + 38)
-      .attr('text-anchor', 'middle').style('font-size', '12px').style('fill', '#6B7280')
+      .attr('text-anchor', 'middle').style('font-size', '12px').style('fill', '#94A3B8')
       .text('AIOE Score (0–100)')
     g.append('text').attr('transform', 'rotate(-90)').attr('x', -innerH / 2).attr('y', -52)
-      .attr('text-anchor', 'middle').style('font-size', '12px').style('fill', '#6B7280')
+      .attr('text-anchor', 'middle').style('font-size', '12px').style('fill', '#94A3B8')
       .text('Median Wage')
 
     // Legend
@@ -130,7 +130,7 @@ export default function WageScatterPlot({ data }: Props) {
     industries.forEach((ind, i) => {
       const row = legend.append('g').attr('transform', `translate(0,${i * 18})`)
       row.append('circle').attr('r', 5).attr('cx', 5).attr('cy', 0).attr('fill', INDUSTRY_COLORS[ind] ?? '#6B7280')
-      row.append('text').attr('x', 14).attr('y', 4).style('font-size', '11px').style('fill', '#6B7280').text(ind)
+      row.append('text').attr('x', 14).attr('y', 4).style('font-size', '11px').style('fill', '#94A3B8').text(ind)
     })
 
   }, [data, width, navigate])

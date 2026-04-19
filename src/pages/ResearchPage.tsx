@@ -13,7 +13,7 @@ function Prose({ children }: { children: React.ReactNode }) {
 }
 
 function P({ children }: { children: React.ReactNode }) {
-  return <p className="text-gray-700 leading-relaxed text-[15px] mt-4">{children}</p>
+  return <p className="text-slate-300 leading-relaxed text-[15px] mt-4">{children}</p>
 }
 
 function DisplayEq({ tex, label }: { tex: string; label?: string }) {
@@ -22,7 +22,7 @@ function DisplayEq({ tex, label }: { tex: string; label?: string }) {
       <div className="flex-1 flex justify-center py-2">
         <Equation tex={tex} display />
       </div>
-      {label && <span className="text-xs text-gray-400 font-mono shrink-0">{label}</span>}
+      {label && <span className="text-xs text-slate-500 font-mono shrink-0">{label}</span>}
     </div>
   )
 }
@@ -34,8 +34,8 @@ function InlineEq({ tex }: { tex: string }) {
 function SectionTitle({ num, children }: { num: string; children: React.ReactNode }) {
   return (
     <div className="flex items-baseline gap-3 mb-4 mt-12">
-      <span className="text-sm font-mono text-gray-400 shrink-0">{num}</span>
-      <h2 className="text-gray-900">{children}</h2>
+      <span className="text-sm font-mono text-slate-500 shrink-0">{num}</span>
+      <h2 className="text-slate-100">{children}</h2>
     </div>
   )
 }
@@ -43,19 +43,19 @@ function SectionTitle({ num, children }: { num: string; children: React.ReactNod
 function SubsectionTitle({ num, children }: { num: string; children: React.ReactNode }) {
   return (
     <div className="flex items-baseline gap-3 mb-3 mt-8">
-      <span className="text-xs font-mono text-gray-400 shrink-0">{num}</span>
-      <h3 className="text-gray-800">{children}</h3>
+      <span className="text-xs font-mono text-slate-500 shrink-0">{num}</span>
+      <h3 className="text-slate-200">{children}</h3>
     </div>
   )
 }
 
 function Figure({ num, caption, children }: { num: number; caption: string; children: React.ReactNode }) {
   return (
-    <figure className="my-8 border border-gray-200 rounded-lg bg-white shadow-sm overflow-hidden">
+    <figure className="my-8 border border-slate-700 rounded-lg bg-slate-900 shadow-sm overflow-hidden">
       <div className="p-4 pb-2">{children}</div>
-      <figcaption className="px-4 py-3 border-t border-gray-100 bg-gray-50">
-        <span className="font-semibold text-xs text-gray-500">Figure {num}.&nbsp;</span>
-        <span className="text-xs text-gray-500">{caption}</span>
+      <figcaption className="px-4 py-3 border-t border-slate-700 bg-slate-800">
+        <span className="font-semibold text-xs text-slate-400">Figure {num}.&nbsp;</span>
+        <span className="text-xs text-slate-400">{caption}</span>
       </figcaption>
     </figure>
   )
@@ -63,8 +63,8 @@ function Figure({ num, caption, children }: { num: number; caption: string; chil
 
 function Callout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="my-6 max-w-2xl pl-4 border-l-2 border-indigo-200">
-      <p className="text-sm text-gray-600 leading-relaxed italic">{children}</p>
+    <div className="my-6 max-w-2xl pl-4 border-l-2 border-teal-500">
+      <p className="text-sm text-slate-400 leading-relaxed italic">{children}</p>
     </div>
   )
 }
@@ -77,18 +77,17 @@ export default function ResearchPage() {
 
       {/* Title block */}
       <div className="max-w-2xl mb-10">
-        <p className="text-xs font-mono text-gray-400 mb-3 uppercase tracking-wider">Working Paper · April 2026</p>
-        <h1 className="text-gray-900 leading-tight mb-4">
+        <h1 className="text-slate-100 leading-tight mb-4">
           Artificial Intelligence and the Labor Market:<br />
           Theory, Measurement, and Early Evidence
         </h1>
-        <p className="text-sm text-gray-500">Jack Michaud · AI Exposure Platform</p>
+        <p className="text-sm text-slate-400">Group 1 · AI Exposure Platform</p>
       </div>
 
       {/* Abstract */}
-      <div className="max-w-2xl mb-10 p-5 bg-gray-50 rounded-lg border border-gray-200">
-        <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Abstract</p>
-        <p className="text-sm text-gray-600 leading-relaxed">
+      <div className="max-w-2xl mb-10 p-5 bg-slate-900 rounded-lg border border-slate-700">
+        <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Abstract</p>
+        <p className="text-sm text-slate-400 leading-relaxed">
           We survey the theoretical economics literature on automation and labor markets, derive predictions
           for occupational wage and employment effects under competing frameworks, and evaluate those
           predictions against a cross-validated set of AI exposure indices matched to BLS wage data.
@@ -441,13 +440,13 @@ export default function ResearchPage() {
       </Prose>
 
       <Figure num={1} caption="Pairwise Pearson correlations across five AI exposure indices. Cell values show r; dark blue indicates r ≥ 0.9. Indices agree strongly on low-exposure manual occupations but diverge significantly for high-exposure cognitive roles — consistent with Budget Lab (2025).">
-        <h3 className="text-gray-700 mb-1 text-sm font-semibold">Figure 1 — Index Agreement Matrix</h3>
+        <h3 className="text-slate-300 mb-1 text-sm font-semibold">Figure 1 — Index Agreement Matrix</h3>
         <ModelAgreementMatrix data={findings.modelCorrelations} />
       </Figure>
 
       {/* Literature timeline */}
       <Figure num={2} caption="Timeline of key theoretical and empirical contributions, 2003–2026. Each entry marks a paradigm shift in how the profession measures AI labor market exposure.">
-        <h3 className="text-gray-700 mb-1 text-sm font-semibold">Figure 2 — Literature Timeline</h3>
+        <h3 className="text-slate-300 mb-1 text-sm font-semibold">Figure 2 — Literature Timeline</h3>
         <LiteratureTimeline data={findings.literatureTimeline} />
       </Figure>
 
@@ -480,7 +479,7 @@ export default function ResearchPage() {
       </Prose>
 
       <Figure num={3} caption="Distribution of AIOE scores across 19 occupations. Blue = augmentation-dominant (AIOE < 30), amber = contested (30–60), red = displacement-dominant (> 60). 42% of occupations exceed the displacement threshold.">
-        <h3 className="text-gray-700 mb-1 text-sm font-semibold">Figure 3 — AIOE Score Distribution</h3>
+        <h3 className="text-slate-300 mb-1 text-sm font-semibold">Figure 3 — AIOE Score Distribution</h3>
         <ExposureHistogram data={findings.exposureDistribution} />
       </Figure>
 
@@ -506,7 +505,7 @@ export default function ResearchPage() {
       </Prose>
 
       <Figure num={4} caption="Median wage vs. AIOE score. Circle size proportional to employment (millions). Dashed line = OLS fit. Click any occupation to open its full profile.">
-        <h3 className="text-gray-700 mb-1 text-sm font-semibold">Figure 4 — Wage × AI Exposure Scatter</h3>
+        <h3 className="text-slate-300 mb-1 text-sm font-semibold">Figure 4 — Wage × AI Exposure Scatter</h3>
         <WageScatterPlot data={findings.wageScatter} />
       </Figure>
 
@@ -546,11 +545,11 @@ export default function ResearchPage() {
       </Prose>
 
       <Figure num={5} caption="OLS coefficient estimates from equation (13). Outcome: log(median wage). n=19, R²=0.61. Error bars show 95% confidence intervals. Green = positive and significant; red = negative and significant; gray = insignificant.">
-        <h3 className="text-gray-700 mb-1 text-sm font-semibold">Figure 5 — OLS Regression Coefficients</h3>
-        <p className="text-xs text-gray-400 mb-2">
+        <h3 className="text-slate-300 mb-1 text-sm font-semibold">Figure 5 — OLS Regression Coefficients</h3>
+        <p className="text-xs text-slate-500 mb-2">
           Outcome: log(median wage) · n={findings.olsResults.n} · R²={findings.olsResults.rSquared}
         </p>
-        <div className="mb-4 px-2 py-3 bg-gray-50 rounded overflow-x-auto">
+        <div className="mb-4 px-2 py-3 bg-slate-800 rounded overflow-x-auto">
           <Equation
             tex="\ln w_o = \alpha + \beta_1\,\text{AIOE}_o + \beta_2\,\text{RTI}_o + \beta_3\,\text{ATE}_o + \boldsymbol{\delta}'\mathbf{X}_o + \varepsilon_o"
             display
@@ -656,7 +655,7 @@ export default function ResearchPage() {
 
       {/* ── References ── */}
       <SectionTitle num="References">References</SectionTitle>
-      <div className="max-w-2xl space-y-2 text-sm text-gray-600 leading-relaxed">
+      <div className="max-w-2xl space-y-2 text-sm text-slate-400 leading-relaxed">
         {[
           'Acemoglu, D. (2024). The simple macroeconomics of AI. NBER Working Paper 32022.',
           'Acemoglu, D. & Autor, D. (2011). Skills, tasks and technologies: Implications for employment and earnings. Handbook of Labor Economics, 4, 1043–1171.',

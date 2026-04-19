@@ -8,9 +8,9 @@ const navLinks = [
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
+    <header className="sticky top-0 z-50 bg-slate-900 border-b border-slate-700">
       <div className="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">
-        <span className="text-base font-semibold text-gray-900 tracking-tight">
+        <span className="text-base font-semibold text-slate-100 tracking-tight">
           AI Exposure Platform
         </span>
         <nav className="flex items-center gap-1">
@@ -22,8 +22,8 @@ export default function Header() {
               className={({ isActive }) =>
                 `px-3 py-1.5 rounded-md text-sm font-medium transition-colors duration-150 ${
                   isActive
-                    ? 'bg-indigo-50 text-indigo-600'
-                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+                    ? 'bg-teal-900/40 text-teal-400'
+                    : 'text-slate-400 hover:text-slate-100 hover:bg-slate-800'
                 }`
               }
             >

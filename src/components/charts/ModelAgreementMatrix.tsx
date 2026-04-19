@@ -66,7 +66,7 @@ export default function ModelAgreementMatrix({ data }: Props) {
           .attr('x', cellW / 2 - 1).attr('y', cellH / 2 - 1)
           .attr('dominant-baseline', 'middle').attr('text-anchor', 'middle')
           .style('font-size', '12px').style('font-family', 'monospace')
-          .style('fill', r > 0.8 ? '#fff' : '#374151')
+          .style('fill', r > 0.8 ? '#fff' : '#CBD5E1')
           .text(r.toFixed(2))
       })
     })
@@ -76,14 +76,14 @@ export default function ModelAgreementMatrix({ data }: Props) {
       g.append('text')
         .attr('x', -8).attr('y', i * cellH + cellH / 2 - 1)
         .attr('text-anchor', 'end').attr('dominant-baseline', 'middle')
-        .style('font-size', '11px').style('fill', '#6B7280').text(m)
+        .style('font-size', '11px').style('fill', '#94A3B8').text(m)
     })
 
     // Col labels
     models.forEach((m, i) => {
       g.append('text')
         .attr('x', i * cellW + cellW / 2 - 1).attr('y', -10)
-        .attr('text-anchor', 'middle').style('font-size', '11px').style('fill', '#6B7280').text(m)
+        .attr('text-anchor', 'middle').style('font-size', '11px').style('fill', '#94A3B8').text(m)
     })
 
   }, [matrix, models, size])

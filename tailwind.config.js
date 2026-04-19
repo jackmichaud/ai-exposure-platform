@@ -12,6 +12,7 @@ export default {
         opportunity: '#2563EB',
         caution: '#D97706',
         success: '#059669',
+        accent: '#2DD4BF',
       },
     },
   },

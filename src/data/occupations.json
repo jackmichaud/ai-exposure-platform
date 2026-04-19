@@ -1,0 +1,2756 @@
+[
+  {
+    "id": "registered-nurse",
+    "title": "Registered Nurse",
+    "industryId": "healthcare",
+    "socCode": "29-1141",
+    "medianWage": 86070,
+    "educationLevel": "bachelor",
+    "description": "Assess patient conditions, administer medications, coordinate care plans, and educate patients and families across hospital, clinic, and community settings.",
+    "tasks": [
+      {
+        "id": "rn-patient-assessment",
+        "name": "Patient Assessment",
+        "description": "Conduct physical and psychological assessments, vital signs monitoring, and intake evaluations to establish baseline patient status.",
+        "category": "physical",
+        "timeWeight": 0.30,
+        "llmExposureTier": "E1",
+        "automationRisk": 33,
+        "augmentationPotential": 62,
+        "automationSubScores": {
+          "routineness": 12,
+          "dataIntensity": 16,
+          "physicalBottleneck": 3,
+          "socialBottleneck": 2
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 20,
+          "decisionSupport": 20,
+          "creativeLeverage": 10,
+          "productivityMultiplier": 12
+        }
+      },
+      {
+        "id": "rn-medication-admin",
+        "name": "Medication Administration",
+        "description": "Prepare and administer oral, IV, and topical medications; verify dosages; monitor patient responses and document outcomes.",
+        "category": "physical",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E1",
+        "automationRisk": 30,
+        "augmentationPotential": 45,
+        "automationSubScores": {
+          "routineness": 18,
+          "dataIntensity": 10,
+          "physicalBottleneck": 2,
+          "socialBottleneck": 0
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 12,
+          "decisionSupport": 18,
+          "creativeLeverage": 5,
+          "productivityMultiplier": 10
+        }
+      },
+      {
+        "id": "rn-care-coordination",
+        "name": "Care Coordination & Documentation",
+        "description": "Update electronic health records, coordinate with physicians and specialists, write care plans, and manage handoffs between shifts.",
+        "category": "cognitive",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E2",
+        "automationRisk": 55,
+        "augmentationPotential": 72,
+        "automationSubScores": {
+          "routineness": 16,
+          "dataIntensity": 20,
+          "physicalBottleneck": 10,
+          "socialBottleneck": 9
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 22,
+          "decisionSupport": 20,
+          "creativeLeverage": 12,
+          "productivityMultiplier": 18
+        }
+      },
+      {
+        "id": "rn-patient-education",
+        "name": "Patient & Family Education",
+        "description": "Counsel patients and families on diagnoses, discharge instructions, medications, and self-care routines to improve adherence and outcomes.",
+        "category": "interpersonal",
+        "timeWeight": 0.20,
+        "llmExposureTier": "E1",
+        "automationRisk": 20,
+        "augmentationPotential": 73,
+        "automationSubScores": {
+          "routineness": 8,
+          "dataIntensity": 8,
+          "physicalBottleneck": 2,
+          "socialBottleneck": 2
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 22,
+          "decisionSupport": 17,
+          "creativeLeverage": 20,
+          "productivityMultiplier": 14
+        }
+      }
+    ],
+    "skills": [
+      {
+        "id": "rn-sk-clinical-judgment",
+        "name": "Clinical Judgment",
+        "impact": "transformed",
+        "relevance": 95
+      },
+      {
+        "id": "rn-sk-ehr",
+        "name": "EHR Documentation",
+        "impact": "transformed",
+        "relevance": 85
+      },
+      {
+        "id": "rn-sk-patient-comms",
+        "name": "Patient Communication",
+        "impact": "gained",
+        "relevance": 90
+      },
+      {
+        "id": "rn-sk-pharmacology",
+        "name": "Pharmacology Knowledge",
+        "impact": "transformed",
+        "relevance": 80
+      },
+      {
+        "id": "rn-sk-care-planning",
+        "name": "Care Plan Development",
+        "impact": "transformed",
+        "relevance": 88
+      }
+    ],
+    "exposureScore": {
+      "overall": 62,
+      "automationRisk": 35,
+      "augmentationPotential": 62,
+      "netDisplacement": -27,
+      "complementarityScore": 74,
+      "routineTaskIntensity": -0.8,
+      "timeline": "mid-term",
+      "wageEffect": 8,
+      "confidence": "medium"
+    },
+    "bottleneckTaskIds": ["rn-patient-education", "rn-medication-admin"],
+    "similarOccupationIds": ["physical-therapist", "radiologist"]
+  },
+
+  {
+    "id": "radiologist",
+    "title": "Radiologist",
+    "industryId": "healthcare",
+    "socCode": "29-1224",
+    "medianWage": 350000,
+    "educationLevel": "doctoral",
+    "description": "Interpret medical imaging (X-ray, CT, MRI, PET) to diagnose disease, guide interventional procedures, and consult with referring physicians on diagnostic strategies.",
+    "tasks": [
+      {
+        "id": "rad-image-interpretation",
+        "name": "Diagnostic Image Interpretation",
+        "description": "Systematically review radiological images to identify abnormalities, classify findings, and generate differential diagnoses across imaging modalities.",
+        "category": "cognitive",
+        "timeWeight": 0.50,
+        "llmExposureTier": "E2",
+        "automationRisk": 78,
+        "augmentationPotential": 80,
+        "automationSubScores": {
+          "routineness": 18,
+          "dataIntensity": 25,
+          "physicalBottleneck": 20,
+          "socialBottleneck": 15
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 24,
+          "decisionSupport": 25,
+          "creativeLeverage": 14,
+          "productivityMultiplier": 17
+        }
+      },
+      {
+        "id": "rad-report-generation",
+        "name": "Radiology Report Writing",
+        "description": "Dictate and edit structured reports summarizing imaging findings, clinical correlation, and recommended follow-up actions for referring clinicians.",
+        "category": "cognitive",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E2",
+        "automationRisk": 82,
+        "augmentationPotential": 78,
+        "automationSubScores": {
+          "routineness": 20,
+          "dataIntensity": 23,
+          "physicalBottleneck": 22,
+          "socialBottleneck": 17
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 22,
+          "decisionSupport": 20,
+          "creativeLeverage": 18,
+          "productivityMultiplier": 18
+        }
+      },
+      {
+        "id": "rad-clinical-consult",
+        "name": "Clinical Consultation",
+        "description": "Discuss complex cases with referring physicians, recommend additional imaging workups, and participate in multidisciplinary tumor boards.",
+        "category": "interpersonal",
+        "timeWeight": 0.15,
+        "llmExposureTier": "E1",
+        "automationRisk": 35,
+        "augmentationPotential": 62,
+        "automationSubScores": {
+          "routineness": 8,
+          "dataIntensity": 15,
+          "physicalBottleneck": 12,
+          "socialBottleneck": 0
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 20,
+          "decisionSupport": 22,
+          "creativeLeverage": 10,
+          "productivityMultiplier": 10
+        }
+      },
+      {
+        "id": "rad-qa-protocols",
+        "name": "Quality Assurance & Peer Review",
+        "description": "Review discrepant cases, participate in peer review programs, and audit AI-assisted reads to maintain diagnostic accuracy standards.",
+        "category": "cognitive",
+        "timeWeight": 0.10,
+        "llmExposureTier": "E1",
+        "automationRisk": 42,
+        "augmentationPotential": 65,
+        "automationSubScores": {
+          "routineness": 12,
+          "dataIntensity": 18,
+          "physicalBottleneck": 8,
+          "socialBottleneck": 4
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 20,
+          "decisionSupport": 22,
+          "creativeLeverage": 12,
+          "productivityMultiplier": 11
+        }
+      }
+    ],
+    "skills": [
+      {
+        "id": "rad-sk-image-analysis",
+        "name": "Medical Image Analysis",
+        "impact": "transformed",
+        "relevance": 98
+      },
+      {
+        "id": "rad-sk-ai-oversight",
+        "name": "AI System Oversight",
+        "impact": "gained",
+        "relevance": 90
+      },
+      {
+        "id": "rad-sk-anatomy",
+        "name": "Cross-sectional Anatomy",
+        "impact": "transformed",
+        "relevance": 95
+      },
+      {
+        "id": "rad-sk-clinical-reasoning",
+        "name": "Clinical Reasoning",
+        "impact": "gained",
+        "relevance": 88
+      },
+      {
+        "id": "rad-sk-reporting",
+        "name": "Structured Reporting",
+        "impact": "displaced",
+        "relevance": 75
+      }
+    ],
+    "exposureScore": {
+      "overall": 78,
+      "automationRisk": 72,
+      "augmentationPotential": 78,
+      "netDisplacement": -6,
+      "complementarityScore": 70,
+      "routineTaskIntensity": 0.6,
+      "timeline": "near-term",
+      "wageEffect": -10,
+      "confidence": "high"
+    },
+    "bottleneckTaskIds": ["rad-clinical-consult", "rad-qa-protocols"],
+    "similarOccupationIds": ["registered-nurse", "medical-coder"]
+  },
+
+  {
+    "id": "medical-coder",
+    "title": "Medical Coder",
+    "industryId": "healthcare",
+    "socCode": "29-2072",
+    "medianWage": 48780,
+    "educationLevel": "associate",
+    "description": "Translate clinical documentation into standardized ICD-10, CPT, and HCPCS codes for billing, reimbursement, and health records management.",
+    "tasks": [
+      {
+        "id": "mc-code-assignment",
+        "name": "Diagnostic & Procedure Code Assignment",
+        "description": "Review physician notes, operative reports, and discharge summaries to assign accurate ICD-10-CM and CPT codes reflecting documented diagnoses and services.",
+        "category": "cognitive",
+        "timeWeight": 0.50,
+        "llmExposureTier": "E2",
+        "automationRisk": 90,
+        "augmentationPotential": 68,
+        "automationSubScores": {
+          "routineness": 24,
+          "dataIntensity": 24,
+          "physicalBottleneck": 23,
+          "socialBottleneck": 19
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 22,
+          "decisionSupport": 20,
+          "creativeLeverage": 10,
+          "productivityMultiplier": 16
+        }
+      },
+      {
+        "id": "mc-documentation-review",
+        "name": "Clinical Documentation Review",
+        "description": "Scrutinize provider documentation for completeness, specificity, and compliance with payer requirements; query physicians for clarification.",
+        "category": "cognitive",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E2",
+        "automationRisk": 82,
+        "augmentationPotential": 72,
+        "automationSubScores": {
+          "routineness": 20,
+          "dataIntensity": 22,
+          "physicalBottleneck": 22,
+          "socialBottleneck": 18
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 24,
+          "decisionSupport": 20,
+          "creativeLeverage": 12,
+          "productivityMultiplier": 16
+        }
+      },
+      {
+        "id": "mc-compliance-audit",
+        "name": "Compliance Auditing",
+        "description": "Audit coded charts for compliance with CMS guidelines, payer contracts, and internal quality standards; prepare for external audits.",
+        "category": "cognitive",
+        "timeWeight": 0.15,
+        "llmExposureTier": "E1",
+        "automationRisk": 72,
+        "augmentationPotential": 65,
+        "automationSubScores": {
+          "routineness": 20,
+          "dataIntensity": 20,
+          "physicalBottleneck": 18,
+          "socialBottleneck": 14
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 22,
+          "decisionSupport": 18,
+          "creativeLeverage": 10,
+          "productivityMultiplier": 15
+        }
+      },
+      {
+        "id": "mc-denial-management",
+        "name": "Claim Denial Management",
+        "description": "Investigate denied claims, identify coding errors or documentation gaps, prepare appeals, and communicate with payers to resolve reimbursement disputes.",
+        "category": "cognitive",
+        "timeWeight": 0.10,
+        "llmExposureTier": "E1",
+        "automationRisk": 60,
+        "augmentationPotential": 58,
+        "automationSubScores": {
+          "routineness": 16,
+          "dataIntensity": 18,
+          "physicalBottleneck": 16,
+          "socialBottleneck": 10
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 18,
+          "decisionSupport": 16,
+          "creativeLeverage": 12,
+          "productivityMultiplier": 12
+        }
+      }
+    ],
+    "skills": [
+      {
+        "id": "mc-sk-icd10",
+        "name": "ICD-10 Coding",
+        "impact": "displaced",
+        "relevance": 98
+      },
+      {
+        "id": "mc-sk-cpt",
+        "name": "CPT & HCPCS Coding",
+        "impact": "displaced",
+        "relevance": 95
+      },
+      {
+        "id": "mc-sk-compliance",
+        "name": "Regulatory Compliance",
+        "impact": "transformed",
+        "relevance": 82
+      },
+      {
+        "id": "mc-sk-ai-auditing",
+        "name": "AI Output Auditing",
+        "impact": "gained",
+        "relevance": 88
+      },
+      {
+        "id": "mc-sk-clinical-terminology",
+        "name": "Clinical Terminology",
+        "impact": "transformed",
+        "relevance": 85
+      }
+    ],
+    "exposureScore": {
+      "overall": 84,
+      "automationRisk": 84,
+      "augmentationPotential": 68,
+      "netDisplacement": 16,
+      "complementarityScore": 42,
+      "routineTaskIntensity": 1.4,
+      "timeline": "near-term",
+      "wageEffect": -25,
+      "confidence": "high"
+    },
+    "bottleneckTaskIds": ["mc-denial-management", "mc-compliance-audit"],
+    "similarOccupationIds": ["radiologist", "insurance-adjuster"]
+  },
+
+  {
+    "id": "physical-therapist",
+    "title": "Physical Therapist",
+    "industryId": "healthcare",
+    "socCode": "29-1123",
+    "medianWage": 97720,
+    "educationLevel": "doctoral",
+    "description": "Diagnose and treat movement disorders through exercise, manual therapy, and rehabilitation programs to restore function and reduce pain.",
+    "tasks": [
+      {
+        "id": "pt-manual-therapy",
+        "name": "Manual Therapy & Hands-on Treatment",
+        "description": "Perform joint mobilization, soft tissue manipulation, myofascial release, and therapeutic massage to improve range of motion and reduce pain.",
+        "category": "physical",
+        "timeWeight": 0.35,
+        "llmExposureTier": "E0",
+        "automationRisk": 12,
+        "augmentationPotential": 22,
+        "automationSubScores": {
+          "routineness": 8,
+          "dataIntensity": 5,
+          "physicalBottleneck": 1,
+          "socialBottleneck": -2
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 5,
+          "decisionSupport": 8,
+          "creativeLeverage": 5,
+          "productivityMultiplier": 4
+        }
+      },
+      {
+        "id": "pt-exercise-prescription",
+        "name": "Therapeutic Exercise Prescription",
+        "description": "Design, instruct, and progress individualized exercise programs targeting strength, flexibility, balance, and functional mobility deficits.",
+        "category": "cognitive",
+        "timeWeight": 0.30,
+        "llmExposureTier": "E1",
+        "automationRisk": 35,
+        "augmentationPotential": 55,
+        "automationSubScores": {
+          "routineness": 12,
+          "dataIntensity": 12,
+          "physicalBottleneck": 5,
+          "socialBottleneck": 6
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 18,
+          "decisionSupport": 18,
+          "creativeLeverage": 10,
+          "productivityMultiplier": 9
+        }
+      },
+      {
+        "id": "pt-patient-eval",
+        "name": "Patient Evaluation & Goal Setting",
+        "description": "Administer functional outcome measures, gait analysis, and strength assessments; establish measurable goals with patients and families.",
+        "category": "interpersonal",
+        "timeWeight": 0.20,
+        "llmExposureTier": "E1",
+        "automationRisk": 28,
+        "augmentationPotential": 45,
+        "automationSubScores": {
+          "routineness": 10,
+          "dataIntensity": 12,
+          "physicalBottleneck": 3,
+          "socialBottleneck": 3
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 15,
+          "decisionSupport": 16,
+          "creativeLeverage": 8,
+          "productivityMultiplier": 6
+        }
+      },
+      {
+        "id": "pt-documentation",
+        "name": "Progress Notes & Insurance Documentation",
+        "description": "Write SOAP notes, initial evaluations, discharge summaries, and prior authorization requests to satisfy payer and regulatory requirements.",
+        "category": "cognitive",
+        "timeWeight": 0.15,
+        "llmExposureTier": "E2",
+        "automationRisk": 60,
+        "augmentationPotential": 68,
+        "automationSubScores": {
+          "routineness": 18,
+          "dataIntensity": 18,
+          "physicalBottleneck": 15,
+          "socialBottleneck": 9
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 20,
+          "decisionSupport": 18,
+          "creativeLeverage": 14,
+          "productivityMultiplier": 16
+        }
+      }
+    ],
+    "skills": [
+      {
+        "id": "pt-sk-manual",
+        "name": "Manual Therapy Techniques",
+        "impact": "gained",
+        "relevance": 95
+      },
+      {
+        "id": "pt-sk-exercise-science",
+        "name": "Exercise Science",
+        "impact": "transformed",
+        "relevance": 90
+      },
+      {
+        "id": "pt-sk-therapeutic-relationship",
+        "name": "Therapeutic Relationship Building",
+        "impact": "gained",
+        "relevance": 88
+      },
+      {
+        "id": "pt-sk-outcome-measures",
+        "name": "Functional Outcome Measurement",
+        "impact": "transformed",
+        "relevance": 82
+      },
+      {
+        "id": "pt-sk-documentation",
+        "name": "Clinical Documentation",
+        "impact": "transformed",
+        "relevance": 75
+      }
+    ],
+    "exposureScore": {
+      "overall": 45,
+      "automationRisk": 26,
+      "augmentationPotential": 45,
+      "netDisplacement": -19,
+      "complementarityScore": 65,
+      "routineTaskIntensity": -1.2,
+      "timeline": "long-term",
+      "wageEffect": 10,
+      "confidence": "medium"
+    },
+    "bottleneckTaskIds": ["pt-manual-therapy", "pt-patient-eval"],
+    "similarOccupationIds": ["registered-nurse", "k12-teacher"]
+  },
+
+  {
+    "id": "financial-analyst",
+    "title": "Financial Analyst",
+    "industryId": "finance",
+    "socCode": "13-2051",
+    "medianWage": 95080,
+    "educationLevel": "bachelor",
+    "description": "Evaluate investment opportunities, build financial models, analyze market trends, and provide data-driven recommendations to support capital allocation decisions.",
+    "tasks": [
+      {
+        "id": "fa-financial-modeling",
+        "name": "Financial Modeling & Valuation",
+        "description": "Build DCF, LBO, and comparable company analysis models in Excel or Python; stress-test assumptions and synthesize outputs into investment theses.",
+        "category": "cognitive",
+        "timeWeight": 0.35,
+        "llmExposureTier": "E2",
+        "automationRisk": 72,
+        "augmentationPotential": 80,
+        "automationSubScores": {
+          "routineness": 20,
+          "dataIntensity": 24,
+          "physicalBottleneck": 18,
+          "socialBottleneck": 10
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 22,
+          "decisionSupport": 24,
+          "creativeLeverage": 16,
+          "productivityMultiplier": 18
+        }
+      },
+      {
+        "id": "fa-research-synthesis",
+        "name": "Market Research & Intelligence Synthesis",
+        "description": "Aggregate and interpret macroeconomic data, industry reports, earnings transcripts, and news flow to identify investment signals.",
+        "category": "cognitive",
+        "timeWeight": 0.30,
+        "llmExposureTier": "E2",
+        "automationRisk": 75,
+        "augmentationPotential": 78,
+        "automationSubScores": {
+          "routineness": 18,
+          "dataIntensity": 25,
+          "physicalBottleneck": 20,
+          "socialBottleneck": 12
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 25,
+          "decisionSupport": 22,
+          "creativeLeverage": 15,
+          "productivityMultiplier": 16
+        }
+      },
+      {
+        "id": "fa-client-reporting",
+        "name": "Client Reporting & Presentation",
+        "description": "Prepare investment committee memos, board presentations, and client-facing reports communicating portfolio performance and strategic recommendations.",
+        "category": "cognitive",
+        "timeWeight": 0.20,
+        "llmExposureTier": "E2",
+        "automationRisk": 62,
+        "augmentationPotential": 72,
+        "automationSubScores": {
+          "routineness": 16,
+          "dataIntensity": 18,
+          "physicalBottleneck": 18,
+          "socialBottleneck": 10
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 20,
+          "decisionSupport": 18,
+          "creativeLeverage": 20,
+          "productivityMultiplier": 14
+        }
+      },
+      {
+        "id": "fa-stakeholder-advisory",
+        "name": "Stakeholder Advisory & Deal Structuring",
+        "description": "Advise clients on deal terms, capital structure, and risk management strategies; negotiate with counterparties and coordinate with legal teams.",
+        "category": "interpersonal",
+        "timeWeight": 0.15,
+        "llmExposureTier": "E1",
+        "automationRisk": 35,
+        "augmentationPotential": 55,
+        "automationSubScores": {
+          "routineness": 8,
+          "dataIntensity": 14,
+          "physicalBottleneck": 10,
+          "socialBottleneck": 3
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 18,
+          "decisionSupport": 20,
+          "creativeLeverage": 10,
+          "productivityMultiplier": 7
+        }
+      }
+    ],
+    "skills": [
+      {
+        "id": "fa-sk-modeling",
+        "name": "Financial Modeling",
+        "impact": "transformed",
+        "relevance": 96
+      },
+      {
+        "id": "fa-sk-data-analysis",
+        "name": "Quantitative Data Analysis",
+        "impact": "transformed",
+        "relevance": 92
+      },
+      {
+        "id": "fa-sk-investment-thesis",
+        "name": "Investment Thesis Development",
+        "impact": "gained",
+        "relevance": 88
+      },
+      {
+        "id": "fa-sk-communication",
+        "name": "Executive Communication",
+        "impact": "gained",
+        "relevance": 82
+      },
+      {
+        "id": "fa-sk-python",
+        "name": "Python / Data Tools",
+        "impact": "gained",
+        "relevance": 78
+      }
+    ],
+    "exposureScore": {
+      "overall": 75,
+      "automationRisk": 68,
+      "augmentationPotential": 75,
+      "netDisplacement": -7,
+      "complementarityScore": 72,
+      "routineTaskIntensity": 0.5,
+      "timeline": "near-term",
+      "wageEffect": 12,
+      "confidence": "high"
+    },
+    "bottleneckTaskIds": ["fa-stakeholder-advisory", "fa-client-reporting"],
+    "similarOccupationIds": ["accountant", "data-scientist"]
+  },
+
+  {
+    "id": "loan-officer",
+    "title": "Loan Officer",
+    "industryId": "finance",
+    "socCode": "13-2072",
+    "medianWage": 69990,
+    "educationLevel": "bachelor",
+    "description": "Evaluate, authorize, and recommend approval of loan applications for individuals and businesses by assessing creditworthiness and financial risk.",
+    "tasks": [
+      {
+        "id": "lo-credit-underwriting",
+        "name": "Credit Underwriting & Risk Assessment",
+        "description": "Analyze credit bureau reports, income statements, debt-to-income ratios, and collateral value to determine loan eligibility and pricing.",
+        "category": "cognitive",
+        "timeWeight": 0.40,
+        "llmExposureTier": "E2",
+        "automationRisk": 88,
+        "augmentationPotential": 55,
+        "automationSubScores": {
+          "routineness": 24,
+          "dataIntensity": 25,
+          "physicalBottleneck": 22,
+          "socialBottleneck": 17
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 18,
+          "decisionSupport": 20,
+          "creativeLeverage": 8,
+          "productivityMultiplier": 9
+        }
+      },
+      {
+        "id": "lo-application-processing",
+        "name": "Loan Application Processing",
+        "description": "Collect and verify applicant documentation, enter data into loan origination systems, order appraisals, and track workflow milestones.",
+        "category": "cognitive",
+        "timeWeight": 0.30,
+        "llmExposureTier": "E2",
+        "automationRisk": 85,
+        "augmentationPotential": 42,
+        "automationSubScores": {
+          "routineness": 24,
+          "dataIntensity": 22,
+          "physicalBottleneck": 23,
+          "socialBottleneck": 16
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 14,
+          "decisionSupport": 12,
+          "creativeLeverage": 6,
+          "productivityMultiplier": 10
+        }
+      },
+      {
+        "id": "lo-client-consultation",
+        "name": "Client Consultation & Product Guidance",
+        "description": "Meet with prospective borrowers, explain loan products and terms, gather financial goals, and match clients to suitable financing solutions.",
+        "category": "interpersonal",
+        "timeWeight": 0.20,
+        "llmExposureTier": "E1",
+        "automationRisk": 45,
+        "augmentationPotential": 52,
+        "automationSubScores": {
+          "routineness": 12,
+          "dataIntensity": 15,
+          "physicalBottleneck": 12,
+          "socialBottleneck": 6
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 16,
+          "decisionSupport": 16,
+          "creativeLeverage": 10,
+          "productivityMultiplier": 10
+        }
+      },
+      {
+        "id": "lo-compliance-reporting",
+        "name": "Regulatory Compliance & Reporting",
+        "description": "Ensure loan files comply with RESPA, TILA, HMDA, and fair lending requirements; generate mandatory disclosures and audit-ready documentation.",
+        "category": "cognitive",
+        "timeWeight": 0.10,
+        "llmExposureTier": "E2",
+        "automationRisk": 80,
+        "augmentationPotential": 50,
+        "automationSubScores": {
+          "routineness": 22,
+          "dataIntensity": 20,
+          "physicalBottleneck": 22,
+          "socialBottleneck": 16
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 18,
+          "decisionSupport": 14,
+          "creativeLeverage": 8,
+          "productivityMultiplier": 10
+        }
+      }
+    ],
+    "skills": [
+      {
+        "id": "lo-sk-underwriting",
+        "name": "Credit Underwriting",
+        "impact": "displaced",
+        "relevance": 96
+      },
+      {
+        "id": "lo-sk-loan-origination",
+        "name": "Loan Origination Systems",
+        "impact": "displaced",
+        "relevance": 88
+      },
+      {
+        "id": "lo-sk-sales",
+        "name": "Client Relationship Management",
+        "impact": "gained",
+        "relevance": 82
+      },
+      {
+        "id": "lo-sk-compliance",
+        "name": "Lending Regulation & Compliance",
+        "impact": "transformed",
+        "relevance": 85
+      },
+      {
+        "id": "lo-sk-financial-analysis",
+        "name": "Financial Statement Analysis",
+        "impact": "transformed",
+        "relevance": 80
+      }
+    ],
+    "exposureScore": {
+      "overall": 80,
+      "automationRisk": 80,
+      "augmentationPotential": 50,
+      "netDisplacement": 30,
+      "complementarityScore": 38,
+      "routineTaskIntensity": 1.2,
+      "timeline": "near-term",
+      "wageEffect": -18,
+      "confidence": "high"
+    },
+    "bottleneckTaskIds": ["lo-client-consultation", "lo-compliance-reporting"],
+    "similarOccupationIds": ["insurance-adjuster", "accountant"]
+  },
+
+  {
+    "id": "accountant",
+    "title": "Accountant",
+    "industryId": "finance",
+    "socCode": "13-2011",
+    "medianWage": 79880,
+    "educationLevel": "bachelor",
+    "description": "Prepare financial statements, manage general ledgers, ensure tax compliance, and advise organizations on financial controls and reporting standards.",
+    "tasks": [
+      {
+        "id": "acct-bookkeeping",
+        "name": "Bookkeeping & Transaction Processing",
+        "description": "Record journal entries, reconcile bank statements, manage accounts payable and receivable, and maintain accurate general ledger balances.",
+        "category": "cognitive",
+        "timeWeight": 0.30,
+        "llmExposureTier": "E2",
+        "automationRisk": 88,
+        "augmentationPotential": 50,
+        "automationSubScores": {
+          "routineness": 25,
+          "dataIntensity": 24,
+          "physicalBottleneck": 23,
+          "socialBottleneck": 16
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 16,
+          "decisionSupport": 12,
+          "creativeLeverage": 8,
+          "productivityMultiplier": 14
+        }
+      },
+      {
+        "id": "acct-financial-reporting",
+        "name": "Financial Statement Preparation",
+        "description": "Compile income statements, balance sheets, and cash flow statements in accordance with GAAP or IFRS; prepare management reports and variance analyses.",
+        "category": "cognitive",
+        "timeWeight": 0.30,
+        "llmExposureTier": "E2",
+        "automationRisk": 78,
+        "augmentationPotential": 72,
+        "automationSubScores": {
+          "routineness": 20,
+          "dataIntensity": 24,
+          "physicalBottleneck": 20,
+          "socialBottleneck": 14
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 22,
+          "decisionSupport": 20,
+          "creativeLeverage": 14,
+          "productivityMultiplier": 16
+        }
+      },
+      {
+        "id": "acct-tax-compliance",
+        "name": "Tax Preparation & Compliance",
+        "description": "Prepare corporate and individual tax returns, research tax code implications, identify planning opportunities, and manage audit correspondence.",
+        "category": "cognitive",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E2",
+        "automationRisk": 72,
+        "augmentationPotential": 65,
+        "automationSubScores": {
+          "routineness": 18,
+          "dataIntensity": 22,
+          "physicalBottleneck": 20,
+          "socialBottleneck": 12
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 22,
+          "decisionSupport": 18,
+          "creativeLeverage": 12,
+          "productivityMultiplier": 13
+        }
+      },
+      {
+        "id": "acct-advisory",
+        "name": "Financial Advisory & Internal Controls",
+        "description": "Advise management on cost reduction, cash flow optimization, and control improvements; liaise with auditors and regulatory bodies.",
+        "category": "interpersonal",
+        "timeWeight": 0.15,
+        "llmExposureTier": "E1",
+        "automationRisk": 38,
+        "augmentationPotential": 60,
+        "automationSubScores": {
+          "routineness": 10,
+          "dataIntensity": 16,
+          "physicalBottleneck": 8,
+          "socialBottleneck": 4
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 20,
+          "decisionSupport": 20,
+          "creativeLeverage": 10,
+          "productivityMultiplier": 10
+        }
+      }
+    ],
+    "skills": [
+      {
+        "id": "acct-sk-gaap",
+        "name": "GAAP / IFRS Reporting",
+        "impact": "transformed",
+        "relevance": 94
+      },
+      {
+        "id": "acct-sk-tax",
+        "name": "Tax Law & Compliance",
+        "impact": "transformed",
+        "relevance": 88
+      },
+      {
+        "id": "acct-sk-erp",
+        "name": "ERP Systems (SAP/Oracle)",
+        "impact": "displaced",
+        "relevance": 80
+      },
+      {
+        "id": "acct-sk-data-analysis",
+        "name": "Data Analysis & Visualization",
+        "impact": "gained",
+        "relevance": 75
+      },
+      {
+        "id": "acct-sk-advisory",
+        "name": "Strategic Financial Advisory",
+        "impact": "gained",
+        "relevance": 82
+      }
+    ],
+    "exposureScore": {
+      "overall": 72,
+      "automationRisk": 72,
+      "augmentationPotential": 62,
+      "netDisplacement": 10,
+      "complementarityScore": 55,
+      "routineTaskIntensity": 0.8,
+      "timeline": "near-term",
+      "wageEffect": -8,
+      "confidence": "high"
+    },
+    "bottleneckTaskIds": ["acct-advisory", "acct-tax-compliance"],
+    "similarOccupationIds": ["financial-analyst", "loan-officer"]
+  },
+
+  {
+    "id": "insurance-adjuster",
+    "title": "Insurance Adjuster",
+    "industryId": "finance",
+    "socCode": "13-1031",
+    "medianWage": 72610,
+    "educationLevel": "bachelor",
+    "description": "Investigate insurance claims, assess property or bodily injury damages, determine coverage applicability, and negotiate settlements with claimants and attorneys.",
+    "tasks": [
+      {
+        "id": "ia-claim-investigation",
+        "name": "Claim Investigation & Documentation",
+        "description": "Gather evidence through field inspections, interviews, police reports, and medical records; document findings in claims management systems.",
+        "category": "cognitive",
+        "timeWeight": 0.35,
+        "llmExposureTier": "E1",
+        "automationRisk": 62,
+        "augmentationPotential": 65,
+        "automationSubScores": {
+          "routineness": 16,
+          "dataIntensity": 20,
+          "physicalBottleneck": 14,
+          "socialBottleneck": 12
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 22,
+          "decisionSupport": 20,
+          "creativeLeverage": 10,
+          "productivityMultiplier": 13
+        }
+      },
+      {
+        "id": "ia-damage-assessment",
+        "name": "Damage Valuation & Estimation",
+        "description": "Use estimating software and cost databases to compute repair or replacement values for property losses; review medical bills and calculate injury settlements.",
+        "category": "cognitive",
+        "timeWeight": 0.30,
+        "llmExposureTier": "E2",
+        "automationRisk": 78,
+        "augmentationPotential": 60,
+        "automationSubScores": {
+          "routineness": 20,
+          "dataIntensity": 24,
+          "physicalBottleneck": 18,
+          "socialBottleneck": 16
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 20,
+          "decisionSupport": 18,
+          "creativeLeverage": 10,
+          "productivityMultiplier": 12
+        }
+      },
+      {
+        "id": "ia-settlement-negotiation",
+        "name": "Settlement Negotiation",
+        "description": "Negotiate claim settlements directly with policyholders, claimants, and plaintiff attorneys; authorize payments within delegated authority.",
+        "category": "interpersonal",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E1",
+        "automationRisk": 38,
+        "augmentationPotential": 52,
+        "automationSubScores": {
+          "routineness": 10,
+          "dataIntensity": 14,
+          "physicalBottleneck": 10,
+          "socialBottleneck": 4
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 16,
+          "decisionSupport": 18,
+          "creativeLeverage": 10,
+          "productivityMultiplier": 8
+        }
+      },
+      {
+        "id": "ia-coverage-analysis",
+        "name": "Policy Coverage Analysis",
+        "description": "Interpret policy language, exclusions, and endorsements to determine whether a claim is covered and the applicable limits and deductibles.",
+        "category": "cognitive",
+        "timeWeight": 0.10,
+        "llmExposureTier": "E2",
+        "automationRisk": 70,
+        "augmentationPotential": 68,
+        "automationSubScores": {
+          "routineness": 18,
+          "dataIntensity": 22,
+          "physicalBottleneck": 18,
+          "socialBottleneck": 12
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 24,
+          "decisionSupport": 20,
+          "creativeLeverage": 12,
+          "productivityMultiplier": 12
+        }
+      }
+    ],
+    "skills": [
+      {
+        "id": "ia-sk-claims-systems",
+        "name": "Claims Management Systems",
+        "impact": "transformed",
+        "relevance": 88
+      },
+      {
+        "id": "ia-sk-negotiation",
+        "name": "Negotiation & Conflict Resolution",
+        "impact": "gained",
+        "relevance": 90
+      },
+      {
+        "id": "ia-sk-policy-interpretation",
+        "name": "Insurance Policy Interpretation",
+        "impact": "transformed",
+        "relevance": 92
+      },
+      {
+        "id": "ia-sk-damage-estimation",
+        "name": "Damage Estimation Software",
+        "impact": "displaced",
+        "relevance": 82
+      },
+      {
+        "id": "ia-sk-investigation",
+        "name": "Claims Investigation",
+        "impact": "transformed",
+        "relevance": 85
+      }
+    ],
+    "exposureScore": {
+      "overall": 68,
+      "automationRisk": 62,
+      "augmentationPotential": 62,
+      "netDisplacement": 0,
+      "complementarityScore": 58,
+      "routineTaskIntensity": 0.4,
+      "timeline": "mid-term",
+      "wageEffect": -5,
+      "confidence": "medium"
+    },
+    "bottleneckTaskIds": ["ia-settlement-negotiation", "ia-claim-investigation"],
+    "similarOccupationIds": ["loan-officer", "medical-coder"]
+  },
+
+  {
+    "id": "software-developer",
+    "title": "Software Developer",
+    "industryId": "technology",
+    "socCode": "15-1252",
+    "medianWage": 132270,
+    "educationLevel": "bachelor",
+    "description": "Design, develop, test, and deploy software applications and systems, spanning front-end interfaces, back-end services, and platform infrastructure.",
+    "tasks": [
+      {
+        "id": "sd-feature-development",
+        "name": "Feature Development & Implementation",
+        "description": "Translate product requirements into working code across frontend and backend layers; conduct code reviews and mentor junior developers.",
+        "category": "cognitive",
+        "timeWeight": 0.40,
+        "llmExposureTier": "E2",
+        "automationRisk": 65,
+        "augmentationPotential": 82,
+        "automationSubScores": {
+          "routineness": 16,
+          "dataIntensity": 18,
+          "physicalBottleneck": 20,
+          "socialBottleneck": 11
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 22,
+          "decisionSupport": 20,
+          "creativeLeverage": 22,
+          "productivityMultiplier": 18
+        }
+      },
+      {
+        "id": "sd-architecture-design",
+        "name": "System Architecture & Design",
+        "description": "Define technical architecture, select technology stacks, design APIs and data models, and evaluate trade-offs for scalability and maintainability.",
+        "category": "cognitive",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E1",
+        "automationRisk": 42,
+        "augmentationPotential": 68,
+        "automationSubScores": {
+          "routineness": 8,
+          "dataIntensity": 14,
+          "physicalBottleneck": 12,
+          "socialBottleneck": 8
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 20,
+          "decisionSupport": 22,
+          "creativeLeverage": 15,
+          "productivityMultiplier": 11
+        }
+      },
+      {
+        "id": "sd-debugging",
+        "name": "Debugging & Performance Optimization",
+        "description": "Diagnose defects through log analysis, profilers, and root-cause investigation; optimize bottlenecks in latency, memory, and throughput.",
+        "category": "cognitive",
+        "timeWeight": 0.20,
+        "llmExposureTier": "E2",
+        "automationRisk": 58,
+        "augmentationPotential": 72,
+        "automationSubScores": {
+          "routineness": 14,
+          "dataIntensity": 20,
+          "physicalBottleneck": 14,
+          "socialBottleneck": 10
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 22,
+          "decisionSupport": 20,
+          "creativeLeverage": 14,
+          "productivityMultiplier": 16
+        }
+      },
+      {
+        "id": "sd-collaboration",
+        "name": "Cross-functional Collaboration",
+        "description": "Work with product managers, designers, and QA to refine requirements, conduct sprint ceremonies, and align technical solutions to business goals.",
+        "category": "interpersonal",
+        "timeWeight": 0.15,
+        "llmExposureTier": "E1",
+        "automationRisk": 30,
+        "augmentationPotential": 52,
+        "automationSubScores": {
+          "routineness": 6,
+          "dataIntensity": 10,
+          "physicalBottleneck": 10,
+          "socialBottleneck": 4
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 16,
+          "decisionSupport": 15,
+          "creativeLeverage": 12,
+          "productivityMultiplier": 9
+        }
+      }
+    ],
+    "skills": [
+      {
+        "id": "sd-sk-coding",
+        "name": "Software Engineering",
+        "impact": "transformed",
+        "relevance": 98
+      },
+      {
+        "id": "sd-sk-ai-tools",
+        "name": "AI-assisted Development Tools",
+        "impact": "gained",
+        "relevance": 95
+      },
+      {
+        "id": "sd-sk-systems-design",
+        "name": "System Design & Architecture",
+        "impact": "gained",
+        "relevance": 90
+      },
+      {
+        "id": "sd-sk-devops",
+        "name": "DevOps & CI/CD",
+        "impact": "transformed",
+        "relevance": 82
+      },
+      {
+        "id": "sd-sk-testing",
+        "name": "Testing & Quality Assurance",
+        "impact": "transformed",
+        "relevance": 78
+      }
+    ],
+    "exposureScore": {
+      "overall": 70,
+      "automationRisk": 54,
+      "augmentationPotential": 70,
+      "netDisplacement": -16,
+      "complementarityScore": 82,
+      "routineTaskIntensity": 0.2,
+      "timeline": "near-term",
+      "wageEffect": 15,
+      "confidence": "high"
+    },
+    "bottleneckTaskIds": ["sd-architecture-design", "sd-collaboration"],
+    "similarOccupationIds": ["data-scientist", "qa-tester"]
+  },
+
+  {
+    "id": "data-scientist",
+    "title": "Data Scientist",
+    "industryId": "technology",
+    "socCode": "15-2051",
+    "medianWage": 108020,
+    "educationLevel": "master",
+    "description": "Extract insights from large datasets using statistical modeling, machine learning, and data visualization to inform product and business strategy.",
+    "tasks": [
+      {
+        "id": "ds-model-development",
+        "name": "ML Model Development & Training",
+        "description": "Design and train machine learning models for classification, regression, forecasting, and recommendation; tune hyperparameters and evaluate model performance.",
+        "category": "cognitive",
+        "timeWeight": 0.35,
+        "llmExposureTier": "E2",
+        "automationRisk": 60,
+        "augmentationPotential": 78,
+        "automationSubScores": {
+          "routineness": 14,
+          "dataIntensity": 22,
+          "physicalBottleneck": 14,
+          "socialBottleneck": 10
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 22,
+          "decisionSupport": 22,
+          "creativeLeverage": 18,
+          "productivityMultiplier": 16
+        }
+      },
+      {
+        "id": "ds-data-wrangling",
+        "name": "Data Wrangling & Feature Engineering",
+        "description": "Clean, transform, and engineer features from raw structured and unstructured data sources; build and maintain data pipelines for model training.",
+        "category": "cognitive",
+        "timeWeight": 0.30,
+        "llmExposureTier": "E2",
+        "automationRisk": 70,
+        "augmentationPotential": 65,
+        "automationSubScores": {
+          "routineness": 18,
+          "dataIntensity": 24,
+          "physicalBottleneck": 18,
+          "socialBottleneck": 10
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 20,
+          "decisionSupport": 16,
+          "creativeLeverage": 14,
+          "productivityMultiplier": 15
+        }
+      },
+      {
+        "id": "ds-insight-communication",
+        "name": "Insight Communication & Storytelling",
+        "description": "Translate complex analytical findings into clear narratives, dashboards, and recommendations for non-technical stakeholders and decision-makers.",
+        "category": "cognitive",
+        "timeWeight": 0.20,
+        "llmExposureTier": "E2",
+        "automationRisk": 55,
+        "augmentationPotential": 72,
+        "automationSubScores": {
+          "routineness": 12,
+          "dataIntensity": 18,
+          "physicalBottleneck": 16,
+          "socialBottleneck": 9
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 22,
+          "decisionSupport": 18,
+          "creativeLeverage": 18,
+          "productivityMultiplier": 14
+        }
+      },
+      {
+        "id": "ds-research-experimentation",
+        "name": "Research & Experimentation Design",
+        "description": "Design A/B tests and causal inference studies; review academic literature to identify novel algorithmic approaches applicable to business problems.",
+        "category": "cognitive",
+        "timeWeight": 0.15,
+        "llmExposureTier": "E1",
+        "automationRisk": 42,
+        "augmentationPotential": 65,
+        "automationSubScores": {
+          "routineness": 8,
+          "dataIntensity": 18,
+          "physicalBottleneck": 10,
+          "socialBottleneck": 6
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 22,
+          "decisionSupport": 20,
+          "creativeLeverage": 14,
+          "productivityMultiplier": 9
+        }
+      }
+    ],
+    "skills": [
+      {
+        "id": "ds-sk-ml",
+        "name": "Machine Learning",
+        "impact": "transformed",
+        "relevance": 98
+      },
+      {
+        "id": "ds-sk-statistics",
+        "name": "Statistical Modeling",
+        "impact": "transformed",
+        "relevance": 94
+      },
+      {
+        "id": "ds-sk-python",
+        "name": "Python / R Programming",
+        "impact": "transformed",
+        "relevance": 92
+      },
+      {
+        "id": "ds-sk-communication",
+        "name": "Data Storytelling",
+        "impact": "gained",
+        "relevance": 85
+      },
+      {
+        "id": "ds-sk-llm-ops",
+        "name": "LLM Fine-tuning & Prompt Engineering",
+        "impact": "gained",
+        "relevance": 88
+      }
+    ],
+    "exposureScore": {
+      "overall": 65,
+      "automationRisk": 60,
+      "augmentationPotential": 65,
+      "netDisplacement": -5,
+      "complementarityScore": 80,
+      "routineTaskIntensity": 0.3,
+      "timeline": "near-term",
+      "wageEffect": 18,
+      "confidence": "high"
+    },
+    "bottleneckTaskIds": ["ds-research-experimentation", "ds-insight-communication"],
+    "similarOccupationIds": ["software-developer", "financial-analyst"]
+  },
+
+  {
+    "id": "it-support-specialist",
+    "title": "IT Support Specialist",
+    "industryId": "technology",
+    "socCode": "15-1232",
+    "medianWage": 59660,
+    "educationLevel": "associate",
+    "description": "Provide technical assistance to end users by diagnosing hardware and software issues, managing tickets, configuring systems, and maintaining IT infrastructure.",
+    "tasks": [
+      {
+        "id": "its-ticket-resolution",
+        "name": "Help Desk Ticket Resolution",
+        "description": "Triage and resolve Level 1 and Level 2 support tickets covering password resets, software errors, connectivity problems, and hardware faults.",
+        "category": "cognitive",
+        "timeWeight": 0.40,
+        "llmExposureTier": "E2",
+        "automationRisk": 72,
+        "augmentationPotential": 65,
+        "automationSubScores": {
+          "routineness": 22,
+          "dataIntensity": 18,
+          "physicalBottleneck": 18,
+          "socialBottleneck": 14
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 22,
+          "decisionSupport": 18,
+          "creativeLeverage": 10,
+          "productivityMultiplier": 15
+        }
+      },
+      {
+        "id": "its-system-setup",
+        "name": "System Configuration & Deployment",
+        "description": "Image and deploy workstations, configure network settings, install and update software, and manage endpoint security tools.",
+        "category": "physical",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E1",
+        "automationRisk": 55,
+        "augmentationPotential": 48,
+        "automationSubScores": {
+          "routineness": 20,
+          "dataIntensity": 14,
+          "physicalBottleneck": 12,
+          "socialBottleneck": 9
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 14,
+          "decisionSupport": 14,
+          "creativeLeverage": 8,
+          "productivityMultiplier": 12
+        }
+      },
+      {
+        "id": "its-user-training",
+        "name": "User Training & Documentation",
+        "description": "Train end users on new software and policies; write and maintain knowledge base articles, FAQs, and IT procedure guides.",
+        "category": "interpersonal",
+        "timeWeight": 0.20,
+        "llmExposureTier": "E2",
+        "automationRisk": 50,
+        "augmentationPotential": 62,
+        "automationSubScores": {
+          "routineness": 14,
+          "dataIntensity": 12,
+          "physicalBottleneck": 14,
+          "socialBottleneck": 10
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 18,
+          "decisionSupport": 14,
+          "creativeLeverage": 16,
+          "productivityMultiplier": 14
+        }
+      },
+      {
+        "id": "its-monitoring",
+        "name": "Infrastructure Monitoring & Incident Response",
+        "description": "Monitor network performance dashboards, respond to alerts, coordinate with vendors on outages, and escalate critical incidents to senior engineers.",
+        "category": "cognitive",
+        "timeWeight": 0.15,
+        "llmExposureTier": "E1",
+        "automationRisk": 58,
+        "augmentationPotential": 55,
+        "automationSubScores": {
+          "routineness": 16,
+          "dataIntensity": 20,
+          "physicalBottleneck": 14,
+          "socialBottleneck": 8
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 20,
+          "decisionSupport": 18,
+          "creativeLeverage": 8,
+          "productivityMultiplier": 9
+        }
+      }
+    ],
+    "skills": [
+      {
+        "id": "its-sk-troubleshooting",
+        "name": "Hardware/Software Troubleshooting",
+        "impact": "transformed",
+        "relevance": 94
+      },
+      {
+        "id": "its-sk-networking",
+        "name": "Networking & Security Fundamentals",
+        "impact": "transformed",
+        "relevance": 85
+      },
+      {
+        "id": "its-sk-customer-service",
+        "name": "Customer Service",
+        "impact": "gained",
+        "relevance": 82
+      },
+      {
+        "id": "its-sk-automation",
+        "name": "IT Process Automation",
+        "impact": "gained",
+        "relevance": 78
+      },
+      {
+        "id": "its-sk-cloud",
+        "name": "Cloud Platforms (Azure/AWS)",
+        "impact": "gained",
+        "relevance": 76
+      }
+    ],
+    "exposureScore": {
+      "overall": 60,
+      "automationRisk": 60,
+      "augmentationPotential": 60,
+      "netDisplacement": 0,
+      "complementarityScore": 55,
+      "routineTaskIntensity": 0.6,
+      "timeline": "near-term",
+      "wageEffect": -12,
+      "confidence": "medium"
+    },
+    "bottleneckTaskIds": ["its-user-training", "its-monitoring"],
+    "similarOccupationIds": ["software-developer", "qa-tester"]
+  },
+
+  {
+    "id": "qa-tester",
+    "title": "QA Tester",
+    "industryId": "technology",
+    "socCode": "15-1253",
+    "medianWage": 99620,
+    "educationLevel": "bachelor",
+    "description": "Design and execute test plans to verify software quality, identify defects, automate regression suites, and ensure products meet functional and performance requirements.",
+    "tasks": [
+      {
+        "id": "qa-test-automation",
+        "name": "Automated Test Script Development",
+        "description": "Write, maintain, and extend automated regression suites using Selenium, Playwright, or Cypress; integrate tests into CI/CD pipelines.",
+        "category": "cognitive",
+        "timeWeight": 0.35,
+        "llmExposureTier": "E2",
+        "automationRisk": 88,
+        "augmentationPotential": 72,
+        "automationSubScores": {
+          "routineness": 22,
+          "dataIntensity": 22,
+          "physicalBottleneck": 22,
+          "socialBottleneck": 22
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 20,
+          "decisionSupport": 18,
+          "creativeLeverage": 16,
+          "productivityMultiplier": 18
+        }
+      },
+      {
+        "id": "qa-manual-testing",
+        "name": "Manual & Exploratory Testing",
+        "description": "Execute manual test cases, perform exploratory testing to uncover edge cases, and validate UI/UX against acceptance criteria and accessibility standards.",
+        "category": "cognitive",
+        "timeWeight": 0.30,
+        "llmExposureTier": "E2",
+        "automationRisk": 82,
+        "augmentationPotential": 60,
+        "automationSubScores": {
+          "routineness": 22,
+          "dataIntensity": 20,
+          "physicalBottleneck": 22,
+          "socialBottleneck": 18
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 18,
+          "decisionSupport": 16,
+          "creativeLeverage": 14,
+          "productivityMultiplier": 12
+        }
+      },
+      {
+        "id": "qa-defect-management",
+        "name": "Defect Tracking & Triage",
+        "description": "Log, reproduce, prioritize, and track defects in Jira; write detailed bug reports with steps to reproduce, expected versus actual behavior, and severity assessments.",
+        "category": "cognitive",
+        "timeWeight": 0.20,
+        "llmExposureTier": "E2",
+        "automationRisk": 78,
+        "augmentationPotential": 65,
+        "automationSubScores": {
+          "routineness": 20,
+          "dataIntensity": 22,
+          "physicalBottleneck": 20,
+          "socialBottleneck": 16
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 20,
+          "decisionSupport": 18,
+          "creativeLeverage": 14,
+          "productivityMultiplier": 13
+        }
+      },
+      {
+        "id": "qa-test-planning",
+        "name": "Test Strategy & Planning",
+        "description": "Develop test strategies, estimate effort, define coverage criteria, and coordinate with developers and product managers on release readiness.",
+        "category": "interpersonal",
+        "timeWeight": 0.15,
+        "llmExposureTier": "E1",
+        "automationRisk": 48,
+        "augmentationPotential": 62,
+        "automationSubScores": {
+          "routineness": 12,
+          "dataIntensity": 16,
+          "physicalBottleneck": 12,
+          "socialBottleneck": 8
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 20,
+          "decisionSupport": 18,
+          "creativeLeverage": 14,
+          "productivityMultiplier": 10
+        }
+      }
+    ],
+    "skills": [
+      {
+        "id": "qa-sk-automation",
+        "name": "Test Automation Frameworks",
+        "impact": "displaced",
+        "relevance": 94
+      },
+      {
+        "id": "qa-sk-ai-testing",
+        "name": "AI-generated Test Coverage",
+        "impact": "gained",
+        "relevance": 90
+      },
+      {
+        "id": "qa-sk-cicd",
+        "name": "CI/CD & DevOps Integration",
+        "impact": "transformed",
+        "relevance": 82
+      },
+      {
+        "id": "qa-sk-exploratory",
+        "name": "Exploratory Testing & Critical Thinking",
+        "impact": "gained",
+        "relevance": 85
+      },
+      {
+        "id": "qa-sk-requirements",
+        "name": "Requirements Analysis",
+        "impact": "transformed",
+        "relevance": 78
+      }
+    ],
+    "exposureScore": {
+      "overall": 82,
+      "automationRisk": 82,
+      "augmentationPotential": 66,
+      "netDisplacement": 16,
+      "complementarityScore": 48,
+      "routineTaskIntensity": 1.0,
+      "timeline": "near-term",
+      "wageEffect": -15,
+      "confidence": "high"
+    },
+    "bottleneckTaskIds": ["qa-test-planning", "qa-defect-management"],
+    "similarOccupationIds": ["software-developer", "it-support-specialist"]
+  },
+
+  {
+    "id": "k12-teacher",
+    "title": "K-12 Teacher",
+    "industryId": "education",
+    "socCode": "25-2031",
+    "medianWage": 62360,
+    "educationLevel": "bachelor",
+    "description": "Plan and deliver instruction aligned to curriculum standards, assess student learning, manage classroom environments, and communicate with families to support student development.",
+    "tasks": [
+      {
+        "id": "k12-instruction",
+        "name": "Direct Classroom Instruction",
+        "description": "Deliver lessons using varied instructional strategies, facilitate discussions, differentiate for diverse learners, and maintain an engaging classroom environment.",
+        "category": "interpersonal",
+        "timeWeight": 0.40,
+        "llmExposureTier": "E1",
+        "automationRisk": 22,
+        "augmentationPotential": 55,
+        "automationSubScores": {
+          "routineness": 8,
+          "dataIntensity": 8,
+          "physicalBottleneck": 8,
+          "socialBottleneck": -2
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 16,
+          "decisionSupport": 14,
+          "creativeLeverage": 14,
+          "productivityMultiplier": 11
+        }
+      },
+      {
+        "id": "k12-lesson-planning",
+        "name": "Lesson Planning & Curriculum Design",
+        "description": "Design standards-aligned unit plans, select instructional materials, create assessments, and scaffold learning progressions for diverse student needs.",
+        "category": "cognitive",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E2",
+        "automationRisk": 52,
+        "augmentationPotential": 72,
+        "automationSubScores": {
+          "routineness": 14,
+          "dataIntensity": 14,
+          "physicalBottleneck": 16,
+          "socialBottleneck": 8
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 22,
+          "decisionSupport": 16,
+          "creativeLeverage": 20,
+          "productivityMultiplier": 14
+        }
+      },
+      {
+        "id": "k12-assessment",
+        "name": "Student Assessment & Grading",
+        "description": "Administer formative and summative assessments, grade student work, track progress in gradebooks, and use data to inform instructional adjustments.",
+        "category": "cognitive",
+        "timeWeight": 0.20,
+        "llmExposureTier": "E2",
+        "automationRisk": 58,
+        "augmentationPotential": 65,
+        "automationSubScores": {
+          "routineness": 16,
+          "dataIntensity": 18,
+          "physicalBottleneck": 16,
+          "socialBottleneck": 8
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 20,
+          "decisionSupport": 18,
+          "creativeLeverage": 12,
+          "productivityMultiplier": 15
+        }
+      },
+      {
+        "id": "k12-family-engagement",
+        "name": "Family Communication & Student Support",
+        "description": "Communicate with parents and guardians about student progress, facilitate conferences, coordinate with counselors, and provide social-emotional support.",
+        "category": "interpersonal",
+        "timeWeight": 0.15,
+        "llmExposureTier": "E1",
+        "automationRisk": 18,
+        "augmentationPotential": 42,
+        "automationSubScores": {
+          "routineness": 6,
+          "dataIntensity": 8,
+          "physicalBottleneck": 6,
+          "socialBottleneck": -2
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 12,
+          "decisionSupport": 12,
+          "creativeLeverage": 10,
+          "productivityMultiplier": 8
+        }
+      }
+    ],
+    "skills": [
+      {
+        "id": "k12-sk-pedagogy",
+        "name": "Pedagogy & Instructional Design",
+        "impact": "transformed",
+        "relevance": 96
+      },
+      {
+        "id": "k12-sk-differentiation",
+        "name": "Differentiated Instruction",
+        "impact": "transformed",
+        "relevance": 90
+      },
+      {
+        "id": "k12-sk-ai-tutoring",
+        "name": "AI Tutoring Tool Integration",
+        "impact": "gained",
+        "relevance": 82
+      },
+      {
+        "id": "k12-sk-relationship",
+        "name": "Student Relationship Building",
+        "impact": "gained",
+        "relevance": 94
+      },
+      {
+        "id": "k12-sk-data-literacy",
+        "name": "Learning Data Analytics",
+        "impact": "gained",
+        "relevance": 72
+      }
+    ],
+    "exposureScore": {
+      "overall": 48,
+      "automationRisk": 35,
+      "augmentationPotential": 48,
+      "netDisplacement": -13,
+      "complementarityScore": 68,
+      "routineTaskIntensity": -0.6,
+      "timeline": "mid-term",
+      "wageEffect": 5,
+      "confidence": "medium"
+    },
+    "bottleneckTaskIds": ["k12-instruction", "k12-family-engagement"],
+    "similarOccupationIds": ["college-professor", "instructional-designer"]
+  },
+
+  {
+    "id": "college-professor",
+    "title": "College Professor",
+    "industryId": "education",
+    "socCode": "25-1099",
+    "medianWage": 84380,
+    "educationLevel": "doctoral",
+    "description": "Teach undergraduate and graduate courses, conduct original research, advise students on academic and career pathways, and contribute to departmental governance.",
+    "tasks": [
+      {
+        "id": "cp-teaching",
+        "name": "Course Instruction & Facilitation",
+        "description": "Deliver lectures, lead seminars and discussions, supervise lab sections, and facilitate online learning environments for undergraduate and graduate students.",
+        "category": "interpersonal",
+        "timeWeight": 0.35,
+        "llmExposureTier": "E1",
+        "automationRisk": 25,
+        "augmentationPotential": 55,
+        "automationSubScores": {
+          "routineness": 8,
+          "dataIntensity": 8,
+          "physicalBottleneck": 8,
+          "socialBottleneck": 1
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 18,
+          "decisionSupport": 14,
+          "creativeLeverage": 14,
+          "productivityMultiplier": 9
+        }
+      },
+      {
+        "id": "cp-research",
+        "name": "Original Research & Publication",
+        "description": "Design studies, collect and analyze data, write manuscripts for peer-reviewed journals, and present findings at academic conferences.",
+        "category": "cognitive",
+        "timeWeight": 0.35,
+        "llmExposureTier": "E2",
+        "automationRisk": 48,
+        "augmentationPotential": 72,
+        "automationSubScores": {
+          "routineness": 8,
+          "dataIntensity": 20,
+          "physicalBottleneck": 12,
+          "socialBottleneck": 8
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 24,
+          "decisionSupport": 20,
+          "creativeLeverage": 16,
+          "productivityMultiplier": 12
+        }
+      },
+      {
+        "id": "cp-student-advising",
+        "name": "Student Advising & Mentorship",
+        "description": "Advise students on course selection, career pathways, and research opportunities; mentor thesis and dissertation students through their academic journeys.",
+        "category": "interpersonal",
+        "timeWeight": 0.20,
+        "llmExposureTier": "E1",
+        "automationRisk": 20,
+        "augmentationPotential": 42,
+        "automationSubScores": {
+          "routineness": 6,
+          "dataIntensity": 8,
+          "physicalBottleneck": 6,
+          "socialBottleneck": 0
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 14,
+          "decisionSupport": 14,
+          "creativeLeverage": 8,
+          "productivityMultiplier": 6
+        }
+      },
+      {
+        "id": "cp-curriculum-development",
+        "name": "Curriculum Development & Assessment Design",
+        "description": "Design course syllabi, develop learning outcomes, create assessments, and evaluate instructional effectiveness through student performance data.",
+        "category": "cognitive",
+        "timeWeight": 0.10,
+        "llmExposureTier": "E2",
+        "automationRisk": 55,
+        "augmentationPotential": 68,
+        "automationSubScores": {
+          "routineness": 14,
+          "dataIntensity": 16,
+          "physicalBottleneck": 16,
+          "socialBottleneck": 9
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 22,
+          "decisionSupport": 16,
+          "creativeLeverage": 18,
+          "productivityMultiplier": 12
+        }
+      }
+    ],
+    "skills": [
+      {
+        "id": "cp-sk-research",
+        "name": "Research Methodology",
+        "impact": "transformed",
+        "relevance": 96
+      },
+      {
+        "id": "cp-sk-domain-expertise",
+        "name": "Deep Domain Expertise",
+        "impact": "gained",
+        "relevance": 98
+      },
+      {
+        "id": "cp-sk-ai-research-tools",
+        "name": "AI Research Assistance Tools",
+        "impact": "gained",
+        "relevance": 85
+      },
+      {
+        "id": "cp-sk-mentorship",
+        "name": "Academic Mentorship",
+        "impact": "gained",
+        "relevance": 88
+      },
+      {
+        "id": "cp-sk-writing",
+        "name": "Academic Writing",
+        "impact": "transformed",
+        "relevance": 90
+      }
+    ],
+    "exposureScore": {
+      "overall": 52,
+      "automationRisk": 35,
+      "augmentationPotential": 52,
+      "netDisplacement": -17,
+      "complementarityScore": 72,
+      "routineTaskIntensity": -0.5,
+      "timeline": "mid-term",
+      "wageEffect": 8,
+      "confidence": "medium"
+    },
+    "bottleneckTaskIds": ["cp-student-advising", "cp-teaching"],
+    "similarOccupationIds": ["k12-teacher", "instructional-designer"]
+  },
+
+  {
+    "id": "instructional-designer",
+    "title": "Instructional Designer",
+    "industryId": "education",
+    "socCode": "25-9031",
+    "medianWage": 74170,
+    "educationLevel": "master",
+    "description": "Design and develop learning experiences, eLearning modules, and training programs using instructional theory, multimedia authoring tools, and learning analytics.",
+    "tasks": [
+      {
+        "id": "id-content-development",
+        "name": "eLearning Content Development",
+        "description": "Author interactive eLearning modules, video scripts, and multimedia learning assets using tools such as Articulate Storyline, Rise, and Adobe Captivate.",
+        "category": "cognitive",
+        "timeWeight": 0.35,
+        "llmExposureTier": "E2",
+        "automationRisk": 65,
+        "augmentationPotential": 72,
+        "automationSubScores": {
+          "routineness": 16,
+          "dataIntensity": 16,
+          "physicalBottleneck": 18,
+          "socialBottleneck": 15
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 20,
+          "decisionSupport": 16,
+          "creativeLeverage": 20,
+          "productivityMultiplier": 16
+        }
+      },
+      {
+        "id": "id-needs-analysis",
+        "name": "Needs Analysis & Learning Design",
+        "description": "Conduct interviews and performance gap analyses with subject matter experts to identify learning objectives and map instructional strategies to outcomes.",
+        "category": "interpersonal",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E1",
+        "automationRisk": 38,
+        "augmentationPotential": 60,
+        "automationSubScores": {
+          "routineness": 8,
+          "dataIntensity": 14,
+          "physicalBottleneck": 10,
+          "socialBottleneck": 6
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 20,
+          "decisionSupport": 18,
+          "creativeLeverage": 12,
+          "productivityMultiplier": 10
+        }
+      },
+      {
+        "id": "id-assessment-design",
+        "name": "Assessment & Evaluation Design",
+        "description": "Design formative and summative assessments aligned to learning objectives; apply Kirkpatrick evaluation models to measure training effectiveness.",
+        "category": "cognitive",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E2",
+        "automationRisk": 62,
+        "augmentationPotential": 65,
+        "automationSubScores": {
+          "routineness": 16,
+          "dataIntensity": 18,
+          "physicalBottleneck": 16,
+          "socialBottleneck": 12
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 20,
+          "decisionSupport": 18,
+          "creativeLeverage": 14,
+          "productivityMultiplier": 13
+        }
+      },
+      {
+        "id": "id-lms-administration",
+        "name": "LMS Administration & Analytics",
+        "description": "Configure and maintain LMS environments (Canvas, Moodle, Cornerstone); analyze learner engagement data and generate completion and performance reports.",
+        "category": "cognitive",
+        "timeWeight": 0.15,
+        "llmExposureTier": "E2",
+        "automationRisk": 70,
+        "augmentationPotential": 55,
+        "automationSubScores": {
+          "routineness": 18,
+          "dataIntensity": 22,
+          "physicalBottleneck": 18,
+          "socialBottleneck": 12
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 18,
+          "decisionSupport": 16,
+          "creativeLeverage": 10,
+          "productivityMultiplier": 11
+        }
+      }
+    ],
+    "skills": [
+      {
+        "id": "id-sk-authoring",
+        "name": "eLearning Authoring Tools",
+        "impact": "transformed",
+        "relevance": 92
+      },
+      {
+        "id": "id-sk-id-theory",
+        "name": "Instructional Design Theory",
+        "impact": "transformed",
+        "relevance": 96
+      },
+      {
+        "id": "id-sk-ai-content-gen",
+        "name": "AI Content Generation",
+        "impact": "gained",
+        "relevance": 88
+      },
+      {
+        "id": "id-sk-lms",
+        "name": "LMS Administration",
+        "impact": "displaced",
+        "relevance": 80
+      },
+      {
+        "id": "id-sk-learning-analytics",
+        "name": "Learning Analytics",
+        "impact": "gained",
+        "relevance": 78
+      }
+    ],
+    "exposureScore": {
+      "overall": 60,
+      "automationRisk": 57,
+      "augmentationPotential": 60,
+      "netDisplacement": -3,
+      "complementarityScore": 65,
+      "routineTaskIntensity": 0.3,
+      "timeline": "near-term",
+      "wageEffect": 2,
+      "confidence": "medium"
+    },
+    "bottleneckTaskIds": ["id-needs-analysis", "id-assessment-design"],
+    "similarOccupationIds": ["k12-teacher", "college-professor"]
+  },
+
+  {
+    "id": "assembly-line-worker",
+    "title": "Assembly Line Worker",
+    "industryId": "manufacturing",
+    "socCode": "51-2098",
+    "medianWage": 36390,
+    "educationLevel": "high-school",
+    "description": "Perform repetitive assembly operations on production lines, joining components, operating hand and power tools, and maintaining output quotas while adhering to safety standards.",
+    "tasks": [
+      {
+        "id": "alw-component-assembly",
+        "name": "Component Assembly & Fastening",
+        "description": "Join parts using hand tools, pneumatic torque drivers, and jigs following standardized work instructions; perform sub-assembly operations at fixed workstations.",
+        "category": "physical",
+        "timeWeight": 0.45,
+        "llmExposureTier": "E0",
+        "automationRisk": 88,
+        "augmentationPotential": 15,
+        "automationSubScores": {
+          "routineness": 24,
+          "dataIntensity": 8,
+          "physicalBottleneck": 30,
+          "socialBottleneck": 26
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 3,
+          "decisionSupport": 4,
+          "creativeLeverage": 3,
+          "productivityMultiplier": 5
+        }
+      },
+      {
+        "id": "alw-quality-check",
+        "name": "In-process Quality Checks",
+        "description": "Inspect assembled units against visual and dimensional standards; flag defects, record rejections in production logs, and escalate to quality control.",
+        "category": "physical",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E1",
+        "automationRisk": 78,
+        "augmentationPotential": 30,
+        "automationSubScores": {
+          "routineness": 22,
+          "dataIntensity": 14,
+          "physicalBottleneck": 22,
+          "socialBottleneck": 20
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 8,
+          "decisionSupport": 10,
+          "creativeLeverage": 4,
+          "productivityMultiplier": 8
+        }
+      },
+      {
+        "id": "alw-material-handling",
+        "name": "Materials Handling & Line Replenishment",
+        "description": "Transport raw materials and components to workstations using carts and hoists; maintain inventory of fasteners and consumables on the production line.",
+        "category": "physical",
+        "timeWeight": 0.20,
+        "llmExposureTier": "E0",
+        "automationRisk": 85,
+        "augmentationPotential": 12,
+        "automationSubScores": {
+          "routineness": 23,
+          "dataIntensity": 8,
+          "physicalBottleneck": 28,
+          "socialBottleneck": 26
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 2,
+          "decisionSupport": 3,
+          "creativeLeverage": 2,
+          "productivityMultiplier": 5
+        }
+      },
+      {
+        "id": "alw-documentation",
+        "name": "Production Documentation",
+        "description": "Record production counts, downtime events, and defect codes in digital or paper-based production logs at end of each shift.",
+        "category": "cognitive",
+        "timeWeight": 0.10,
+        "llmExposureTier": "E1",
+        "automationRisk": 75,
+        "augmentationPotential": 38,
+        "automationSubScores": {
+          "routineness": 22,
+          "dataIntensity": 18,
+          "physicalBottleneck": 20,
+          "socialBottleneck": 15
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 12,
+          "decisionSupport": 10,
+          "creativeLeverage": 6,
+          "productivityMultiplier": 10
+        }
+      }
+    ],
+    "skills": [
+      {
+        "id": "alw-sk-assembly",
+        "name": "Manual Assembly Techniques",
+        "impact": "displaced",
+        "relevance": 95
+      },
+      {
+        "id": "alw-sk-tools",
+        "name": "Hand & Power Tool Operation",
+        "impact": "displaced",
+        "relevance": 90
+      },
+      {
+        "id": "alw-sk-safety",
+        "name": "Workplace Safety & Ergonomics",
+        "impact": "transformed",
+        "relevance": 85
+      },
+      {
+        "id": "alw-sk-quality-awareness",
+        "name": "Quality Awareness",
+        "impact": "transformed",
+        "relevance": 78
+      },
+      {
+        "id": "alw-sk-cobot-operation",
+        "name": "Collaborative Robot (Cobot) Operation",
+        "impact": "gained",
+        "relevance": 72
+      }
+    ],
+    "exposureScore": {
+      "overall": 85,
+      "automationRisk": 85,
+      "augmentationPotential": 19,
+      "netDisplacement": 66,
+      "complementarityScore": 22,
+      "routineTaskIntensity": 1.8,
+      "timeline": "mid-term",
+      "wageEffect": -35,
+      "confidence": "high"
+    },
+    "bottleneckTaskIds": ["alw-quality-check", "alw-documentation"],
+    "similarOccupationIds": ["cnc-machine-operator", "quality-control-inspector"]
+  },
+
+  {
+    "id": "quality-control-inspector",
+    "title": "Quality Control Inspector",
+    "industryId": "manufacturing",
+    "socCode": "51-9061",
+    "medianWage": 45220,
+    "educationLevel": "high-school",
+    "description": "Inspect products and materials for defects, measure dimensional tolerances, document nonconformances, and collaborate with production teams to maintain quality standards.",
+    "tasks": [
+      {
+        "id": "qci-visual-inspection",
+        "name": "Visual & Dimensional Inspection",
+        "description": "Examine products using calipers, gauges, and optical comparators; identify surface defects, dimensional out-of-tolerance conditions, and assembly errors.",
+        "category": "physical",
+        "timeWeight": 0.40,
+        "llmExposureTier": "E1",
+        "automationRisk": 72,
+        "augmentationPotential": 48,
+        "automationSubScores": {
+          "routineness": 22,
+          "dataIntensity": 16,
+          "physicalBottleneck": 18,
+          "socialBottleneck": 16
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 14,
+          "decisionSupport": 16,
+          "creativeLeverage": 8,
+          "productivityMultiplier": 10
+        }
+      },
+      {
+        "id": "qci-statistical-process-control",
+        "name": "Statistical Process Control",
+        "description": "Collect and chart measurement data using SPC software; analyze control charts for trends, calculate Cpk, and identify assignable causes of variation.",
+        "category": "cognitive",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E2",
+        "automationRisk": 70,
+        "augmentationPotential": 65,
+        "automationSubScores": {
+          "routineness": 20,
+          "dataIntensity": 22,
+          "physicalBottleneck": 16,
+          "socialBottleneck": 12
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 20,
+          "decisionSupport": 20,
+          "creativeLeverage": 10,
+          "productivityMultiplier": 15
+        }
+      },
+      {
+        "id": "qci-ncr-documentation",
+        "name": "Nonconformance Reporting",
+        "description": "Create and track nonconformance reports (NCRs), coordinate with engineering and production on root cause analysis and corrective action plans.",
+        "category": "cognitive",
+        "timeWeight": 0.20,
+        "llmExposureTier": "E2",
+        "automationRisk": 65,
+        "augmentationPotential": 60,
+        "automationSubScores": {
+          "routineness": 18,
+          "dataIntensity": 20,
+          "physicalBottleneck": 14,
+          "socialBottleneck": 13
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 20,
+          "decisionSupport": 18,
+          "creativeLeverage": 10,
+          "productivityMultiplier": 12
+        }
+      },
+      {
+        "id": "qci-supplier-audit",
+        "name": "Supplier & Process Auditing",
+        "description": "Conduct first-article inspections, perform incoming material audits, review supplier certifications, and participate in process improvement activities.",
+        "category": "interpersonal",
+        "timeWeight": 0.15,
+        "llmExposureTier": "E1",
+        "automationRisk": 42,
+        "augmentationPotential": 52,
+        "automationSubScores": {
+          "routineness": 12,
+          "dataIntensity": 16,
+          "physicalBottleneck": 8,
+          "socialBottleneck": 6
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 18,
+          "decisionSupport": 16,
+          "creativeLeverage": 8,
+          "productivityMultiplier": 10
+        }
+      }
+    ],
+    "skills": [
+      {
+        "id": "qci-sk-metrology",
+        "name": "Precision Metrology",
+        "impact": "transformed",
+        "relevance": 94
+      },
+      {
+        "id": "qci-sk-spc",
+        "name": "Statistical Process Control",
+        "impact": "transformed",
+        "relevance": 88
+      },
+      {
+        "id": "qci-sk-machine-vision",
+        "name": "Machine Vision Systems",
+        "impact": "gained",
+        "relevance": 82
+      },
+      {
+        "id": "qci-sk-iso",
+        "name": "ISO 9001 / Quality Standards",
+        "impact": "transformed",
+        "relevance": 85
+      },
+      {
+        "id": "qci-sk-root-cause",
+        "name": "Root Cause Analysis",
+        "impact": "gained",
+        "relevance": 80
+      }
+    ],
+    "exposureScore": {
+      "overall": 67,
+      "automationRisk": 67,
+      "augmentationPotential": 55,
+      "netDisplacement": 12,
+      "complementarityScore": 52,
+      "routineTaskIntensity": 0.9,
+      "timeline": "mid-term",
+      "wageEffect": -10,
+      "confidence": "medium"
+    },
+    "bottleneckTaskIds": ["qci-supplier-audit", "qci-ncr-documentation"],
+    "similarOccupationIds": ["assembly-line-worker", "industrial-engineer"]
+  },
+
+  {
+    "id": "industrial-engineer",
+    "title": "Industrial Engineer",
+    "industryId": "manufacturing",
+    "socCode": "17-2112",
+    "medianWage": 96350,
+    "educationLevel": "bachelor",
+    "description": "Optimize production systems, workflows, and supply chains by applying quantitative methods, simulation, and lean principles to reduce waste and improve efficiency.",
+    "tasks": [
+      {
+        "id": "ie-process-analysis",
+        "name": "Process Analysis & Work Study",
+        "description": "Conduct time-motion studies, value stream mapping, and process capability analyses to identify inefficiencies and quantify improvement opportunities.",
+        "category": "cognitive",
+        "timeWeight": 0.30,
+        "llmExposureTier": "E2",
+        "automationRisk": 62,
+        "augmentationPotential": 72,
+        "automationSubScores": {
+          "routineness": 16,
+          "dataIntensity": 22,
+          "physicalBottleneck": 14,
+          "socialBottleneck": 10
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 24,
+          "decisionSupport": 22,
+          "creativeLeverage": 12,
+          "productivityMultiplier": 14
+        }
+      },
+      {
+        "id": "ie-simulation-modeling",
+        "name": "Simulation & Systems Modeling",
+        "description": "Build discrete-event simulation models of production lines and logistics networks to evaluate layout changes, staffing levels, and scheduling policies.",
+        "category": "cognitive",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E2",
+        "automationRisk": 55,
+        "augmentationPotential": 75,
+        "automationSubScores": {
+          "routineness": 12,
+          "dataIntensity": 22,
+          "physicalBottleneck": 12,
+          "socialBottleneck": 9
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 22,
+          "decisionSupport": 24,
+          "creativeLeverage": 14,
+          "productivityMultiplier": 15
+        }
+      },
+      {
+        "id": "ie-lean-kaizen",
+        "name": "Lean Implementation & Kaizen Events",
+        "description": "Facilitate kaizen workshops, implement 5S, SMED, and kanban systems; coach production teams on continuous improvement practices and standard work.",
+        "category": "interpersonal",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E1",
+        "automationRisk": 35,
+        "augmentationPotential": 55,
+        "automationSubScores": {
+          "routineness": 8,
+          "dataIntensity": 12,
+          "physicalBottleneck": 8,
+          "socialBottleneck": 7
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 16,
+          "decisionSupport": 18,
+          "creativeLeverage": 12,
+          "productivityMultiplier": 9
+        }
+      },
+      {
+        "id": "ie-capacity-planning",
+        "name": "Capacity Planning & Scheduling",
+        "description": "Develop production schedules, model capacity constraints, and perform demand-supply matching to optimize equipment utilization and on-time delivery.",
+        "category": "cognitive",
+        "timeWeight": 0.20,
+        "llmExposureTier": "E2",
+        "automationRisk": 68,
+        "augmentationPotential": 70,
+        "automationSubScores": {
+          "routineness": 18,
+          "dataIntensity": 24,
+          "physicalBottleneck": 14,
+          "socialBottleneck": 12
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 20,
+          "decisionSupport": 24,
+          "creativeLeverage": 12,
+          "productivityMultiplier": 14
+        }
+      }
+    ],
+    "skills": [
+      {
+        "id": "ie-sk-simulation",
+        "name": "Discrete-Event Simulation",
+        "impact": "transformed",
+        "relevance": 90
+      },
+      {
+        "id": "ie-sk-lean",
+        "name": "Lean / Six Sigma",
+        "impact": "transformed",
+        "relevance": 94
+      },
+      {
+        "id": "ie-sk-optimization",
+        "name": "Operations Research & Optimization",
+        "impact": "gained",
+        "relevance": 88
+      },
+      {
+        "id": "ie-sk-data-analysis",
+        "name": "Data Analysis & Visualization",
+        "impact": "gained",
+        "relevance": 85
+      },
+      {
+        "id": "ie-sk-change-mgmt",
+        "name": "Change Management & Facilitation",
+        "impact": "gained",
+        "relevance": 80
+      }
+    ],
+    "exposureScore": {
+      "overall": 58,
+      "automationRisk": 55,
+      "augmentationPotential": 58,
+      "netDisplacement": -3,
+      "complementarityScore": 70,
+      "routineTaskIntensity": 0.1,
+      "timeline": "mid-term",
+      "wageEffect": 10,
+      "confidence": "medium"
+    },
+    "bottleneckTaskIds": ["ie-lean-kaizen", "ie-process-analysis"],
+    "similarOccupationIds": ["quality-control-inspector", "data-scientist"]
+  },
+
+  {
+    "id": "cnc-machine-operator",
+    "title": "CNC Machine Operator",
+    "industryId": "manufacturing",
+    "socCode": "51-4011",
+    "medianWage": 45750,
+    "educationLevel": "high-school",
+    "description": "Set up, operate, and monitor CNC milling machines, lathes, and machining centers to produce precision metal components according to engineering drawings and tolerances.",
+    "tasks": [
+      {
+        "id": "cnc-machine-setup",
+        "name": "Machine Setup & Tooling",
+        "description": "Install tooling, set work offsets, load G-code programs, configure cutting parameters, and verify setup with trial runs before production.",
+        "category": "physical",
+        "timeWeight": 0.30,
+        "llmExposureTier": "E1",
+        "automationRisk": 65,
+        "augmentationPotential": 52,
+        "automationSubScores": {
+          "routineness": 18,
+          "dataIntensity": 14,
+          "physicalBottleneck": 18,
+          "socialBottleneck": 15
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 14,
+          "decisionSupport": 16,
+          "creativeLeverage": 10,
+          "productivityMultiplier": 12
+        }
+      },
+      {
+        "id": "cnc-production-monitoring",
+        "name": "Production Run Monitoring",
+        "description": "Monitor machine operation during production runs, watch for tool wear, chatter, or surface finish anomalies, and make minor in-cycle adjustments.",
+        "category": "physical",
+        "timeWeight": 0.30,
+        "llmExposureTier": "E0",
+        "automationRisk": 72,
+        "augmentationPotential": 35,
+        "automationSubScores": {
+          "routineness": 22,
+          "dataIntensity": 14,
+          "physicalBottleneck": 20,
+          "socialBottleneck": 16
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 8,
+          "decisionSupport": 12,
+          "creativeLeverage": 6,
+          "productivityMultiplier": 9
+        }
+      },
+      {
+        "id": "cnc-part-inspection",
+        "name": "In-process Part Inspection",
+        "description": "Measure machined features with micrometers, calipers, and CMM probes; compare to print tolerances and adjust offsets to correct drift.",
+        "category": "physical",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E1",
+        "automationRisk": 68,
+        "augmentationPotential": 48,
+        "automationSubScores": {
+          "routineness": 20,
+          "dataIntensity": 18,
+          "physicalBottleneck": 16,
+          "socialBottleneck": 14
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 14,
+          "decisionSupport": 16,
+          "creativeLeverage": 8,
+          "productivityMultiplier": 10
+        }
+      },
+      {
+        "id": "cnc-program-editing",
+        "name": "G-code Program Editing & Optimization",
+        "description": "Edit and optimize G-code programs to improve cycle time, surface finish, and tool life; troubleshoot program errors and coordinate with process engineers.",
+        "category": "cognitive",
+        "timeWeight": 0.15,
+        "llmExposureTier": "E2",
+        "automationRisk": 72,
+        "augmentationPotential": 68,
+        "automationSubScores": {
+          "routineness": 16,
+          "dataIntensity": 22,
+          "physicalBottleneck": 18,
+          "socialBottleneck": 16
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 20,
+          "decisionSupport": 20,
+          "creativeLeverage": 14,
+          "productivityMultiplier": 14
+        }
+      }
+    ],
+    "skills": [
+      {
+        "id": "cnc-sk-gcode",
+        "name": "G-code Programming",
+        "impact": "transformed",
+        "relevance": 92
+      },
+      {
+        "id": "cnc-sk-metrology",
+        "name": "Precision Measurement",
+        "impact": "transformed",
+        "relevance": 90
+      },
+      {
+        "id": "cnc-sk-cam",
+        "name": "CAM Software",
+        "impact": "gained",
+        "relevance": 82
+      },
+      {
+        "id": "cnc-sk-machine-monitoring",
+        "name": "Machine Condition Monitoring",
+        "impact": "transformed",
+        "relevance": 78
+      },
+      {
+        "id": "cnc-sk-troubleshooting",
+        "name": "Mechanical Troubleshooting",
+        "impact": "gained",
+        "relevance": 85
+      }
+    ],
+    "exposureScore": {
+      "overall": 70,
+      "automationRisk": 70,
+      "augmentationPotential": 47,
+      "netDisplacement": 23,
+      "complementarityScore": 42,
+      "routineTaskIntensity": 1.1,
+      "timeline": "mid-term",
+      "wageEffect": -12,
+      "confidence": "medium"
+    },
+    "bottleneckTaskIds": ["cnc-machine-setup", "cnc-program-editing"],
+    "similarOccupationIds": ["assembly-line-worker", "quality-control-inspector"]
+  }
+]

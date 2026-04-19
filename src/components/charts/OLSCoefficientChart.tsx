@@ -38,7 +38,7 @@ export default function OLSCoefficientChart({ data }: Props) {
 
     // Zero line
     g.append('line').attr('x1', x(0)).attr('x2', x(0)).attr('y1', 0).attr('y2', innerH)
-      .attr('stroke', '#D1D5DB').attr('stroke-width', 1)
+      .attr('stroke', '#475569').attr('stroke-width', 1)
 
     data.forEach(d => {
       const cy = y(d.label)! + y.bandwidth() / 2
@@ -68,20 +68,20 @@ export default function OLSCoefficientChart({ data }: Props) {
     g.append('g')
       .call(d3.axisLeft(y).tickSize(0))
       .call(g => g.select('.domain').remove())
-      .call(g => g.selectAll('text').style('font-size', '12px').style('fill', '#374151'))
+      .call(g => g.selectAll('text').style('font-size', '12px').style('fill', '#CBD5E1'))
 
     // X axis
     g.append('g').attr('transform', `translate(0,${innerH})`)
       .call(d3.axisBottom(x).ticks(5).tickFormat(v => `${+v > 0 ? '+' : ''}${v}`))
-      .call(g => g.select('.domain').attr('stroke', '#E5E7EB'))
-      .call(g => g.selectAll('text').style('font-size', '10px').style('fill', '#9CA3AF'))
+      .call(g => g.select('.domain').attr('stroke', '#334155'))
+      .call(g => g.selectAll('text').style('font-size', '10px').style('fill', '#64748B'))
 
   }, [data, width, height])
 
   return (
     <div ref={containerRef} className="w-full">
       <svg ref={svgRef} width={width} height={height} role="img" aria-label="OLS regression coefficients for wage model" />
-      <p className="text-xs text-gray-400 mt-1">* p &lt; 0.05 · Error bars show 95% CI · Outcome: log(median wage)</p>
+      <p className="text-xs text-slate-500 mt-1">* p &lt; 0.05 · Error bars show 95% CI · Outcome: log(median wage)</p>
     </div>
   )
 }
