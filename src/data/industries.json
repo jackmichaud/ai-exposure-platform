@@ -3,7 +3,7 @@
     "id": "healthcare",
     "name": "Healthcare",
     "description": "Medical services, patient care, and health system operations",
-    "occupationCount": 6
+    "occupationCount": 8
   },
   {
     "id": "finance",
@@ -58,5 +58,17 @@
     "name": "Creative & Media",
     "description": "Writing, design, journalism, film, and digital content production",
     "occupationCount": 4
+  },
+  {
+    "id": "trades",
+    "name": "Skilled Trades",
+    "description": "Construction, electrical, plumbing, HVAC, and other hands-on technical trades",
+    "occupationCount": 4
+  },
+  {
+    "id": "public-safety",
+    "name": "Public Safety",
+    "description": "Law enforcement, fire protection, emergency response, and public security",
+    "occupationCount": 2
   }
 ]

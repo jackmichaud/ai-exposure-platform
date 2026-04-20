@@ -7020,5 +7020,1621 @@
       "lawyers",
       "instructional-designer"
     ]
+  },
+  {
+    "id": "electricians",
+    "title": "Electricians",
+    "industryId": "trades",
+    "socCode": "47-2111",
+    "medianWage": 61590,
+    "educationLevel": "high-school",
+    "description": "Electricians install, maintain, and repair electrical wiring, equipment, and fixtures in residential, commercial, and industrial settings. They read blueprints, ensure compliance with electrical codes, and troubleshoot faults using specialized testing equipment. The role demands significant physical dexterity, on-site presence, and adherence to safety regulations.",
+    "tasks": [
+      {
+        "id": "e-physical-installation",
+        "name": "Physical Installation of Wiring and Conduit",
+        "description": "Run conduit, pull wire, connect circuits, and mount fixtures on-site using hand and power tools, often working from ladders or scaffolding in confined or hazardous spaces.",
+        "category": "physical",
+        "timeWeight": 0.35,
+        "llmExposureTier": "E0",
+        "automationRisk": 37,
+        "augmentationPotential": 24,
+        "automationSubScores": {
+          "routineness": 12,
+          "dataIntensity": 5,
+          "physicalBottleneck": 2,
+          "socialBottleneck": 18
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 8,
+          "decisionSupport": 7,
+          "creativeLeverage": 4,
+          "productivityMultiplier": 5
+        }
+      },
+      {
+        "id": "e-blueprint-planning",
+        "name": "Blueprint Reading and Job Planning",
+        "description": "Interpret architectural and electrical blueprints, plan wiring layouts, and ensure designs conform to local building and safety codes before and during installation.",
+        "category": "cognitive",
+        "timeWeight": 0.2,
+        "llmExposureTier": "E2",
+        "automationRisk": 62,
+        "augmentationPotential": 69,
+        "automationSubScores": {
+          "routineness": 14,
+          "dataIntensity": 16,
+          "physicalBottleneck": 14,
+          "socialBottleneck": 18
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 20,
+          "decisionSupport": 18,
+          "creativeLeverage": 14,
+          "productivityMultiplier": 17
+        }
+      },
+      {
+        "id": "e-testing-troubleshooting",
+        "name": "Testing and Troubleshooting Electrical Systems",
+        "description": "Use ohmmeters, voltmeters, oscilloscopes, and other diagnostic tools to test circuits, identify faults, and verify system safety and compatibility.",
+        "category": "cognitive",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E2",
+        "automationRisk": 53,
+        "augmentationPotential": 64,
+        "automationSubScores": {
+          "routineness": 10,
+          "dataIntensity": 18,
+          "physicalBottleneck": 5,
+          "socialBottleneck": 20
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 19,
+          "decisionSupport": 21,
+          "creativeLeverage": 8,
+          "productivityMultiplier": 16
+        }
+      },
+      {
+        "id": "e-coordination-supervision",
+        "name": "Coordinating and Supervising Workers",
+        "description": "Direct apprentices and crew members, communicate job requirements with supervisors and clients, and coordinate work schedules and task assignments on job sites.",
+        "category": "interpersonal",
+        "timeWeight": 0.12,
+        "llmExposureTier": "E1",
+        "automationRisk": 31,
+        "augmentationPotential": 47,
+        "automationSubScores": {
+          "routineness": 8,
+          "dataIntensity": 8,
+          "physicalBottleneck": 10,
+          "socialBottleneck": 5
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 12,
+          "decisionSupport": 14,
+          "creativeLeverage": 8,
+          "productivityMultiplier": 13
+        }
+      },
+      {
+        "id": "e-compliance-documentation",
+        "name": "Code Compliance and Documentation",
+        "description": "Maintain licensure, document completed work, file inspection reports, and ensure all installations meet national and local electrical codes and safety standards.",
+        "category": "cognitive",
+        "timeWeight": 0.08,
+        "llmExposureTier": "E1",
+        "automationRisk": 70,
+        "augmentationPotential": 55,
+        "automationSubScores": {
+          "routineness": 18,
+          "dataIntensity": 14,
+          "physicalBottleneck": 18,
+          "socialBottleneck": 20
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 16,
+          "decisionSupport": 13,
+          "creativeLeverage": 6,
+          "productivityMultiplier": 20
+        }
+      }
+    ],
+    "skills": [
+      {
+        "id": "troubleshooting",
+        "name": "Troubleshooting",
+        "impact": "transformed",
+        "relevance": 90
+      },
+      {
+        "id": "repairing",
+        "name": "Repairing",
+        "impact": "gained",
+        "relevance": 85
+      },
+      {
+        "id": "blueprint-reading",
+        "name": "Blueprint Reading",
+        "impact": "transformed",
+        "relevance": 80
+      },
+      {
+        "id": "critical-thinking",
+        "name": "Critical Thinking",
+        "impact": "transformed",
+        "relevance": 78
+      },
+      {
+        "id": "installation",
+        "name": "Installation",
+        "impact": "gained",
+        "relevance": 88
+      },
+      {
+        "id": "code-compliance",
+        "name": "Code Compliance Knowledge",
+        "impact": "transformed",
+        "relevance": 75
+      },
+      {
+        "id": "active-listening",
+        "name": "Active Listening",
+        "impact": "gained",
+        "relevance": 65
+      },
+      {
+        "id": "quality-control-analysis",
+        "name": "Quality Control Analysis",
+        "impact": "transformed",
+        "relevance": 70
+      },
+      {
+        "id": "documentation",
+        "name": "Documentation and Reporting",
+        "impact": "displaced",
+        "relevance": 60
+      },
+      {
+        "id": "complex-problem-solving",
+        "name": "Complex Problem Solving",
+        "impact": "transformed",
+        "relevance": 72
+      }
+    ],
+    "exposureScore": {
+      "overall": 48,
+      "automationRisk": 48,
+      "augmentationPotential": 48,
+      "netDisplacement": 0,
+      "complementarityScore": 38,
+      "routineTaskIntensity": -0.47,
+      "timeline": "long-term",
+      "wageEffect": 5,
+      "confidence": "high"
+    },
+    "bottleneckTaskIds": [
+      "e-coordination-supervision",
+      "e-physical-installation"
+    ],
+    "similarOccupationIds": [
+      "renewable-energy-technician",
+      "assembly-line-worker",
+      "quality-control-inspector",
+      "industrial-engineer",
+      "cnc-machine-operator"
+    ]
+  },
+  {
+    "id": "plumbers-pipefitters-and-steamfitters",
+    "title": "Plumbers, Pipefitters, and Steamfitters",
+    "industryId": "trades",
+    "socCode": "47-2152",
+    "medianWage": 61550,
+    "educationLevel": "high-school",
+    "description": "Plumbers, pipefitters, and steamfitters assemble, install, alter, and repair pipelines and pipe systems that carry water, steam, air, or other liquids and gases. They work across residential, commercial, and industrial settings, reading blueprints, selecting materials, and ensuring systems meet building codes and safety standards. The occupation requires significant physical dexterity, on-site presence, and applied problem-solving in variable environments.",
+    "tasks": [
+      {
+        "id": "ppas-pipe-installation",
+        "name": "Install and Assemble Pipe Systems",
+        "description": "Cut, thread, bend, and join pipe sections using a variety of tools and joining methods including welding, soldering, and mechanical fittings. Requires precise physical manipulation in confined or elevated spaces.",
+        "category": "physical",
+        "timeWeight": 0.35,
+        "llmExposureTier": "E0",
+        "automationRisk": 38,
+        "augmentationPotential": 29,
+        "automationSubScores": {
+          "routineness": 12,
+          "dataIntensity": 6,
+          "physicalBottleneck": 2,
+          "socialBottleneck": 18
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 8,
+          "decisionSupport": 10,
+          "creativeLeverage": 5,
+          "productivityMultiplier": 6
+        }
+      },
+      {
+        "id": "ppas-blueprint-planning",
+        "name": "Review Blueprints and Plan Pipe Layout",
+        "description": "Interpret engineering drawings, building codes, and specifications to determine pipe routing, sizing, and installation procedures. Lay out full-scale drawings and plan system configurations before physical work begins.",
+        "category": "cognitive",
+        "timeWeight": 0.2,
+        "llmExposureTier": "E2",
+        "automationRisk": 64,
+        "augmentationPotential": 70,
+        "automationSubScores": {
+          "routineness": 10,
+          "dataIntensity": 16,
+          "physicalBottleneck": 18,
+          "socialBottleneck": 20
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 20,
+          "decisionSupport": 18,
+          "creativeLeverage": 14,
+          "productivityMultiplier": 18
+        }
+      },
+      {
+        "id": "ppas-troubleshooting-repair",
+        "name": "Diagnose and Repair Pipe System Failures",
+        "description": "Identify leaks, blockages, pressure failures, or mechanical faults by inspecting systems, testing with water or air pressure, and using diagnostic judgment. Determine and execute appropriate repair strategies.",
+        "category": "cognitive",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E1",
+        "automationRisk": 40,
+        "augmentationPotential": 62,
+        "automationSubScores": {
+          "routineness": 7,
+          "dataIntensity": 13,
+          "physicalBottleneck": 3,
+          "socialBottleneck": 17
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 18,
+          "decisionSupport": 20,
+          "creativeLeverage": 10,
+          "productivityMultiplier": 14
+        }
+      },
+      {
+        "id": "ppas-material-selection",
+        "name": "Select Materials and Coordinate with Supervisors",
+        "description": "Choose appropriate pipe sizes, types, fittings, and supports based on system specifications and site conditions. Communicate progress, issues, and material needs to supervisors, contractors, and team members.",
+        "category": "interpersonal",
+        "timeWeight": 0.12,
+        "llmExposureTier": "E1",
+        "automationRisk": 46,
+        "augmentationPotential": 54,
+        "automationSubScores": {
+          "routineness": 9,
+          "dataIntensity": 14,
+          "physicalBottleneck": 15,
+          "socialBottleneck": 8
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 16,
+          "decisionSupport": 15,
+          "creativeLeverage": 8,
+          "productivityMultiplier": 15
+        }
+      },
+      {
+        "id": "ppas-safety-compliance",
+        "name": "Ensure Safety and Code Compliance",
+        "description": "Shut off utilities, use protective equipment, and verify that all installations meet local building codes and safety regulations. Conduct inspections and document completed work for compliance records.",
+        "category": "cognitive",
+        "timeWeight": 0.08,
+        "llmExposureTier": "E1",
+        "automationRisk": 47,
+        "augmentationPotential": 53,
+        "automationSubScores": {
+          "routineness": 14,
+          "dataIntensity": 12,
+          "physicalBottleneck": 5,
+          "socialBottleneck": 16
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 17,
+          "decisionSupport": 14,
+          "creativeLeverage": 6,
+          "productivityMultiplier": 16
+        }
+      }
+    ],
+    "skills": [
+      {
+        "id": "critical-thinking",
+        "name": "Critical Thinking",
+        "impact": "transformed",
+        "relevance": 85
+      },
+      {
+        "id": "troubleshooting",
+        "name": "Troubleshooting",
+        "impact": "transformed",
+        "relevance": 82
+      },
+      {
+        "id": "blueprint-reading",
+        "name": "Blueprint Reading and Interpretation",
+        "impact": "transformed",
+        "relevance": 78
+      },
+      {
+        "id": "repairing",
+        "name": "Repairing",
+        "impact": "displaced",
+        "relevance": 70
+      },
+      {
+        "id": "manual-dexterity",
+        "name": "Manual Dexterity and Tool Use",
+        "impact": "gained",
+        "relevance": 90
+      },
+      {
+        "id": "judgment-decision-making",
+        "name": "Judgment and Decision Making",
+        "impact": "transformed",
+        "relevance": 75
+      },
+      {
+        "id": "code-compliance",
+        "name": "Building Code and Regulatory Knowledge",
+        "impact": "transformed",
+        "relevance": 72
+      },
+      {
+        "id": "coordination",
+        "name": "Coordination with Trades Teams",
+        "impact": "gained",
+        "relevance": 65
+      }
+    ],
+    "exposureScore": {
+      "overall": 50,
+      "automationRisk": 45,
+      "augmentationPotential": 50,
+      "netDisplacement": -5,
+      "complementarityScore": 38,
+      "routineTaskIntensity": -0.41,
+      "timeline": "long-term",
+      "wageEffect": 5,
+      "confidence": "high"
+    },
+    "bottleneckTaskIds": [
+      "ppas-pipe-installation",
+      "ppas-troubleshooting-repair"
+    ],
+    "similarOccupationIds": [
+      "renewable-energy-technician",
+      "naval-shipbuilder",
+      "assembly-line-worker",
+      "cnc-machine-operator",
+      "industrial-engineer"
+    ]
+  },
+  {
+    "id": "heating-air-conditioning-and-refrigeration-mechanics-and-installers",
+    "title": "Heating, Air Conditioning, and Refrigeration Mechanics and Installers",
+    "industryId": "trades",
+    "socCode": "49-9021",
+    "medianWage": 57300,
+    "educationLevel": "associate",
+    "description": "HVAC/R technicians install, maintain, and repair heating, cooling, and refrigeration systems in residential and commercial settings. The work is heavily hands-on, requiring physical presence at job sites to diagnose malfunctions, replace components, and verify system performance. Technicians must interpret technical blueprints, apply electrical and mechanical knowledge, and interact directly with customers to resolve issues.",
+    "tasks": [
+      {
+        "id": "haca-diagnose-troubleshoot",
+        "name": "Diagnose and Troubleshoot System Malfunctions",
+        "description": "Inspect HVAC/R systems, test electrical circuits and components, and discuss symptoms with users to isolate faults and determine corrective action. Requires integrating sensory observation, test equipment readings, and technical knowledge.",
+        "category": "cognitive",
+        "timeWeight": 0.28,
+        "llmExposureTier": "E0",
+        "automationRisk": 31,
+        "augmentationPotential": 59,
+        "automationSubScores": {
+          "routineness": 7,
+          "dataIntensity": 13,
+          "physicalBottleneck": 3,
+          "socialBottleneck": 8
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 18,
+          "decisionSupport": 19,
+          "creativeLeverage": 8,
+          "productivityMultiplier": 14
+        }
+      },
+      {
+        "id": "haca-install-connect-systems",
+        "name": "Install and Connect HVAC/R Equipment",
+        "description": "Physically install heating, cooling, and refrigeration units by connecting them to fuel, water, refrigerant, and electrical sources per blueprints and manufacturer specifications. Requires dexterous on-site manipulation of tools, pipes, and wiring.",
+        "category": "physical",
+        "timeWeight": 0.3,
+        "llmExposureTier": "E0",
+        "automationRisk": 34,
+        "augmentationPotential": 42,
+        "automationSubScores": {
+          "routineness": 10,
+          "dataIntensity": 8,
+          "physicalBottleneck": 2,
+          "socialBottleneck": 14
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 14,
+          "decisionSupport": 13,
+          "creativeLeverage": 6,
+          "productivityMultiplier": 9
+        }
+      },
+      {
+        "id": "haca-repair-replace-components",
+        "name": "Repair or Replace Defective Components and Wiring",
+        "description": "Remove and replace faulty parts such as compressors, motors, valves, and wiring to restore system functionality. Work is physically demanding and site-specific, requiring hands-on manipulation in confined or elevated spaces.",
+        "category": "physical",
+        "timeWeight": 0.22,
+        "llmExposureTier": "E0",
+        "automationRisk": 36,
+        "augmentationPotential": 36,
+        "automationSubScores": {
+          "routineness": 11,
+          "dataIntensity": 7,
+          "physicalBottleneck": 2,
+          "socialBottleneck": 16
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 11,
+          "decisionSupport": 12,
+          "creativeLeverage": 5,
+          "productivityMultiplier": 8
+        }
+      },
+      {
+        "id": "haca-compliance-documentation",
+        "name": "Ensure Compliance and Document Work",
+        "description": "Review blueprints and manufacturer specifications, verify installations meet code and safety standards, and record maintenance or repair activities. Involves reading technical documents and producing service reports.",
+        "category": "cognitive",
+        "timeWeight": 0.12,
+        "llmExposureTier": "E1",
+        "automationRisk": 60,
+        "augmentationPotential": 58,
+        "automationSubScores": {
+          "routineness": 16,
+          "dataIntensity": 14,
+          "physicalBottleneck": 12,
+          "socialBottleneck": 18
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 17,
+          "decisionSupport": 14,
+          "creativeLeverage": 7,
+          "productivityMultiplier": 20
+        }
+      },
+      {
+        "id": "haca-customer-communication",
+        "name": "Customer Communication and Preventive Maintenance Recommendations",
+        "description": "Discuss system performance and malfunctions with building occupants or facility managers, and recommend preventive maintenance procedures to extend equipment life. Requires active listening and clear explanation of technical issues.",
+        "category": "interpersonal",
+        "timeWeight": 0.08,
+        "llmExposureTier": "E1",
+        "automationRisk": 31,
+        "augmentationPotential": 49,
+        "automationSubScores": {
+          "routineness": 9,
+          "dataIntensity": 8,
+          "physicalBottleneck": 10,
+          "socialBottleneck": 4
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 13,
+          "decisionSupport": 12,
+          "creativeLeverage": 9,
+          "productivityMultiplier": 15
+        }
+      }
+    ],
+    "skills": [
+      {
+        "id": "troubleshooting",
+        "name": "Troubleshooting",
+        "impact": "transformed",
+        "relevance": 92
+      },
+      {
+        "id": "operations-monitoring",
+        "name": "Operations Monitoring",
+        "impact": "transformed",
+        "relevance": 85
+      },
+      {
+        "id": "installation",
+        "name": "Installation",
+        "impact": "gained",
+        "relevance": 88
+      },
+      {
+        "id": "repairing",
+        "name": "Repairing",
+        "impact": "gained",
+        "relevance": 87
+      },
+      {
+        "id": "critical-thinking",
+        "name": "Critical Thinking",
+        "impact": "transformed",
+        "relevance": 80
+      },
+      {
+        "id": "reading-comprehension",
+        "name": "Reading Comprehension",
+        "impact": "displaced",
+        "relevance": 70
+      },
+      {
+        "id": "complex-problem-solving",
+        "name": "Complex Problem Solving",
+        "impact": "transformed",
+        "relevance": 75
+      },
+      {
+        "id": "quality-control-analysis",
+        "name": "Quality Control Analysis",
+        "impact": "transformed",
+        "relevance": 72
+      },
+      {
+        "id": "active-listening",
+        "name": "Active Listening",
+        "impact": "gained",
+        "relevance": 65
+      },
+      {
+        "id": "active-learning",
+        "name": "Active Learning",
+        "impact": "gained",
+        "relevance": 68
+      }
+    ],
+    "exposureScore": {
+      "overall": 48,
+      "automationRisk": 36,
+      "augmentationPotential": 48,
+      "netDisplacement": -11,
+      "complementarityScore": 38,
+      "routineTaskIntensity": -0.41,
+      "timeline": "long-term",
+      "wageEffect": 5,
+      "confidence": "high"
+    },
+    "bottleneckTaskIds": [
+      "haca-diagnose-troubleshoot",
+      "haca-customer-communication"
+    ],
+    "similarOccupationIds": [
+      "renewable-energy-technician",
+      "assembly-line-worker",
+      "quality-control-inspector",
+      "cnc-machine-operator",
+      "industrial-engineer"
+    ]
+  },
+  {
+    "id": "carpenters",
+    "title": "Carpenters",
+    "industryId": "trades",
+    "socCode": "47-2031",
+    "medianWage": 51390,
+    "educationLevel": "high-school",
+    "description": "Carpenters construct, erect, install, and repair structures and fixtures made of wood and comparable materials, including building frameworks, floors, windows, and door frames. They work from blueprints and specifications to measure, cut, shape, and assemble materials using hand and power tools. The occupation is predominantly physical and on-site, requiring dexterous manipulation of materials in varied construction environments.",
+    "tasks": [
+      {
+        "id": "c-blueprint-reading-layout",
+        "name": "Blueprint Reading and Project Layout",
+        "description": "Study blueprints, sketches, or building plans to determine dimensions, materials, and project layout. Translate specifications into actionable measurements and sequencing on the job site.",
+        "category": "cognitive",
+        "timeWeight": 0.15,
+        "llmExposureTier": "E1",
+        "automationRisk": 52,
+        "augmentationPotential": 59,
+        "automationSubScores": {
+          "routineness": 12,
+          "dataIntensity": 14,
+          "physicalBottleneck": 10,
+          "socialBottleneck": 16
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 18,
+          "decisionSupport": 16,
+          "creativeLeverage": 10,
+          "productivityMultiplier": 15
+        }
+      },
+      {
+        "id": "c-measuring-cutting-shaping",
+        "name": "Measuring, Marking, and Cutting Materials",
+        "description": "Measure and mark cutting lines on wood and comparable materials using rulers, chalk lines, and marking gauges, then cut and shape materials to specified dimensions using hand tools, machines, or power saws.",
+        "category": "physical",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E0",
+        "automationRisk": 47,
+        "augmentationPotential": 30,
+        "automationSubScores": {
+          "routineness": 16,
+          "dataIntensity": 8,
+          "physicalBottleneck": 3,
+          "socialBottleneck": 20
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 7,
+          "decisionSupport": 10,
+          "creativeLeverage": 5,
+          "productivityMultiplier": 8
+        }
+      },
+      {
+        "id": "c-assembly-fastening-framing",
+        "name": "Assembling and Fastening Structural Frameworks",
+        "description": "Assemble and fasten materials to construct frameworks, partitions, joists, rafters, and other structural elements using hand tools, nails, screws, dowels, and adhesives. Verify structural trueness using plumb bobs and levels.",
+        "category": "physical",
+        "timeWeight": 0.35,
+        "llmExposureTier": "E0",
+        "automationRisk": 40,
+        "augmentationPotential": 29,
+        "automationSubScores": {
+          "routineness": 14,
+          "dataIntensity": 6,
+          "physicalBottleneck": 2,
+          "socialBottleneck": 18
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 6,
+          "decisionSupport": 11,
+          "creativeLeverage": 5,
+          "productivityMultiplier": 7
+        }
+      },
+      {
+        "id": "c-inspection-quality-check",
+        "name": "Inspection and Quality Verification",
+        "description": "Inspect completed structures, materials, and installed fixtures to detect damage, misalignment, or defects. Ensure work meets safety regulations, building codes, and project specifications.",
+        "category": "cognitive",
+        "timeWeight": 0.15,
+        "llmExposureTier": "E0",
+        "automationRisk": 40,
+        "augmentationPotential": 44,
+        "automationSubScores": {
+          "routineness": 11,
+          "dataIntensity": 9,
+          "physicalBottleneck": 3,
+          "socialBottleneck": 17
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 14,
+          "decisionSupport": 15,
+          "creativeLeverage": 5,
+          "productivityMultiplier": 10
+        }
+      },
+      {
+        "id": "c-documentation-reporting",
+        "name": "Documentation and Progress Reporting",
+        "description": "Maintain records of work performed, document actions taken, and prepare written progress reports for supervisors or project managers. Track materials used and flag issues encountered on site.",
+        "category": "cognitive",
+        "timeWeight": 0.1,
+        "llmExposureTier": "E1",
+        "automationRisk": 67,
+        "augmentationPotential": 48,
+        "automationSubScores": {
+          "routineness": 17,
+          "dataIntensity": 13,
+          "physicalBottleneck": 18,
+          "socialBottleneck": 19
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 12,
+          "decisionSupport": 10,
+          "creativeLeverage": 8,
+          "productivityMultiplier": 18
+        }
+      }
+    ],
+    "skills": [
+      {
+        "id": "blueprint-interpretation",
+        "name": "Blueprint Interpretation",
+        "impact": "transformed",
+        "relevance": 82
+      },
+      {
+        "id": "hand-power-tool-operation",
+        "name": "Hand and Power Tool Operation",
+        "impact": "displaced",
+        "relevance": 90
+      },
+      {
+        "id": "structural-measurement",
+        "name": "Structural Measurement and Layout",
+        "impact": "transformed",
+        "relevance": 85
+      },
+      {
+        "id": "critical-thinking",
+        "name": "Critical Thinking and Problem Solving",
+        "impact": "gained",
+        "relevance": 70
+      },
+      {
+        "id": "safety-compliance",
+        "name": "Safety Rules and Regulatory Compliance",
+        "impact": "transformed",
+        "relevance": 75
+      },
+      {
+        "id": "quality-control",
+        "name": "Quality Control and Inspection",
+        "impact": "transformed",
+        "relevance": 72
+      },
+      {
+        "id": "documentation",
+        "name": "Documentation and Record Keeping",
+        "impact": "displaced",
+        "relevance": 55
+      },
+      {
+        "id": "coordination",
+        "name": "Team Coordination and Communication",
+        "impact": "gained",
+        "relevance": 65
+      }
+    ],
+    "exposureScore": {
+      "overall": 46,
+      "automationRisk": 46,
+      "augmentationPotential": 38,
+      "netDisplacement": 8,
+      "complementarityScore": 28,
+      "routineTaskIntensity": -0.41,
+      "timeline": "long-term",
+      "wageEffect": -5,
+      "confidence": "high"
+    },
+    "bottleneckTaskIds": [
+      "c-assembly-fastening-framing",
+      "c-inspection-quality-check"
+    ],
+    "similarOccupationIds": [
+      "assembly-line-worker",
+      "cnc-machine-operator",
+      "quality-control-inspector",
+      "naval-shipbuilder",
+      "renewable-energy-technician"
+    ]
+  },
+  {
+    "id": "firefighters",
+    "title": "Firefighters",
+    "industryId": "public-safety",
+    "socCode": "33-2011",
+    "medianWage": 54650,
+    "educationLevel": "high-school",
+    "description": "Firefighters control and extinguish fires and respond to emergency situations where life, property, or the environment is at risk. Their duties span fire suppression, emergency medical response, hazardous material incidents, search and rescue, and disaster assistance. The role demands high physical fitness, rapid decision-making under extreme conditions, and close coordination with team members and the public.",
+    "tasks": [
+      {
+        "id": "f-fire-suppression-rescue",
+        "name": "Fire Suppression and Rescue Operations",
+        "description": "Respond to fire alarms, enter burning structures, operate hoses and equipment, and rescue survivors from hazardous environments. Requires real-time physical judgment under rapidly changing, life-threatening conditions.",
+        "category": "physical",
+        "timeWeight": 0.35,
+        "llmExposureTier": "E0",
+        "automationRisk": 14,
+        "augmentationPotential": 32,
+        "automationSubScores": {
+          "routineness": 4,
+          "dataIntensity": 6,
+          "physicalBottleneck": 1,
+          "socialBottleneck": 3
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 10,
+          "decisionSupport": 14,
+          "creativeLeverage": 3,
+          "productivityMultiplier": 5
+        }
+      },
+      {
+        "id": "f-situational-assessment-communication",
+        "name": "Situational Assessment and Radio Communication",
+        "description": "Assess fire conditions, identify hazards, and report status to command using two-way radios to coordinate tactical response. Involves rapid synthesis of environmental cues and structured reporting under pressure.",
+        "category": "cognitive",
+        "timeWeight": 0.2,
+        "llmExposureTier": "E0",
+        "automationRisk": 30,
+        "augmentationPotential": 50,
+        "automationSubScores": {
+          "routineness": 7,
+          "dataIntensity": 12,
+          "physicalBottleneck": 5,
+          "socialBottleneck": 6
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 17,
+          "decisionSupport": 18,
+          "creativeLeverage": 5,
+          "productivityMultiplier": 10
+        }
+      },
+      {
+        "id": "f-equipment-inspection-maintenance",
+        "name": "Equipment Inspection and Maintenance",
+        "description": "Inspect, test, and maintain firefighting vehicles, tools, breathing apparatus, and protective gear to ensure operational readiness. Follows structured checklists but requires hands-on physical verification.",
+        "category": "physical",
+        "timeWeight": 0.2,
+        "llmExposureTier": "E1",
+        "automationRisk": 49,
+        "augmentationPotential": 39,
+        "automationSubScores": {
+          "routineness": 17,
+          "dataIntensity": 10,
+          "physicalBottleneck": 4,
+          "socialBottleneck": 18
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 10,
+          "decisionSupport": 11,
+          "creativeLeverage": 4,
+          "productivityMultiplier": 14
+        }
+      },
+      {
+        "id": "f-incident-documentation-reporting",
+        "name": "Incident Documentation and Reporting",
+        "description": "Document fire incidents, emergency responses, and inspection findings in structured reports for administrative, legal, and analytical purposes. Involves data entry, narrative writing, and records management.",
+        "category": "cognitive",
+        "timeWeight": 0.15,
+        "llmExposureTier": "E2",
+        "automationRisk": 77,
+        "augmentationPotential": 52,
+        "automationSubScores": {
+          "routineness": 18,
+          "dataIntensity": 17,
+          "physicalBottleneck": 22,
+          "socialBottleneck": 20
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 14,
+          "decisionSupport": 10,
+          "creativeLeverage": 8,
+          "productivityMultiplier": 20
+        }
+      },
+      {
+        "id": "f-public-safety-education",
+        "name": "Public Safety Education and Community Engagement",
+        "description": "Conduct fire prevention inspections, deliver safety education programs, and engage with the public to reduce fire risk and build community trust. Requires interpersonal communication and relationship-building.",
+        "category": "interpersonal",
+        "timeWeight": 0.1,
+        "llmExposureTier": "E1",
+        "automationRisk": 34,
+        "augmentationPotential": 49,
+        "automationSubScores": {
+          "routineness": 12,
+          "dataIntensity": 8,
+          "physicalBottleneck": 10,
+          "socialBottleneck": 4
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 13,
+          "decisionSupport": 9,
+          "creativeLeverage": 14,
+          "productivityMultiplier": 13
+        }
+      }
+    ],
+    "skills": [
+      {
+        "id": "critical-thinking",
+        "name": "Critical Thinking",
+        "impact": "transformed",
+        "relevance": 85
+      },
+      {
+        "id": "coordination",
+        "name": "Team Coordination",
+        "impact": "transformed",
+        "relevance": 80
+      },
+      {
+        "id": "judgment-decision-making",
+        "name": "Judgment and Decision Making",
+        "impact": "transformed",
+        "relevance": 82
+      },
+      {
+        "id": "service-orientation",
+        "name": "Service Orientation",
+        "impact": "gained",
+        "relevance": 75
+      },
+      {
+        "id": "active-learning",
+        "name": "Active Learning",
+        "impact": "gained",
+        "relevance": 70
+      },
+      {
+        "id": "monitoring",
+        "name": "Environmental Monitoring",
+        "impact": "transformed",
+        "relevance": 78
+      },
+      {
+        "id": "physical-fitness",
+        "name": "Physical Fitness and Dexterity",
+        "impact": "gained",
+        "relevance": 90
+      },
+      {
+        "id": "documentation",
+        "name": "Incident Documentation",
+        "impact": "displaced",
+        "relevance": 65
+      },
+      {
+        "id": "hazmat-knowledge",
+        "name": "Hazardous Materials Knowledge",
+        "impact": "transformed",
+        "relevance": 72
+      },
+      {
+        "id": "social-perceptiveness",
+        "name": "Social Perceptiveness",
+        "impact": "gained",
+        "relevance": 68
+      }
+    ],
+    "exposureScore": {
+      "overall": 42,
+      "automationRisk": 36,
+      "augmentationPotential": 42,
+      "netDisplacement": -6,
+      "complementarityScore": 28,
+      "routineTaskIntensity": -1.42,
+      "timeline": "long-term",
+      "wageEffect": 3,
+      "confidence": "high"
+    },
+    "bottleneckTaskIds": [
+      "f-fire-suppression-rescue",
+      "f-situational-assessment-communication"
+    ],
+    "similarOccupationIds": [
+      "registered-nurse",
+      "physical-therapist",
+      "renewable-energy-technician",
+      "heavy-and-tractor-trailer-truck-drivers",
+      "environmental-engineer"
+    ]
+  },
+  {
+    "id": "police-and-sheriff-s-patrol-officers",
+    "title": "Police and Sheriff's Patrol Officers",
+    "industryId": "public-safety",
+    "socCode": "33-3051",
+    "medianWage": 67290,
+    "educationLevel": "high-school",
+    "description": "Police and sheriff's patrol officers maintain public order and safety by enforcing local, state, and federal laws. They patrol assigned areas, respond to emergencies, investigate crimes, apprehend suspects, and document incidents. The role demands constant real-time judgment, physical presence, and deep interpersonal engagement with the public.",
+    "tasks": [
+      {
+        "id": "pass-patrol-apprehend",
+        "name": "Patrol, Identify, and Apprehend Suspects",
+        "description": "Officers patrol assigned areas, monitor for suspicious activity, pursue, and arrest suspects and perpetrators of criminal acts. This requires real-time situational awareness, physical presence, and split-second judgment.",
+        "category": "physical",
+        "timeWeight": 0.3,
+        "llmExposureTier": "E0",
+        "automationRisk": 17,
+        "augmentationPotential": 49,
+        "automationSubScores": {
+          "routineness": 4,
+          "dataIntensity": 8,
+          "physicalBottleneck": 2,
+          "socialBottleneck": 3
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 16,
+          "decisionSupport": 18,
+          "creativeLeverage": 5,
+          "productivityMultiplier": 10
+        }
+      },
+      {
+        "id": "pass-investigate-incidents",
+        "name": "Investigate Crimes and Suspicious Activities",
+        "description": "Officers review facts of incidents, investigate illegal or suspicious activities, and determine whether criminal statutes were violated. This involves gathering evidence, interviewing witnesses, and applying legal knowledge.",
+        "category": "cognitive",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E2",
+        "automationRisk": 34,
+        "augmentationPotential": 66,
+        "automationSubScores": {
+          "routineness": 7,
+          "dataIntensity": 16,
+          "physicalBottleneck": 6,
+          "socialBottleneck": 5
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 21,
+          "decisionSupport": 20,
+          "creativeLeverage": 8,
+          "productivityMultiplier": 17
+        }
+      },
+      {
+        "id": "pass-document-report",
+        "name": "Document Incidents and Prepare Reports",
+        "description": "Officers record facts and prepare written reports documenting incidents, arrests, and activities for legal and administrative purposes. Accuracy and completeness are critical for court proceedings and departmental records.",
+        "category": "cognitive",
+        "timeWeight": 0.2,
+        "llmExposureTier": "E1",
+        "automationRisk": 75,
+        "augmentationPotential": 54,
+        "automationSubScores": {
+          "routineness": 17,
+          "dataIntensity": 18,
+          "physicalBottleneck": 20,
+          "socialBottleneck": 20
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 15,
+          "decisionSupport": 10,
+          "creativeLeverage": 7,
+          "productivityMultiplier": 22
+        }
+      },
+      {
+        "id": "pass-public-interaction-conflict",
+        "name": "Public Interaction, Conflict Resolution, and Community Relations",
+        "description": "Officers engage directly with the public to resolve conflicts, respond to complaints, render first aid, and promote community relations. This requires high emotional intelligence, negotiation skills, and trust-building.",
+        "category": "interpersonal",
+        "timeWeight": 0.15,
+        "llmExposureTier": "E0",
+        "automationRisk": 15,
+        "augmentationPotential": 44,
+        "automationSubScores": {
+          "routineness": 4,
+          "dataIntensity": 6,
+          "physicalBottleneck": 3,
+          "socialBottleneck": 2
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 12,
+          "decisionSupport": 17,
+          "creativeLeverage": 8,
+          "productivityMultiplier": 7
+        }
+      },
+      {
+        "id": "pass-court-testimony",
+        "name": "Testify in Court and Present Evidence",
+        "description": "Officers testify in criminal and traffic court cases, presenting evidence and acting as witnesses. This requires precise recall, legal knowledge, and credible oral communication under cross-examination.",
+        "category": "interpersonal",
+        "timeWeight": 0.1,
+        "llmExposureTier": "E1",
+        "automationRisk": 47,
+        "augmentationPotential": 57,
+        "automationSubScores": {
+          "routineness": 10,
+          "dataIntensity": 14,
+          "physicalBottleneck": 18,
+          "socialBottleneck": 5
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 18,
+          "decisionSupport": 14,
+          "creativeLeverage": 9,
+          "productivityMultiplier": 16
+        }
+      }
+    ],
+    "skills": [
+      {
+        "id": "active-listening",
+        "name": "Active Listening",
+        "impact": "transformed",
+        "relevance": 72
+      },
+      {
+        "id": "social-perceptiveness",
+        "name": "Social Perceptiveness",
+        "impact": "gained",
+        "relevance": 72
+      },
+      {
+        "id": "speaking",
+        "name": "Speaking",
+        "impact": "transformed",
+        "relevance": 72
+      },
+      {
+        "id": "critical-thinking",
+        "name": "Critical Thinking",
+        "impact": "transformed",
+        "relevance": 69
+      },
+      {
+        "id": "judgment-decision-making",
+        "name": "Judgment and Decision Making",
+        "impact": "transformed",
+        "relevance": 66
+      },
+      {
+        "id": "report-writing",
+        "name": "Report Writing / Documentation",
+        "impact": "displaced",
+        "relevance": 86
+      },
+      {
+        "id": "information-retrieval",
+        "name": "Information Retrieval and Database Search",
+        "impact": "displaced",
+        "relevance": 70
+      },
+      {
+        "id": "coordination",
+        "name": "Coordination",
+        "impact": "gained",
+        "relevance": 66
+      },
+      {
+        "id": "persuasion",
+        "name": "Persuasion",
+        "impact": "gained",
+        "relevance": 66
+      },
+      {
+        "id": "physical-enforcement",
+        "name": "Physical Enforcement and Tactical Response",
+        "impact": "gained",
+        "relevance": 87
+      }
+    ],
+    "exposureScore": {
+      "overall": 54,
+      "automationRisk": 36,
+      "augmentationPotential": 54,
+      "netDisplacement": -19,
+      "complementarityScore": 38,
+      "routineTaskIntensity": -0.82,
+      "timeline": "long-term",
+      "wageEffect": 3,
+      "confidence": "medium"
+    },
+    "bottleneckTaskIds": [
+      "pass-public-interaction-conflict",
+      "pass-patrol-apprehend"
+    ],
+    "similarOccupationIds": [
+      "intelligence-analyst",
+      "paralegals-and-legal-assistants",
+      "arbitrators-mediators-and-conciliators",
+      "lawyers",
+      "insurance-adjuster"
+    ]
+  },
+  {
+    "id": "physical-therapists",
+    "title": "Physical Therapists",
+    "industryId": "healthcare",
+    "socCode": "29-1123",
+    "medianWage": 97720,
+    "educationLevel": "doctoral",
+    "description": "Physical therapists assess, plan, and implement individualized rehabilitative programs to improve patient mobility, relieve pain, and restore physical functioning following disease or injury. They work directly with patients through hands-on manual techniques, therapeutic exercises, and patient education. The role demands deep clinical judgment, interpersonal trust, and physical presence at the point of care.",
+    "tasks": [
+      {
+        "id": "pt-initial-eval-diagnosis",
+        "name": "Initial Patient Evaluation and Diagnosis",
+        "description": "Perform comprehensive physical examinations, collect and interpret clinical data, and establish a diagnosis and treatment plan prior to intervention. Requires integrating subjective history, objective measurements, and clinical reasoning.",
+        "category": "cognitive",
+        "timeWeight": 0.2,
+        "llmExposureTier": "E2",
+        "automationRisk": 35,
+        "augmentationPotential": 72,
+        "automationSubScores": {
+          "routineness": 8,
+          "dataIntensity": 18,
+          "physicalBottleneck": 5,
+          "socialBottleneck": 4
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 22,
+          "decisionSupport": 22,
+          "creativeLeverage": 12,
+          "productivityMultiplier": 16
+        }
+      },
+      {
+        "id": "pt-hands-on-treatment",
+        "name": "Hands-On Manual Therapy and Exercise Administration",
+        "description": "Administer manual exercises, massage, traction, and therapeutic modalities directly to patients to relieve pain, increase strength, and restore function. Requires physical dexterity, tactile feedback, and real-time patient response monitoring.",
+        "category": "physical",
+        "timeWeight": 0.3,
+        "llmExposureTier": "E0",
+        "automationRisk": 23,
+        "augmentationPotential": 37,
+        "automationSubScores": {
+          "routineness": 10,
+          "dataIntensity": 8,
+          "physicalBottleneck": 2,
+          "socialBottleneck": 3
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 10,
+          "decisionSupport": 14,
+          "creativeLeverage": 8,
+          "productivityMultiplier": 5
+        }
+      },
+      {
+        "id": "pt-treatment-monitoring-adjustment",
+        "name": "Treatment Progress Monitoring and Plan Adjustment",
+        "description": "Evaluate patient response to treatment at various stages, interpret outcome measures, and modify the intervention program to maximize therapeutic benefit. Involves ongoing clinical reasoning and adaptive decision-making.",
+        "category": "cognitive",
+        "timeWeight": 0.2,
+        "llmExposureTier": "E2",
+        "automationRisk": 37,
+        "augmentationPotential": 69,
+        "automationSubScores": {
+          "routineness": 9,
+          "dataIntensity": 17,
+          "physicalBottleneck": 6,
+          "socialBottleneck": 5
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 20,
+          "decisionSupport": 21,
+          "creativeLeverage": 10,
+          "productivityMultiplier": 18
+        }
+      },
+      {
+        "id": "pt-patient-family-education",
+        "name": "Patient and Family Education",
+        "description": "Instruct patients and their families in home exercise programs, activity modifications, and self-management strategies to reinforce clinical gains outside the clinic. Requires clear communication, empathy, and tailoring of information to individual comprehension levels.",
+        "category": "interpersonal",
+        "timeWeight": 0.15,
+        "llmExposureTier": "E1",
+        "automationRisk": 33,
+        "augmentationPotential": 61,
+        "automationSubScores": {
+          "routineness": 11,
+          "dataIntensity": 10,
+          "physicalBottleneck": 8,
+          "socialBottleneck": 4
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 14,
+          "decisionSupport": 12,
+          "creativeLeverage": 15,
+          "productivityMultiplier": 20
+        }
+      },
+      {
+        "id": "pt-documentation-care-coordination",
+        "name": "Clinical Documentation and Interdisciplinary Care Coordination",
+        "description": "Record patient evaluations, treatment notes, progress reports, and outcomes in electronic health records, and confer with physicians and other healthcare providers to coordinate care. Involves structured data entry, report generation, and professional communication.",
+        "category": "cognitive",
+        "timeWeight": 0.15,
+        "llmExposureTier": "E1",
+        "automationRisk": 70,
+        "augmentationPotential": 60,
+        "automationSubScores": {
+          "routineness": 17,
+          "dataIntensity": 19,
+          "physicalBottleneck": 20,
+          "socialBottleneck": 14
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 16,
+          "decisionSupport": 13,
+          "creativeLeverage": 8,
+          "productivityMultiplier": 23
+        }
+      }
+    ],
+    "skills": [
+      {
+        "id": "active-listening",
+        "name": "Active Listening",
+        "impact": "transformed",
+        "relevance": 90
+      },
+      {
+        "id": "critical-thinking",
+        "name": "Critical Thinking",
+        "impact": "transformed",
+        "relevance": 88
+      },
+      {
+        "id": "social-perceptiveness",
+        "name": "Social Perceptiveness",
+        "impact": "gained",
+        "relevance": 85
+      },
+      {
+        "id": "clinical-documentation",
+        "name": "Clinical Documentation",
+        "impact": "displaced",
+        "relevance": 80
+      },
+      {
+        "id": "manual-therapy",
+        "name": "Manual Therapy Techniques",
+        "impact": "gained",
+        "relevance": 92
+      },
+      {
+        "id": "service-orientation",
+        "name": "Service Orientation",
+        "impact": "gained",
+        "relevance": 87
+      },
+      {
+        "id": "judgment-decision-making",
+        "name": "Judgment and Decision Making",
+        "impact": "transformed",
+        "relevance": 85
+      },
+      {
+        "id": "reading-comprehension",
+        "name": "Reading Comprehension (Clinical Literature)",
+        "impact": "transformed",
+        "relevance": 75
+      },
+      {
+        "id": "writing",
+        "name": "Clinical Writing and Reporting",
+        "impact": "displaced",
+        "relevance": 72
+      },
+      {
+        "id": "time-management",
+        "name": "Time Management",
+        "impact": "transformed",
+        "relevance": 68
+      }
+    ],
+    "exposureScore": {
+      "overall": 57,
+      "automationRisk": 37,
+      "augmentationPotential": 57,
+      "netDisplacement": -21,
+      "complementarityScore": 52,
+      "routineTaskIntensity": -1.42,
+      "timeline": "long-term",
+      "wageEffect": 5,
+      "confidence": "high"
+    },
+    "bottleneckTaskIds": [
+      "pt-hands-on-treatment",
+      "pt-patient-family-education"
+    ],
+    "similarOccupationIds": [
+      "nurse-practitioner",
+      "registered-nurse",
+      "pharmacist",
+      "radiologist",
+      "k12-teacher"
+    ]
+  },
+  {
+    "id": "nursing-assistants",
+    "title": "Nursing Assistants",
+    "industryId": "healthcare",
+    "socCode": "31-1131",
+    "medianWage": 35740,
+    "educationLevel": "high-school",
+    "description": "Nursing assistants provide basic care and support to patients in health or nursing facilities under the supervision of licensed nursing staff. Their duties include assisting with daily living activities such as bathing, dressing, feeding, and ambulation, as well as monitoring and documenting patient health status. The role is highly physical and interpersonal, requiring close, continuous contact with patients.",
+    "tasks": [
+      {
+        "id": "na-direct-patient-care",
+        "name": "Direct Physical Patient Care",
+        "description": "Assist patients with daily living activities including bathing, dressing, toileting, repositioning, and ambulation. Requires hands-on physical presence and dexterous manipulation in close proximity to patients.",
+        "category": "physical",
+        "timeWeight": 0.4,
+        "llmExposureTier": "E0",
+        "automationRisk": 18,
+        "augmentationPotential": 19,
+        "automationSubScores": {
+          "routineness": 10,
+          "dataIntensity": 4,
+          "physicalBottleneck": 2,
+          "socialBottleneck": 2
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 5,
+          "decisionSupport": 8,
+          "creativeLeverage": 2,
+          "productivityMultiplier": 4
+        }
+      },
+      {
+        "id": "na-patient-monitoring-observation",
+        "name": "Patient Monitoring and Observation",
+        "description": "Observe patients for symptoms, changes in condition, or signs requiring medical attention such as wounds, behavioral changes, or abnormal outputs. Respond to call signals and assess immediate patient needs.",
+        "category": "cognitive",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E0",
+        "automationRisk": 29,
+        "augmentationPotential": 43,
+        "automationSubScores": {
+          "routineness": 12,
+          "dataIntensity": 10,
+          "physicalBottleneck": 3,
+          "socialBottleneck": 4
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 14,
+          "decisionSupport": 15,
+          "creativeLeverage": 4,
+          "productivityMultiplier": 10
+        }
+      },
+      {
+        "id": "na-documentation-reporting",
+        "name": "Documentation and Reporting",
+        "description": "Measure and record food and liquid intake, urinary and fecal output, and document observations of patient behavior, complaints, and physical symptoms for nursing staff review.",
+        "category": "cognitive",
+        "timeWeight": 0.15,
+        "llmExposureTier": "E2",
+        "automationRisk": 73,
+        "augmentationPotential": 51,
+        "automationSubScores": {
+          "routineness": 18,
+          "dataIntensity": 17,
+          "physicalBottleneck": 20,
+          "socialBottleneck": 18
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 14,
+          "decisionSupport": 12,
+          "creativeLeverage": 5,
+          "productivityMultiplier": 20
+        }
+      },
+      {
+        "id": "na-dietary-medication-support",
+        "name": "Dietary and Medication Support",
+        "description": "Review and apply patients' dietary restrictions, food allergies, and preferences to ensure appropriate nutrition. Remind patients to take medications or nutritional supplements as scheduled.",
+        "category": "cognitive",
+        "timeWeight": 0.1,
+        "llmExposureTier": "E2",
+        "automationRisk": 49,
+        "augmentationPotential": 48,
+        "automationSubScores": {
+          "routineness": 17,
+          "dataIntensity": 14,
+          "physicalBottleneck": 10,
+          "socialBottleneck": 8
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 16,
+          "decisionSupport": 13,
+          "creativeLeverage": 4,
+          "productivityMultiplier": 15
+        }
+      },
+      {
+        "id": "na-interpersonal-patient-communication",
+        "name": "Interpersonal Communication and Emotional Support",
+        "description": "Establish and maintain supportive relationships with patients and their families, communicating needs and concerns to nursing staff and providing emotional reassurance during care activities.",
+        "category": "interpersonal",
+        "timeWeight": 0.1,
+        "llmExposureTier": "E0",
+        "automationRisk": 17,
+        "augmentationPotential": 27,
+        "automationSubScores": {
+          "routineness": 6,
+          "dataIntensity": 4,
+          "physicalBottleneck": 5,
+          "socialBottleneck": 2
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 8,
+          "decisionSupport": 9,
+          "creativeLeverage": 5,
+          "productivityMultiplier": 5
+        }
+      }
+    ],
+    "skills": [
+      {
+        "id": "service-orientation",
+        "name": "Service Orientation",
+        "impact": "transformed",
+        "relevance": 90
+      },
+      {
+        "id": "active-listening",
+        "name": "Active Listening",
+        "impact": "transformed",
+        "relevance": 80
+      },
+      {
+        "id": "social-perceptiveness",
+        "name": "Social Perceptiveness",
+        "impact": "gained",
+        "relevance": 85
+      },
+      {
+        "id": "monitoring",
+        "name": "Monitoring",
+        "impact": "transformed",
+        "relevance": 75
+      },
+      {
+        "id": "documentation",
+        "name": "Clinical Documentation",
+        "impact": "displaced",
+        "relevance": 70
+      },
+      {
+        "id": "critical-thinking",
+        "name": "Critical Thinking",
+        "impact": "transformed",
+        "relevance": 65
+      },
+      {
+        "id": "coordination",
+        "name": "Care Coordination",
+        "impact": "transformed",
+        "relevance": 70
+      },
+      {
+        "id": "physical-patient-handling",
+        "name": "Physical Patient Handling",
+        "impact": "gained",
+        "relevance": 95
+      },
+      {
+        "id": "reading-comprehension",
+        "name": "Reading Comprehension",
+        "impact": "displaced",
+        "relevance": 55
+      },
+      {
+        "id": "judgment-decision-making",
+        "name": "Judgment and Decision Making",
+        "impact": "transformed",
+        "relevance": 60
+      }
+    ],
+    "exposureScore": {
+      "overall": 34,
+      "automationRisk": 32,
+      "augmentationPotential": 34,
+      "netDisplacement": -2,
+      "complementarityScore": 28,
+      "routineTaskIntensity": -0.62,
+      "timeline": "long-term",
+      "wageEffect": 3,
+      "confidence": "high"
+    },
+    "bottleneckTaskIds": [
+      "na-interpersonal-patient-communication",
+      "na-direct-patient-care"
+    ],
+    "similarOccupationIds": [
+      "registered-nurse",
+      "physical-therapist",
+      "nurse-practitioner",
+      "pharmacist",
+      "renewable-energy-technician"
+    ]
   }
 ]

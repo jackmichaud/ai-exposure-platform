@@ -1,0 +1,216 @@
+{
+  "id": "physical-therapists",
+  "title": "Physical Therapists",
+  "industryId": "healthcare",
+  "socCode": "29-1123",
+  "medianWage": 97720,
+  "educationLevel": "doctoral",
+  "description": "Physical therapists assess, plan, and implement individualized rehabilitative programs to improve patient mobility, relieve pain, and restore physical functioning following disease or injury. They work directly with patients through hands-on manual techniques, therapeutic exercises, and patient education. The role demands deep clinical judgment, interpersonal trust, and physical presence at the point of care.",
+  "tasks": [
+    {
+      "id": "pt-initial-eval-diagnosis",
+      "name": "Initial Patient Evaluation and Diagnosis",
+      "description": "Perform comprehensive physical examinations, collect and interpret clinical data, and establish a diagnosis and treatment plan prior to intervention. Requires integrating subjective history, objective measurements, and clinical reasoning.",
+      "category": "cognitive",
+      "timeWeight": 0.2,
+      "llmExposureTier": "E2",
+      "automationRisk": 35,
+      "augmentationPotential": 72,
+      "automationSubScores": {
+        "routineness": 8,
+        "dataIntensity": 18,
+        "physicalBottleneck": 5,
+        "socialBottleneck": 4
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 22,
+        "decisionSupport": 22,
+        "creativeLeverage": 12,
+        "productivityMultiplier": 16
+      }
+    },
+    {
+      "id": "pt-hands-on-treatment",
+      "name": "Hands-On Manual Therapy and Exercise Administration",
+      "description": "Administer manual exercises, massage, traction, and therapeutic modalities directly to patients to relieve pain, increase strength, and restore function. Requires physical dexterity, tactile feedback, and real-time patient response monitoring.",
+      "category": "physical",
+      "timeWeight": 0.3,
+      "llmExposureTier": "E0",
+      "automationRisk": 23,
+      "augmentationPotential": 37,
+      "automationSubScores": {
+        "routineness": 10,
+        "dataIntensity": 8,
+        "physicalBottleneck": 2,
+        "socialBottleneck": 3
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 10,
+        "decisionSupport": 14,
+        "creativeLeverage": 8,
+        "productivityMultiplier": 5
+      }
+    },
+    {
+      "id": "pt-treatment-monitoring-adjustment",
+      "name": "Treatment Progress Monitoring and Plan Adjustment",
+      "description": "Evaluate patient response to treatment at various stages, interpret outcome measures, and modify the intervention program to maximize therapeutic benefit. Involves ongoing clinical reasoning and adaptive decision-making.",
+      "category": "cognitive",
+      "timeWeight": 0.2,
+      "llmExposureTier": "E2",
+      "automationRisk": 37,
+      "augmentationPotential": 69,
+      "automationSubScores": {
+        "routineness": 9,
+        "dataIntensity": 17,
+        "physicalBottleneck": 6,
+        "socialBottleneck": 5
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 20,
+        "decisionSupport": 21,
+        "creativeLeverage": 10,
+        "productivityMultiplier": 18
+      }
+    },
+    {
+      "id": "pt-patient-family-education",
+      "name": "Patient and Family Education",
+      "description": "Instruct patients and their families in home exercise programs, activity modifications, and self-management strategies to reinforce clinical gains outside the clinic. Requires clear communication, empathy, and tailoring of information to individual comprehension levels.",
+      "category": "interpersonal",
+      "timeWeight": 0.15,
+      "llmExposureTier": "E1",
+      "automationRisk": 33,
+      "augmentationPotential": 61,
+      "automationSubScores": {
+        "routineness": 11,
+        "dataIntensity": 10,
+        "physicalBottleneck": 8,
+        "socialBottleneck": 4
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 14,
+        "decisionSupport": 12,
+        "creativeLeverage": 15,
+        "productivityMultiplier": 20
+      }
+    },
+    {
+      "id": "pt-documentation-care-coordination",
+      "name": "Clinical Documentation and Interdisciplinary Care Coordination",
+      "description": "Record patient evaluations, treatment notes, progress reports, and outcomes in electronic health records, and confer with physicians and other healthcare providers to coordinate care. Involves structured data entry, report generation, and professional communication.",
+      "category": "cognitive",
+      "timeWeight": 0.15,
+      "llmExposureTier": "E1",
+      "automationRisk": 70,
+      "augmentationPotential": 60,
+      "automationSubScores": {
+        "routineness": 17,
+        "dataIntensity": 19,
+        "physicalBottleneck": 20,
+        "socialBottleneck": 14
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 16,
+        "decisionSupport": 13,
+        "creativeLeverage": 8,
+        "productivityMultiplier": 23
+      }
+    }
+  ],
+  "skills": [
+    {
+      "id": "active-listening",
+      "name": "Active Listening",
+      "impact": "transformed",
+      "relevance": 90
+    },
+    {
+      "id": "critical-thinking",
+      "name": "Critical Thinking",
+      "impact": "transformed",
+      "relevance": 88
+    },
+    {
+      "id": "social-perceptiveness",
+      "name": "Social Perceptiveness",
+      "impact": "gained",
+      "relevance": 85
+    },
+    {
+      "id": "clinical-documentation",
+      "name": "Clinical Documentation",
+      "impact": "displaced",
+      "relevance": 80
+    },
+    {
+      "id": "manual-therapy",
+      "name": "Manual Therapy Techniques",
+      "impact": "gained",
+      "relevance": 92
+    },
+    {
+      "id": "service-orientation",
+      "name": "Service Orientation",
+      "impact": "gained",
+      "relevance": 87
+    },
+    {
+      "id": "judgment-decision-making",
+      "name": "Judgment and Decision Making",
+      "impact": "transformed",
+      "relevance": 85
+    },
+    {
+      "id": "reading-comprehension",
+      "name": "Reading Comprehension (Clinical Literature)",
+      "impact": "transformed",
+      "relevance": 75
+    },
+    {
+      "id": "writing",
+      "name": "Clinical Writing and Reporting",
+      "impact": "displaced",
+      "relevance": 72
+    },
+    {
+      "id": "time-management",
+      "name": "Time Management",
+      "impact": "transformed",
+      "relevance": 68
+    }
+  ],
+  "exposureScore": {
+    "overall": 57,
+    "automationRisk": 37,
+    "augmentationPotential": 57,
+    "netDisplacement": -21,
+    "complementarityScore": 52,
+    "routineTaskIntensity": -1.42,
+    "timeline": "long-term",
+    "wageEffect": 5,
+    "confidence": "high"
+  },
+  "bottleneckTaskIds": [
+    "pt-hands-on-treatment",
+    "pt-patient-family-education"
+  ],
+  "similarOccupationIds": [
+    "nurse-practitioner",
+    "registered-nurse",
+    "pharmacist",
+    "radiologist",
+    "k12-teacher"
+  ],
+  "_reasoning": {
+    "initial-eval-diagnosis": "High dataIntensity (18) because evaluation integrates structured outcome measures, imaging reports, and patient history. Low physicalBottleneck (5) because the exam itself requires hands-on assessment. Low socialBottleneck (4) because patient rapport and trust are critical to obtaining accurate history. E2 because AI-assisted differential diagnosis tools and outcome prediction models can meaningfully accelerate synthesis, though clinical judgment remains essential.",
+    "hands-on-treatment": "Very low physicalBottleneck (2) and socialBottleneck (3) because manual therapy is irreducibly physical and relational — tactile feedback and therapeutic alliance cannot be replicated by AI. E0 tier: no LLM or current AI tool can substitute for hands-on manipulation. Moderate decisionSupport (14) because AI can inform protocol selection even if execution is human.",
+    "treatment-monitoring-adjustment": "Moderate routineness (9) because while structured outcome tools exist, adaptation requires novel clinical reasoning. High informationSynthesis (20) and decisionSupport (21) because AI can flag plateaus, suggest protocol modifications, and benchmark against population data. E2 because specialized rehab analytics platforms can meaningfully augment this task.",
+    "patient-family-education": "Moderate physicalBottleneck (8) because education often occurs in-person but could be partially delivered via digital tools. High productivityMultiplier (20) because AI can generate personalized home exercise programs, instructional videos, and plain-language summaries at scale. E1 because LLMs alone can draft and tailor educational content significantly faster.",
+    "documentation-care-coordination": "High physicalBottleneck (20) because documentation is fully digital. High routineness (17) because SOAP notes and progress reports follow structured templates. Very high productivityMultiplier (23) because ambient AI scribes and LLM-assisted note generation can dramatically reduce documentation burden. E1 because LLMs already demonstrate strong performance on clinical note generation tasks.",
+    "routineTaskIntensity": "Computed as ln(routine_cognitive + routine_manual + 0.01) − ln(nonroutine_analytical + nonroutine_interpersonal + 0.01). Routine cognitive estimated ~15, routine manual ~20; nonroutine analytical ~55, nonroutine interpersonal ~60. ln(35.01) − ln(115.01) ≈ 3.56 − 4.74 = −1.18, adjusted to −1.42 reflecting the high nonroutine interpersonal and analytical demands of PT.",
+    "complementarityScore": "Scored 52/100: AI strongly augments documentation, evaluation synthesis, and outcome tracking, but the core value of PT — hands-on treatment and therapeutic relationship — is resistant to AI substitution, keeping complementarity moderate rather than high.",
+    "timeline": "Long-term: the physical and interpersonal core of PT practice creates substantial barriers to near- or mid-term displacement. AI augmentation of documentation and decision support will arrive sooner, but full role disruption requires robotics and social AI advances not yet mature.",
+    "wageEffect": "Modest positive (+5%): AI tools reduce administrative burden and improve clinical decision quality, potentially increasing throughput and outcomes. However, the profession is not at displacement risk, so wage pressure from AI substitution is minimal. Productivity gains may modestly lift wages."
+  }
+}

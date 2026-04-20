@@ -1,0 +1,216 @@
+{
+  "id": "police-and-sheriff-s-patrol-officers",
+  "title": "Police and Sheriff's Patrol Officers",
+  "industryId": "public-safety",
+  "socCode": "33-3051",
+  "medianWage": 67290,
+  "educationLevel": "high-school",
+  "description": "Police and sheriff's patrol officers maintain public order and safety by enforcing local, state, and federal laws. They patrol assigned areas, respond to emergencies, investigate crimes, apprehend suspects, and document incidents. The role demands constant real-time judgment, physical presence, and deep interpersonal engagement with the public.",
+  "tasks": [
+    {
+      "id": "pass-patrol-apprehend",
+      "name": "Patrol, Identify, and Apprehend Suspects",
+      "description": "Officers patrol assigned areas, monitor for suspicious activity, pursue, and arrest suspects and perpetrators of criminal acts. This requires real-time situational awareness, physical presence, and split-second judgment.",
+      "category": "physical",
+      "timeWeight": 0.3,
+      "llmExposureTier": "E0",
+      "automationRisk": 17,
+      "augmentationPotential": 49,
+      "automationSubScores": {
+        "routineness": 4,
+        "dataIntensity": 8,
+        "physicalBottleneck": 2,
+        "socialBottleneck": 3
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 16,
+        "decisionSupport": 18,
+        "creativeLeverage": 5,
+        "productivityMultiplier": 10
+      }
+    },
+    {
+      "id": "pass-investigate-incidents",
+      "name": "Investigate Crimes and Suspicious Activities",
+      "description": "Officers review facts of incidents, investigate illegal or suspicious activities, and determine whether criminal statutes were violated. This involves gathering evidence, interviewing witnesses, and applying legal knowledge.",
+      "category": "cognitive",
+      "timeWeight": 0.25,
+      "llmExposureTier": "E2",
+      "automationRisk": 34,
+      "augmentationPotential": 66,
+      "automationSubScores": {
+        "routineness": 7,
+        "dataIntensity": 16,
+        "physicalBottleneck": 6,
+        "socialBottleneck": 5
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 21,
+        "decisionSupport": 20,
+        "creativeLeverage": 8,
+        "productivityMultiplier": 17
+      }
+    },
+    {
+      "id": "pass-document-report",
+      "name": "Document Incidents and Prepare Reports",
+      "description": "Officers record facts and prepare written reports documenting incidents, arrests, and activities for legal and administrative purposes. Accuracy and completeness are critical for court proceedings and departmental records.",
+      "category": "cognitive",
+      "timeWeight": 0.2,
+      "llmExposureTier": "E1",
+      "automationRisk": 75,
+      "augmentationPotential": 54,
+      "automationSubScores": {
+        "routineness": 17,
+        "dataIntensity": 18,
+        "physicalBottleneck": 20,
+        "socialBottleneck": 20
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 15,
+        "decisionSupport": 10,
+        "creativeLeverage": 7,
+        "productivityMultiplier": 22
+      }
+    },
+    {
+      "id": "pass-public-interaction-conflict",
+      "name": "Public Interaction, Conflict Resolution, and Community Relations",
+      "description": "Officers engage directly with the public to resolve conflicts, respond to complaints, render first aid, and promote community relations. This requires high emotional intelligence, negotiation skills, and trust-building.",
+      "category": "interpersonal",
+      "timeWeight": 0.15,
+      "llmExposureTier": "E0",
+      "automationRisk": 15,
+      "augmentationPotential": 44,
+      "automationSubScores": {
+        "routineness": 4,
+        "dataIntensity": 6,
+        "physicalBottleneck": 3,
+        "socialBottleneck": 2
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 12,
+        "decisionSupport": 17,
+        "creativeLeverage": 8,
+        "productivityMultiplier": 7
+      }
+    },
+    {
+      "id": "pass-court-testimony",
+      "name": "Testify in Court and Present Evidence",
+      "description": "Officers testify in criminal and traffic court cases, presenting evidence and acting as witnesses. This requires precise recall, legal knowledge, and credible oral communication under cross-examination.",
+      "category": "interpersonal",
+      "timeWeight": 0.1,
+      "llmExposureTier": "E1",
+      "automationRisk": 47,
+      "augmentationPotential": 57,
+      "automationSubScores": {
+        "routineness": 10,
+        "dataIntensity": 14,
+        "physicalBottleneck": 18,
+        "socialBottleneck": 5
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 18,
+        "decisionSupport": 14,
+        "creativeLeverage": 9,
+        "productivityMultiplier": 16
+      }
+    }
+  ],
+  "skills": [
+    {
+      "id": "active-listening",
+      "name": "Active Listening",
+      "impact": "transformed",
+      "relevance": 72
+    },
+    {
+      "id": "social-perceptiveness",
+      "name": "Social Perceptiveness",
+      "impact": "gained",
+      "relevance": 72
+    },
+    {
+      "id": "speaking",
+      "name": "Speaking",
+      "impact": "transformed",
+      "relevance": 72
+    },
+    {
+      "id": "critical-thinking",
+      "name": "Critical Thinking",
+      "impact": "transformed",
+      "relevance": 69
+    },
+    {
+      "id": "judgment-decision-making",
+      "name": "Judgment and Decision Making",
+      "impact": "transformed",
+      "relevance": 66
+    },
+    {
+      "id": "report-writing",
+      "name": "Report Writing / Documentation",
+      "impact": "displaced",
+      "relevance": 86
+    },
+    {
+      "id": "information-retrieval",
+      "name": "Information Retrieval and Database Search",
+      "impact": "displaced",
+      "relevance": 70
+    },
+    {
+      "id": "coordination",
+      "name": "Coordination",
+      "impact": "gained",
+      "relevance": 66
+    },
+    {
+      "id": "persuasion",
+      "name": "Persuasion",
+      "impact": "gained",
+      "relevance": 66
+    },
+    {
+      "id": "physical-enforcement",
+      "name": "Physical Enforcement and Tactical Response",
+      "impact": "gained",
+      "relevance": 87
+    }
+  ],
+  "exposureScore": {
+    "overall": 54,
+    "automationRisk": 36,
+    "augmentationPotential": 54,
+    "netDisplacement": -19,
+    "complementarityScore": 38,
+    "routineTaskIntensity": -0.82,
+    "timeline": "long-term",
+    "wageEffect": 3,
+    "confidence": "medium"
+  },
+  "bottleneckTaskIds": [
+    "pass-public-interaction-conflict",
+    "pass-patrol-apprehend"
+  ],
+  "similarOccupationIds": [
+    "intelligence-analyst",
+    "paralegals-and-legal-assistants",
+    "arbitrators-mediators-and-conciliators",
+    "lawyers",
+    "insurance-adjuster"
+  ],
+  "_reasoning": {
+    "patrol-apprehend": "Highly physical, unpredictable, and interpersonally intense task. Routineness is very low (novel judgment every encounter), physicalBottleneck is near-maximum (requires on-site dexterous presence), and socialBottleneck is near-maximum (deep public trust and confrontation). E0 because no LLM can substitute for physical pursuit or arrest. Augmentation potential is moderate via real-time data feeds (license plates, warrants) and decision support tools.",
+    "investigate-incidents": "More cognitive and data-driven than patrol. dataIntensity is elevated because officers analyze evidence, cross-reference records, and apply legal frameworks. E2 because LLM + specialized tools (case management, legal databases, pattern recognition) can meaningfully accelerate investigation workflows. physicalBottleneck is moderate since some investigation is field-based. High augmentation potential for synthesis and decision support.",
+    "document-report": "Report writing is the most automatable task — highly routine, fully digital, structured output. physicalBottleneck and socialBottleneck are high (25-range) because this is done at a desk or in a vehicle. E1 because LLM alone can draft incident reports from officer dictation or structured inputs. productivityMultiplier is very high (22) as AI can dramatically accelerate report generation.",
+    "public-interaction-conflict": "Deep interpersonal trust, emotional regulation, and physical presence make this E0. socialBottleneck is near-minimum (2) because human interaction is absolutely essential. routineness is very low due to unpredictable human behavior. Augmentation is limited but AI could assist with de-escalation script suggestions or real-time translation.",
+    "court-testimony": "Partially augmentable — AI can help officers prepare testimony, organize evidence summaries, and review case files (E1). However, the actual testimony requires physical presence and credibility under cross-examination. physicalBottleneck is moderate-high (18) since presence in court is mandatory. informationSynthesis is high because officers must synthesize complex case facts into coherent testimony.",
+    "routineTaskIntensity": "Calculated as ln(routine_cognitive[~25] + routine_manual[~15] + 0.01) - ln(nonroutine_analytical[~55] + nonroutine_interpersonal[~60] + 0.01) ≈ ln(40.01) - ln(115.01) ≈ 3.69 - 4.74 = -1.05, adjusted to -0.82 reflecting moderate non-routine dominance with some routine documentation tasks.",
+    "complementarityScore": "Score of 38 reflects that while AI tools (report drafting, database search, predictive analytics) can meaningfully augment officers, the core of the job — physical presence, interpersonal judgment, use of force — remains deeply human. Augmentation is real but bounded by the physical and social nature of law enforcement.",
+    "timeline": "Long-term because the physical, interpersonal, and legal accountability dimensions of policing create strong barriers to near- or mid-term AI displacement. Incremental augmentation (body cam AI, report automation, predictive dispatch) will occur gradually.",
+    "wageEffect": "Modest positive wage effect (+3%) as AI tools increase officer productivity in documentation and investigation, potentially allowing departments to handle more cases per officer, but strong union protections and public-safety mandates limit displacement pressure."
+  }
+}

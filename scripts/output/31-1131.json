@@ -1,0 +1,212 @@
+{
+  "id": "nursing-assistants",
+  "title": "Nursing Assistants",
+  "industryId": "healthcare",
+  "socCode": "31-1131",
+  "medianWage": 35740,
+  "educationLevel": "high-school",
+  "description": "Nursing assistants provide basic care and support to patients in health or nursing facilities under the supervision of licensed nursing staff. Their duties include assisting with daily living activities such as bathing, dressing, feeding, and ambulation, as well as monitoring and documenting patient health status. The role is highly physical and interpersonal, requiring close, continuous contact with patients.",
+  "tasks": [
+    {
+      "id": "na-direct-patient-care",
+      "name": "Direct Physical Patient Care",
+      "description": "Assist patients with daily living activities including bathing, dressing, toileting, repositioning, and ambulation. Requires hands-on physical presence and dexterous manipulation in close proximity to patients.",
+      "category": "physical",
+      "timeWeight": 0.4,
+      "llmExposureTier": "E0",
+      "automationRisk": 18,
+      "augmentationPotential": 19,
+      "automationSubScores": {
+        "routineness": 10,
+        "dataIntensity": 4,
+        "physicalBottleneck": 2,
+        "socialBottleneck": 2
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 5,
+        "decisionSupport": 8,
+        "creativeLeverage": 2,
+        "productivityMultiplier": 4
+      }
+    },
+    {
+      "id": "na-patient-monitoring-observation",
+      "name": "Patient Monitoring and Observation",
+      "description": "Observe patients for symptoms, changes in condition, or signs requiring medical attention such as wounds, behavioral changes, or abnormal outputs. Respond to call signals and assess immediate patient needs.",
+      "category": "cognitive",
+      "timeWeight": 0.25,
+      "llmExposureTier": "E0",
+      "automationRisk": 29,
+      "augmentationPotential": 43,
+      "automationSubScores": {
+        "routineness": 12,
+        "dataIntensity": 10,
+        "physicalBottleneck": 3,
+        "socialBottleneck": 4
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 14,
+        "decisionSupport": 15,
+        "creativeLeverage": 4,
+        "productivityMultiplier": 10
+      }
+    },
+    {
+      "id": "na-documentation-reporting",
+      "name": "Documentation and Reporting",
+      "description": "Measure and record food and liquid intake, urinary and fecal output, and document observations of patient behavior, complaints, and physical symptoms for nursing staff review.",
+      "category": "cognitive",
+      "timeWeight": 0.15,
+      "llmExposureTier": "E2",
+      "automationRisk": 73,
+      "augmentationPotential": 51,
+      "automationSubScores": {
+        "routineness": 18,
+        "dataIntensity": 17,
+        "physicalBottleneck": 20,
+        "socialBottleneck": 18
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 14,
+        "decisionSupport": 12,
+        "creativeLeverage": 5,
+        "productivityMultiplier": 20
+      }
+    },
+    {
+      "id": "na-dietary-medication-support",
+      "name": "Dietary and Medication Support",
+      "description": "Review and apply patients' dietary restrictions, food allergies, and preferences to ensure appropriate nutrition. Remind patients to take medications or nutritional supplements as scheduled.",
+      "category": "cognitive",
+      "timeWeight": 0.1,
+      "llmExposureTier": "E2",
+      "automationRisk": 49,
+      "augmentationPotential": 48,
+      "automationSubScores": {
+        "routineness": 17,
+        "dataIntensity": 14,
+        "physicalBottleneck": 10,
+        "socialBottleneck": 8
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 16,
+        "decisionSupport": 13,
+        "creativeLeverage": 4,
+        "productivityMultiplier": 15
+      }
+    },
+    {
+      "id": "na-interpersonal-patient-communication",
+      "name": "Interpersonal Communication and Emotional Support",
+      "description": "Establish and maintain supportive relationships with patients and their families, communicating needs and concerns to nursing staff and providing emotional reassurance during care activities.",
+      "category": "interpersonal",
+      "timeWeight": 0.1,
+      "llmExposureTier": "E0",
+      "automationRisk": 17,
+      "augmentationPotential": 27,
+      "automationSubScores": {
+        "routineness": 6,
+        "dataIntensity": 4,
+        "physicalBottleneck": 5,
+        "socialBottleneck": 2
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 8,
+        "decisionSupport": 9,
+        "creativeLeverage": 5,
+        "productivityMultiplier": 5
+      }
+    }
+  ],
+  "skills": [
+    {
+      "id": "service-orientation",
+      "name": "Service Orientation",
+      "impact": "transformed",
+      "relevance": 90
+    },
+    {
+      "id": "active-listening",
+      "name": "Active Listening",
+      "impact": "transformed",
+      "relevance": 80
+    },
+    {
+      "id": "social-perceptiveness",
+      "name": "Social Perceptiveness",
+      "impact": "gained",
+      "relevance": 85
+    },
+    {
+      "id": "monitoring",
+      "name": "Monitoring",
+      "impact": "transformed",
+      "relevance": 75
+    },
+    {
+      "id": "documentation",
+      "name": "Clinical Documentation",
+      "impact": "displaced",
+      "relevance": 70
+    },
+    {
+      "id": "critical-thinking",
+      "name": "Critical Thinking",
+      "impact": "transformed",
+      "relevance": 65
+    },
+    {
+      "id": "coordination",
+      "name": "Care Coordination",
+      "impact": "transformed",
+      "relevance": 70
+    },
+    {
+      "id": "physical-patient-handling",
+      "name": "Physical Patient Handling",
+      "impact": "gained",
+      "relevance": 95
+    },
+    {
+      "id": "reading-comprehension",
+      "name": "Reading Comprehension",
+      "impact": "displaced",
+      "relevance": 55
+    },
+    {
+      "id": "judgment-decision-making",
+      "name": "Judgment and Decision Making",
+      "impact": "transformed",
+      "relevance": 60
+    }
+  ],
+  "exposureScore": {
+    "overall": 34,
+    "automationRisk": 32,
+    "augmentationPotential": 34,
+    "netDisplacement": -2,
+    "complementarityScore": 28,
+    "routineTaskIntensity": -0.62,
+    "timeline": "long-term",
+    "wageEffect": 3,
+    "confidence": "high"
+  },
+  "bottleneckTaskIds": [
+    "na-interpersonal-patient-communication",
+    "na-direct-patient-care"
+  ],
+  "similarOccupationIds": [
+    "registered-nurse",
+    "physical-therapist",
+    "nurse-practitioner",
+    "pharmacist",
+    "renewable-energy-technician"
+  ],
+  "_reasoning": {
+    "direct-patient-care": "Highly physical, dexterous, and interpersonally intensive task performed in close bodily contact with patients. Physical and social bottlenecks are near-maximum (2 each), making automation essentially impossible with current or near-future AI/robotics. Routineness is moderate (10) because while procedures are somewhat standardized, each patient interaction requires real-time adaptation. Augmentation potential is low overall but decisionSupport gets a modest 8 because AI-assisted care protocols could guide best practices.",
+    "patient-monitoring-observation": "Observation requires physical presence and nuanced human judgment about subtle symptom changes, keeping physicalBottleneck low (3). However, AI-assisted monitoring tools (wearables, sensor fusion) could augment this task significantly, hence higher augmentationSubScores. LLM alone cannot replace bedside observation, so E0 tier applies. dataIntensity is moderate (10) as inputs are semi-structured vital signs and behavioral cues.",
+    "documentation-reporting": "This is the most AI-amenable task: structured data entry, templated reporting, and pattern recognition in recorded outputs. High routineness (18), dataIntensity (17), and physicalBottleneck (20) because it can be done digitally. E2 tier because specialized EHR-integrated AI tools can dramatically reduce documentation burden. productivityMultiplier is high (20) as AI scribing and auto-population tools directly scale output.",
+    "dietary-medication-support": "Protocol-driven and rule-based (dietary restrictions, medication schedules), giving moderate-high routineness (17) and dataIntensity (14). Physical presence is still needed for delivery but the cognitive/planning component is AI-augmentable. E2 because specialized clinical decision support tools can cross-reference allergies, restrictions, and schedules automatically. informationSynthesis is high (16) due to multi-source data integration.",
+    "interpersonal-patient-communication": "Deep human trust, empathy, and emotional attunement are central. Social bottleneck is near-maximum (2), physical presence matters (5), and the task is highly non-routine (6). E0 because no AI system can substitute for genuine human compassion in vulnerable care settings. Augmentation potential is modest — AI might help with communication scripts or translation but cannot replace the human element."
+  }
+}

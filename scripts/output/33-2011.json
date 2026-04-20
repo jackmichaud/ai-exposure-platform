@@ -1,0 +1,212 @@
+{
+  "id": "firefighters",
+  "title": "Firefighters",
+  "industryId": "public-safety",
+  "socCode": "33-2011",
+  "medianWage": 54650,
+  "educationLevel": "high-school",
+  "description": "Firefighters control and extinguish fires and respond to emergency situations where life, property, or the environment is at risk. Their duties span fire suppression, emergency medical response, hazardous material incidents, search and rescue, and disaster assistance. The role demands high physical fitness, rapid decision-making under extreme conditions, and close coordination with team members and the public.",
+  "tasks": [
+    {
+      "id": "f-fire-suppression-rescue",
+      "name": "Fire Suppression and Rescue Operations",
+      "description": "Respond to fire alarms, enter burning structures, operate hoses and equipment, and rescue survivors from hazardous environments. Requires real-time physical judgment under rapidly changing, life-threatening conditions.",
+      "category": "physical",
+      "timeWeight": 0.35,
+      "llmExposureTier": "E0",
+      "automationRisk": 14,
+      "augmentationPotential": 32,
+      "automationSubScores": {
+        "routineness": 4,
+        "dataIntensity": 6,
+        "physicalBottleneck": 1,
+        "socialBottleneck": 3
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 10,
+        "decisionSupport": 14,
+        "creativeLeverage": 3,
+        "productivityMultiplier": 5
+      }
+    },
+    {
+      "id": "f-situational-assessment-communication",
+      "name": "Situational Assessment and Radio Communication",
+      "description": "Assess fire conditions, identify hazards, and report status to command using two-way radios to coordinate tactical response. Involves rapid synthesis of environmental cues and structured reporting under pressure.",
+      "category": "cognitive",
+      "timeWeight": 0.2,
+      "llmExposureTier": "E0",
+      "automationRisk": 30,
+      "augmentationPotential": 50,
+      "automationSubScores": {
+        "routineness": 7,
+        "dataIntensity": 12,
+        "physicalBottleneck": 5,
+        "socialBottleneck": 6
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 17,
+        "decisionSupport": 18,
+        "creativeLeverage": 5,
+        "productivityMultiplier": 10
+      }
+    },
+    {
+      "id": "f-equipment-inspection-maintenance",
+      "name": "Equipment Inspection and Maintenance",
+      "description": "Inspect, test, and maintain firefighting vehicles, tools, breathing apparatus, and protective gear to ensure operational readiness. Follows structured checklists but requires hands-on physical verification.",
+      "category": "physical",
+      "timeWeight": 0.2,
+      "llmExposureTier": "E1",
+      "automationRisk": 49,
+      "augmentationPotential": 39,
+      "automationSubScores": {
+        "routineness": 17,
+        "dataIntensity": 10,
+        "physicalBottleneck": 4,
+        "socialBottleneck": 18
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 10,
+        "decisionSupport": 11,
+        "creativeLeverage": 4,
+        "productivityMultiplier": 14
+      }
+    },
+    {
+      "id": "f-incident-documentation-reporting",
+      "name": "Incident Documentation and Reporting",
+      "description": "Document fire incidents, emergency responses, and inspection findings in structured reports for administrative, legal, and analytical purposes. Involves data entry, narrative writing, and records management.",
+      "category": "cognitive",
+      "timeWeight": 0.15,
+      "llmExposureTier": "E2",
+      "automationRisk": 77,
+      "augmentationPotential": 52,
+      "automationSubScores": {
+        "routineness": 18,
+        "dataIntensity": 17,
+        "physicalBottleneck": 22,
+        "socialBottleneck": 20
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 14,
+        "decisionSupport": 10,
+        "creativeLeverage": 8,
+        "productivityMultiplier": 20
+      }
+    },
+    {
+      "id": "f-public-safety-education",
+      "name": "Public Safety Education and Community Engagement",
+      "description": "Conduct fire prevention inspections, deliver safety education programs, and engage with the public to reduce fire risk and build community trust. Requires interpersonal communication and relationship-building.",
+      "category": "interpersonal",
+      "timeWeight": 0.1,
+      "llmExposureTier": "E1",
+      "automationRisk": 34,
+      "augmentationPotential": 49,
+      "automationSubScores": {
+        "routineness": 12,
+        "dataIntensity": 8,
+        "physicalBottleneck": 10,
+        "socialBottleneck": 4
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 13,
+        "decisionSupport": 9,
+        "creativeLeverage": 14,
+        "productivityMultiplier": 13
+      }
+    }
+  ],
+  "skills": [
+    {
+      "id": "critical-thinking",
+      "name": "Critical Thinking",
+      "impact": "transformed",
+      "relevance": 85
+    },
+    {
+      "id": "coordination",
+      "name": "Team Coordination",
+      "impact": "transformed",
+      "relevance": 80
+    },
+    {
+      "id": "judgment-decision-making",
+      "name": "Judgment and Decision Making",
+      "impact": "transformed",
+      "relevance": 82
+    },
+    {
+      "id": "service-orientation",
+      "name": "Service Orientation",
+      "impact": "gained",
+      "relevance": 75
+    },
+    {
+      "id": "active-learning",
+      "name": "Active Learning",
+      "impact": "gained",
+      "relevance": 70
+    },
+    {
+      "id": "monitoring",
+      "name": "Environmental Monitoring",
+      "impact": "transformed",
+      "relevance": 78
+    },
+    {
+      "id": "physical-fitness",
+      "name": "Physical Fitness and Dexterity",
+      "impact": "gained",
+      "relevance": 90
+    },
+    {
+      "id": "documentation",
+      "name": "Incident Documentation",
+      "impact": "displaced",
+      "relevance": 65
+    },
+    {
+      "id": "hazmat-knowledge",
+      "name": "Hazardous Materials Knowledge",
+      "impact": "transformed",
+      "relevance": 72
+    },
+    {
+      "id": "social-perceptiveness",
+      "name": "Social Perceptiveness",
+      "impact": "gained",
+      "relevance": 68
+    }
+  ],
+  "exposureScore": {
+    "overall": 42,
+    "automationRisk": 36,
+    "augmentationPotential": 42,
+    "netDisplacement": -6,
+    "complementarityScore": 28,
+    "routineTaskIntensity": -1.42,
+    "timeline": "long-term",
+    "wageEffect": 3,
+    "confidence": "high"
+  },
+  "bottleneckTaskIds": [
+    "f-fire-suppression-rescue",
+    "f-situational-assessment-communication"
+  ],
+  "similarOccupationIds": [
+    "registered-nurse",
+    "physical-therapist",
+    "renewable-energy-technician",
+    "heavy-and-tractor-trailer-truck-drivers",
+    "environmental-engineer"
+  ],
+  "_reasoning": {
+    "fire-suppression-rescue": "Scored E0 because the task is overwhelmingly physical, unpredictable, and life-critical. Routineness is very low (4) because every fire scene is unique. PhysicalBottleneck is near-zero (1) as on-site dexterous presence is irreplaceable. SocialBottleneck is low (3) because victim rescue requires direct human contact. Augmentation is modest — AI could assist with building layout data or thermal imaging feeds but cannot substitute for the firefighter's body.",
+    "situational-assessment-communication": "Scored E0 because assessment happens in real-time in hazardous environments. DataIntensity is moderate (12) as sensor data and radio feeds are structured inputs. DecisionSupport augmentation is high (18) because AI-assisted building intelligence, fire behavior modeling, and sensor fusion could meaningfully support commanders, even if the firefighter on the ground still acts autonomously.",
+    "equipment-inspection-maintenance": "Scored E1 because checklists are highly routine (17) and documentation is digital, but physical verification of gear integrity cannot be fully automated. ProductivityMultiplier is high (14) as AI-assisted maintenance scheduling and anomaly detection from sensor data can reduce inspection time significantly.",
+    "incident-documentation-reporting": "Scored E2 because this is the most digitally tractable task — structured data entry, narrative report generation, and records management are all strong LLM use cases. Routineness (18) and physicalBottleneck (22) are high, reflecting the desk-based, procedural nature. ProductivityMultiplier is highest here (20) as LLMs can draft reports from voice notes or structured inputs.",
+    "public-safety-education": "Scored E1 because LLMs can assist in drafting educational materials, presentations, and outreach content, but delivery requires human presence and interpersonal trust. SocialBottleneck is low (4) reflecting the essential human element. CreativeLeverage (14) is meaningful as AI can help design engaging safety campaigns."
+  }
+}

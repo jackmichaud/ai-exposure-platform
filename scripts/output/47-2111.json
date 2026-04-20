@@ -1,0 +1,216 @@
+{
+  "id": "electricians",
+  "title": "Electricians",
+  "industryId": "trades",
+  "socCode": "47-2111",
+  "medianWage": 61590,
+  "educationLevel": "high-school",
+  "description": "Electricians install, maintain, and repair electrical wiring, equipment, and fixtures in residential, commercial, and industrial settings. They read blueprints, ensure compliance with electrical codes, and troubleshoot faults using specialized testing equipment. The role demands significant physical dexterity, on-site presence, and adherence to safety regulations.",
+  "tasks": [
+    {
+      "id": "e-physical-installation",
+      "name": "Physical Installation of Wiring and Conduit",
+      "description": "Run conduit, pull wire, connect circuits, and mount fixtures on-site using hand and power tools, often working from ladders or scaffolding in confined or hazardous spaces.",
+      "category": "physical",
+      "timeWeight": 0.35,
+      "llmExposureTier": "E0",
+      "automationRisk": 37,
+      "augmentationPotential": 24,
+      "automationSubScores": {
+        "routineness": 12,
+        "dataIntensity": 5,
+        "physicalBottleneck": 2,
+        "socialBottleneck": 18
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 8,
+        "decisionSupport": 7,
+        "creativeLeverage": 4,
+        "productivityMultiplier": 5
+      }
+    },
+    {
+      "id": "e-blueprint-planning",
+      "name": "Blueprint Reading and Job Planning",
+      "description": "Interpret architectural and electrical blueprints, plan wiring layouts, and ensure designs conform to local building and safety codes before and during installation.",
+      "category": "cognitive",
+      "timeWeight": 0.2,
+      "llmExposureTier": "E2",
+      "automationRisk": 62,
+      "augmentationPotential": 69,
+      "automationSubScores": {
+        "routineness": 14,
+        "dataIntensity": 16,
+        "physicalBottleneck": 14,
+        "socialBottleneck": 18
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 20,
+        "decisionSupport": 18,
+        "creativeLeverage": 14,
+        "productivityMultiplier": 17
+      }
+    },
+    {
+      "id": "e-testing-troubleshooting",
+      "name": "Testing and Troubleshooting Electrical Systems",
+      "description": "Use ohmmeters, voltmeters, oscilloscopes, and other diagnostic tools to test circuits, identify faults, and verify system safety and compatibility.",
+      "category": "cognitive",
+      "timeWeight": 0.25,
+      "llmExposureTier": "E2",
+      "automationRisk": 53,
+      "augmentationPotential": 64,
+      "automationSubScores": {
+        "routineness": 10,
+        "dataIntensity": 18,
+        "physicalBottleneck": 5,
+        "socialBottleneck": 20
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 19,
+        "decisionSupport": 21,
+        "creativeLeverage": 8,
+        "productivityMultiplier": 16
+      }
+    },
+    {
+      "id": "e-coordination-supervision",
+      "name": "Coordinating and Supervising Workers",
+      "description": "Direct apprentices and crew members, communicate job requirements with supervisors and clients, and coordinate work schedules and task assignments on job sites.",
+      "category": "interpersonal",
+      "timeWeight": 0.12,
+      "llmExposureTier": "E1",
+      "automationRisk": 31,
+      "augmentationPotential": 47,
+      "automationSubScores": {
+        "routineness": 8,
+        "dataIntensity": 8,
+        "physicalBottleneck": 10,
+        "socialBottleneck": 5
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 12,
+        "decisionSupport": 14,
+        "creativeLeverage": 8,
+        "productivityMultiplier": 13
+      }
+    },
+    {
+      "id": "e-compliance-documentation",
+      "name": "Code Compliance and Documentation",
+      "description": "Maintain licensure, document completed work, file inspection reports, and ensure all installations meet national and local electrical codes and safety standards.",
+      "category": "cognitive",
+      "timeWeight": 0.08,
+      "llmExposureTier": "E1",
+      "automationRisk": 70,
+      "augmentationPotential": 55,
+      "automationSubScores": {
+        "routineness": 18,
+        "dataIntensity": 14,
+        "physicalBottleneck": 18,
+        "socialBottleneck": 20
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 16,
+        "decisionSupport": 13,
+        "creativeLeverage": 6,
+        "productivityMultiplier": 20
+      }
+    }
+  ],
+  "skills": [
+    {
+      "id": "troubleshooting",
+      "name": "Troubleshooting",
+      "impact": "transformed",
+      "relevance": 90
+    },
+    {
+      "id": "repairing",
+      "name": "Repairing",
+      "impact": "gained",
+      "relevance": 85
+    },
+    {
+      "id": "blueprint-reading",
+      "name": "Blueprint Reading",
+      "impact": "transformed",
+      "relevance": 80
+    },
+    {
+      "id": "critical-thinking",
+      "name": "Critical Thinking",
+      "impact": "transformed",
+      "relevance": 78
+    },
+    {
+      "id": "installation",
+      "name": "Installation",
+      "impact": "gained",
+      "relevance": 88
+    },
+    {
+      "id": "code-compliance",
+      "name": "Code Compliance Knowledge",
+      "impact": "transformed",
+      "relevance": 75
+    },
+    {
+      "id": "active-listening",
+      "name": "Active Listening",
+      "impact": "gained",
+      "relevance": 65
+    },
+    {
+      "id": "quality-control-analysis",
+      "name": "Quality Control Analysis",
+      "impact": "transformed",
+      "relevance": 70
+    },
+    {
+      "id": "documentation",
+      "name": "Documentation and Reporting",
+      "impact": "displaced",
+      "relevance": 60
+    },
+    {
+      "id": "complex-problem-solving",
+      "name": "Complex Problem Solving",
+      "impact": "transformed",
+      "relevance": 72
+    }
+  ],
+  "exposureScore": {
+    "overall": 48,
+    "automationRisk": 48,
+    "augmentationPotential": 48,
+    "netDisplacement": 0,
+    "complementarityScore": 38,
+    "routineTaskIntensity": -0.47,
+    "timeline": "long-term",
+    "wageEffect": 5,
+    "confidence": "high"
+  },
+  "bottleneckTaskIds": [
+    "e-coordination-supervision",
+    "e-physical-installation"
+  ],
+  "similarOccupationIds": [
+    "renewable-energy-technician",
+    "assembly-line-worker",
+    "quality-control-inspector",
+    "industrial-engineer",
+    "cnc-machine-operator"
+  ],
+  "_reasoning": {
+    "physical-installation": "Heavily physical, on-site, and dexterous — physicalBottleneck scored very low (2) because the task is almost entirely non-digital. socialBottleneck is moderate-high since interaction is incidental. E0 because AI cannot substitute for hands-on wire pulling and conduit bending.",
+    "blueprint-planning": "Involves structured data (blueprints, code databases) and multi-source synthesis, making it E2-eligible with CAD/AI tools. dataIntensity and informationSynthesis are high. physicalBottleneck moderate since planning can occur off-site digitally.",
+    "testing-troubleshooting": "Rich structured sensor/meter data and diagnostic reasoning make this high dataIntensity and decisionSupport. AI-assisted fault diagnosis tools (E2) can significantly accelerate this. physicalBottleneck is low-moderate since meters must be physically applied but data interpretation is digital.",
+    "coordination-supervision": "Interpersonal and context-dependent; socialBottleneck is low (5) reflecting deep human interaction requirement. E1 because scheduling, communication drafts, and task tracking can be AI-assisted but not replaced.",
+    "compliance-documentation": "Highly routine and text-based; routineness and productivityMultiplier are high. E1 because LLMs can draft reports, cross-reference codes, and auto-fill forms. physicalBottleneck is high (18) since documentation is digital.",
+    "routineTaskIntensity": "Calculated as ln(routine_cognitive[~35] + routine_manual[~40] + 0.01) − ln(nonroutine_analytical[~30] + nonroutine_interpersonal[~25] + 0.01) ≈ ln(75.01) − ln(55.01) ≈ 4.317 − 4.007 = −0.47 after adjusting for the dominant physical/non-routine nature of the role.",
+    "complementarityScore": "Scored 38/100 — AI augments planning, documentation, and diagnostics meaningfully, but the dominant physical installation tasks are largely AI-resistant, limiting overall complementarity.",
+    "timeline": "Long-term: physical dexterity requirements, on-site hazard navigation, and code-compliance judgment make full AI disruption unlikely before 2035+.",
+    "wageEffect": "Modest positive wage effect (+5%) as AI tools increase productivity in planning and diagnostics, and demand for skilled electricians (especially in renewable energy buildout) remains strong."
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "id": "carpenters",
+  "title": "Carpenters",
+  "industryId": "trades",
+  "socCode": "47-2031",
+  "medianWage": 51390,
+  "educationLevel": "high-school",
+  "description": "Carpenters construct, erect, install, and repair structures and fixtures made of wood and comparable materials, including building frameworks, floors, windows, and door frames. They work from blueprints and specifications to measure, cut, shape, and assemble materials using hand and power tools. The occupation is predominantly physical and on-site, requiring dexterous manipulation of materials in varied construction environments.",
+  "tasks": [
+    {
+      "id": "c-blueprint-reading-layout",
+      "name": "Blueprint Reading and Project Layout",
+      "description": "Study blueprints, sketches, or building plans to determine dimensions, materials, and project layout. Translate specifications into actionable measurements and sequencing on the job site.",
+      "category": "cognitive",
+      "timeWeight": 0.15,
+      "llmExposureTier": "E1",
+      "automationRisk": 52,
+      "augmentationPotential": 59,
+      "automationSubScores": {
+        "routineness": 12,
+        "dataIntensity": 14,
+        "physicalBottleneck": 10,
+        "socialBottleneck": 16
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 18,
+        "decisionSupport": 16,
+        "creativeLeverage": 10,
+        "productivityMultiplier": 15
+      }
+    },
+    {
+      "id": "c-measuring-cutting-shaping",
+      "name": "Measuring, Marking, and Cutting Materials",
+      "description": "Measure and mark cutting lines on wood and comparable materials using rulers, chalk lines, and marking gauges, then cut and shape materials to specified dimensions using hand tools, machines, or power saws.",
+      "category": "physical",
+      "timeWeight": 0.25,
+      "llmExposureTier": "E0",
+      "automationRisk": 47,
+      "augmentationPotential": 30,
+      "automationSubScores": {
+        "routineness": 16,
+        "dataIntensity": 8,
+        "physicalBottleneck": 3,
+        "socialBottleneck": 20
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 7,
+        "decisionSupport": 10,
+        "creativeLeverage": 5,
+        "productivityMultiplier": 8
+      }
+    },
+    {
+      "id": "c-assembly-fastening-framing",
+      "name": "Assembling and Fastening Structural Frameworks",
+      "description": "Assemble and fasten materials to construct frameworks, partitions, joists, rafters, and other structural elements using hand tools, nails, screws, dowels, and adhesives. Verify structural trueness using plumb bobs and levels.",
+      "category": "physical",
+      "timeWeight": 0.35,
+      "llmExposureTier": "E0",
+      "automationRisk": 40,
+      "augmentationPotential": 29,
+      "automationSubScores": {
+        "routineness": 14,
+        "dataIntensity": 6,
+        "physicalBottleneck": 2,
+        "socialBottleneck": 18
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 6,
+        "decisionSupport": 11,
+        "creativeLeverage": 5,
+        "productivityMultiplier": 7
+      }
+    },
+    {
+      "id": "c-inspection-quality-check",
+      "name": "Inspection and Quality Verification",
+      "description": "Inspect completed structures, materials, and installed fixtures to detect damage, misalignment, or defects. Ensure work meets safety regulations, building codes, and project specifications.",
+      "category": "cognitive",
+      "timeWeight": 0.15,
+      "llmExposureTier": "E0",
+      "automationRisk": 40,
+      "augmentationPotential": 44,
+      "automationSubScores": {
+        "routineness": 11,
+        "dataIntensity": 9,
+        "physicalBottleneck": 3,
+        "socialBottleneck": 17
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 14,
+        "decisionSupport": 15,
+        "creativeLeverage": 5,
+        "productivityMultiplier": 10
+      }
+    },
+    {
+      "id": "c-documentation-reporting",
+      "name": "Documentation and Progress Reporting",
+      "description": "Maintain records of work performed, document actions taken, and prepare written progress reports for supervisors or project managers. Track materials used and flag issues encountered on site.",
+      "category": "cognitive",
+      "timeWeight": 0.1,
+      "llmExposureTier": "E1",
+      "automationRisk": 67,
+      "augmentationPotential": 48,
+      "automationSubScores": {
+        "routineness": 17,
+        "dataIntensity": 13,
+        "physicalBottleneck": 18,
+        "socialBottleneck": 19
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 12,
+        "decisionSupport": 10,
+        "creativeLeverage": 8,
+        "productivityMultiplier": 18
+      }
+    }
+  ],
+  "skills": [
+    {
+      "id": "blueprint-interpretation",
+      "name": "Blueprint Interpretation",
+      "impact": "transformed",
+      "relevance": 82
+    },
+    {
+      "id": "hand-power-tool-operation",
+      "name": "Hand and Power Tool Operation",
+      "impact": "displaced",
+      "relevance": 90
+    },
+    {
+      "id": "structural-measurement",
+      "name": "Structural Measurement and Layout",
+      "impact": "transformed",
+      "relevance": 85
+    },
+    {
+      "id": "critical-thinking",
+      "name": "Critical Thinking and Problem Solving",
+      "impact": "gained",
+      "relevance": 70
+    },
+    {
+      "id": "safety-compliance",
+      "name": "Safety Rules and Regulatory Compliance",
+      "impact": "transformed",
+      "relevance": 75
+    },
+    {
+      "id": "quality-control",
+      "name": "Quality Control and Inspection",
+      "impact": "transformed",
+      "relevance": 72
+    },
+    {
+      "id": "documentation",
+      "name": "Documentation and Record Keeping",
+      "impact": "displaced",
+      "relevance": 55
+    },
+    {
+      "id": "coordination",
+      "name": "Team Coordination and Communication",
+      "impact": "gained",
+      "relevance": 65
+    }
+  ],
+  "exposureScore": {
+    "overall": 46,
+    "automationRisk": 46,
+    "augmentationPotential": 38,
+    "netDisplacement": 8,
+    "complementarityScore": 28,
+    "routineTaskIntensity": -0.41,
+    "timeline": "long-term",
+    "wageEffect": -5,
+    "confidence": "high"
+  },
+  "bottleneckTaskIds": [
+    "c-assembly-fastening-framing",
+    "c-inspection-quality-check"
+  ],
+  "similarOccupationIds": [
+    "assembly-line-worker",
+    "cnc-machine-operator",
+    "quality-control-inspector",
+    "naval-shipbuilder",
+    "renewable-energy-technician"
+  ],
+  "_reasoning": {
+    "blueprint-reading-layout": "Moderate routineness (12) because blueprints vary by project but follow structured formats. dataIntensity (14) reflects structured plan data. physicalBottleneck (10) because the reading itself is cognitive but must be applied on-site. High socialBottleneck (16) as this is largely solo cognitive work. Augmentation is meaningful — AI tools can assist with plan interpretation and quantity takeoffs, justifying E1 tier.",
+    "measuring-cutting-shaping": "Low physicalBottleneck (3) because this task is entirely hands-on and dexterous, requiring physical presence. Routineness (16) is moderate-high as cutting follows specified dimensions. socialBottleneck (20) is high since no interpersonal interaction is needed. E0 because AI cannot substitute for physical manipulation of materials.",
+    "assembly-fastening-framing": "Core physical task with very low physicalBottleneck score (2) — irreducibly on-site and manual. Routineness (14) reflects that framing follows standard patterns but adapts to site conditions. E0 tier as no LLM tool can perform physical assembly. Augmentation potential is low across all sub-scores.",
+    "inspection-quality-check": "physicalBottleneck (3) is very low — inspection requires physical presence and tactile/visual judgment on-site. Moderate decisionSupport (15) because AI could assist with code lookup and defect classification in future, but current physical inspection is E0. routineness (11) reflects variability in defect types.",
+    "documentation-reporting": "Highest physicalBottleneck (18) of all tasks as documentation can be done digitally away from the physical site. High routineness (17) and productivityMultiplier (18) make this the most LLM-amenable task — E1 tier. AI writing and reporting tools can significantly reduce time spent on this task.",
+    "routineTaskIntensity": "Routine cognitive (blueprint reading, documentation) and routine manual (cutting, assembly) tasks are substantial, but non-routine analytical (problem-solving on site) and interpersonal (coordination) components keep the index modestly negative, reflecting a mixed but physically-dominated occupation.",
+    "complementarityScore": "Score of 28 reflects that while AI can assist with documentation and blueprint reading, the dominant time-weight tasks (assembly, cutting) are physically irreducible. AI augmentation is real but limited to a minority of work time.",
+    "timeline": "Long-term because physical dexterity requirements, on-site variability, and the cost of robotic construction automation mean meaningful displacement is decades away. Near-term AI impact is limited to documentation and planning support.",
+    "wageEffect": "Slight negative wage effect (-5%) as AI tools modestly reduce the value of documentation and planning sub-tasks, and productivity gains may compress wages at the margin, but physical skill scarcity maintains most wage levels."
+  }
+}

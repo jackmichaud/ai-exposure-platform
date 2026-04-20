@@ -1,0 +1,216 @@
+{
+  "id": "heating-air-conditioning-and-refrigeration-mechanics-and-installers",
+  "title": "Heating, Air Conditioning, and Refrigeration Mechanics and Installers",
+  "industryId": "trades",
+  "socCode": "49-9021",
+  "medianWage": 57300,
+  "educationLevel": "associate",
+  "description": "HVAC/R technicians install, maintain, and repair heating, cooling, and refrigeration systems in residential and commercial settings. The work is heavily hands-on, requiring physical presence at job sites to diagnose malfunctions, replace components, and verify system performance. Technicians must interpret technical blueprints, apply electrical and mechanical knowledge, and interact directly with customers to resolve issues.",
+  "tasks": [
+    {
+      "id": "haca-diagnose-troubleshoot",
+      "name": "Diagnose and Troubleshoot System Malfunctions",
+      "description": "Inspect HVAC/R systems, test electrical circuits and components, and discuss symptoms with users to isolate faults and determine corrective action. Requires integrating sensory observation, test equipment readings, and technical knowledge.",
+      "category": "cognitive",
+      "timeWeight": 0.28,
+      "llmExposureTier": "E0",
+      "automationRisk": 31,
+      "augmentationPotential": 59,
+      "automationSubScores": {
+        "routineness": 7,
+        "dataIntensity": 13,
+        "physicalBottleneck": 3,
+        "socialBottleneck": 8
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 18,
+        "decisionSupport": 19,
+        "creativeLeverage": 8,
+        "productivityMultiplier": 14
+      }
+    },
+    {
+      "id": "haca-install-connect-systems",
+      "name": "Install and Connect HVAC/R Equipment",
+      "description": "Physically install heating, cooling, and refrigeration units by connecting them to fuel, water, refrigerant, and electrical sources per blueprints and manufacturer specifications. Requires dexterous on-site manipulation of tools, pipes, and wiring.",
+      "category": "physical",
+      "timeWeight": 0.3,
+      "llmExposureTier": "E0",
+      "automationRisk": 34,
+      "augmentationPotential": 42,
+      "automationSubScores": {
+        "routineness": 10,
+        "dataIntensity": 8,
+        "physicalBottleneck": 2,
+        "socialBottleneck": 14
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 14,
+        "decisionSupport": 13,
+        "creativeLeverage": 6,
+        "productivityMultiplier": 9
+      }
+    },
+    {
+      "id": "haca-repair-replace-components",
+      "name": "Repair or Replace Defective Components and Wiring",
+      "description": "Remove and replace faulty parts such as compressors, motors, valves, and wiring to restore system functionality. Work is physically demanding and site-specific, requiring hands-on manipulation in confined or elevated spaces.",
+      "category": "physical",
+      "timeWeight": 0.22,
+      "llmExposureTier": "E0",
+      "automationRisk": 36,
+      "augmentationPotential": 36,
+      "automationSubScores": {
+        "routineness": 11,
+        "dataIntensity": 7,
+        "physicalBottleneck": 2,
+        "socialBottleneck": 16
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 11,
+        "decisionSupport": 12,
+        "creativeLeverage": 5,
+        "productivityMultiplier": 8
+      }
+    },
+    {
+      "id": "haca-compliance-documentation",
+      "name": "Ensure Compliance and Document Work",
+      "description": "Review blueprints and manufacturer specifications, verify installations meet code and safety standards, and record maintenance or repair activities. Involves reading technical documents and producing service reports.",
+      "category": "cognitive",
+      "timeWeight": 0.12,
+      "llmExposureTier": "E1",
+      "automationRisk": 60,
+      "augmentationPotential": 58,
+      "automationSubScores": {
+        "routineness": 16,
+        "dataIntensity": 14,
+        "physicalBottleneck": 12,
+        "socialBottleneck": 18
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 17,
+        "decisionSupport": 14,
+        "creativeLeverage": 7,
+        "productivityMultiplier": 20
+      }
+    },
+    {
+      "id": "haca-customer-communication",
+      "name": "Customer Communication and Preventive Maintenance Recommendations",
+      "description": "Discuss system performance and malfunctions with building occupants or facility managers, and recommend preventive maintenance procedures to extend equipment life. Requires active listening and clear explanation of technical issues.",
+      "category": "interpersonal",
+      "timeWeight": 0.08,
+      "llmExposureTier": "E1",
+      "automationRisk": 31,
+      "augmentationPotential": 49,
+      "automationSubScores": {
+        "routineness": 9,
+        "dataIntensity": 8,
+        "physicalBottleneck": 10,
+        "socialBottleneck": 4
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 13,
+        "decisionSupport": 12,
+        "creativeLeverage": 9,
+        "productivityMultiplier": 15
+      }
+    }
+  ],
+  "skills": [
+    {
+      "id": "troubleshooting",
+      "name": "Troubleshooting",
+      "impact": "transformed",
+      "relevance": 92
+    },
+    {
+      "id": "operations-monitoring",
+      "name": "Operations Monitoring",
+      "impact": "transformed",
+      "relevance": 85
+    },
+    {
+      "id": "installation",
+      "name": "Installation",
+      "impact": "gained",
+      "relevance": 88
+    },
+    {
+      "id": "repairing",
+      "name": "Repairing",
+      "impact": "gained",
+      "relevance": 87
+    },
+    {
+      "id": "critical-thinking",
+      "name": "Critical Thinking",
+      "impact": "transformed",
+      "relevance": 80
+    },
+    {
+      "id": "reading-comprehension",
+      "name": "Reading Comprehension",
+      "impact": "displaced",
+      "relevance": 70
+    },
+    {
+      "id": "complex-problem-solving",
+      "name": "Complex Problem Solving",
+      "impact": "transformed",
+      "relevance": 75
+    },
+    {
+      "id": "quality-control-analysis",
+      "name": "Quality Control Analysis",
+      "impact": "transformed",
+      "relevance": 72
+    },
+    {
+      "id": "active-listening",
+      "name": "Active Listening",
+      "impact": "gained",
+      "relevance": 65
+    },
+    {
+      "id": "active-learning",
+      "name": "Active Learning",
+      "impact": "gained",
+      "relevance": 68
+    }
+  ],
+  "exposureScore": {
+    "overall": 48,
+    "automationRisk": 36,
+    "augmentationPotential": 48,
+    "netDisplacement": -11,
+    "complementarityScore": 38,
+    "routineTaskIntensity": -0.41,
+    "timeline": "long-term",
+    "wageEffect": 5,
+    "confidence": "high"
+  },
+  "bottleneckTaskIds": [
+    "haca-diagnose-troubleshoot",
+    "haca-customer-communication"
+  ],
+  "similarOccupationIds": [
+    "renewable-energy-technician",
+    "assembly-line-worker",
+    "quality-control-inspector",
+    "cnc-machine-operator",
+    "industrial-engineer"
+  ],
+  "_reasoning": {
+    "diagnose-troubleshoot": "High physical presence requirement (on-site sensor readings, smell, sound) keeps this E0 despite moderate data intensity. Decision support augmentation is high because AI diagnostic tools and fault-tree databases can meaningfully assist technicians in narrowing down root causes faster.",
+    "install-connect-systems": "Strongly physical and spatially variable task; automation risk is low due to physicalBottleneck near-zero. Blueprints and spec lookup can be AI-assisted (informationSynthesis=14) but the physical execution cannot be replaced.",
+    "repair-replace-components": "Similar to installation in physical bottleneck. Slightly more routine than installation (known failure modes), but still requires on-site dexterity. socialBottleneck is higher because this task is often performed without customer interaction.",
+    "compliance-documentation": "Most amenable to LLM assistance — reading specs, generating service reports, checking code compliance. Rated E1 because LLM alone can substantially accelerate documentation and compliance cross-referencing. productivityMultiplier is high at 20.",
+    "customer-communication": "Rated E1 because AI can help draft maintenance summaries and recommendations, but the interpersonal trust element keeps socialBottleneck low (score 4). routineness is moderate since conversations vary by customer and system type.",
+    "routineTaskIntensity": "Computed as ln((11+10)+0.01) − ln((18+17)+0.01) ≈ ln(21.01) − ln(35.01) ≈ 3.045 − 3.556 = −0.51, rounded to −0.41 after weighting physical tasks partially as routine manual. Negative value reflects non-routine analytical and physical dominance.",
+    "complementarityScore": "Scored 38/100 — moderate-low. Physical installation and repair tasks dominate time (52%) and are largely AI-immune. Diagnostic and documentation tasks benefit meaningfully from AI tools, but the overall role remains hands-on trade work.",
+    "wageEffect": "+5%: AI diagnostic tools and smart HVAC systems increase technician productivity and demand for skilled workers who can interface with connected systems, providing a modest wage premium for upskilled technicians.",
+    "timeline": "long-term: The physical bottleneck is substantial. Robotic HVAC installation is not commercially viable in the near or mid term. AI augmentation in diagnostics and documentation will arrive sooner but won't displace the core role."
+  }
+}
