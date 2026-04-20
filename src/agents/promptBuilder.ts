@@ -66,13 +66,38 @@ Rules:
 
 // ─── Context Helpers ─────────────────────────────────────────────────────────
 
+const TIER_KEY = `LLM exposure tiers (Eloundou et al. 2023): E0 = LLM cannot reduce task time ≥50% (physical/social/novel); E1 = LLM alone can; E2 = LLM + specialized tools can.`
+
+const RESEARCH_CONTEXT = `## Academic Research Context
+These are real published findings you may reference by author name:
+- Autor, Levy & Murnane (2003): Routine Task Intensity (RTI) — routine cognitive/manual tasks are automatable; non-routine analytical and interpersonal tasks resist automation. RTI < 0 means the occupation is non-routine-dominant.
+- Frey & Osborne (2013): Estimated 47% of US jobs at high automation risk, but widely criticized for occupation-level conflation — task-level analysis is more accurate.
+- Felten, Raj & Seamans (2018): AIOE index — correlates 0.83 with observed AI adoption data; high-AIOE occupations skew toward higher wages, unlike prior automation waves.
+- Acemoglu & Restrepo (2022): Task-based framework — automation creates a displacement effect (tasks replaced) and a productivity effect; wages rise only if new reinstatement tasks emerge. Displacement can dominate even when productivity rises.
+- Eloundou et al. (2023): ~80% of US jobs have ≥10% of tasks at E1/E2 exposure; white-collar, high-wage occupations are more exposed than in prior automation waves.
+- Humlum & Vestergaard (2025): Danish administrative data finds near-zero wage and hours effects from AI adoption so far — large gap between measured exposure and realized labor market impact.
+- Gupta & Kumar (2026): Agentic Task Exposure (ATE) — workflow-level displacement by autonomous AI agents; significantly higher impact than single-task LLM exposure estimates.`
+
 function formatTasks(occupation: Occupation): string {
+  const bottleneckIds = new Set(occupation.bottleneckTaskIds)
   return occupation.tasks
-    .map(
-      (t) =>
-        `- ${t.name} (auto risk: ${t.automationRisk}, aug potential: ${t.augmentationPotential}, ${Math.round(t.timeWeight * 100)}% of time)`
-    )
+    .map((t) => {
+      const pct = Math.round(t.timeWeight * 100)
+      const bottleneck = bottleneckIds.has(t.id) ? ' [bottleneck]' : ''
+      return `- ${t.name} — ${pct}% of time | tier: ${t.llmExposureTier}${bottleneck} | auto risk: ${t.automationRisk}/100 | aug potential: ${t.augmentationPotential}/100`
+    })
     .join('\n')
+}
+
+function formatSkills(occupation: Occupation): string {
+  const gained = occupation.skills.filter((s) => s.impact === 'gained').map((s) => s.name)
+  const transformed = occupation.skills.filter((s) => s.impact === 'transformed').map((s) => s.name)
+  const displaced = occupation.skills.filter((s) => s.impact === 'displaced').map((s) => s.name)
+  const lines: string[] = []
+  if (gained.length) lines.push(`  Gained: ${gained.join(', ')}`)
+  if (transformed.length) lines.push(`  Transformed: ${transformed.join(', ')}`)
+  if (displaced.length) lines.push(`  Displaced: ${displaced.join(', ')}`)
+  return lines.join('\n')
 }
 
 function educationLabel(level: string): string {
@@ -89,18 +114,29 @@ function educationLabel(level: string): string {
 // ─── Round Prompts ────────────────────────────────────────────────────────────
 
 export function buildRound1Prompt(occupation: Occupation, industryName: string): string {
+  const es = occupation.exposureScore
+  const wageEffectStr = es.wageEffect >= 0 ? `+${es.wageEffect}%` : `${es.wageEffect}%`
+
   return `The occupation under discussion is ${occupation.title} in the ${industryName} industry.
 
-Key facts:
-- Median wage: ${formatWage(occupation.medianWage)}
-- Education: ${educationLabel(occupation.educationLevel)}
-- Overall AI exposure score: ${Math.round(occupation.exposureScore.overall)}/100
+## Occupation Data
+- Median wage: ${formatWage(occupation.medianWage)} | Education: ${educationLabel(occupation.educationLevel)}
+- Overall AI exposure: ${Math.round(es.overall)}/100 | Automation risk: ${es.automationRisk}/100 | Augmentation potential: ${es.augmentationPotential}/100
+- Net displacement score: ${es.netDisplacement} (negative = augmentation-dominant)
+- Complementarity score: ${es.complementarityScore}/100 (how much the role benefits from working with AI)
+- Routine Task Intensity (RTI): ${es.routineTaskIntensity.toFixed(2)} (negative = non-routine-dominant)
+- Projected wage effect: ${wageEffectStr} | Timeline: ${es.timeline} | Model confidence: ${es.confidence}
 
-Task breakdown:
+## Task Breakdown
+${TIER_KEY}
 ${formatTasks(occupation)}
 
-Provide your opening analysis of how AI will impact this occupation. Address
-automation risks, augmentation opportunities, and implications for workers.`
+## Skills
+${formatSkills(occupation)}
+
+${RESEARCH_CONTEXT}
+
+Provide your opening analysis of how AI will impact this occupation. Ground your arguments in the occupation data and research above — reference specific tasks, scores, tiers, and authors where relevant.`
 }
 
 export function buildRound2Prompt(priorResponses: string): string {
