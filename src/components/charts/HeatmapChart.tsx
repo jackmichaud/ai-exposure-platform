@@ -258,7 +258,7 @@ export default function HeatmapChart({ data, industries, onCellClick }: Props) {
       )}
 
       {data.length > 0 && !isMobile && (
-        <svg ref={svgRef} width="100%" className="overflow-visible" role="img" aria-label="AI exposure heatmap by industry" />
+        <svg ref={svgRef} width="100%" className="block" role="img" aria-label="AI exposure heatmap by industry" />
       )}
 
       {/* Screen reader alternative table */}

@@ -47,7 +47,7 @@ export default function Dashboard() {
       <FilterBar resultCount={filtered.length} />
 
       {/* Heatmap */}
-      <div className="bg-slate-900 border border-slate-800 rounded-xl p-4">
+      <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 overflow-hidden">
         <HeatmapChart
           data={filtered}
           industries={visibleIndustries}

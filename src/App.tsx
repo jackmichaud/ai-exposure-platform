@@ -25,7 +25,7 @@ export default function App() {
     <BrowserRouter>
       <FilterProvider>
         <DebateProvider>
-          <div className="min-h-screen bg-slate-950">
+          <div className="bg-slate-950">
             <Header />
             <PageShell>
               <ErrorBoundary>
