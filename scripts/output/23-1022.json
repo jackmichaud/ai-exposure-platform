@@ -1,0 +1,215 @@
+{
+  "id": "arbitrators-mediators-and-conciliators",
+  "title": "Arbitrators, Mediators, and Conciliators",
+  "industryId": "legal",
+  "socCode": "23-1022",
+  "medianWage": 75050,
+  "educationLevel": "master",
+  "description": "Arbitrators, mediators, and conciliators facilitate negotiation and conflict resolution outside the court system through structured dialogue and legal analysis. They evaluate evidence, apply relevant laws and precedents, and guide disputing parties toward mutually acceptable agreements or binding decisions. The role demands deep interpersonal trust, legal expertise, and nuanced judgment.",
+  "tasks": [
+    {
+      "id": "amac-legal-research-analysis",
+      "name": "Legal Research and Case Analysis",
+      "description": "Research applicable laws, regulations, precedents, and evaluate documentary evidence to prepare for hearings and reach legally sound conclusions. Involves synthesizing complex multi-source legal information.",
+      "category": "cognitive",
+      "timeWeight": 0.25,
+      "llmExposureTier": "E2",
+      "automationRisk": 71,
+      "augmentationPotential": 80,
+      "automationSubScores": {
+        "routineness": 10,
+        "dataIntensity": 21,
+        "physicalBottleneck": 22,
+        "socialBottleneck": 18
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 24,
+        "decisionSupport": 22,
+        "creativeLeverage": 12,
+        "productivityMultiplier": 22
+      }
+    },
+    {
+      "id": "amac-written-opinions-decisions",
+      "name": "Drafting Written Opinions and Decisions",
+      "description": "Prepare formal written opinions, rulings, and decisions that articulate legal reasoning, findings of fact, and conclusions. Requires precise legal writing and structured argumentation.",
+      "category": "cognitive",
+      "timeWeight": 0.25,
+      "llmExposureTier": "E1",
+      "automationRisk": 72,
+      "augmentationPotential": 82,
+      "automationSubScores": {
+        "routineness": 11,
+        "dataIntensity": 18,
+        "physicalBottleneck": 23,
+        "socialBottleneck": 20
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 22,
+        "decisionSupport": 21,
+        "creativeLeverage": 16,
+        "productivityMultiplier": 23
+      }
+    },
+    {
+      "id": "amac-mediation-facilitation",
+      "name": "Mediation and Dispute Facilitation",
+      "description": "Conduct hearings and mediation sessions, using interpersonal techniques to facilitate communication between disputants, clarify issues, and guide parties toward mutual agreement. Requires deep social perceptiveness and trust-building.",
+      "category": "interpersonal",
+      "timeWeight": 0.3,
+      "llmExposureTier": "E0",
+      "automationRisk": 33,
+      "augmentationPotential": 60,
+      "automationSubScores": {
+        "routineness": 6,
+        "dataIntensity": 10,
+        "physicalBottleneck": 14,
+        "socialBottleneck": 3
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 16,
+        "decisionSupport": 20,
+        "creativeLeverage": 14,
+        "productivityMultiplier": 10
+      }
+    },
+    {
+      "id": "amac-evidence-compliance-evaluation",
+      "name": "Evidence and Compliance Evaluation",
+      "description": "Evaluate submitted documents, claims, and evidence for compliance with legal standards; rule on admissibility of evidence and procedural motions. Involves structured judgment against defined legal criteria.",
+      "category": "cognitive",
+      "timeWeight": 0.12,
+      "llmExposureTier": "E2",
+      "automationRisk": 73,
+      "augmentationPotential": 72,
+      "automationSubScores": {
+        "routineness": 14,
+        "dataIntensity": 20,
+        "physicalBottleneck": 22,
+        "socialBottleneck": 17
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 21,
+        "decisionSupport": 23,
+        "creativeLeverage": 8,
+        "productivityMultiplier": 20
+      }
+    },
+    {
+      "id": "amac-procedural-case-management",
+      "name": "Procedural and Case Management",
+      "description": "Conduct initial meetings with disputants to outline processes, settle procedural matters such as fees and scheduling, and manage case logistics. Involves moderate routine coordination and communication.",
+      "category": "interpersonal",
+      "timeWeight": 0.08,
+      "llmExposureTier": "E1",
+      "automationRisk": 58,
+      "augmentationPotential": 50,
+      "automationSubScores": {
+        "routineness": 16,
+        "dataIntensity": 12,
+        "physicalBottleneck": 20,
+        "socialBottleneck": 10
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 12,
+        "decisionSupport": 13,
+        "creativeLeverage": 7,
+        "productivityMultiplier": 18
+      }
+    }
+  ],
+  "skills": [
+    {
+      "id": "negotiation",
+      "name": "Negotiation",
+      "impact": "transformed",
+      "relevance": 95
+    },
+    {
+      "id": "active-listening",
+      "name": "Active Listening",
+      "impact": "gained",
+      "relevance": 90
+    },
+    {
+      "id": "legal-writing",
+      "name": "Legal Writing",
+      "impact": "transformed",
+      "relevance": 88
+    },
+    {
+      "id": "reading-comprehension",
+      "name": "Reading Comprehension",
+      "impact": "displaced",
+      "relevance": 82
+    },
+    {
+      "id": "critical-thinking",
+      "name": "Critical Thinking",
+      "impact": "gained",
+      "relevance": 85
+    },
+    {
+      "id": "legal-research",
+      "name": "Legal Research",
+      "impact": "displaced",
+      "relevance": 80
+    },
+    {
+      "id": "social-perceptiveness",
+      "name": "Social Perceptiveness",
+      "impact": "gained",
+      "relevance": 88
+    },
+    {
+      "id": "complex-problem-solving",
+      "name": "Complex Problem Solving",
+      "impact": "transformed",
+      "relevance": 78
+    },
+    {
+      "id": "persuasion",
+      "name": "Persuasion",
+      "impact": "gained",
+      "relevance": 75
+    },
+    {
+      "id": "ai-tool-literacy",
+      "name": "AI Tool Literacy",
+      "impact": "gained",
+      "relevance": 70
+    }
+  ],
+  "exposureScore": {
+    "overall": 71,
+    "automationRisk": 59,
+    "augmentationPotential": 71,
+    "netDisplacement": -12,
+    "complementarityScore": 62,
+    "routineTaskIntensity": -0.87,
+    "timeline": "mid-term",
+    "wageEffect": 8,
+    "confidence": "medium"
+  },
+  "bottleneckTaskIds": [
+    "amac-mediation-facilitation",
+    "amac-procedural-case-management"
+  ],
+  "similarOccupationIds": [
+    "lawyers",
+    "insurance-adjuster",
+    "intelligence-analyst",
+    "program-analyst",
+    "financial-analyst"
+  ],
+  "_reasoning": {
+    "legal-research-analysis": "High dataIntensity (21) reflects rich structured legal data; physicalBottleneck high (22) as fully digital; socialBottleneck moderate-high (18) since research is largely solitary. LLM+tools can dramatically accelerate case law retrieval and synthesis, warranting E2.",
+    "written-opinions-decisions": "High productivityMultiplier (23) and informationSynthesis (22) because LLMs excel at structured legal drafting. Routineness moderate (11) since each case is unique but follows formal templates. E1 because LLM alone can substantially accelerate drafting.",
+    "mediation-facilitation": "Low socialBottleneck (3) is the dominant constraint — real-time human trust, emotional attunement, and physical presence are irreplaceable. E0 assigned despite high informationSynthesis potential because AI cannot substitute for live interpersonal dynamics. physicalBottleneck moderate (14) as in-person sessions are common.",
+    "evidence-compliance-evaluation": "Routineness moderate (14) — compliance checks follow defined legal standards but require contextual judgment. High decisionSupport (23) because AI can flag compliance issues and pattern-match against precedents. E2 due to specialized legal tools.",
+    "procedural-case-management": "Most routine task (16) involving scheduling and logistics. High physicalBottleneck (20) as largely digital/email-based. E1 because LLMs can draft procedural communications and manage scheduling templates efficiently.",
+    "routineTaskIntensity": "Calculated as ln(routine_cognitive[~30] + routine_manual[~5] + 0.01) − ln(nonroutine_analytical[~55] + nonroutine_interpersonal[~45] + 0.01) ≈ ln(35.01) − ln(100.01) ≈ 3.56 − 4.61 = −1.05, adjusted to −0.87 reflecting moderate non-routine dominance.",
+    "complementarityScore": "Scored 62 reflecting strong augmentation potential in research, drafting, and evidence review, but constrained by the irreplaceable interpersonal core of mediation (30% of time weight) which limits overall AI complementarity.",
+    "wageEffect": "Modest positive wage effect (+8%) as AI tools increase productivity and quality of legal outputs, but the interpersonal trust premium protects wages; top practitioners may see larger gains from AI-enhanced throughput."
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "id": "heavy-and-tractor-trailer-truck-drivers",
+  "title": "Heavy and Tractor-Trailer Truck Drivers",
+  "industryId": "transportation",
+  "socCode": "53-3032",
+  "medianWage": 54320,
+  "educationLevel": "high-school",
+  "description": "Heavy and tractor-trailer truck drivers operate large commercial vehicles with a GVW of at least 26,001 pounds to transport goods across local, regional, or national routes. They are responsible for vehicle inspection, cargo security, regulatory compliance, and maintaining accurate logs. The role requires a commercial driver's license and combines physical operation with administrative documentation duties.",
+  "tasks": [
+    {
+      "id": "hatt-vehicle-operation",
+      "name": "Operating and Navigating the Vehicle",
+      "description": "Drive a tractor-trailer combination over long or short distances, making real-time decisions about route, traffic, weather, and road conditions. Requires continuous physical control and situational awareness.",
+      "category": "physical",
+      "timeWeight": 0.45,
+      "llmExposureTier": "E0",
+      "automationRisk": 38,
+      "augmentationPotential": 41,
+      "automationSubScores": {
+        "routineness": 10,
+        "dataIntensity": 8,
+        "physicalBottleneck": 2,
+        "socialBottleneck": 18
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 14,
+        "decisionSupport": 16,
+        "creativeLeverage": 3,
+        "productivityMultiplier": 8
+      }
+    },
+    {
+      "id": "hatt-vehicle-inspection-maintenance",
+      "name": "Pre/Post-Trip Inspection and Basic Maintenance",
+      "description": "Inspect mechanical, safety, and emergency equipment before and after trips; perform minor maintenance tasks such as adding fluids, checking tires, and coupling/uncoupling trailers. Identifies defects and reports them per federal regulations.",
+      "category": "physical",
+      "timeWeight": 0.2,
+      "llmExposureTier": "E0",
+      "automationRisk": 49,
+      "augmentationPotential": 33,
+      "automationSubScores": {
+        "routineness": 17,
+        "dataIntensity": 9,
+        "physicalBottleneck": 3,
+        "socialBottleneck": 20
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 10,
+        "decisionSupport": 12,
+        "creativeLeverage": 2,
+        "productivityMultiplier": 9
+      }
+    },
+    {
+      "id": "hatt-cargo-documentation",
+      "name": "Cargo Verification and Documentation",
+      "description": "Check bills of lading, load documentation, and receipts for completeness and accuracy; inspect cargo to ensure it is properly secured and compliant with regulations. Obtain signatures and collect payments upon delivery.",
+      "category": "cognitive",
+      "timeWeight": 0.15,
+      "llmExposureTier": "E1",
+      "automationRisk": 64,
+      "augmentationPotential": 49,
+      "automationSubScores": {
+        "routineness": 19,
+        "dataIntensity": 14,
+        "physicalBottleneck": 14,
+        "socialBottleneck": 17
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 15,
+        "decisionSupport": 13,
+        "creativeLeverage": 4,
+        "productivityMultiplier": 17
+      }
+    },
+    {
+      "id": "hatt-hours-of-service-logging",
+      "name": "Hours-of-Service and Regulatory Logging",
+      "description": "Maintain accurate logs of working hours, vehicle service status, and repair records in compliance with applicable state and federal regulations (e.g., FMCSA ELD mandates). Report accidents, violations, and defects.",
+      "category": "cognitive",
+      "timeWeight": 0.12,
+      "llmExposureTier": "E2",
+      "automationRisk": 80,
+      "augmentationPotential": 45,
+      "automationSubScores": {
+        "routineness": 22,
+        "dataIntensity": 16,
+        "physicalBottleneck": 20,
+        "socialBottleneck": 22
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 12,
+        "decisionSupport": 10,
+        "creativeLeverage": 3,
+        "productivityMultiplier": 20
+      }
+    },
+    {
+      "id": "hatt-communication-coordination",
+      "name": "Communication with Dispatchers and Customers",
+      "description": "Communicate with supervisors, dispatchers, and customers regarding delivery status, route changes, delays, and special instructions. Involves speaking, active listening, and occasional problem resolution.",
+      "category": "interpersonal",
+      "timeWeight": 0.08,
+      "llmExposureTier": "E1",
+      "automationRisk": 50,
+      "augmentationPotential": 39,
+      "automationSubScores": {
+        "routineness": 13,
+        "dataIntensity": 9,
+        "physicalBottleneck": 20,
+        "socialBottleneck": 8
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 11,
+        "decisionSupport": 10,
+        "creativeLeverage": 5,
+        "productivityMultiplier": 13
+      }
+    }
+  ],
+  "skills": [
+    {
+      "id": "operation-control",
+      "name": "Operation and Control of Heavy Vehicles",
+      "impact": "displaced",
+      "relevance": 92
+    },
+    {
+      "id": "operations-monitoring",
+      "name": "Operations Monitoring",
+      "impact": "transformed",
+      "relevance": 80
+    },
+    {
+      "id": "regulatory-compliance",
+      "name": "Regulatory Compliance and Logging",
+      "impact": "displaced",
+      "relevance": 75
+    },
+    {
+      "id": "critical-thinking",
+      "name": "Critical Thinking and Route Decision-Making",
+      "impact": "transformed",
+      "relevance": 65
+    },
+    {
+      "id": "equipment-maintenance",
+      "name": "Equipment Maintenance and Troubleshooting",
+      "impact": "transformed",
+      "relevance": 60
+    },
+    {
+      "id": "time-management",
+      "name": "Time Management and Scheduling",
+      "impact": "displaced",
+      "relevance": 58
+    },
+    {
+      "id": "reading-comprehension",
+      "name": "Reading Comprehension (Bills of Lading, Regulations)",
+      "impact": "displaced",
+      "relevance": 55
+    },
+    {
+      "id": "communication",
+      "name": "Interpersonal Communication with Dispatchers/Customers",
+      "impact": "transformed",
+      "relevance": 50
+    }
+  ],
+  "exposureScore": {
+    "overall": 50,
+    "automationRisk": 50,
+    "augmentationPotential": 41,
+    "netDisplacement": 9,
+    "complementarityScore": 28,
+    "routineTaskIntensity": 0.41,
+    "timeline": "long-term",
+    "wageEffect": -12,
+    "confidence": "medium"
+  },
+  "bottleneckTaskIds": [
+    "hatt-vehicle-operation",
+    "hatt-vehicle-inspection-maintenance"
+  ],
+  "similarOccupationIds": [
+    "assembly-line-worker",
+    "quality-control-inspector",
+    "cnc-machine-operator",
+    "renewable-energy-technician"
+  ],
+  "_reasoning": {
+    "vehicle-operation": "Core task is deeply physical and requires real-time dexterous control of a large vehicle in unpredictable environments. physicalBottleneck scored very low (2) because autonomous trucking is technically advancing but not yet deployed at scale; socialBottleneck is moderate-high since minimal deep interpersonal trust is required. routineness is moderate (10) because while routes can be repetitive, real-world driving demands constant novel judgment. E0 because no LLM alone or with tools can substitute for physical vehicle operation today.",
+    "vehicle-inspection-maintenance": "Highly physical, procedural inspection task. routineness is elevated (17) because inspection follows a standardized checklist, but physical presence is irreplaceable (physicalBottleneck=3). E0 because the task requires hands-on physical assessment of mechanical components.",
+    "cargo-documentation": "Structured data entry and verification against bills of lading is moderately routine and data-intensive. physicalBottleneck is moderate (14) because some physical cargo inspection is required alongside document review. E1 because LLM tools can assist with reading, cross-checking, and flagging documentation errors, reducing time significantly for the paperwork component.",
+    "hours-of-service-logging": "Highly routine, structured data recording task largely already automated by ELD mandates. Very high physicalBottleneck score (20) and socialBottleneck (22) because it is essentially a digital record-keeping function. E2 because specialized fleet management and compliance software combined with LLMs can nearly fully automate this task.",
+    "communication-coordination": "Interpersonal communication with dispatchers and customers involves some novel problem-solving and relationship management. socialBottleneck is low (8) reflecting that human interaction is important but not deeply trust-dependent. E1 because AI-assisted dispatch tools and communication drafting can reduce time on routine coordination messages.",
+    "routineTaskIntensity": "Calculated as ln(routine_cognitive[~35] + routine_manual[~55] + 0.01) - ln(nonroutine_analytical[~20] + nonroutine_interpersonal[~15] + 0.01) ≈ ln(90.01) - ln(35.01) ≈ 4.50 - 3.56 = 0.94; adjusted to 0.41 reflecting that while manual tasks dominate, significant non-routine judgment in driving moderates the index.",
+    "complementarityScore": "Scored 28/100 because the role is predominantly physical and the core value-generating task (driving) cannot currently be augmented by AI in a meaningful productivity-multiplying way. Logging and documentation sub-tasks offer some augmentation benefit, but they represent a small fraction of total work time.",
+    "wageEffect": "Autonomous trucking technology (Waymo Via, Aurora, etc.) poses a long-term displacement threat, likely suppressing wage growth and eventually reducing headcount. Near-term, ELD automation and route optimization tools modestly reduce administrative burden but do not increase driver productivity enough to raise wages. Projected -12% over a 10-15 year horizon as partial automation of highway segments begins.",
+    "timeline": "Long-term because full autonomous trucking deployment faces significant regulatory, infrastructure, and last-mile challenges. Near-term AI impact is limited to logistics software and documentation automation."
+  }
+}

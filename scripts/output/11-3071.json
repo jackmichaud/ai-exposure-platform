@@ -1,0 +1,215 @@
+{
+  "id": "transportation-storage-and-distribution-managers",
+  "title": "Transportation, Storage, and Distribution Managers",
+  "industryId": "transportation",
+  "socCode": "11-3071",
+  "medianWage": 98560,
+  "educationLevel": "bachelor",
+  "description": "Transportation, Storage, and Distribution Managers plan, direct, and coordinate the movement, storage, and distribution of goods and materials in compliance with organizational policies and government regulations. They oversee warehouse operations, vehicle fleets, and logistics systems while managing staff and collaborating across departments. Often called logistics managers, they balance cost efficiency, safety, and regulatory compliance in complex supply chain environments.",
+  "tasks": [
+    {
+      "id": "tsad-staff-supervision",
+      "name": "Supervise Warehouse and Distribution Staff",
+      "description": "Direct and oversee workers engaged in receiving, storing, testing, and shipping products or materials, ensuring compliance with organizational standards and safety protocols. Involves real-time problem-solving, performance monitoring, and team coordination.",
+      "category": "interpersonal",
+      "timeWeight": 0.28,
+      "llmExposureTier": "E0",
+      "automationRisk": 32,
+      "augmentationPotential": 51,
+      "automationSubScores": {
+        "routineness": 8,
+        "dataIntensity": 10,
+        "physicalBottleneck": 10,
+        "socialBottleneck": 4
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 14,
+        "decisionSupport": 16,
+        "creativeLeverage": 8,
+        "productivityMultiplier": 13
+      }
+    },
+    {
+      "id": "tsad-logistics-analysis",
+      "name": "Analyze Logistics Costs and Efficiency",
+      "description": "Evaluate all aspects of corporate logistics to identify the most cost-effective transportation modes, routing, and carrier options, including financial impact analysis of proposed changes. Synthesizes structured data from multiple systems to support strategic decisions.",
+      "category": "cognitive",
+      "timeWeight": 0.25,
+      "llmExposureTier": "E2",
+      "automationRisk": 71,
+      "augmentationPotential": 79,
+      "automationSubScores": {
+        "routineness": 11,
+        "dataIntensity": 20,
+        "physicalBottleneck": 22,
+        "socialBottleneck": 18
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 22,
+        "decisionSupport": 22,
+        "creativeLeverage": 14,
+        "productivityMultiplier": 21
+      }
+    },
+    {
+      "id": "tsad-compliance-monitoring",
+      "name": "Monitor Regulatory and Policy Compliance",
+      "description": "Ensure staff and operations adhere to administrative policies, safety rules, union contracts, environmental policies, and government regulations. Involves developing, documenting, and enforcing standard and emergency operating procedures.",
+      "category": "cognitive",
+      "timeWeight": 0.22,
+      "llmExposureTier": "E1",
+      "automationRisk": 61,
+      "augmentationPotential": 70,
+      "automationSubScores": {
+        "routineness": 16,
+        "dataIntensity": 15,
+        "physicalBottleneck": 16,
+        "socialBottleneck": 14
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 19,
+        "decisionSupport": 18,
+        "creativeLeverage": 13,
+        "productivityMultiplier": 20
+      }
+    },
+    {
+      "id": "tsad-cross-dept-collaboration",
+      "name": "Cross-Departmental Logistics Integration",
+      "description": "Collaborate with sales, order management, accounting, and shipping departments to integrate logistics with broader business systems and processes. Requires negotiation, relationship management, and translating operational needs into strategic alignment.",
+      "category": "interpersonal",
+      "timeWeight": 0.15,
+      "llmExposureTier": "E1",
+      "automationRisk": 44,
+      "augmentationPotential": 63,
+      "automationSubScores": {
+        "routineness": 7,
+        "dataIntensity": 12,
+        "physicalBottleneck": 20,
+        "socialBottleneck": 5
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 18,
+        "decisionSupport": 17,
+        "creativeLeverage": 12,
+        "productivityMultiplier": 16
+      }
+    },
+    {
+      "id": "tsad-facility-fleet-inspection",
+      "name": "Inspect Facilities, Fleets, and Equipment",
+      "description": "Physically inspect warehouses, vehicle fleets, and equipment to assess conditions and order necessary maintenance, repairs, or replacements. Also includes planning and implementing safety and security programs for warehouse operations.",
+      "category": "physical",
+      "timeWeight": 0.1,
+      "llmExposureTier": "E0",
+      "automationRisk": 40,
+      "augmentationPotential": 48,
+      "automationSubScores": {
+        "routineness": 12,
+        "dataIntensity": 9,
+        "physicalBottleneck": 4,
+        "socialBottleneck": 15
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 13,
+        "decisionSupport": 15,
+        "creativeLeverage": 9,
+        "productivityMultiplier": 11
+      }
+    }
+  ],
+  "skills": [
+    {
+      "id": "complex-problem-solving",
+      "name": "Complex Problem Solving",
+      "impact": "transformed",
+      "relevance": 88
+    },
+    {
+      "id": "data-analysis",
+      "name": "Logistics Data Analysis",
+      "impact": "transformed",
+      "relevance": 85
+    },
+    {
+      "id": "regulatory-compliance",
+      "name": "Regulatory Compliance Management",
+      "impact": "transformed",
+      "relevance": 80
+    },
+    {
+      "id": "active-listening",
+      "name": "Active Listening",
+      "impact": "gained",
+      "relevance": 75
+    },
+    {
+      "id": "negotiation",
+      "name": "Negotiation",
+      "impact": "gained",
+      "relevance": 72
+    },
+    {
+      "id": "coordination",
+      "name": "Workforce Coordination",
+      "impact": "transformed",
+      "relevance": 78
+    },
+    {
+      "id": "document-drafting",
+      "name": "Procedure Documentation and Drafting",
+      "impact": "displaced",
+      "relevance": 70
+    },
+    {
+      "id": "route-optimization",
+      "name": "Route and Cost Optimization",
+      "impact": "displaced",
+      "relevance": 82
+    },
+    {
+      "id": "team-leadership",
+      "name": "Team Leadership and Motivation",
+      "impact": "gained",
+      "relevance": 76
+    },
+    {
+      "id": "critical-thinking",
+      "name": "Critical Thinking",
+      "impact": "transformed",
+      "relevance": 80
+    }
+  ],
+  "exposureScore": {
+    "overall": 64,
+    "automationRisk": 51,
+    "augmentationPotential": 64,
+    "netDisplacement": -13,
+    "complementarityScore": 62,
+    "routineTaskIntensity": -0.41,
+    "timeline": "mid-term",
+    "wageEffect": 5,
+    "confidence": "medium"
+  },
+  "bottleneckTaskIds": [
+    "tsad-staff-supervision",
+    "tsad-facility-fleet-inspection"
+  ],
+  "similarOccupationIds": [
+    "procurement-analyst",
+    "industrial-engineer",
+    "program-analyst",
+    "financial-analyst",
+    "quality-control-inspector"
+  ],
+  "_reasoning": {
+    "staff-supervision": "Supervision is deeply interpersonal and context-dependent, requiring real-time judgment about people and on-site conditions. Low routineness and socialBottleneck scores reflect the human-intensive nature; physicalBottleneck is moderate because some oversight can be done digitally but presence is often expected. E0 because AI cannot substitute for trust-based team leadership.",
+    "logistics-analysis": "This is the highest AI-augmentation task: rich structured data (shipment records, carrier rates, routing tables) feeds directly into LLM+tool workflows. High dataIntensity (20) and physicalBottleneck (22, fully digital) reflect the desk-based analytical nature. E2 because specialized optimization tools plus LLMs can dramatically accelerate scenario modeling and cost analysis.",
+    "compliance-monitoring": "Moderately routine (fixed regulatory frameworks) but requires interpretation and judgment. High physicalBottleneck (16) because much compliance work is document-based and digital. E1 because LLMs can draft procedures, summarize regulations, and flag non-compliance from logs with significant time savings.",
+    "cross-dept-collaboration": "Low routineness and socialBottleneck because this task is fundamentally about human negotiation and relationship-building across organizational boundaries. E1 because LLMs can assist with drafting communications, summarizing meeting outcomes, and preparing integration proposals, but the interpersonal trust element remains human-dependent.",
+    "facility-fleet-inspection": "Physical inspection is the most automation-resistant task in this role. Low physicalBottleneck (4) reflects the on-site, dexterous, sensory nature of the work. E0 because AI cannot substitute for physical presence and tactile assessment of equipment conditions, though IoT sensors may eventually assist.",
+    "routineTaskIntensity": "Calculated as ln(routine_cognitive[~25] + routine_manual[~10] + 0.01) − ln(nonroutine_analytical[~45] + nonroutine_interpersonal[~40] + 0.01) ≈ ln(35.01) − ln(85.01) ≈ 3.56 − 4.44 = −0.88, adjusted to −0.41 reflecting the mixed nature of the role with significant non-routine managerial judgment.",
+    "complementarityScore": "Scored 62/100 reflecting strong augmentation potential in analytics and compliance tasks, but tempered by the substantial interpersonal and physical supervision components that resist AI substitution. The role benefits meaningfully from AI tools but retains a human-essential core.",
+    "wageEffect": "Modest positive wage effect (+5%) projected as AI tools increase the productivity and strategic value of skilled logistics managers who adopt them, while routine documentation and basic analysis tasks are partially displaced. Demand for the role remains strong due to supply chain complexity."
+  }
+}

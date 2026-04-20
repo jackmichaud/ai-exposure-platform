@@ -1,0 +1,216 @@
+{
+  "id": "graphic-designers",
+  "title": "Graphic Designers",
+  "industryId": "creative",
+  "socCode": "27-1024",
+  "medianWage": 57990,
+  "educationLevel": "bachelor",
+  "description": "Graphic designers create visual concepts to communicate ideas that inspire, inform, or captivate consumers. They develop the overall layout and production design for applications such as advertisements, brochures, magazines, and corporate reports. Using a combination of artistic skill and digital tools, they translate client needs into compelling visual solutions.",
+  "tasks": [
+    {
+      "id": "gd-creative-concept-development",
+      "name": "Creative Concept & Layout Design",
+      "description": "Develop original design concepts, sample layouts, and visual hierarchies based on client briefs and aesthetic principles. Involves ideation, composition decisions, and iterative refinement.",
+      "category": "cognitive",
+      "timeWeight": 0.3,
+      "llmExposureTier": "E2",
+      "automationRisk": 52,
+      "augmentationPotential": 80,
+      "automationSubScores": {
+        "routineness": 4,
+        "dataIntensity": 12,
+        "physicalBottleneck": 22,
+        "socialBottleneck": 14
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 18,
+        "decisionSupport": 17,
+        "creativeLeverage": 25,
+        "productivityMultiplier": 20
+      }
+    },
+    {
+      "id": "gd-digital-asset-production",
+      "name": "Digital Asset Production & File Preparation",
+      "description": "Use design software to generate images, prepare digital files for print or web, and produce final deliverables such as logos, illustrations, and packaged print-ready files.",
+      "category": "cognitive",
+      "timeWeight": 0.28,
+      "llmExposureTier": "E2",
+      "automationRisk": 71,
+      "augmentationPotential": 69,
+      "automationSubScores": {
+        "routineness": 14,
+        "dataIntensity": 14,
+        "physicalBottleneck": 23,
+        "socialBottleneck": 20
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 12,
+        "decisionSupport": 13,
+        "creativeLeverage": 20,
+        "productivityMultiplier": 24
+      }
+    },
+    {
+      "id": "gd-client-consultation",
+      "name": "Client Consultation & Requirements Gathering",
+      "description": "Confer with clients or supervisors to understand project goals, target audience, brand guidelines, and design constraints. Translate qualitative feedback into actionable design direction.",
+      "category": "interpersonal",
+      "timeWeight": 0.2,
+      "llmExposureTier": "E1",
+      "automationRisk": 40,
+      "augmentationPotential": 61,
+      "automationSubScores": {
+        "routineness": 6,
+        "dataIntensity": 9,
+        "physicalBottleneck": 20,
+        "socialBottleneck": 5
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 17,
+        "decisionSupport": 16,
+        "creativeLeverage": 13,
+        "productivityMultiplier": 15
+      }
+    },
+    {
+      "id": "gd-audience-research",
+      "name": "Target Audience & Market Research",
+      "description": "Research the demographics, preferences, and behaviors of target audiences to inform design decisions. Synthesize competitive landscape and trend data to ensure relevance and effectiveness.",
+      "category": "cognitive",
+      "timeWeight": 0.12,
+      "llmExposureTier": "E1",
+      "automationRisk": 68,
+      "augmentationPotential": 73,
+      "automationSubScores": {
+        "routineness": 8,
+        "dataIntensity": 18,
+        "physicalBottleneck": 23,
+        "socialBottleneck": 19
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 22,
+        "decisionSupport": 18,
+        "creativeLeverage": 12,
+        "productivityMultiplier": 21
+      }
+    },
+    {
+      "id": "gd-design-review-feedback",
+      "name": "Design Review & Quality Iteration",
+      "description": "Review final layouts for accuracy, consistency, and aesthetic quality; incorporate feedback from clients and stakeholders through iterative revision cycles.",
+      "category": "cognitive",
+      "timeWeight": 0.1,
+      "llmExposureTier": "E1",
+      "automationRisk": 50,
+      "augmentationPotential": 68,
+      "automationSubScores": {
+        "routineness": 7,
+        "dataIntensity": 11,
+        "physicalBottleneck": 22,
+        "socialBottleneck": 10
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 16,
+        "decisionSupport": 19,
+        "creativeLeverage": 16,
+        "productivityMultiplier": 17
+      }
+    }
+  ],
+  "skills": [
+    {
+      "id": "visual-composition",
+      "name": "Visual Composition & Aesthetics",
+      "impact": "transformed",
+      "relevance": 95
+    },
+    {
+      "id": "ai-image-generation",
+      "name": "AI Image Generation & Prompt Engineering",
+      "impact": "gained",
+      "relevance": 90
+    },
+    {
+      "id": "typography",
+      "name": "Typography & Layout",
+      "impact": "transformed",
+      "relevance": 85
+    },
+    {
+      "id": "brand-strategy",
+      "name": "Brand Strategy & Identity",
+      "impact": "transformed",
+      "relevance": 82
+    },
+    {
+      "id": "client-communication",
+      "name": "Client Communication & Presentation",
+      "impact": "transformed",
+      "relevance": 78
+    },
+    {
+      "id": "software-proficiency",
+      "name": "Design Software Proficiency (Adobe, Figma)",
+      "impact": "transformed",
+      "relevance": 75
+    },
+    {
+      "id": "file-preparation",
+      "name": "Print & Digital File Preparation",
+      "impact": "displaced",
+      "relevance": 60
+    },
+    {
+      "id": "critical-thinking",
+      "name": "Critical Thinking & Problem Solving",
+      "impact": "gained",
+      "relevance": 72
+    },
+    {
+      "id": "active-listening",
+      "name": "Active Listening & Requirements Elicitation",
+      "impact": "transformed",
+      "relevance": 70
+    },
+    {
+      "id": "trend-research",
+      "name": "Market & Trend Research",
+      "impact": "displaced",
+      "relevance": 55
+    }
+  ],
+  "exposureScore": {
+    "overall": 71,
+    "automationRisk": 57,
+    "augmentationPotential": 71,
+    "netDisplacement": -14,
+    "complementarityScore": 74,
+    "routineTaskIntensity": -0.87,
+    "timeline": "near-term",
+    "wageEffect": 5,
+    "confidence": "high"
+  },
+  "bottleneckTaskIds": [
+    "gd-client-consultation",
+    "gd-design-review-feedback"
+  ],
+  "similarOccupationIds": [
+    "instructional-designer",
+    "software-developer",
+    "data-scientist",
+    "intelligence-analyst",
+    "program-analyst"
+  ],
+  "_reasoning": {
+    "creative-concept-development": "Routineness scored very low (4) because concept ideation is inherently novel and judgment-driven. physicalBottleneck is high (22) as work is fully digital. socialBottleneck moderate (14) because client taste and brand alignment require human judgment. creativeLeverage maxed at 25 given 'Thinking Creatively' O*NET score of 98 — this is the core AI augmentation opportunity via generative tools.",
+    "digital-asset-production": "Routineness higher (14) for production tasks like file prep and image generation which follow established workflows. physicalBottleneck near-max (23) — fully digital. productivityMultiplier very high (24) because AI image generation and automation tools directly accelerate output volume. E2 tier because specialized tools (Midjourney, Firefly, Figma AI) are central.",
+    "client-consultation": "socialBottleneck scored low (5) because deep interpersonal trust and nuanced communication are essential — this is the strongest E0 buffer. routineness low (6) as each client situation is unique. E1 because LLMs can assist with brief summarization and communication drafting but cannot replace the relational dynamic.",
+    "audience-research": "dataIntensity high (18) and physicalBottleneck near-max (23) because research is fully digital and data-rich. informationSynthesis scored 22 reflecting the 'Getting Information' O*NET score of 90 — LLMs excel here. E1 because synthesis and summarization of market data is a core LLM strength.",
+    "design-review-feedback": "decisionSupport scored 19 reflecting high-stakes aesthetic and brand judgment. routineness low (7) as each review involves novel qualitative assessment. E1 because LLMs can assist with structured feedback documentation and consistency checking but aesthetic judgment remains human-anchored.",
+    "routineTaskIntensity": "Calculated as ln(routine_cognitive[~18] + routine_manual[~5] + 0.01) − ln(nonroutine_analytical[~35] + nonroutine_interpersonal[~25] + 0.01) ≈ ln(23.01) − ln(60.01) ≈ 3.14 − 4.09 = −0.87, indicating a nonroutine-dominant occupation.",
+    "complementarityScore": "Scored 74 reflecting strong augmentation potential in creative ideation, research synthesis, and production throughput, tempered by the irreplaceable human elements of client relationships and aesthetic judgment.",
+    "wageEffect": "Modest positive (+5%) projected: designers who master AI tools will command premium rates and handle more projects, but commoditization of basic design tasks will compress wages at the lower end of the market.",
+    "timeline": "Near-term: generative AI tools (Midjourney, Adobe Firefly, Stable Diffusion) are already reshaping production workflows and entry-level task demand in 2024–2025."
+  }
+}

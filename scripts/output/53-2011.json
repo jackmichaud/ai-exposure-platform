@@ -1,0 +1,198 @@
+{
+  "id": "airline-pilots-copilots-and-flight-engineers",
+  "title": "Airline Pilots, Copilots, and Flight Engineers",
+  "industryId": "transportation",
+  "socCode": "53-2011",
+  "medianWage": 171000,
+  "educationLevel": "associate",
+  "description": "Airline pilots operate fixed-wing aircraft on scheduled carrier routes, transporting passengers and cargo under strict federal regulations and safety protocols. They are responsible for pre-flight inspections, navigation, crew coordination, and emergency response. The role demands continuous real-time judgment, physical control of complex machinery, and high-stakes decision-making under time pressure.",
+  "tasks": [
+    {
+      "id": "apca-aircraft-operation-navigation",
+      "name": "Aircraft Operation and Navigation",
+      "description": "Pilots start engines, operate flight controls, and navigate aircraft along planned routes using autopilot systems, flight management computers, and instrumentation. This is the core physical-cognitive task occupying the majority of flight time.",
+      "category": "physical",
+      "timeWeight": 0.35,
+      "llmExposureTier": "E0",
+      "automationRisk": 46,
+      "augmentationPotential": 52,
+      "automationSubScores": {
+        "routineness": 10,
+        "dataIntensity": 16,
+        "physicalBottleneck": 2,
+        "socialBottleneck": 18
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 18,
+        "decisionSupport": 20,
+        "creativeLeverage": 4,
+        "productivityMultiplier": 10
+      }
+    },
+    {
+      "id": "apca-systems-monitoring",
+      "name": "In-Flight Systems and Performance Monitoring",
+      "description": "Pilots continuously monitor engine operation, fuel consumption, gauges, warning devices, and control panels to verify aircraft performance and detect anomalies. This involves interpreting rich structured sensor data in real time.",
+      "category": "cognitive",
+      "timeWeight": 0.25,
+      "llmExposureTier": "E2",
+      "automationRisk": 61,
+      "augmentationPotential": 61,
+      "automationSubScores": {
+        "routineness": 14,
+        "dataIntensity": 22,
+        "physicalBottleneck": 5,
+        "socialBottleneck": 20
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 21,
+        "decisionSupport": 19,
+        "creativeLeverage": 5,
+        "productivityMultiplier": 16
+      }
+    },
+    {
+      "id": "apca-emergency-response",
+      "name": "Emergency Response and Malfunction Management",
+      "description": "Pilots respond to in-flight emergencies and malfunctions, applying trained procedures while exercising real-time judgment under extreme time pressure. This task is highly novel and safety-critical, requiring deep situational awareness and crew coordination.",
+      "category": "cognitive",
+      "timeWeight": 0.1,
+      "llmExposureTier": "E0",
+      "automationRisk": 25,
+      "augmentationPotential": 60,
+      "automationSubScores": {
+        "routineness": 4,
+        "dataIntensity": 14,
+        "physicalBottleneck": 2,
+        "socialBottleneck": 5
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 20,
+        "decisionSupport": 24,
+        "creativeLeverage": 8,
+        "productivityMultiplier": 8
+      }
+    },
+    {
+      "id": "apca-preflight-inspection",
+      "name": "Pre-Flight Inspection and Weight/Balance Verification",
+      "description": "Pilots inspect aircraft for defects and malfunctions using standardized checklists and verify passenger, cargo, and fuel distributions to ensure weight and balance specifications are met. This is a structured, procedural task with physical on-site requirements.",
+      "category": "physical",
+      "timeWeight": 0.15,
+      "llmExposureTier": "E0",
+      "automationRisk": 56,
+      "augmentationPotential": 44,
+      "automationSubScores": {
+        "routineness": 18,
+        "dataIntensity": 15,
+        "physicalBottleneck": 3,
+        "socialBottleneck": 20
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 13,
+        "decisionSupport": 14,
+        "creativeLeverage": 3,
+        "productivityMultiplier": 14
+      }
+    },
+    {
+      "id": "apca-crew-atc-coordination",
+      "name": "Crew and Air Traffic Control Coordination",
+      "description": "Pilots work as part of a flight team with crew members and communicate with air traffic control towers for clearances, arrival instructions, and situational updates via radio. This task is deeply interpersonal and safety-critical, requiring precise verbal communication and teamwork.",
+      "category": "interpersonal",
+      "timeWeight": 0.15,
+      "llmExposureTier": "E0",
+      "automationRisk": 30,
+      "augmentationPotential": 42,
+      "automationSubScores": {
+        "routineness": 12,
+        "dataIntensity": 10,
+        "physicalBottleneck": 4,
+        "socialBottleneck": 4
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 14,
+        "decisionSupport": 16,
+        "creativeLeverage": 4,
+        "productivityMultiplier": 8
+      }
+    }
+  ],
+  "skills": [
+    {
+      "id": "operation-control",
+      "name": "Operation and Control of Aircraft Systems",
+      "impact": "transformed",
+      "relevance": 97
+    },
+    {
+      "id": "operations-monitoring",
+      "name": "Operations Monitoring",
+      "impact": "transformed",
+      "relevance": 91
+    },
+    {
+      "id": "critical-thinking",
+      "name": "Critical Thinking and Judgment",
+      "impact": "gained",
+      "relevance": 78
+    },
+    {
+      "id": "active-listening",
+      "name": "Active Listening and Communication",
+      "impact": "displaced",
+      "relevance": 78
+    },
+    {
+      "id": "time-management",
+      "name": "Time Management Under Pressure",
+      "impact": "transformed",
+      "relevance": 72
+    },
+    {
+      "id": "situational-awareness",
+      "name": "Situational Awareness and Threat Detection",
+      "impact": "gained",
+      "relevance": 90
+    },
+    {
+      "id": "checklist-compliance",
+      "name": "Procedural Checklist Compliance",
+      "impact": "displaced",
+      "relevance": 70
+    }
+  ],
+  "exposureScore": {
+    "overall": 52,
+    "automationRisk": 47,
+    "augmentationPotential": 52,
+    "netDisplacement": -6,
+    "complementarityScore": 38,
+    "routineTaskIntensity": -0.62,
+    "timeline": "long-term",
+    "wageEffect": -5,
+    "confidence": "medium"
+  },
+  "bottleneckTaskIds": [
+    "apca-emergency-response",
+    "apca-crew-atc-coordination"
+  ],
+  "similarOccupationIds": [
+    "defense-systems-engineer",
+    "nuclear-engineer",
+    "naval-shipbuilder",
+    "industrial-engineer",
+    "quality-control-inspector"
+  ],
+  "_reasoning": {
+    "aircraft-operation-navigation": "Core piloting is physical and real-time; autopilot and FMS already provide significant AI-adjacent automation, but human override and dexterous control remain essential. physicalBottleneck scored very low (2) because the cockpit is enclosed and digital, yet the physical control requirement is irreplaceable. socialBottleneck is high because minimal public interaction occurs during flight. E0 because AI cannot yet safely replace the human pilot in the control loop.",
+    "systems-monitoring": "Rich structured telemetry data makes this highly data-intensive (22). AI tools already augment this via ACARS and predictive maintenance systems, qualifying for E2. Routineness is moderate (14) because while procedures exist, anomaly detection requires judgment. augmentationSubScores are high because AI can synthesize sensor streams and flag deviations faster than humans.",
+    "emergency-response": "Lowest routineness (4) — each emergency is unique and novel. physicalBottleneck is very low (2) as emergencies require immediate physical intervention. socialBottleneck is low (5) because crew coordination is essential. E0 because no LLM can substitute for real-time physical emergency response. decisionSupport augmentation is very high (24) because AI decision-support tools (e.g., electronic checklists, fault trees) can meaningfully assist.",
+    "preflight-inspection": "Highly procedural (routineness 18) and checklist-driven, but requires physical on-site presence (physicalBottleneck 3). E0 because physical inspection cannot be delegated to LLMs. AI could assist with data logging and anomaly flagging but cannot replace the physical walk-around.",
+    "crew-atc-coordination": "Deep interpersonal and safety-critical communication; socialBottleneck scored very low (4) because human trust and coordination are essential. E0 because real-time voice communication with ATC and crew cannot be safely automated by LLMs in current regulatory frameworks.",
+    "routineTaskIntensity": "Calculated as ln(routine_cognitive[~25] + routine_manual[~20] + 0.01) − ln(nonroutine_analytical[~55] + nonroutine_interpersonal[~30] + 0.01) ≈ ln(45.01) − ln(85.01) ≈ 3.807 − 4.443 = −0.636, indicating nonroutine tasks dominate.",
+    "complementarityScore": "Scored 38/100 — AI augments monitoring and decision support meaningfully, but the physical, regulatory, and safety constraints severely limit AI substitution. The role benefits from AI tools but cannot be AI-dominant.",
+    "timeline": "Long-term — regulatory frameworks (FAA, ICAO), public trust, and the physical nature of flight control mean full AI disruption is decades away. Incremental augmentation (enhanced autopilot, AI co-pilot advisory systems) will occur mid-term.",
+    "wageEffect": "Slight negative (-5%) due to automation of monitoring tasks and potential reduction in flight engineer roles, offset by persistent demand for certified human pilots and strong union protections."
+  }
+}

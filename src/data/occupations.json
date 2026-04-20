@@ -2907,7 +2907,7 @@
         "name": "Contract Documentation & Reporting",
         "description": "Draft contract modifications, solicitations, and required reporting; maintain procurement records in government systems.",
         "category": "cognitive",
-        "timeWeight": 0.30,
+        "timeWeight": 0.3,
         "llmExposureTier": "E2",
         "automationRisk": 65,
         "augmentationPotential": 75,
@@ -2929,7 +2929,7 @@
         "name": "Market Research & Price Analysis",
         "description": "Conduct market surveys, analyze pricing trends, and determine fair and reasonable pricing for government acquisitions.",
         "category": "cognitive",
-        "timeWeight": 0.20,
+        "timeWeight": 0.2,
         "llmExposureTier": "E2",
         "automationRisk": 50,
         "augmentationPotential": 68,
@@ -2948,10 +2948,30 @@
       }
     ],
     "skills": [
-      { "id": "pa-sk-far-knowledge", "name": "FAR/DFARS Regulatory Knowledge", "impact": "transformed", "relevance": 92 },
-      { "id": "pa-sk-data-analysis", "name": "Quantitative Data Analysis", "impact": "transformed", "relevance": 85 },
-      { "id": "pa-sk-negotiation", "name": "Vendor Negotiation", "impact": "gained", "relevance": 70 },
-      { "id": "pa-sk-documentation", "name": "Contract Documentation", "impact": "displaced", "relevance": 88 }
+      {
+        "id": "pa-sk-far-knowledge",
+        "name": "FAR/DFARS Regulatory Knowledge",
+        "impact": "transformed",
+        "relevance": 92
+      },
+      {
+        "id": "pa-sk-data-analysis",
+        "name": "Quantitative Data Analysis",
+        "impact": "transformed",
+        "relevance": 85
+      },
+      {
+        "id": "pa-sk-negotiation",
+        "name": "Vendor Negotiation",
+        "impact": "gained",
+        "relevance": 70
+      },
+      {
+        "id": "pa-sk-documentation",
+        "name": "Contract Documentation",
+        "impact": "displaced",
+        "relevance": 88
+      }
     ],
     "exposureScore": {
       "overall": 72,
@@ -2964,8 +2984,14 @@
       "wageEffect": 5,
       "confidence": "high"
     },
-    "bottleneckTaskIds": ["pa-vendor-evaluation"],
-    "similarOccupationIds": ["financial-analyst", "program-analyst", "insurance-underwriter"]
+    "bottleneckTaskIds": [
+      "pa-vendor-evaluation"
+    ],
+    "similarOccupationIds": [
+      "financial-analyst",
+      "program-analyst",
+      "insurance-underwriter"
+    ]
   },
   {
     "id": "naval-shipbuilder",
@@ -2981,7 +3007,7 @@
         "name": "Structural Fabrication & Welding",
         "description": "Cut, shape, and weld steel plates, frames, and structural components to precise specifications for ship hulls and superstructures.",
         "category": "physical",
-        "timeWeight": 0.40,
+        "timeWeight": 0.4,
         "llmExposureTier": "E0",
         "automationRisk": 22,
         "augmentationPotential": 25,
@@ -3003,7 +3029,7 @@
         "name": "Module & Block Assembly",
         "description": "Assemble large ship sections from prefabricated modules, coordinating fit-up and alignment with rigging and crane operations.",
         "category": "physical",
-        "timeWeight": 0.30,
+        "timeWeight": 0.3,
         "llmExposureTier": "E0",
         "automationRisk": 20,
         "augmentationPotential": 28,
@@ -3025,7 +3051,7 @@
         "name": "Quality Inspection & Blueprint Reading",
         "description": "Interpret engineering drawings and specifications; perform dimensional checks and quality inspections on completed work.",
         "category": "cognitive",
-        "timeWeight": 0.20,
+        "timeWeight": 0.2,
         "llmExposureTier": "E1",
         "automationRisk": 28,
         "augmentationPotential": 38,
@@ -3047,7 +3073,7 @@
         "name": "Safety Compliance & Tool Maintenance",
         "description": "Follow shipyard safety protocols, maintain welding equipment and tools, and participate in safety training and hazard identification.",
         "category": "physical",
-        "timeWeight": 0.10,
+        "timeWeight": 0.1,
         "llmExposureTier": "E0",
         "automationRisk": 18,
         "augmentationPotential": 22,
@@ -3066,10 +3092,30 @@
       }
     ],
     "skills": [
-      { "id": "nsb-sk-welding", "name": "Structural Welding", "impact": "transformed", "relevance": 95 },
-      { "id": "nsb-sk-blueprint", "name": "Blueprint & CAD Reading", "impact": "gained", "relevance": 80 },
-      { "id": "nsb-sk-rigging", "name": "Rigging & Crane Operations", "impact": "displaced", "relevance": 60 },
-      { "id": "nsb-sk-safety", "name": "Maritime Safety Protocols", "impact": "gained", "relevance": 75 }
+      {
+        "id": "nsb-sk-welding",
+        "name": "Structural Welding",
+        "impact": "transformed",
+        "relevance": 95
+      },
+      {
+        "id": "nsb-sk-blueprint",
+        "name": "Blueprint & CAD Reading",
+        "impact": "gained",
+        "relevance": 80
+      },
+      {
+        "id": "nsb-sk-rigging",
+        "name": "Rigging & Crane Operations",
+        "impact": "displaced",
+        "relevance": 60
+      },
+      {
+        "id": "nsb-sk-safety",
+        "name": "Maritime Safety Protocols",
+        "impact": "gained",
+        "relevance": 75
+      }
     ],
     "exposureScore": {
       "overall": 28,
@@ -3082,8 +3128,15 @@
       "wageEffect": 2,
       "confidence": "medium"
     },
-    "bottleneckTaskIds": ["nsb-structural-fabrication", "nsb-assembly"],
-    "similarOccupationIds": ["cnc-machine-operator", "quality-control-inspector", "renewable-energy-technician"]
+    "bottleneckTaskIds": [
+      "nsb-structural-fabrication",
+      "nsb-assembly"
+    ],
+    "similarOccupationIds": [
+      "cnc-machine-operator",
+      "quality-control-inspector",
+      "renewable-energy-technician"
+    ]
   },
   {
     "id": "program-analyst",
@@ -3099,7 +3152,7 @@
         "name": "Program Performance Analysis",
         "description": "Analyze earned value management data, schedule variances, and cost performance indices to assess program health.",
         "category": "cognitive",
-        "timeWeight": 0.30,
+        "timeWeight": 0.3,
         "llmExposureTier": "E2",
         "automationRisk": 60,
         "augmentationPotential": 78,
@@ -3121,7 +3174,7 @@
         "name": "Reporting & Briefing Preparation",
         "description": "Draft status reports, executive briefings, Congressional budget justifications, and program review packages.",
         "category": "cognitive",
-        "timeWeight": 0.30,
+        "timeWeight": 0.3,
         "llmExposureTier": "E2",
         "automationRisk": 65,
         "augmentationPotential": 80,
@@ -3184,10 +3237,30 @@
       }
     ],
     "skills": [
-      { "id": "pgma-sk-evm", "name": "Earned Value Management", "impact": "transformed", "relevance": 90 },
-      { "id": "pgma-sk-data-viz", "name": "Data Visualization & Reporting", "impact": "displaced", "relevance": 85 },
-      { "id": "pgma-sk-risk", "name": "Risk Management", "impact": "transformed", "relevance": 88 },
-      { "id": "pgma-sk-communication", "name": "Executive Communication", "impact": "gained", "relevance": 75 }
+      {
+        "id": "pgma-sk-evm",
+        "name": "Earned Value Management",
+        "impact": "transformed",
+        "relevance": 90
+      },
+      {
+        "id": "pgma-sk-data-viz",
+        "name": "Data Visualization & Reporting",
+        "impact": "displaced",
+        "relevance": 85
+      },
+      {
+        "id": "pgma-sk-risk",
+        "name": "Risk Management",
+        "impact": "transformed",
+        "relevance": 88
+      },
+      {
+        "id": "pgma-sk-communication",
+        "name": "Executive Communication",
+        "impact": "gained",
+        "relevance": 75
+      }
     ],
     "exposureScore": {
       "overall": 73,
@@ -3200,8 +3273,14 @@
       "wageEffect": 7,
       "confidence": "high"
     },
-    "bottleneckTaskIds": ["pgma-stakeholder-coordination"],
-    "similarOccupationIds": ["financial-analyst", "procurement-analyst", "data-scientist"]
+    "bottleneckTaskIds": [
+      "pgma-stakeholder-coordination"
+    ],
+    "similarOccupationIds": [
+      "financial-analyst",
+      "procurement-analyst",
+      "data-scientist"
+    ]
   },
   {
     "id": "defense-systems-engineer",
@@ -3217,7 +3296,7 @@
         "name": "Requirements Analysis & Architecture",
         "description": "Elicit, decompose, and allocate system requirements across hardware, software, and human interfaces; develop system architecture concepts.",
         "category": "cognitive",
-        "timeWeight": 0.30,
+        "timeWeight": 0.3,
         "llmExposureTier": "E2",
         "automationRisk": 42,
         "augmentationPotential": 65,
@@ -3239,7 +3318,7 @@
         "name": "System Integration & Testing",
         "description": "Plan and execute integration tests across subsystems; analyze test data, identify failure modes, and resolve interface defects.",
         "category": "cognitive",
-        "timeWeight": 0.30,
+        "timeWeight": 0.3,
         "llmExposureTier": "E2",
         "automationRisk": 45,
         "augmentationPotential": 60,
@@ -3302,10 +3381,30 @@
       }
     ],
     "skills": [
-      { "id": "dse-sk-mbse", "name": "Model-Based Systems Engineering", "impact": "transformed", "relevance": 95 },
-      { "id": "dse-sk-verification", "name": "Verification & Validation", "impact": "transformed", "relevance": 90 },
-      { "id": "dse-sk-safety", "name": "System Safety Analysis", "impact": "gained", "relevance": 85 },
-      { "id": "dse-sk-requirements", "name": "Requirements Management", "impact": "displaced", "relevance": 80 }
+      {
+        "id": "dse-sk-mbse",
+        "name": "Model-Based Systems Engineering",
+        "impact": "transformed",
+        "relevance": 95
+      },
+      {
+        "id": "dse-sk-verification",
+        "name": "Verification & Validation",
+        "impact": "transformed",
+        "relevance": 90
+      },
+      {
+        "id": "dse-sk-safety",
+        "name": "System Safety Analysis",
+        "impact": "gained",
+        "relevance": 85
+      },
+      {
+        "id": "dse-sk-requirements",
+        "name": "Requirements Management",
+        "impact": "displaced",
+        "relevance": 80
+      }
     ],
     "exposureScore": {
       "overall": 61,
@@ -3318,8 +3417,15 @@
       "wageEffect": 10,
       "confidence": "medium"
     },
-    "bottleneckTaskIds": ["dse-safety-analysis", "dse-trade-studies"],
-    "similarOccupationIds": ["software-developer", "industrial-engineer", "program-analyst"]
+    "bottleneckTaskIds": [
+      "dse-safety-analysis",
+      "dse-trade-studies"
+    ],
+    "similarOccupationIds": [
+      "software-developer",
+      "industrial-engineer",
+      "program-analyst"
+    ]
   },
   {
     "id": "intelligence-analyst",
@@ -3357,7 +3463,7 @@
         "name": "Pattern & Link Analysis",
         "description": "Identify patterns, associations, and anomalies in large datasets; map networks of actors, facilities, and activities.",
         "category": "cognitive",
-        "timeWeight": 0.30,
+        "timeWeight": 0.3,
         "llmExposureTier": "E2",
         "automationRisk": 72,
         "augmentationPotential": 85,
@@ -3401,7 +3507,7 @@
         "name": "Leadership Briefing & Advising",
         "description": "Deliver oral and written intelligence briefings to commanders and policymakers; answer questions and provide real-time analytical support.",
         "category": "interpersonal",
-        "timeWeight": 0.20,
+        "timeWeight": 0.2,
         "llmExposureTier": "E1",
         "automationRisk": 30,
         "augmentationPotential": 50,
@@ -3420,10 +3526,30 @@
       }
     ],
     "skills": [
-      { "id": "ia-sk-analytical", "name": "All-Source Analysis", "impact": "transformed", "relevance": 98 },
-      { "id": "ia-sk-data-mining", "name": "Data Mining & Pattern Recognition", "impact": "transformed", "relevance": 95 },
-      { "id": "ia-sk-writing", "name": "Intelligence Writing", "impact": "displaced", "relevance": 85 },
-      { "id": "ia-sk-critical-thinking", "name": "Critical & Structured Thinking", "impact": "gained", "relevance": 92 }
+      {
+        "id": "ia-sk-analytical",
+        "name": "All-Source Analysis",
+        "impact": "transformed",
+        "relevance": 98
+      },
+      {
+        "id": "ia-sk-data-mining",
+        "name": "Data Mining & Pattern Recognition",
+        "impact": "transformed",
+        "relevance": 95
+      },
+      {
+        "id": "ia-sk-writing",
+        "name": "Intelligence Writing",
+        "impact": "displaced",
+        "relevance": 85
+      },
+      {
+        "id": "ia-sk-critical-thinking",
+        "name": "Critical & Structured Thinking",
+        "impact": "gained",
+        "relevance": 92
+      }
     ],
     "exposureScore": {
       "overall": 76,
@@ -3436,8 +3562,14 @@
       "wageEffect": 12,
       "confidence": "high"
     },
-    "bottleneckTaskIds": ["ia-briefing"],
-    "similarOccupationIds": ["data-scientist", "cybersecurity-analyst", "program-analyst"]
+    "bottleneckTaskIds": [
+      "ia-briefing"
+    ],
+    "similarOccupationIds": [
+      "data-scientist",
+      "cybersecurity-analyst",
+      "program-analyst"
+    ]
   },
   {
     "id": "nuclear-engineer",
@@ -3538,10 +3670,30 @@
       }
     ],
     "skills": [
-      { "id": "ne-sk-reactor-physics", "name": "Reactor Physics & Neutronics", "impact": "transformed", "relevance": 98 },
-      { "id": "ne-sk-simulation", "name": "Simulation & Modeling", "impact": "transformed", "relevance": 90 },
-      { "id": "ne-sk-regulatory", "name": "NRC Regulatory Knowledge", "impact": "gained", "relevance": 88 },
-      { "id": "ne-sk-safety", "name": "Probabilistic Risk Assessment", "impact": "transformed", "relevance": 85 }
+      {
+        "id": "ne-sk-reactor-physics",
+        "name": "Reactor Physics & Neutronics",
+        "impact": "transformed",
+        "relevance": 98
+      },
+      {
+        "id": "ne-sk-simulation",
+        "name": "Simulation & Modeling",
+        "impact": "transformed",
+        "relevance": 90
+      },
+      {
+        "id": "ne-sk-regulatory",
+        "name": "NRC Regulatory Knowledge",
+        "impact": "gained",
+        "relevance": 88
+      },
+      {
+        "id": "ne-sk-safety",
+        "name": "Probabilistic Risk Assessment",
+        "impact": "transformed",
+        "relevance": 85
+      }
     ],
     "exposureScore": {
       "overall": 56,
@@ -3554,8 +3706,15 @@
       "wageEffect": 8,
       "confidence": "medium"
     },
-    "bottleneckTaskIds": ["ne-plant-operations", "ne-regulatory-compliance"],
-    "similarOccupationIds": ["environmental-engineer", "defense-systems-engineer", "industrial-engineer"]
+    "bottleneckTaskIds": [
+      "ne-plant-operations",
+      "ne-regulatory-compliance"
+    ],
+    "similarOccupationIds": [
+      "environmental-engineer",
+      "defense-systems-engineer",
+      "industrial-engineer"
+    ]
   },
   {
     "id": "climate-data-scientist",
@@ -3571,7 +3730,7 @@
         "name": "Climate Model Development & Validation",
         "description": "Develop, tune, and validate statistical and machine learning models of climate systems; integrate outputs with physical simulation frameworks.",
         "category": "cognitive",
-        "timeWeight": 0.30,
+        "timeWeight": 0.3,
         "llmExposureTier": "E2",
         "automationRisk": 68,
         "augmentationPotential": 88,
@@ -3637,7 +3796,7 @@
         "name": "Research Communication & Policy Support",
         "description": "Translate findings into accessible reports, visualizations, and policy briefs; present results to government and NGO stakeholders.",
         "category": "creative",
-        "timeWeight": 0.20,
+        "timeWeight": 0.2,
         "llmExposureTier": "E2",
         "automationRisk": 50,
         "augmentationPotential": 74,
@@ -3656,10 +3815,30 @@
       }
     ],
     "skills": [
-      { "id": "cds-sk-ml", "name": "Machine Learning & Statistical Modeling", "impact": "transformed", "relevance": 98 },
-      { "id": "cds-sk-programming", "name": "Python/R Scientific Programming", "impact": "displaced", "relevance": 92 },
-      { "id": "cds-sk-climate", "name": "Climate Science Domain Knowledge", "impact": "gained", "relevance": 95 },
-      { "id": "cds-sk-visualization", "name": "Scientific Visualization", "impact": "transformed", "relevance": 80 }
+      {
+        "id": "cds-sk-ml",
+        "name": "Machine Learning & Statistical Modeling",
+        "impact": "transformed",
+        "relevance": 98
+      },
+      {
+        "id": "cds-sk-programming",
+        "name": "Python/R Scientific Programming",
+        "impact": "displaced",
+        "relevance": 92
+      },
+      {
+        "id": "cds-sk-climate",
+        "name": "Climate Science Domain Knowledge",
+        "impact": "gained",
+        "relevance": 95
+      },
+      {
+        "id": "cds-sk-visualization",
+        "name": "Scientific Visualization",
+        "impact": "transformed",
+        "relevance": 80
+      }
     ],
     "exposureScore": {
       "overall": 83,
@@ -3672,8 +3851,14 @@
       "wageEffect": 14,
       "confidence": "high"
     },
-    "bottleneckTaskIds": ["cds-communication"],
-    "similarOccupationIds": ["data-scientist", "environmental-engineer", "actuary"]
+    "bottleneckTaskIds": [
+      "cds-communication"
+    ],
+    "similarOccupationIds": [
+      "data-scientist",
+      "environmental-engineer",
+      "actuary"
+    ]
   },
   {
     "id": "wildlife-biologist",
@@ -3774,10 +3959,30 @@
       }
     ],
     "skills": [
-      { "id": "wb-sk-field", "name": "Field Survey & Sampling Methods", "impact": "transformed", "relevance": 95 },
-      { "id": "wb-sk-gis", "name": "GIS & Remote Sensing", "impact": "transformed", "relevance": 88 },
-      { "id": "wb-sk-stats", "name": "Population Statistics & Modeling", "impact": "transformed", "relevance": 85 },
-      { "id": "wb-sk-ecology", "name": "Ecological Theory & Conservation", "impact": "gained", "relevance": 92 }
+      {
+        "id": "wb-sk-field",
+        "name": "Field Survey & Sampling Methods",
+        "impact": "transformed",
+        "relevance": 95
+      },
+      {
+        "id": "wb-sk-gis",
+        "name": "GIS & Remote Sensing",
+        "impact": "transformed",
+        "relevance": 88
+      },
+      {
+        "id": "wb-sk-stats",
+        "name": "Population Statistics & Modeling",
+        "impact": "transformed",
+        "relevance": 85
+      },
+      {
+        "id": "wb-sk-ecology",
+        "name": "Ecological Theory & Conservation",
+        "impact": "gained",
+        "relevance": 92
+      }
     ],
     "exposureScore": {
       "overall": 53,
@@ -3790,8 +3995,14 @@
       "wageEffect": 5,
       "confidence": "medium"
     },
-    "bottleneckTaskIds": ["wb-field-surveys"],
-    "similarOccupationIds": ["climate-data-scientist", "environmental-engineer", "data-scientist"]
+    "bottleneckTaskIds": [
+      "wb-field-surveys"
+    ],
+    "similarOccupationIds": [
+      "climate-data-scientist",
+      "environmental-engineer",
+      "data-scientist"
+    ]
   },
   {
     "id": "environmental-engineer",
@@ -3807,7 +4018,7 @@
         "name": "Environmental Site Assessment",
         "description": "Conduct Phase I/II site assessments; collect soil, water, and air samples; characterize contamination extent and risk pathways.",
         "category": "physical",
-        "timeWeight": 0.30,
+        "timeWeight": 0.3,
         "llmExposureTier": "E1",
         "automationRisk": 35,
         "augmentationPotential": 48,
@@ -3873,7 +4084,7 @@
         "name": "Human Health & Ecological Risk Assessment",
         "description": "Quantify exposure pathways and toxicological risks; apply EPA risk assessment frameworks to determine cleanup levels and remedial goals.",
         "category": "cognitive",
-        "timeWeight": 0.20,
+        "timeWeight": 0.2,
         "llmExposureTier": "E2",
         "automationRisk": 52,
         "augmentationPotential": 68,
@@ -3892,10 +4103,30 @@
       }
     ],
     "skills": [
-      { "id": "ee-sk-remediation", "name": "Remediation Technology", "impact": "transformed", "relevance": 90 },
-      { "id": "ee-sk-regulatory", "name": "Environmental Regulatory Compliance", "impact": "transformed", "relevance": 92 },
-      { "id": "ee-sk-risk", "name": "Risk Assessment Methods", "impact": "transformed", "relevance": 85 },
-      { "id": "ee-sk-gis", "name": "GIS & Environmental Modeling", "impact": "gained", "relevance": 78 }
+      {
+        "id": "ee-sk-remediation",
+        "name": "Remediation Technology",
+        "impact": "transformed",
+        "relevance": 90
+      },
+      {
+        "id": "ee-sk-regulatory",
+        "name": "Environmental Regulatory Compliance",
+        "impact": "transformed",
+        "relevance": 92
+      },
+      {
+        "id": "ee-sk-risk",
+        "name": "Risk Assessment Methods",
+        "impact": "transformed",
+        "relevance": 85
+      },
+      {
+        "id": "ee-sk-gis",
+        "name": "GIS & Environmental Modeling",
+        "impact": "gained",
+        "relevance": 78
+      }
     ],
     "exposureScore": {
       "overall": 62,
@@ -3908,8 +4139,14 @@
       "wageEffect": 7,
       "confidence": "medium"
     },
-    "bottleneckTaskIds": ["ee-site-assessment"],
-    "similarOccupationIds": ["nuclear-engineer", "industrial-engineer", "wildlife-biologist"]
+    "bottleneckTaskIds": [
+      "ee-site-assessment"
+    ],
+    "similarOccupationIds": [
+      "nuclear-engineer",
+      "industrial-engineer",
+      "wildlife-biologist"
+    ]
   },
   {
     "id": "renewable-energy-technician",
@@ -3969,7 +4206,7 @@
         "name": "System Performance Monitoring",
         "description": "Monitor SCADA dashboards and performance data; identify underperforming assets and escalate anomalies to engineering teams.",
         "category": "cognitive",
-        "timeWeight": 0.20,
+        "timeWeight": 0.2,
         "llmExposureTier": "E1",
         "automationRisk": 30,
         "augmentationPotential": 45,
@@ -3991,7 +4228,7 @@
         "name": "Safety & Compliance Procedures",
         "description": "Follow OSHA and NFPA 70E electrical safety protocols; complete lockout/tagout procedures, work permits, and safety documentation.",
         "category": "physical",
-        "timeWeight": 0.10,
+        "timeWeight": 0.1,
         "llmExposureTier": "E0",
         "automationRisk": 20,
         "augmentationPotential": 25,
@@ -4010,10 +4247,30 @@
       }
     ],
     "skills": [
-      { "id": "ret-sk-electrical", "name": "Electrical Systems & NEC", "impact": "transformed", "relevance": 90 },
-      { "id": "ret-sk-mechanical", "name": "Mechanical Maintenance", "impact": "displaced", "relevance": 75 },
-      { "id": "ret-sk-scada", "name": "SCADA & Remote Monitoring", "impact": "gained", "relevance": 85 },
-      { "id": "ret-sk-safety", "name": "Electrical Safety (NFPA 70E)", "impact": "gained", "relevance": 80 }
+      {
+        "id": "ret-sk-electrical",
+        "name": "Electrical Systems & NEC",
+        "impact": "transformed",
+        "relevance": 90
+      },
+      {
+        "id": "ret-sk-mechanical",
+        "name": "Mechanical Maintenance",
+        "impact": "displaced",
+        "relevance": 75
+      },
+      {
+        "id": "ret-sk-scada",
+        "name": "SCADA & Remote Monitoring",
+        "impact": "gained",
+        "relevance": 85
+      },
+      {
+        "id": "ret-sk-safety",
+        "name": "Electrical Safety (NFPA 70E)",
+        "impact": "gained",
+        "relevance": 80
+      }
     ],
     "exposureScore": {
       "overall": 35,
@@ -4021,13 +4278,20 @@
       "augmentationPotential": 35,
       "netDisplacement": -13,
       "complementarityScore": 52,
-      "routineTaskIntensity": 1.0,
+      "routineTaskIntensity": 1,
       "timeline": "long-term",
       "wageEffect": 3,
       "confidence": "medium"
     },
-    "bottleneckTaskIds": ["ret-installation", "ret-maintenance"],
-    "similarOccupationIds": ["naval-shipbuilder", "cnc-machine-operator", "quality-control-inspector"]
+    "bottleneckTaskIds": [
+      "ret-installation",
+      "ret-maintenance"
+    ],
+    "similarOccupationIds": [
+      "naval-shipbuilder",
+      "cnc-machine-operator",
+      "quality-control-inspector"
+    ]
   },
   {
     "id": "pharmacist",
@@ -4043,7 +4307,7 @@
         "name": "Prescription Verification & Dispensing",
         "description": "Review, verify, and process prescriptions; perform drug utilization review and check for contraindications, dosing errors, and interactions.",
         "category": "cognitive",
-        "timeWeight": 0.30,
+        "timeWeight": 0.3,
         "llmExposureTier": "E2",
         "automationRisk": 72,
         "augmentationPotential": 78,
@@ -4109,7 +4373,7 @@
         "name": "Pharmacy Operations & Regulatory Compliance",
         "description": "Manage inventory, supervise pharmacy technicians, maintain DEA schedule compliance, and ensure accreditation standards are met.",
         "category": "cognitive",
-        "timeWeight": 0.20,
+        "timeWeight": 0.2,
         "llmExposureTier": "E2",
         "automationRisk": 62,
         "augmentationPotential": 65,
@@ -4128,10 +4392,30 @@
       }
     ],
     "skills": [
-      { "id": "pharm-sk-pharmacotherapy", "name": "Pharmacotherapy & Drug Knowledge", "impact": "transformed", "relevance": 98 },
-      { "id": "pharm-sk-clinical", "name": "Clinical Decision Support", "impact": "transformed", "relevance": 92 },
-      { "id": "pharm-sk-counseling", "name": "Patient Counseling", "impact": "gained", "relevance": 88 },
-      { "id": "pharm-sk-dispensing", "name": "Prescription Processing", "impact": "displaced", "relevance": 70 }
+      {
+        "id": "pharm-sk-pharmacotherapy",
+        "name": "Pharmacotherapy & Drug Knowledge",
+        "impact": "transformed",
+        "relevance": 98
+      },
+      {
+        "id": "pharm-sk-clinical",
+        "name": "Clinical Decision Support",
+        "impact": "transformed",
+        "relevance": 92
+      },
+      {
+        "id": "pharm-sk-counseling",
+        "name": "Patient Counseling",
+        "impact": "gained",
+        "relevance": 88
+      },
+      {
+        "id": "pharm-sk-dispensing",
+        "name": "Prescription Processing",
+        "impact": "displaced",
+        "relevance": 70
+      }
     ],
     "exposureScore": {
       "overall": 69,
@@ -4144,8 +4428,15 @@
       "wageEffect": 4,
       "confidence": "high"
     },
-    "bottleneckTaskIds": ["pharm-patient-counseling", "pharm-mtm"],
-    "similarOccupationIds": ["registered-nurse", "nurse-practitioner", "actuary"]
+    "bottleneckTaskIds": [
+      "pharm-patient-counseling",
+      "pharm-mtm"
+    ],
+    "similarOccupationIds": [
+      "registered-nurse",
+      "nurse-practitioner",
+      "actuary"
+    ]
   },
   {
     "id": "nurse-practitioner",
@@ -4161,7 +4452,7 @@
         "name": "Clinical Diagnosis & Physical Examination",
         "description": "Conduct comprehensive history and physical examinations; formulate differential diagnoses and develop diagnostic workup plans.",
         "category": "physical",
-        "timeWeight": 0.30,
+        "timeWeight": 0.3,
         "llmExposureTier": "E1",
         "automationRisk": 28,
         "augmentationPotential": 58,
@@ -4183,7 +4474,7 @@
         "name": "Treatment Planning & Prescribing",
         "description": "Develop and implement individualized treatment plans; prescribe medications, therapies, and referrals; monitor treatment response.",
         "category": "cognitive",
-        "timeWeight": 0.30,
+        "timeWeight": 0.3,
         "llmExposureTier": "E2",
         "automationRisk": 45,
         "augmentationPotential": 72,
@@ -4246,10 +4537,30 @@
       }
     ],
     "skills": [
-      { "id": "np-sk-clinical", "name": "Advanced Clinical Assessment", "impact": "transformed", "relevance": 98 },
-      { "id": "np-sk-pharmacology", "name": "Advanced Pharmacology", "impact": "transformed", "relevance": 92 },
-      { "id": "np-sk-diagnosis", "name": "Differential Diagnosis", "impact": "transformed", "relevance": 90 },
-      { "id": "np-sk-patient-relationship", "name": "Therapeutic Patient Relationships", "impact": "gained", "relevance": 88 }
+      {
+        "id": "np-sk-clinical",
+        "name": "Advanced Clinical Assessment",
+        "impact": "transformed",
+        "relevance": 98
+      },
+      {
+        "id": "np-sk-pharmacology",
+        "name": "Advanced Pharmacology",
+        "impact": "transformed",
+        "relevance": 92
+      },
+      {
+        "id": "np-sk-diagnosis",
+        "name": "Differential Diagnosis",
+        "impact": "transformed",
+        "relevance": 90
+      },
+      {
+        "id": "np-sk-patient-relationship",
+        "name": "Therapeutic Patient Relationships",
+        "impact": "gained",
+        "relevance": 88
+      }
     ],
     "exposureScore": {
       "overall": 67,
@@ -4262,7 +4573,2452 @@
       "wageEffect": 9,
       "confidence": "medium"
     },
-    "bottleneckTaskIds": ["np-diagnosis", "np-chronic-disease"],
-    "similarOccupationIds": ["registered-nurse", "pharmacist", "physical-therapist"]
+    "bottleneckTaskIds": [
+      "np-diagnosis",
+      "np-chronic-disease"
+    ],
+    "similarOccupationIds": [
+      "registered-nurse",
+      "pharmacist",
+      "physical-therapist"
+    ]
+  },
+  {
+    "id": "lawyers",
+    "title": "Lawyers",
+    "industryId": "legal",
+    "socCode": "23-1011",
+    "medianWage": 135740,
+    "educationLevel": "doctoral",
+    "description": "Lawyers represent clients in criminal and civil litigation and other legal proceedings, draft legal documents, and advise clients on legal transactions and rights. They interpret laws, analyze case precedents, negotiate settlements, and advocate before courts and government agencies. The role demands deep legal expertise, strategic judgment, and strong interpersonal skills across a wide range of practice areas.",
+    "tasks": [
+      {
+        "id": "l-legal-research-analysis",
+        "name": "Legal Research and Case Analysis",
+        "description": "Research statutes, case law, regulations, and legal precedents to assess the merits of a case and develop legal strategy. Synthesize complex multi-source legal information to advise clients and prepare arguments.",
+        "category": "cognitive",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E2",
+        "automationRisk": 71,
+        "augmentationPotential": 86,
+        "automationSubScores": {
+          "routineness": 8,
+          "dataIntensity": 22,
+          "physicalBottleneck": 23,
+          "socialBottleneck": 18
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 25,
+          "decisionSupport": 22,
+          "creativeLeverage": 16,
+          "productivityMultiplier": 23
+        }
+      },
+      {
+        "id": "l-document-drafting-review",
+        "name": "Drafting and Reviewing Legal Documents",
+        "description": "Prepare, draft, and review legal instruments such as contracts, wills, deeds, pleadings, and briefs. Ensure accuracy, compliance with legal standards, and alignment with client objectives.",
+        "category": "cognitive",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E2",
+        "automationRisk": 76,
+        "augmentationPotential": 84,
+        "automationSubScores": {
+          "routineness": 13,
+          "dataIntensity": 20,
+          "physicalBottleneck": 24,
+          "socialBottleneck": 19
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 21,
+          "decisionSupport": 18,
+          "creativeLeverage": 20,
+          "productivityMultiplier": 25
+        }
+      },
+      {
+        "id": "l-client-counsel-advising",
+        "name": "Client Counseling and Legal Advising",
+        "description": "Advise clients on legal rights, obligations, risks, and strategies related to business transactions, disputes, or regulatory matters. Build trust-based relationships requiring nuanced judgment and empathy.",
+        "category": "interpersonal",
+        "timeWeight": 0.2,
+        "llmExposureTier": "E1",
+        "automationRisk": 46,
+        "augmentationPotential": 75,
+        "automationSubScores": {
+          "routineness": 6,
+          "dataIntensity": 16,
+          "physicalBottleneck": 20,
+          "socialBottleneck": 4
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 22,
+          "decisionSupport": 23,
+          "creativeLeverage": 14,
+          "productivityMultiplier": 16
+        }
+      },
+      {
+        "id": "l-courtroom-advocacy",
+        "name": "Courtroom Representation and Oral Advocacy",
+        "description": "Represent clients before courts, tribunals, or government agencies through oral arguments, examination of witnesses, and presentation of evidence. Requires real-time adaptive judgment and persuasive communication.",
+        "category": "interpersonal",
+        "timeWeight": 0.18,
+        "llmExposureTier": "E0",
+        "automationRisk": 30,
+        "augmentationPotential": 69,
+        "automationSubScores": {
+          "routineness": 5,
+          "dataIntensity": 14,
+          "physicalBottleneck": 8,
+          "socialBottleneck": 3
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 18,
+          "decisionSupport": 22,
+          "creativeLeverage": 17,
+          "productivityMultiplier": 12
+        }
+      },
+      {
+        "id": "l-negotiation-settlement",
+        "name": "Negotiation and Settlement",
+        "description": "Negotiate with opposing counsel, parties, and mediators to resolve civil disputes, reach plea agreements, or finalize transactional terms. Requires strategic interpersonal skill, persuasion, and real-time judgment.",
+        "category": "interpersonal",
+        "timeWeight": 0.12,
+        "llmExposureTier": "E1",
+        "automationRisk": 37,
+        "augmentationPotential": 71,
+        "automationSubScores": {
+          "routineness": 5,
+          "dataIntensity": 15,
+          "physicalBottleneck": 14,
+          "socialBottleneck": 3
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 19,
+          "decisionSupport": 23,
+          "creativeLeverage": 15,
+          "productivityMultiplier": 14
+        }
+      }
+    ],
+    "skills": [
+      {
+        "id": "legal-research",
+        "name": "Legal Research",
+        "impact": "transformed",
+        "relevance": 95
+      },
+      {
+        "id": "document-drafting",
+        "name": "Legal Document Drafting",
+        "impact": "transformed",
+        "relevance": 92
+      },
+      {
+        "id": "critical-thinking",
+        "name": "Critical Thinking",
+        "impact": "gained",
+        "relevance": 90
+      },
+      {
+        "id": "reading-comprehension",
+        "name": "Reading Comprehension",
+        "impact": "transformed",
+        "relevance": 88
+      },
+      {
+        "id": "oral-advocacy",
+        "name": "Oral Advocacy and Persuasion",
+        "impact": "gained",
+        "relevance": 85
+      },
+      {
+        "id": "negotiation",
+        "name": "Negotiation",
+        "impact": "gained",
+        "relevance": 82
+      },
+      {
+        "id": "writing",
+        "name": "Legal Writing",
+        "impact": "transformed",
+        "relevance": 80
+      },
+      {
+        "id": "case-strategy",
+        "name": "Case Strategy Development",
+        "impact": "gained",
+        "relevance": 88
+      },
+      {
+        "id": "client-relations",
+        "name": "Client Relationship Management",
+        "impact": "gained",
+        "relevance": 78
+      },
+      {
+        "id": "ai-tool-proficiency",
+        "name": "AI-Assisted Legal Tool Proficiency",
+        "impact": "gained",
+        "relevance": 75
+      },
+      {
+        "id": "document-review",
+        "name": "Document Review and Due Diligence",
+        "impact": "displaced",
+        "relevance": 70
+      }
+    ],
+    "exposureScore": {
+      "overall": 78,
+      "automationRisk": 56,
+      "augmentationPotential": 78,
+      "netDisplacement": -23,
+      "complementarityScore": 72,
+      "routineTaskIntensity": -1.42,
+      "timeline": "mid-term",
+      "wageEffect": 8,
+      "confidence": "high"
+    },
+    "bottleneckTaskIds": [
+      "l-courtroom-advocacy",
+      "l-negotiation-settlement"
+    ],
+    "similarOccupationIds": [
+      "financial-analyst",
+      "intelligence-analyst",
+      "program-analyst",
+      "accountant",
+      "insurance-adjuster"
+    ]
+  },
+  {
+    "id": "paralegals-and-legal-assistants",
+    "title": "Paralegals and Legal Assistants",
+    "industryId": "legal",
+    "socCode": "23-2011",
+    "medianWage": 59200,
+    "educationLevel": "associate",
+    "description": "Paralegals and legal assistants support attorneys by researching legal precedent, drafting and organizing legal documents, and managing case files. They conduct factual investigations, communicate with clients and court personnel, and prepare materials for trials and hearings. The role is heavily document- and research-intensive, operating almost entirely in digital and office environments.",
+    "tasks": [
+      {
+        "id": "pala-legal-doc-drafting",
+        "name": "Drafting and Editing Legal Documents",
+        "description": "Prepare, edit, and review legal documents including briefs, pleadings, contracts, wills, and correspondence. Organize and maintain documents in paper or electronic filing systems.",
+        "category": "cognitive",
+        "timeWeight": 0.3,
+        "llmExposureTier": "E1",
+        "automationRisk": 71,
+        "augmentationPotential": 77,
+        "automationSubScores": {
+          "routineness": 14,
+          "dataIntensity": 18,
+          "physicalBottleneck": 23,
+          "socialBottleneck": 16
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 18,
+          "decisionSupport": 16,
+          "creativeLeverage": 20,
+          "productivityMultiplier": 23
+        }
+      },
+      {
+        "id": "pala-legal-research",
+        "name": "Legal Research and Case Investigation",
+        "description": "Investigate facts and law of cases by searching statutes, case decisions, public records, and legal databases to determine causes of action and support case strategy. Gather and analyze legal articles, codes, and documents.",
+        "category": "cognitive",
+        "timeWeight": 0.28,
+        "llmExposureTier": "E2",
+        "automationRisk": 75,
+        "augmentationPotential": 80,
+        "automationSubScores": {
+          "routineness": 10,
+          "dataIntensity": 21,
+          "physicalBottleneck": 24,
+          "socialBottleneck": 20
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 24,
+          "decisionSupport": 20,
+          "creativeLeverage": 14,
+          "productivityMultiplier": 22
+        }
+      },
+      {
+        "id": "pala-trial-preparation",
+        "name": "Trial and Hearing Preparation",
+        "description": "Organize exhibits, prepare trial binders, file pleadings with court clerks, and coordinate logistics such as subpoena delivery and witness scheduling. Ensure all materials are accurate and submitted on time.",
+        "category": "cognitive",
+        "timeWeight": 0.2,
+        "llmExposureTier": "E2",
+        "automationRisk": 68,
+        "augmentationPotential": 62,
+        "automationSubScores": {
+          "routineness": 17,
+          "dataIntensity": 16,
+          "physicalBottleneck": 18,
+          "socialBottleneck": 17
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 16,
+          "decisionSupport": 15,
+          "creativeLeverage": 10,
+          "productivityMultiplier": 21
+        }
+      },
+      {
+        "id": "pala-client-professional-communication",
+        "name": "Client and Professional Communication",
+        "description": "Meet with clients, attorneys, witnesses, and other professionals to discuss case details, gather information, and relay updates. Conduct telephone and written correspondence with courts, opposing counsel, and external parties.",
+        "category": "interpersonal",
+        "timeWeight": 0.14,
+        "llmExposureTier": "E0",
+        "automationRisk": 41,
+        "augmentationPotential": 51,
+        "automationSubScores": {
+          "routineness": 9,
+          "dataIntensity": 12,
+          "physicalBottleneck": 15,
+          "socialBottleneck": 5
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 14,
+          "decisionSupport": 13,
+          "creativeLeverage": 10,
+          "productivityMultiplier": 14
+        }
+      },
+      {
+        "id": "pala-admin-case-management",
+        "name": "Administrative and Case Management",
+        "description": "Direct and coordinate law office activities, manage calendars and deadlines, maintain filing systems, and perform administrative tasks such as billing support and records management.",
+        "category": "cognitive",
+        "timeWeight": 0.08,
+        "llmExposureTier": "E2",
+        "automationRisk": 76,
+        "augmentationPotential": 50,
+        "automationSubScores": {
+          "routineness": 20,
+          "dataIntensity": 15,
+          "physicalBottleneck": 23,
+          "socialBottleneck": 18
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 12,
+          "decisionSupport": 11,
+          "creativeLeverage": 7,
+          "productivityMultiplier": 20
+        }
+      }
+    ],
+    "skills": [
+      {
+        "id": "writing",
+        "name": "Legal Writing",
+        "impact": "transformed",
+        "relevance": 92
+      },
+      {
+        "id": "reading-comprehension",
+        "name": "Reading Comprehension",
+        "impact": "transformed",
+        "relevance": 88
+      },
+      {
+        "id": "legal-research",
+        "name": "Legal Research",
+        "impact": "transformed",
+        "relevance": 90
+      },
+      {
+        "id": "critical-thinking",
+        "name": "Critical Thinking",
+        "impact": "gained",
+        "relevance": 82
+      },
+      {
+        "id": "active-listening",
+        "name": "Active Listening",
+        "impact": "gained",
+        "relevance": 75
+      },
+      {
+        "id": "document-management",
+        "name": "Document Management",
+        "impact": "displaced",
+        "relevance": 70
+      },
+      {
+        "id": "complex-problem-solving",
+        "name": "Complex Problem Solving",
+        "impact": "gained",
+        "relevance": 68
+      },
+      {
+        "id": "ai-tool-proficiency",
+        "name": "AI Tool Proficiency (LegalTech)",
+        "impact": "gained",
+        "relevance": 85
+      },
+      {
+        "id": "speaking",
+        "name": "Speaking and Client Communication",
+        "impact": "gained",
+        "relevance": 72
+      },
+      {
+        "id": "judgment-decision-making",
+        "name": "Judgment and Decision Making",
+        "impact": "transformed",
+        "relevance": 65
+      }
+    ],
+    "exposureScore": {
+      "overall": 69,
+      "automationRisk": 68,
+      "augmentationPotential": 69,
+      "netDisplacement": -1,
+      "complementarityScore": 78,
+      "routineTaskIntensity": -0.41,
+      "timeline": "near-term",
+      "wageEffect": 8,
+      "confidence": "high"
+    },
+    "bottleneckTaskIds": [
+      "pala-client-professional-communication",
+      "pala-trial-preparation"
+    ],
+    "similarOccupationIds": [
+      "lawyers",
+      "insurance-adjuster",
+      "loan-officer",
+      "intelligence-analyst",
+      "program-analyst"
+    ]
+  },
+  {
+    "id": "arbitrators-mediators-and-conciliators",
+    "title": "Arbitrators, Mediators, and Conciliators",
+    "industryId": "legal",
+    "socCode": "23-1022",
+    "medianWage": 75050,
+    "educationLevel": "master",
+    "description": "Arbitrators, mediators, and conciliators facilitate negotiation and conflict resolution outside the court system through structured dialogue and legal analysis. They evaluate evidence, apply relevant laws and precedents, and guide disputing parties toward mutually acceptable agreements or binding decisions. The role demands deep interpersonal trust, legal expertise, and nuanced judgment.",
+    "tasks": [
+      {
+        "id": "amac-legal-research-analysis",
+        "name": "Legal Research and Case Analysis",
+        "description": "Research applicable laws, regulations, precedents, and evaluate documentary evidence to prepare for hearings and reach legally sound conclusions. Involves synthesizing complex multi-source legal information.",
+        "category": "cognitive",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E2",
+        "automationRisk": 71,
+        "augmentationPotential": 80,
+        "automationSubScores": {
+          "routineness": 10,
+          "dataIntensity": 21,
+          "physicalBottleneck": 22,
+          "socialBottleneck": 18
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 24,
+          "decisionSupport": 22,
+          "creativeLeverage": 12,
+          "productivityMultiplier": 22
+        }
+      },
+      {
+        "id": "amac-written-opinions-decisions",
+        "name": "Drafting Written Opinions and Decisions",
+        "description": "Prepare formal written opinions, rulings, and decisions that articulate legal reasoning, findings of fact, and conclusions. Requires precise legal writing and structured argumentation.",
+        "category": "cognitive",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E1",
+        "automationRisk": 72,
+        "augmentationPotential": 82,
+        "automationSubScores": {
+          "routineness": 11,
+          "dataIntensity": 18,
+          "physicalBottleneck": 23,
+          "socialBottleneck": 20
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 22,
+          "decisionSupport": 21,
+          "creativeLeverage": 16,
+          "productivityMultiplier": 23
+        }
+      },
+      {
+        "id": "amac-mediation-facilitation",
+        "name": "Mediation and Dispute Facilitation",
+        "description": "Conduct hearings and mediation sessions, using interpersonal techniques to facilitate communication between disputants, clarify issues, and guide parties toward mutual agreement. Requires deep social perceptiveness and trust-building.",
+        "category": "interpersonal",
+        "timeWeight": 0.3,
+        "llmExposureTier": "E0",
+        "automationRisk": 33,
+        "augmentationPotential": 60,
+        "automationSubScores": {
+          "routineness": 6,
+          "dataIntensity": 10,
+          "physicalBottleneck": 14,
+          "socialBottleneck": 3
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 16,
+          "decisionSupport": 20,
+          "creativeLeverage": 14,
+          "productivityMultiplier": 10
+        }
+      },
+      {
+        "id": "amac-evidence-compliance-evaluation",
+        "name": "Evidence and Compliance Evaluation",
+        "description": "Evaluate submitted documents, claims, and evidence for compliance with legal standards; rule on admissibility of evidence and procedural motions. Involves structured judgment against defined legal criteria.",
+        "category": "cognitive",
+        "timeWeight": 0.12,
+        "llmExposureTier": "E2",
+        "automationRisk": 73,
+        "augmentationPotential": 72,
+        "automationSubScores": {
+          "routineness": 14,
+          "dataIntensity": 20,
+          "physicalBottleneck": 22,
+          "socialBottleneck": 17
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 21,
+          "decisionSupport": 23,
+          "creativeLeverage": 8,
+          "productivityMultiplier": 20
+        }
+      },
+      {
+        "id": "amac-procedural-case-management",
+        "name": "Procedural and Case Management",
+        "description": "Conduct initial meetings with disputants to outline processes, settle procedural matters such as fees and scheduling, and manage case logistics. Involves moderate routine coordination and communication.",
+        "category": "interpersonal",
+        "timeWeight": 0.08,
+        "llmExposureTier": "E1",
+        "automationRisk": 58,
+        "augmentationPotential": 50,
+        "automationSubScores": {
+          "routineness": 16,
+          "dataIntensity": 12,
+          "physicalBottleneck": 20,
+          "socialBottleneck": 10
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 12,
+          "decisionSupport": 13,
+          "creativeLeverage": 7,
+          "productivityMultiplier": 18
+        }
+      }
+    ],
+    "skills": [
+      {
+        "id": "negotiation",
+        "name": "Negotiation",
+        "impact": "transformed",
+        "relevance": 95
+      },
+      {
+        "id": "active-listening",
+        "name": "Active Listening",
+        "impact": "gained",
+        "relevance": 90
+      },
+      {
+        "id": "legal-writing",
+        "name": "Legal Writing",
+        "impact": "transformed",
+        "relevance": 88
+      },
+      {
+        "id": "reading-comprehension",
+        "name": "Reading Comprehension",
+        "impact": "displaced",
+        "relevance": 82
+      },
+      {
+        "id": "critical-thinking",
+        "name": "Critical Thinking",
+        "impact": "gained",
+        "relevance": 85
+      },
+      {
+        "id": "legal-research",
+        "name": "Legal Research",
+        "impact": "displaced",
+        "relevance": 80
+      },
+      {
+        "id": "social-perceptiveness",
+        "name": "Social Perceptiveness",
+        "impact": "gained",
+        "relevance": 88
+      },
+      {
+        "id": "complex-problem-solving",
+        "name": "Complex Problem Solving",
+        "impact": "transformed",
+        "relevance": 78
+      },
+      {
+        "id": "persuasion",
+        "name": "Persuasion",
+        "impact": "gained",
+        "relevance": 75
+      },
+      {
+        "id": "ai-tool-literacy",
+        "name": "AI Tool Literacy",
+        "impact": "gained",
+        "relevance": 70
+      }
+    ],
+    "exposureScore": {
+      "overall": 71,
+      "automationRisk": 59,
+      "augmentationPotential": 71,
+      "netDisplacement": -12,
+      "complementarityScore": 62,
+      "routineTaskIntensity": -0.87,
+      "timeline": "mid-term",
+      "wageEffect": 8,
+      "confidence": "medium"
+    },
+    "bottleneckTaskIds": [
+      "amac-mediation-facilitation",
+      "amac-procedural-case-management"
+    ],
+    "similarOccupationIds": [
+      "lawyers",
+      "insurance-adjuster",
+      "intelligence-analyst",
+      "program-analyst",
+      "financial-analyst"
+    ]
+  },
+  {
+    "id": "judges-magistrate-judges-and-magistrates",
+    "title": "Judges, Magistrate Judges, and Magistrates",
+    "industryId": "legal",
+    "socCode": "23-1023",
+    "medianWage": 148030,
+    "educationLevel": "doctoral",
+    "description": "Judges preside over legal proceedings in courts of law, arbitrating disputes, ruling on the admissibility of evidence, and administering justice in criminal and civil cases. They interpret and apply statutes, precedents, and constitutional principles to render decisions and write legal opinions. Their role demands deep legal expertise, impartiality, and high-stakes judgment under significant public accountability.",
+    "tasks": [
+      {
+        "id": "jmja-legal-research-opinion-writing",
+        "name": "Legal Research and Opinion Writing",
+        "description": "Judges research applicable statutes, case law, and legal precedents to write formal opinions and decisions on motions, appeals, and cases. This involves synthesizing complex multi-source legal information into authoritative written rulings.",
+        "category": "cognitive",
+        "timeWeight": 0.28,
+        "llmExposureTier": "E2",
+        "automationRisk": 67,
+        "augmentationPotential": 89,
+        "automationSubScores": {
+          "routineness": 6,
+          "dataIntensity": 21,
+          "physicalBottleneck": 22,
+          "socialBottleneck": 18
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 24,
+          "decisionSupport": 22,
+          "creativeLeverage": 20,
+          "productivityMultiplier": 23
+        }
+      },
+      {
+        "id": "jmja-adjudication-sentencing",
+        "name": "Adjudication and Sentencing",
+        "description": "Judges evaluate evidence, apply legal standards, and render binding verdicts or sentences in criminal and civil proceedings. This requires nuanced judgment about facts, credibility, proportionality, and statutory compliance under conditions of high public consequence.",
+        "category": "cognitive",
+        "timeWeight": 0.3,
+        "llmExposureTier": "E0",
+        "automationRisk": 47,
+        "augmentationPotential": 75,
+        "automationSubScores": {
+          "routineness": 5,
+          "dataIntensity": 18,
+          "physicalBottleneck": 20,
+          "socialBottleneck": 4
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 23,
+          "decisionSupport": 25,
+          "creativeLeverage": 12,
+          "productivityMultiplier": 15
+        }
+      },
+      {
+        "id": "jmja-courtroom-proceedings-management",
+        "name": "Courtroom Proceedings Management",
+        "description": "Judges preside over hearings, rule on evidentiary objections, instruct juries, and ensure procedural compliance throughout trials. This task is deeply interpersonal and situationally dynamic, requiring real-time judgment in a public forum.",
+        "category": "interpersonal",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E0",
+        "automationRisk": 32,
+        "augmentationPotential": 58,
+        "automationSubScores": {
+          "routineness": 7,
+          "dataIntensity": 14,
+          "physicalBottleneck": 8,
+          "socialBottleneck": 3
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 18,
+          "decisionSupport": 22,
+          "creativeLeverage": 8,
+          "productivityMultiplier": 10
+        }
+      },
+      {
+        "id": "jmja-case-document-review",
+        "name": "Case Document and Pleading Review",
+        "description": "Judges read and analyze pleadings, motions, briefs, and evidentiary submissions to ascertain facts, legal issues, and procedural posture before and during proceedings. This is a high-volume information-processing task with structured legal inputs.",
+        "category": "cognitive",
+        "timeWeight": 0.12,
+        "llmExposureTier": "E2",
+        "automationRisk": 75,
+        "augmentationPotential": 71,
+        "automationSubScores": {
+          "routineness": 10,
+          "dataIntensity": 22,
+          "physicalBottleneck": 23,
+          "socialBottleneck": 20
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 23,
+          "decisionSupport": 18,
+          "creativeLeverage": 8,
+          "productivityMultiplier": 22
+        }
+      },
+      {
+        "id": "jmja-advisory-counsel-interaction",
+        "name": "Advisory Interaction with Counsel and Court Personnel",
+        "description": "Judges advise attorneys, litigants, juries, and court staff on conduct, procedural issues, and legal standards, often in real-time during proceedings or in pre-trial conferences. This task is fundamentally interpersonal and authority-dependent.",
+        "category": "interpersonal",
+        "timeWeight": 0.05,
+        "llmExposureTier": "E0",
+        "automationRisk": 33,
+        "augmentationPotential": 50,
+        "automationSubScores": {
+          "routineness": 8,
+          "dataIntensity": 12,
+          "physicalBottleneck": 10,
+          "socialBottleneck": 3
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 16,
+          "decisionSupport": 18,
+          "creativeLeverage": 7,
+          "productivityMultiplier": 9
+        }
+      }
+    ],
+    "skills": [
+      {
+        "id": "critical-thinking",
+        "name": "Critical Thinking",
+        "impact": "transformed",
+        "relevance": 98
+      },
+      {
+        "id": "legal-research",
+        "name": "Legal Research",
+        "impact": "transformed",
+        "relevance": 95
+      },
+      {
+        "id": "opinion-writing",
+        "name": "Legal Opinion Writing",
+        "impact": "transformed",
+        "relevance": 92
+      },
+      {
+        "id": "active-listening",
+        "name": "Active Listening",
+        "impact": "gained",
+        "relevance": 90
+      },
+      {
+        "id": "judgment-decision-making",
+        "name": "Judgment and Decision Making",
+        "impact": "gained",
+        "relevance": 88
+      },
+      {
+        "id": "reading-comprehension",
+        "name": "Reading Comprehension",
+        "impact": "displaced",
+        "relevance": 85
+      },
+      {
+        "id": "social-perceptiveness",
+        "name": "Social Perceptiveness",
+        "impact": "gained",
+        "relevance": 80
+      },
+      {
+        "id": "complex-problem-solving",
+        "name": "Complex Problem Solving",
+        "impact": "transformed",
+        "relevance": 78
+      },
+      {
+        "id": "document-review",
+        "name": "Document Review and Summarization",
+        "impact": "displaced",
+        "relevance": 75
+      },
+      {
+        "id": "ai-tool-literacy",
+        "name": "AI-Assisted Legal Research Literacy",
+        "impact": "gained",
+        "relevance": 70
+      }
+    ],
+    "exposureScore": {
+      "overall": 73,
+      "automationRisk": 52,
+      "augmentationPotential": 73,
+      "netDisplacement": -21,
+      "complementarityScore": 62,
+      "routineTaskIntensity": -1.47,
+      "timeline": "long-term",
+      "wageEffect": 5,
+      "confidence": "medium"
+    },
+    "bottleneckTaskIds": [
+      "jmja-courtroom-proceedings-management",
+      "jmja-advisory-counsel-interaction"
+    ],
+    "similarOccupationIds": [
+      "lawyers",
+      "intelligence-analyst",
+      "program-analyst"
+    ]
+  },
+  {
+    "id": "logisticians",
+    "title": "Logisticians",
+    "industryId": "transportation",
+    "socCode": "13-1081",
+    "medianWage": 79400,
+    "educationLevel": "bachelor",
+    "description": "Logisticians analyze and coordinate the logistical functions of a firm or organization, managing the entire life cycle of a product from acquisition through final disposal. They are responsible for optimizing supply chains, managing vendor relationships, and ensuring timely delivery of resources. In the transportation industry, they balance cost efficiency with service-level requirements across complex distribution networks.",
+    "tasks": [
+      {
+        "id": "l-supply-chain-analysis",
+        "name": "Supply Chain Analysis and Optimization",
+        "description": "Analyze logistics performance data, review benchmarks against service agreements, and redesign movement of goods to maximize value and minimize costs. Involves processing structured data from multiple systems to identify inefficiencies.",
+        "category": "cognitive",
+        "timeWeight": 0.28,
+        "llmExposureTier": "E2",
+        "automationRisk": 69,
+        "augmentationPotential": 81,
+        "automationSubScores": {
+          "routineness": 12,
+          "dataIntensity": 20,
+          "physicalBottleneck": 21,
+          "socialBottleneck": 16
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 22,
+          "decisionSupport": 21,
+          "creativeLeverage": 16,
+          "productivityMultiplier": 22
+        }
+      },
+      {
+        "id": "l-customer-relationship-management",
+        "name": "Customer and Stakeholder Relationship Management",
+        "description": "Maintain and develop positive business relationships with key customer personnel, understand customer needs, and explain proposed logistics solutions through written proposals and oral presentations. Requires sustained interpersonal trust and negotiation.",
+        "category": "interpersonal",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E1",
+        "automationRisk": 43,
+        "augmentationPotential": 70,
+        "automationSubScores": {
+          "routineness": 9,
+          "dataIntensity": 11,
+          "physicalBottleneck": 18,
+          "socialBottleneck": 5
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 17,
+          "decisionSupport": 16,
+          "creativeLeverage": 18,
+          "productivityMultiplier": 19
+        }
+      },
+      {
+        "id": "l-materials-allocation-direction",
+        "name": "Materials and Resource Allocation Direction",
+        "description": "Direct the availability and allocation of materials, supplies, and finished products across the supply chain. Involves scheduling, tracking inventory levels, and making real-time decisions about resource distribution.",
+        "category": "cognitive",
+        "timeWeight": 0.22,
+        "llmExposureTier": "E2",
+        "automationRisk": 69,
+        "augmentationPotential": 73,
+        "automationSubScores": {
+          "routineness": 16,
+          "dataIntensity": 19,
+          "physicalBottleneck": 20,
+          "socialBottleneck": 14
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 19,
+          "decisionSupport": 22,
+          "creativeLeverage": 11,
+          "productivityMultiplier": 21
+        }
+      },
+      {
+        "id": "l-subcontractor-proposal-management",
+        "name": "Subcontractor and Proposal Management",
+        "description": "Manage subcontractor activities by reviewing proposals, developing performance specifications, and serving as liaison between subcontractors and the organization. Includes drafting documentation and estimates for logistics proposals.",
+        "category": "cognitive",
+        "timeWeight": 0.15,
+        "llmExposureTier": "E1",
+        "automationRisk": 60,
+        "augmentationPotential": 76,
+        "automationSubScores": {
+          "routineness": 13,
+          "dataIntensity": 15,
+          "physicalBottleneck": 20,
+          "socialBottleneck": 12
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 18,
+          "decisionSupport": 17,
+          "creativeLeverage": 19,
+          "productivityMultiplier": 22
+        }
+      },
+      {
+        "id": "l-team-leadership-operations",
+        "name": "Team Leadership and Operational Oversight",
+        "description": "Direct team activities by establishing task priorities, scheduling and tracking work assignments, providing guidance, and overseeing facility and staffing needs. Involves hiring, training, and performance management of logistics personnel.",
+        "category": "interpersonal",
+        "timeWeight": 0.1,
+        "llmExposureTier": "E1",
+        "automationRisk": 39,
+        "augmentationPotential": 61,
+        "automationSubScores": {
+          "routineness": 8,
+          "dataIntensity": 10,
+          "physicalBottleneck": 17,
+          "socialBottleneck": 4
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 14,
+          "decisionSupport": 18,
+          "creativeLeverage": 13,
+          "productivityMultiplier": 16
+        }
+      }
+    ],
+    "skills": [
+      {
+        "id": "critical-thinking",
+        "name": "Critical Thinking",
+        "impact": "transformed",
+        "relevance": 90
+      },
+      {
+        "id": "data-analysis",
+        "name": "Data Analysis and Interpretation",
+        "impact": "transformed",
+        "relevance": 88
+      },
+      {
+        "id": "coordination",
+        "name": "Coordination and Scheduling",
+        "impact": "displaced",
+        "relevance": 82
+      },
+      {
+        "id": "complex-problem-solving",
+        "name": "Complex Problem Solving",
+        "impact": "transformed",
+        "relevance": 85
+      },
+      {
+        "id": "active-listening",
+        "name": "Active Listening and Communication",
+        "impact": "gained",
+        "relevance": 78
+      },
+      {
+        "id": "proposal-writing",
+        "name": "Proposal and Documentation Writing",
+        "impact": "displaced",
+        "relevance": 72
+      },
+      {
+        "id": "supply-chain-software",
+        "name": "Supply Chain Management Software Proficiency",
+        "impact": "transformed",
+        "relevance": 86
+      },
+      {
+        "id": "ai-tool-oversight",
+        "name": "AI Tool Oversight and Prompt Engineering",
+        "impact": "gained",
+        "relevance": 75
+      },
+      {
+        "id": "vendor-negotiation",
+        "name": "Vendor and Subcontractor Negotiation",
+        "impact": "gained",
+        "relevance": 80
+      },
+      {
+        "id": "monitoring",
+        "name": "Performance Monitoring and Benchmarking",
+        "impact": "displaced",
+        "relevance": 76
+      }
+    ],
+    "exposureScore": {
+      "overall": 74,
+      "automationRisk": 58,
+      "augmentationPotential": 74,
+      "netDisplacement": -16,
+      "complementarityScore": 72,
+      "routineTaskIntensity": -0.41,
+      "timeline": "mid-term",
+      "wageEffect": 8,
+      "confidence": "high"
+    },
+    "bottleneckTaskIds": [
+      "l-team-leadership-operations",
+      "l-customer-relationship-management"
+    ],
+    "similarOccupationIds": [
+      "procurement-analyst",
+      "industrial-engineer",
+      "program-analyst",
+      "financial-analyst",
+      "quality-control-inspector"
+    ]
+  },
+  {
+    "id": "heavy-and-tractor-trailer-truck-drivers",
+    "title": "Heavy and Tractor-Trailer Truck Drivers",
+    "industryId": "transportation",
+    "socCode": "53-3032",
+    "medianWage": 54320,
+    "educationLevel": "high-school",
+    "description": "Heavy and tractor-trailer truck drivers operate large commercial vehicles with a GVW of at least 26,001 pounds to transport goods across local, regional, or national routes. They are responsible for vehicle inspection, cargo security, regulatory compliance, and maintaining accurate logs. The role requires a commercial driver's license and combines physical operation with administrative documentation duties.",
+    "tasks": [
+      {
+        "id": "hatt-vehicle-operation",
+        "name": "Operating and Navigating the Vehicle",
+        "description": "Drive a tractor-trailer combination over long or short distances, making real-time decisions about route, traffic, weather, and road conditions. Requires continuous physical control and situational awareness.",
+        "category": "physical",
+        "timeWeight": 0.45,
+        "llmExposureTier": "E0",
+        "automationRisk": 38,
+        "augmentationPotential": 41,
+        "automationSubScores": {
+          "routineness": 10,
+          "dataIntensity": 8,
+          "physicalBottleneck": 2,
+          "socialBottleneck": 18
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 14,
+          "decisionSupport": 16,
+          "creativeLeverage": 3,
+          "productivityMultiplier": 8
+        }
+      },
+      {
+        "id": "hatt-vehicle-inspection-maintenance",
+        "name": "Pre/Post-Trip Inspection and Basic Maintenance",
+        "description": "Inspect mechanical, safety, and emergency equipment before and after trips; perform minor maintenance tasks such as adding fluids, checking tires, and coupling/uncoupling trailers. Identifies defects and reports them per federal regulations.",
+        "category": "physical",
+        "timeWeight": 0.2,
+        "llmExposureTier": "E0",
+        "automationRisk": 49,
+        "augmentationPotential": 33,
+        "automationSubScores": {
+          "routineness": 17,
+          "dataIntensity": 9,
+          "physicalBottleneck": 3,
+          "socialBottleneck": 20
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 10,
+          "decisionSupport": 12,
+          "creativeLeverage": 2,
+          "productivityMultiplier": 9
+        }
+      },
+      {
+        "id": "hatt-cargo-documentation",
+        "name": "Cargo Verification and Documentation",
+        "description": "Check bills of lading, load documentation, and receipts for completeness and accuracy; inspect cargo to ensure it is properly secured and compliant with regulations. Obtain signatures and collect payments upon delivery.",
+        "category": "cognitive",
+        "timeWeight": 0.15,
+        "llmExposureTier": "E1",
+        "automationRisk": 64,
+        "augmentationPotential": 49,
+        "automationSubScores": {
+          "routineness": 19,
+          "dataIntensity": 14,
+          "physicalBottleneck": 14,
+          "socialBottleneck": 17
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 15,
+          "decisionSupport": 13,
+          "creativeLeverage": 4,
+          "productivityMultiplier": 17
+        }
+      },
+      {
+        "id": "hatt-hours-of-service-logging",
+        "name": "Hours-of-Service and Regulatory Logging",
+        "description": "Maintain accurate logs of working hours, vehicle service status, and repair records in compliance with applicable state and federal regulations (e.g., FMCSA ELD mandates). Report accidents, violations, and defects.",
+        "category": "cognitive",
+        "timeWeight": 0.12,
+        "llmExposureTier": "E2",
+        "automationRisk": 80,
+        "augmentationPotential": 45,
+        "automationSubScores": {
+          "routineness": 22,
+          "dataIntensity": 16,
+          "physicalBottleneck": 20,
+          "socialBottleneck": 22
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 12,
+          "decisionSupport": 10,
+          "creativeLeverage": 3,
+          "productivityMultiplier": 20
+        }
+      },
+      {
+        "id": "hatt-communication-coordination",
+        "name": "Communication with Dispatchers and Customers",
+        "description": "Communicate with supervisors, dispatchers, and customers regarding delivery status, route changes, delays, and special instructions. Involves speaking, active listening, and occasional problem resolution.",
+        "category": "interpersonal",
+        "timeWeight": 0.08,
+        "llmExposureTier": "E1",
+        "automationRisk": 50,
+        "augmentationPotential": 39,
+        "automationSubScores": {
+          "routineness": 13,
+          "dataIntensity": 9,
+          "physicalBottleneck": 20,
+          "socialBottleneck": 8
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 11,
+          "decisionSupport": 10,
+          "creativeLeverage": 5,
+          "productivityMultiplier": 13
+        }
+      }
+    ],
+    "skills": [
+      {
+        "id": "operation-control",
+        "name": "Operation and Control of Heavy Vehicles",
+        "impact": "displaced",
+        "relevance": 92
+      },
+      {
+        "id": "operations-monitoring",
+        "name": "Operations Monitoring",
+        "impact": "transformed",
+        "relevance": 80
+      },
+      {
+        "id": "regulatory-compliance",
+        "name": "Regulatory Compliance and Logging",
+        "impact": "displaced",
+        "relevance": 75
+      },
+      {
+        "id": "critical-thinking",
+        "name": "Critical Thinking and Route Decision-Making",
+        "impact": "transformed",
+        "relevance": 65
+      },
+      {
+        "id": "equipment-maintenance",
+        "name": "Equipment Maintenance and Troubleshooting",
+        "impact": "transformed",
+        "relevance": 60
+      },
+      {
+        "id": "time-management",
+        "name": "Time Management and Scheduling",
+        "impact": "displaced",
+        "relevance": 58
+      },
+      {
+        "id": "reading-comprehension",
+        "name": "Reading Comprehension (Bills of Lading, Regulations)",
+        "impact": "displaced",
+        "relevance": 55
+      },
+      {
+        "id": "communication",
+        "name": "Interpersonal Communication with Dispatchers/Customers",
+        "impact": "transformed",
+        "relevance": 50
+      }
+    ],
+    "exposureScore": {
+      "overall": 50,
+      "automationRisk": 50,
+      "augmentationPotential": 41,
+      "netDisplacement": 9,
+      "complementarityScore": 28,
+      "routineTaskIntensity": 0.41,
+      "timeline": "long-term",
+      "wageEffect": -12,
+      "confidence": "medium"
+    },
+    "bottleneckTaskIds": [
+      "hatt-vehicle-operation",
+      "hatt-vehicle-inspection-maintenance"
+    ],
+    "similarOccupationIds": [
+      "assembly-line-worker",
+      "quality-control-inspector",
+      "cnc-machine-operator",
+      "renewable-energy-technician"
+    ]
+  },
+  {
+    "id": "airline-pilots-copilots-and-flight-engineers",
+    "title": "Airline Pilots, Copilots, and Flight Engineers",
+    "industryId": "transportation",
+    "socCode": "53-2011",
+    "medianWage": 171000,
+    "educationLevel": "associate",
+    "description": "Airline pilots operate fixed-wing aircraft on scheduled carrier routes, transporting passengers and cargo under strict federal regulations and safety protocols. They are responsible for pre-flight inspections, navigation, crew coordination, and emergency response. The role demands continuous real-time judgment, physical control of complex machinery, and high-stakes decision-making under time pressure.",
+    "tasks": [
+      {
+        "id": "apca-aircraft-operation-navigation",
+        "name": "Aircraft Operation and Navigation",
+        "description": "Pilots start engines, operate flight controls, and navigate aircraft along planned routes using autopilot systems, flight management computers, and instrumentation. This is the core physical-cognitive task occupying the majority of flight time.",
+        "category": "physical",
+        "timeWeight": 0.35,
+        "llmExposureTier": "E0",
+        "automationRisk": 46,
+        "augmentationPotential": 52,
+        "automationSubScores": {
+          "routineness": 10,
+          "dataIntensity": 16,
+          "physicalBottleneck": 2,
+          "socialBottleneck": 18
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 18,
+          "decisionSupport": 20,
+          "creativeLeverage": 4,
+          "productivityMultiplier": 10
+        }
+      },
+      {
+        "id": "apca-systems-monitoring",
+        "name": "In-Flight Systems and Performance Monitoring",
+        "description": "Pilots continuously monitor engine operation, fuel consumption, gauges, warning devices, and control panels to verify aircraft performance and detect anomalies. This involves interpreting rich structured sensor data in real time.",
+        "category": "cognitive",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E2",
+        "automationRisk": 61,
+        "augmentationPotential": 61,
+        "automationSubScores": {
+          "routineness": 14,
+          "dataIntensity": 22,
+          "physicalBottleneck": 5,
+          "socialBottleneck": 20
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 21,
+          "decisionSupport": 19,
+          "creativeLeverage": 5,
+          "productivityMultiplier": 16
+        }
+      },
+      {
+        "id": "apca-emergency-response",
+        "name": "Emergency Response and Malfunction Management",
+        "description": "Pilots respond to in-flight emergencies and malfunctions, applying trained procedures while exercising real-time judgment under extreme time pressure. This task is highly novel and safety-critical, requiring deep situational awareness and crew coordination.",
+        "category": "cognitive",
+        "timeWeight": 0.1,
+        "llmExposureTier": "E0",
+        "automationRisk": 25,
+        "augmentationPotential": 60,
+        "automationSubScores": {
+          "routineness": 4,
+          "dataIntensity": 14,
+          "physicalBottleneck": 2,
+          "socialBottleneck": 5
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 20,
+          "decisionSupport": 24,
+          "creativeLeverage": 8,
+          "productivityMultiplier": 8
+        }
+      },
+      {
+        "id": "apca-preflight-inspection",
+        "name": "Pre-Flight Inspection and Weight/Balance Verification",
+        "description": "Pilots inspect aircraft for defects and malfunctions using standardized checklists and verify passenger, cargo, and fuel distributions to ensure weight and balance specifications are met. This is a structured, procedural task with physical on-site requirements.",
+        "category": "physical",
+        "timeWeight": 0.15,
+        "llmExposureTier": "E0",
+        "automationRisk": 56,
+        "augmentationPotential": 44,
+        "automationSubScores": {
+          "routineness": 18,
+          "dataIntensity": 15,
+          "physicalBottleneck": 3,
+          "socialBottleneck": 20
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 13,
+          "decisionSupport": 14,
+          "creativeLeverage": 3,
+          "productivityMultiplier": 14
+        }
+      },
+      {
+        "id": "apca-crew-atc-coordination",
+        "name": "Crew and Air Traffic Control Coordination",
+        "description": "Pilots work as part of a flight team with crew members and communicate with air traffic control towers for clearances, arrival instructions, and situational updates via radio. This task is deeply interpersonal and safety-critical, requiring precise verbal communication and teamwork.",
+        "category": "interpersonal",
+        "timeWeight": 0.15,
+        "llmExposureTier": "E0",
+        "automationRisk": 30,
+        "augmentationPotential": 42,
+        "automationSubScores": {
+          "routineness": 12,
+          "dataIntensity": 10,
+          "physicalBottleneck": 4,
+          "socialBottleneck": 4
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 14,
+          "decisionSupport": 16,
+          "creativeLeverage": 4,
+          "productivityMultiplier": 8
+        }
+      }
+    ],
+    "skills": [
+      {
+        "id": "operation-control",
+        "name": "Operation and Control of Aircraft Systems",
+        "impact": "transformed",
+        "relevance": 97
+      },
+      {
+        "id": "operations-monitoring",
+        "name": "Operations Monitoring",
+        "impact": "transformed",
+        "relevance": 91
+      },
+      {
+        "id": "critical-thinking",
+        "name": "Critical Thinking and Judgment",
+        "impact": "gained",
+        "relevance": 78
+      },
+      {
+        "id": "active-listening",
+        "name": "Active Listening and Communication",
+        "impact": "displaced",
+        "relevance": 78
+      },
+      {
+        "id": "time-management",
+        "name": "Time Management Under Pressure",
+        "impact": "transformed",
+        "relevance": 72
+      },
+      {
+        "id": "situational-awareness",
+        "name": "Situational Awareness and Threat Detection",
+        "impact": "gained",
+        "relevance": 90
+      },
+      {
+        "id": "checklist-compliance",
+        "name": "Procedural Checklist Compliance",
+        "impact": "displaced",
+        "relevance": 70
+      }
+    ],
+    "exposureScore": {
+      "overall": 52,
+      "automationRisk": 47,
+      "augmentationPotential": 52,
+      "netDisplacement": -6,
+      "complementarityScore": 38,
+      "routineTaskIntensity": -0.62,
+      "timeline": "long-term",
+      "wageEffect": -5,
+      "confidence": "medium"
+    },
+    "bottleneckTaskIds": [
+      "apca-emergency-response",
+      "apca-crew-atc-coordination"
+    ],
+    "similarOccupationIds": [
+      "defense-systems-engineer",
+      "nuclear-engineer",
+      "naval-shipbuilder",
+      "industrial-engineer",
+      "quality-control-inspector"
+    ]
+  },
+  {
+    "id": "transportation-storage-and-distribution-managers",
+    "title": "Transportation, Storage, and Distribution Managers",
+    "industryId": "transportation",
+    "socCode": "11-3071",
+    "medianWage": 98560,
+    "educationLevel": "bachelor",
+    "description": "Transportation, Storage, and Distribution Managers plan, direct, and coordinate the movement, storage, and distribution of goods and materials in compliance with organizational policies and government regulations. They oversee warehouse operations, vehicle fleets, and logistics systems while managing staff and collaborating across departments. Often called logistics managers, they balance cost efficiency, safety, and regulatory compliance in complex supply chain environments.",
+    "tasks": [
+      {
+        "id": "tsad-staff-supervision",
+        "name": "Supervise Warehouse and Distribution Staff",
+        "description": "Direct and oversee workers engaged in receiving, storing, testing, and shipping products or materials, ensuring compliance with organizational standards and safety protocols. Involves real-time problem-solving, performance monitoring, and team coordination.",
+        "category": "interpersonal",
+        "timeWeight": 0.28,
+        "llmExposureTier": "E0",
+        "automationRisk": 32,
+        "augmentationPotential": 51,
+        "automationSubScores": {
+          "routineness": 8,
+          "dataIntensity": 10,
+          "physicalBottleneck": 10,
+          "socialBottleneck": 4
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 14,
+          "decisionSupport": 16,
+          "creativeLeverage": 8,
+          "productivityMultiplier": 13
+        }
+      },
+      {
+        "id": "tsad-logistics-analysis",
+        "name": "Analyze Logistics Costs and Efficiency",
+        "description": "Evaluate all aspects of corporate logistics to identify the most cost-effective transportation modes, routing, and carrier options, including financial impact analysis of proposed changes. Synthesizes structured data from multiple systems to support strategic decisions.",
+        "category": "cognitive",
+        "timeWeight": 0.25,
+        "llmExposureTier": "E2",
+        "automationRisk": 71,
+        "augmentationPotential": 79,
+        "automationSubScores": {
+          "routineness": 11,
+          "dataIntensity": 20,
+          "physicalBottleneck": 22,
+          "socialBottleneck": 18
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 22,
+          "decisionSupport": 22,
+          "creativeLeverage": 14,
+          "productivityMultiplier": 21
+        }
+      },
+      {
+        "id": "tsad-compliance-monitoring",
+        "name": "Monitor Regulatory and Policy Compliance",
+        "description": "Ensure staff and operations adhere to administrative policies, safety rules, union contracts, environmental policies, and government regulations. Involves developing, documenting, and enforcing standard and emergency operating procedures.",
+        "category": "cognitive",
+        "timeWeight": 0.22,
+        "llmExposureTier": "E1",
+        "automationRisk": 61,
+        "augmentationPotential": 70,
+        "automationSubScores": {
+          "routineness": 16,
+          "dataIntensity": 15,
+          "physicalBottleneck": 16,
+          "socialBottleneck": 14
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 19,
+          "decisionSupport": 18,
+          "creativeLeverage": 13,
+          "productivityMultiplier": 20
+        }
+      },
+      {
+        "id": "tsad-cross-dept-collaboration",
+        "name": "Cross-Departmental Logistics Integration",
+        "description": "Collaborate with sales, order management, accounting, and shipping departments to integrate logistics with broader business systems and processes. Requires negotiation, relationship management, and translating operational needs into strategic alignment.",
+        "category": "interpersonal",
+        "timeWeight": 0.15,
+        "llmExposureTier": "E1",
+        "automationRisk": 44,
+        "augmentationPotential": 63,
+        "automationSubScores": {
+          "routineness": 7,
+          "dataIntensity": 12,
+          "physicalBottleneck": 20,
+          "socialBottleneck": 5
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 18,
+          "decisionSupport": 17,
+          "creativeLeverage": 12,
+          "productivityMultiplier": 16
+        }
+      },
+      {
+        "id": "tsad-facility-fleet-inspection",
+        "name": "Inspect Facilities, Fleets, and Equipment",
+        "description": "Physically inspect warehouses, vehicle fleets, and equipment to assess conditions and order necessary maintenance, repairs, or replacements. Also includes planning and implementing safety and security programs for warehouse operations.",
+        "category": "physical",
+        "timeWeight": 0.1,
+        "llmExposureTier": "E0",
+        "automationRisk": 40,
+        "augmentationPotential": 48,
+        "automationSubScores": {
+          "routineness": 12,
+          "dataIntensity": 9,
+          "physicalBottleneck": 4,
+          "socialBottleneck": 15
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 13,
+          "decisionSupport": 15,
+          "creativeLeverage": 9,
+          "productivityMultiplier": 11
+        }
+      }
+    ],
+    "skills": [
+      {
+        "id": "complex-problem-solving",
+        "name": "Complex Problem Solving",
+        "impact": "transformed",
+        "relevance": 88
+      },
+      {
+        "id": "data-analysis",
+        "name": "Logistics Data Analysis",
+        "impact": "transformed",
+        "relevance": 85
+      },
+      {
+        "id": "regulatory-compliance",
+        "name": "Regulatory Compliance Management",
+        "impact": "transformed",
+        "relevance": 80
+      },
+      {
+        "id": "active-listening",
+        "name": "Active Listening",
+        "impact": "gained",
+        "relevance": 75
+      },
+      {
+        "id": "negotiation",
+        "name": "Negotiation",
+        "impact": "gained",
+        "relevance": 72
+      },
+      {
+        "id": "coordination",
+        "name": "Workforce Coordination",
+        "impact": "transformed",
+        "relevance": 78
+      },
+      {
+        "id": "document-drafting",
+        "name": "Procedure Documentation and Drafting",
+        "impact": "displaced",
+        "relevance": 70
+      },
+      {
+        "id": "route-optimization",
+        "name": "Route and Cost Optimization",
+        "impact": "displaced",
+        "relevance": 82
+      },
+      {
+        "id": "team-leadership",
+        "name": "Team Leadership and Motivation",
+        "impact": "gained",
+        "relevance": 76
+      },
+      {
+        "id": "critical-thinking",
+        "name": "Critical Thinking",
+        "impact": "transformed",
+        "relevance": 80
+      }
+    ],
+    "exposureScore": {
+      "overall": 64,
+      "automationRisk": 51,
+      "augmentationPotential": 64,
+      "netDisplacement": -13,
+      "complementarityScore": 62,
+      "routineTaskIntensity": -0.41,
+      "timeline": "mid-term",
+      "wageEffect": 5,
+      "confidence": "medium"
+    },
+    "bottleneckTaskIds": [
+      "tsad-staff-supervision",
+      "tsad-facility-fleet-inspection"
+    ],
+    "similarOccupationIds": [
+      "procurement-analyst",
+      "industrial-engineer",
+      "program-analyst",
+      "financial-analyst",
+      "quality-control-inspector"
+    ]
+  },
+  {
+    "id": "writers-and-authors",
+    "title": "Writers and Authors",
+    "industryId": "creative",
+    "socCode": "27-3043",
+    "medianWage": 73690,
+    "educationLevel": "bachelor",
+    "description": "Writers and authors originate and prepare written material including scripts, stories, advertisements, and promotional content across a wide range of media and industries. They research topics, craft narratives or persuasive copy, and collaborate with clients, editors, and creative teams to refine and deliver polished written work. The role demands strong command of language, audience awareness, and creative ideation.",
+    "tasks": [
+      {
+        "id": "waa-creative-drafting",
+        "name": "Creative Writing and Content Drafting",
+        "description": "Compose original written material including stories, scripts, articles, and promotional copy, adapting tone and style to suit the medium and audience. This is the core creative output of the occupation.",
+        "category": "cognitive",
+        "timeWeight": 0.35,
+        "llmExposureTier": "E1",
+        "automationRisk": 56,
+        "augmentationPotential": 78,
+        "automationSubScores": {
+          "routineness": 6,
+          "dataIntensity": 10,
+          "physicalBottleneck": 23,
+          "socialBottleneck": 17
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 18,
+          "decisionSupport": 14,
+          "creativeLeverage": 24,
+          "productivityMultiplier": 22
+        }
+      },
+      {
+        "id": "waa-research-ideation",
+        "name": "Research and Ideation",
+        "description": "Gather factual information, review consumer surveys, advertising trends, and conduct interviews to inform written content and identify the most compelling angles or selling features. Synthesizes diverse sources into coherent creative direction.",
+        "category": "cognitive",
+        "timeWeight": 0.2,
+        "llmExposureTier": "E2",
+        "automationRisk": 64,
+        "augmentationPotential": 78,
+        "automationSubScores": {
+          "routineness": 8,
+          "dataIntensity": 18,
+          "physicalBottleneck": 22,
+          "socialBottleneck": 16
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 24,
+          "decisionSupport": 16,
+          "creativeLeverage": 18,
+          "productivityMultiplier": 20
+        }
+      },
+      {
+        "id": "waa-client-collaboration",
+        "name": "Client Consultation and Presentation",
+        "description": "Present drafts and creative concepts to clients, discuss advertising themes and methods, and incorporate feedback to align written work with client goals and brand identity. Requires persuasion, active listening, and interpersonal trust.",
+        "category": "interpersonal",
+        "timeWeight": 0.2,
+        "llmExposureTier": "E0",
+        "automationRisk": 36,
+        "augmentationPotential": 52,
+        "automationSubScores": {
+          "routineness": 9,
+          "dataIntensity": 8,
+          "physicalBottleneck": 14,
+          "socialBottleneck": 5
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 14,
+          "decisionSupport": 16,
+          "creativeLeverage": 12,
+          "productivityMultiplier": 10
+        }
+      },
+      {
+        "id": "waa-campaign-strategy",
+        "name": "Advertising Campaign Development",
+        "description": "Develop overarching advertising campaigns in collaboration with creative directors and art directors, determining messaging strategy, tone, and channel-specific adaptations. Involves high-level creative and strategic decision-making.",
+        "category": "cognitive",
+        "timeWeight": 0.15,
+        "llmExposureTier": "E2",
+        "automationRisk": 54,
+        "augmentationPotential": 80,
+        "automationSubScores": {
+          "routineness": 7,
+          "dataIntensity": 15,
+          "physicalBottleneck": 22,
+          "socialBottleneck": 10
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 20,
+          "decisionSupport": 20,
+          "creativeLeverage": 22,
+          "productivityMultiplier": 18
+        }
+      },
+      {
+        "id": "waa-editing-revision",
+        "name": "Editing, Revision, and Quality Review",
+        "description": "Review and refine drafts for clarity, consistency, grammar, and alignment with brand or editorial standards, incorporating feedback from editors, clients, or collaborators. Ensures final output meets professional quality benchmarks.",
+        "category": "cognitive",
+        "timeWeight": 0.1,
+        "llmExposureTier": "E1",
+        "automationRisk": 66,
+        "augmentationPotential": 65,
+        "automationSubScores": {
+          "routineness": 13,
+          "dataIntensity": 12,
+          "physicalBottleneck": 23,
+          "socialBottleneck": 18
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 15,
+          "decisionSupport": 13,
+          "creativeLeverage": 14,
+          "productivityMultiplier": 23
+        }
+      }
+    ],
+    "skills": [
+      {
+        "id": "writing",
+        "name": "Writing",
+        "impact": "transformed",
+        "relevance": 95
+      },
+      {
+        "id": "reading-comprehension",
+        "name": "Reading Comprehension",
+        "impact": "transformed",
+        "relevance": 80
+      },
+      {
+        "id": "critical-thinking",
+        "name": "Critical Thinking",
+        "impact": "gained",
+        "relevance": 78
+      },
+      {
+        "id": "active-listening",
+        "name": "Active Listening",
+        "impact": "gained",
+        "relevance": 72
+      },
+      {
+        "id": "persuasion",
+        "name": "Persuasion",
+        "impact": "gained",
+        "relevance": 70
+      },
+      {
+        "id": "research",
+        "name": "Research and Information Synthesis",
+        "impact": "transformed",
+        "relevance": 75
+      },
+      {
+        "id": "time-management",
+        "name": "Time Management",
+        "impact": "transformed",
+        "relevance": 65
+      },
+      {
+        "id": "prompt-engineering",
+        "name": "AI Prompt Engineering and Editing",
+        "impact": "gained",
+        "relevance": 85
+      },
+      {
+        "id": "social-perceptiveness",
+        "name": "Social Perceptiveness",
+        "impact": "gained",
+        "relevance": 68
+      },
+      {
+        "id": "coordination",
+        "name": "Coordination with Creative Teams",
+        "impact": "gained",
+        "relevance": 60
+      }
+    ],
+    "exposureScore": {
+      "overall": 72,
+      "automationRisk": 54,
+      "augmentationPotential": 72,
+      "netDisplacement": -17,
+      "complementarityScore": 74,
+      "routineTaskIntensity": -0.82,
+      "timeline": "near-term",
+      "wageEffect": -8,
+      "confidence": "high"
+    },
+    "bottleneckTaskIds": [
+      "waa-client-collaboration",
+      "waa-campaign-strategy"
+    ],
+    "similarOccupationIds": [
+      "instructional-designer",
+      "intelligence-analyst",
+      "program-analyst",
+      "lawyers",
+      "college-professor"
+    ]
+  },
+  {
+    "id": "graphic-designers",
+    "title": "Graphic Designers",
+    "industryId": "creative",
+    "socCode": "27-1024",
+    "medianWage": 57990,
+    "educationLevel": "bachelor",
+    "description": "Graphic designers create visual concepts to communicate ideas that inspire, inform, or captivate consumers. They develop the overall layout and production design for applications such as advertisements, brochures, magazines, and corporate reports. Using a combination of artistic skill and digital tools, they translate client needs into compelling visual solutions.",
+    "tasks": [
+      {
+        "id": "gd-creative-concept-development",
+        "name": "Creative Concept & Layout Design",
+        "description": "Develop original design concepts, sample layouts, and visual hierarchies based on client briefs and aesthetic principles. Involves ideation, composition decisions, and iterative refinement.",
+        "category": "cognitive",
+        "timeWeight": 0.3,
+        "llmExposureTier": "E2",
+        "automationRisk": 52,
+        "augmentationPotential": 80,
+        "automationSubScores": {
+          "routineness": 4,
+          "dataIntensity": 12,
+          "physicalBottleneck": 22,
+          "socialBottleneck": 14
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 18,
+          "decisionSupport": 17,
+          "creativeLeverage": 25,
+          "productivityMultiplier": 20
+        }
+      },
+      {
+        "id": "gd-digital-asset-production",
+        "name": "Digital Asset Production & File Preparation",
+        "description": "Use design software to generate images, prepare digital files for print or web, and produce final deliverables such as logos, illustrations, and packaged print-ready files.",
+        "category": "cognitive",
+        "timeWeight": 0.28,
+        "llmExposureTier": "E2",
+        "automationRisk": 71,
+        "augmentationPotential": 69,
+        "automationSubScores": {
+          "routineness": 14,
+          "dataIntensity": 14,
+          "physicalBottleneck": 23,
+          "socialBottleneck": 20
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 12,
+          "decisionSupport": 13,
+          "creativeLeverage": 20,
+          "productivityMultiplier": 24
+        }
+      },
+      {
+        "id": "gd-client-consultation",
+        "name": "Client Consultation & Requirements Gathering",
+        "description": "Confer with clients or supervisors to understand project goals, target audience, brand guidelines, and design constraints. Translate qualitative feedback into actionable design direction.",
+        "category": "interpersonal",
+        "timeWeight": 0.2,
+        "llmExposureTier": "E1",
+        "automationRisk": 40,
+        "augmentationPotential": 61,
+        "automationSubScores": {
+          "routineness": 6,
+          "dataIntensity": 9,
+          "physicalBottleneck": 20,
+          "socialBottleneck": 5
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 17,
+          "decisionSupport": 16,
+          "creativeLeverage": 13,
+          "productivityMultiplier": 15
+        }
+      },
+      {
+        "id": "gd-audience-research",
+        "name": "Target Audience & Market Research",
+        "description": "Research the demographics, preferences, and behaviors of target audiences to inform design decisions. Synthesize competitive landscape and trend data to ensure relevance and effectiveness.",
+        "category": "cognitive",
+        "timeWeight": 0.12,
+        "llmExposureTier": "E1",
+        "automationRisk": 68,
+        "augmentationPotential": 73,
+        "automationSubScores": {
+          "routineness": 8,
+          "dataIntensity": 18,
+          "physicalBottleneck": 23,
+          "socialBottleneck": 19
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 22,
+          "decisionSupport": 18,
+          "creativeLeverage": 12,
+          "productivityMultiplier": 21
+        }
+      },
+      {
+        "id": "gd-design-review-feedback",
+        "name": "Design Review & Quality Iteration",
+        "description": "Review final layouts for accuracy, consistency, and aesthetic quality; incorporate feedback from clients and stakeholders through iterative revision cycles.",
+        "category": "cognitive",
+        "timeWeight": 0.1,
+        "llmExposureTier": "E1",
+        "automationRisk": 50,
+        "augmentationPotential": 68,
+        "automationSubScores": {
+          "routineness": 7,
+          "dataIntensity": 11,
+          "physicalBottleneck": 22,
+          "socialBottleneck": 10
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 16,
+          "decisionSupport": 19,
+          "creativeLeverage": 16,
+          "productivityMultiplier": 17
+        }
+      }
+    ],
+    "skills": [
+      {
+        "id": "visual-composition",
+        "name": "Visual Composition & Aesthetics",
+        "impact": "transformed",
+        "relevance": 95
+      },
+      {
+        "id": "ai-image-generation",
+        "name": "AI Image Generation & Prompt Engineering",
+        "impact": "gained",
+        "relevance": 90
+      },
+      {
+        "id": "typography",
+        "name": "Typography & Layout",
+        "impact": "transformed",
+        "relevance": 85
+      },
+      {
+        "id": "brand-strategy",
+        "name": "Brand Strategy & Identity",
+        "impact": "transformed",
+        "relevance": 82
+      },
+      {
+        "id": "client-communication",
+        "name": "Client Communication & Presentation",
+        "impact": "transformed",
+        "relevance": 78
+      },
+      {
+        "id": "software-proficiency",
+        "name": "Design Software Proficiency (Adobe, Figma)",
+        "impact": "transformed",
+        "relevance": 75
+      },
+      {
+        "id": "file-preparation",
+        "name": "Print & Digital File Preparation",
+        "impact": "displaced",
+        "relevance": 60
+      },
+      {
+        "id": "critical-thinking",
+        "name": "Critical Thinking & Problem Solving",
+        "impact": "gained",
+        "relevance": 72
+      },
+      {
+        "id": "active-listening",
+        "name": "Active Listening & Requirements Elicitation",
+        "impact": "transformed",
+        "relevance": 70
+      },
+      {
+        "id": "trend-research",
+        "name": "Market & Trend Research",
+        "impact": "displaced",
+        "relevance": 55
+      }
+    ],
+    "exposureScore": {
+      "overall": 71,
+      "automationRisk": 57,
+      "augmentationPotential": 71,
+      "netDisplacement": -14,
+      "complementarityScore": 74,
+      "routineTaskIntensity": -0.87,
+      "timeline": "near-term",
+      "wageEffect": 5,
+      "confidence": "high"
+    },
+    "bottleneckTaskIds": [
+      "gd-client-consultation",
+      "gd-design-review-feedback"
+    ],
+    "similarOccupationIds": [
+      "instructional-designer",
+      "software-developer",
+      "data-scientist",
+      "intelligence-analyst",
+      "program-analyst"
+    ]
+  },
+  {
+    "id": "film-and-video-editors",
+    "title": "Film and Video Editors",
+    "industryId": "creative",
+    "socCode": "27-4032",
+    "medianWage": 62360,
+    "educationLevel": "bachelor",
+    "description": "Film and video editors assemble raw footage into polished final products by selecting, trimming, and sequencing shots according to director or producer instructions. They integrate music, dialogue, sound effects, and visual effects to create cohesive narratives. The role demands both technical proficiency with editing software and strong aesthetic judgment.",
+    "tasks": [
+      {
+        "id": "fave-footage-assembly",
+        "name": "Organize and Assemble Raw Footage",
+        "description": "Review, organize, and string together raw footage into a continuous, coherent sequence following scripts and director/producer instructions. Involves ingesting media, logging clips, and building rough cuts.",
+        "category": "cognitive",
+        "timeWeight": 0.3,
+        "llmExposureTier": "E2",
+        "automationRisk": 64,
+        "augmentationPotential": 79,
+        "automationSubScores": {
+          "routineness": 10,
+          "dataIntensity": 18,
+          "physicalBottleneck": 22,
+          "socialBottleneck": 14
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 20,
+          "decisionSupport": 18,
+          "creativeLeverage": 20,
+          "productivityMultiplier": 21
+        }
+      },
+      {
+        "id": "fave-creative-cutting",
+        "name": "Creative Editing and Shot Selection",
+        "description": "Select the most effective shots from each scene, cut sequences to different angles, and craft seamless transitions to maximize narrative impact and emotional resonance. Requires strong aesthetic and storytelling judgment.",
+        "category": "cognitive",
+        "timeWeight": 0.3,
+        "llmExposureTier": "E2",
+        "automationRisk": 57,
+        "augmentationPotential": 80,
+        "automationSubScores": {
+          "routineness": 5,
+          "dataIntensity": 14,
+          "physicalBottleneck": 23,
+          "socialBottleneck": 15
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 18,
+          "decisionSupport": 20,
+          "creativeLeverage": 24,
+          "productivityMultiplier": 18
+        }
+      },
+      {
+        "id": "fave-audio-visual-sync",
+        "name": "Audio-Visual Integration and Sound Editing",
+        "description": "Edit and synchronize music, dialogue, and sound effects with visual footage, manipulating audio tracks and collaborating with sound, music, and special effects departments to produce a unified final product.",
+        "category": "cognitive",
+        "timeWeight": 0.2,
+        "llmExposureTier": "E2",
+        "automationRisk": 63,
+        "augmentationPotential": 74,
+        "automationSubScores": {
+          "routineness": 12,
+          "dataIntensity": 17,
+          "physicalBottleneck": 22,
+          "socialBottleneck": 12
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 17,
+          "decisionSupport": 16,
+          "creativeLeverage": 21,
+          "productivityMultiplier": 20
+        }
+      },
+      {
+        "id": "fave-technical-operations",
+        "name": "Technical Equipment Operation and Quality Review",
+        "description": "Set up and operate editing systems, electronic titling, video switching, and digital effects units; verify key numbers and time codes; review assembled edits on monitors to identify and correct errors.",
+        "category": "cognitive",
+        "timeWeight": 0.12,
+        "llmExposureTier": "E2",
+        "automationRisk": 71,
+        "augmentationPotential": 54,
+        "automationSubScores": {
+          "routineness": 17,
+          "dataIntensity": 16,
+          "physicalBottleneck": 20,
+          "socialBottleneck": 18
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 13,
+          "decisionSupport": 14,
+          "creativeLeverage": 8,
+          "productivityMultiplier": 19
+        }
+      },
+      {
+        "id": "fave-director-collaboration",
+        "name": "Collaboration with Directors and Producers",
+        "description": "Communicate with directors, producers, and cross-functional creative teams to interpret creative vision, incorporate feedback, and align editorial decisions with the overall production goals.",
+        "category": "interpersonal",
+        "timeWeight": 0.08,
+        "llmExposureTier": "E0",
+        "automationRisk": 37,
+        "augmentationPotential": 55,
+        "automationSubScores": {
+          "routineness": 6,
+          "dataIntensity": 8,
+          "physicalBottleneck": 18,
+          "socialBottleneck": 5
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 14,
+          "decisionSupport": 15,
+          "creativeLeverage": 16,
+          "productivityMultiplier": 10
+        }
+      }
+    ],
+    "skills": [
+      {
+        "id": "creative-storytelling",
+        "name": "Creative Storytelling and Narrative Judgment",
+        "impact": "transformed",
+        "relevance": 95
+      },
+      {
+        "id": "nle-software",
+        "name": "Non-Linear Editing Software (Premiere, Avid, DaVinci)",
+        "impact": "transformed",
+        "relevance": 90
+      },
+      {
+        "id": "critical-thinking",
+        "name": "Critical Thinking and Aesthetic Judgment",
+        "impact": "transformed",
+        "relevance": 88
+      },
+      {
+        "id": "audio-editing",
+        "name": "Audio Editing and Sound Synchronization",
+        "impact": "transformed",
+        "relevance": 80
+      },
+      {
+        "id": "media-logging",
+        "name": "Media Logging and Clip Organization",
+        "impact": "displaced",
+        "relevance": 72
+      },
+      {
+        "id": "time-management",
+        "name": "Time Management Under Deadline Pressure",
+        "impact": "gained",
+        "relevance": 70
+      },
+      {
+        "id": "active-listening",
+        "name": "Active Listening and Director Communication",
+        "impact": "gained",
+        "relevance": 68
+      },
+      {
+        "id": "ai-tool-prompting",
+        "name": "AI-Assisted Editing Tool Prompting and Curation",
+        "impact": "gained",
+        "relevance": 85
+      },
+      {
+        "id": "metadata-verification",
+        "name": "Timecode and Key Number Verification",
+        "impact": "displaced",
+        "relevance": 55
+      },
+      {
+        "id": "color-grading",
+        "name": "Color Grading and Visual Effects Coordination",
+        "impact": "transformed",
+        "relevance": 65
+      }
+    ],
+    "exposureScore": {
+      "overall": 73,
+      "automationRisk": 60,
+      "augmentationPotential": 73,
+      "netDisplacement": -13,
+      "complementarityScore": 72,
+      "routineTaskIntensity": -0.62,
+      "timeline": "mid-term",
+      "wageEffect": 5,
+      "confidence": "medium"
+    },
+    "bottleneckTaskIds": [
+      "fave-director-collaboration",
+      "fave-creative-cutting"
+    ],
+    "similarOccupationIds": [
+      "instructional-designer",
+      "software-developer",
+      "intelligence-analyst",
+      "program-analyst"
+    ]
+  },
+  {
+    "id": "news-analysts-reporters-and-journalists",
+    "title": "News Analysts, Reporters, and Journalists",
+    "industryId": "creative",
+    "socCode": "27-3023",
+    "medianWage": 55960,
+    "educationLevel": "bachelor",
+    "description": "News analysts, reporters, and journalists gather, investigate, and communicate news stories across print, broadcast, and digital media. They conduct interviews, research backgrounds, and synthesize information to produce accurate and compelling narratives for public audiences. The role demands strong interpersonal skills, creative judgment, and the ability to work under significant time pressure.",
+    "tasks": [
+      {
+        "id": "nara-story-research-investigation",
+        "name": "Story Research and Investigation",
+        "description": "Reporters gather background information, evaluate leads, and conduct interviews to develop accurate and complete news stories. This involves multi-source synthesis, source cultivation, and on-the-ground observation.",
+        "category": "cognitive",
+        "timeWeight": 0.28,
+        "llmExposureTier": "E2",
+        "automationRisk": 36,
+        "augmentationPotential": 76,
+        "automationSubScores": {
+          "routineness": 5,
+          "dataIntensity": 16,
+          "physicalBottleneck": 10,
+          "socialBottleneck": 5
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 24,
+          "decisionSupport": 18,
+          "creativeLeverage": 14,
+          "productivityMultiplier": 20
+        }
+      },
+      {
+        "id": "nara-writing-scripting",
+        "name": "Writing, Scripting, and Commentary",
+        "description": "Journalists write news articles, opinion columns, broadcast scripts, and digital content using computers. This task requires clear prose, narrative structure, and editorial judgment about framing and emphasis.",
+        "category": "cognitive",
+        "timeWeight": 0.3,
+        "llmExposureTier": "E1",
+        "automationRisk": 61,
+        "augmentationPotential": 81,
+        "automationSubScores": {
+          "routineness": 7,
+          "dataIntensity": 14,
+          "physicalBottleneck": 22,
+          "socialBottleneck": 18
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 21,
+          "decisionSupport": 15,
+          "creativeLeverage": 22,
+          "productivityMultiplier": 23
+        }
+      },
+      {
+        "id": "nara-news-analysis-interpretation",
+        "name": "News Analysis and Interpretation",
+        "description": "Analysts evaluate the significance of local, national, and international events, interpreting complex information for public audiences. This involves critical thinking, contextual judgment, and editorial prioritization.",
+        "category": "cognitive",
+        "timeWeight": 0.22,
+        "llmExposureTier": "E2",
+        "automationRisk": 60,
+        "augmentationPotential": 81,
+        "automationSubScores": {
+          "routineness": 6,
+          "dataIntensity": 18,
+          "physicalBottleneck": 22,
+          "socialBottleneck": 14
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 24,
+          "decisionSupport": 22,
+          "creativeLeverage": 16,
+          "productivityMultiplier": 19
+        }
+      },
+      {
+        "id": "nara-on-air-presenting",
+        "name": "On-Air Presenting and Broadcasting",
+        "description": "Broadcast journalists anchor news programs, introduce segments, and present live or recorded stories to television or radio audiences. This requires real-time performance, vocal delivery, and audience engagement.",
+        "category": "interpersonal",
+        "timeWeight": 0.12,
+        "llmExposureTier": "E0",
+        "automationRisk": 27,
+        "augmentationPotential": 55,
+        "automationSubScores": {
+          "routineness": 10,
+          "dataIntensity": 10,
+          "physicalBottleneck": 4,
+          "socialBottleneck": 3
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 14,
+          "decisionSupport": 12,
+          "creativeLeverage": 15,
+          "productivityMultiplier": 14
+        }
+      },
+      {
+        "id": "nara-source-relationship-management",
+        "name": "Source Cultivation and Interview Coordination",
+        "description": "Journalists arrange and conduct interviews, build relationships with sources, and maintain networks of contacts to access exclusive or timely information. This task is deeply interpersonal and trust-dependent.",
+        "category": "interpersonal",
+        "timeWeight": 0.08,
+        "llmExposureTier": "E0",
+        "automationRisk": 23,
+        "augmentationPotential": 43,
+        "automationSubScores": {
+          "routineness": 4,
+          "dataIntensity": 8,
+          "physicalBottleneck": 8,
+          "socialBottleneck": 3
+        },
+        "augmentationSubScores": {
+          "informationSynthesis": 12,
+          "decisionSupport": 13,
+          "creativeLeverage": 8,
+          "productivityMultiplier": 10
+        }
+      }
+    ],
+    "skills": [
+      {
+        "id": "writing",
+        "name": "Writing",
+        "impact": "transformed",
+        "relevance": 95
+      },
+      {
+        "id": "reading-comprehension",
+        "name": "Reading Comprehension",
+        "impact": "transformed",
+        "relevance": 88
+      },
+      {
+        "id": "speaking",
+        "name": "Speaking",
+        "impact": "gained",
+        "relevance": 85
+      },
+      {
+        "id": "active-listening",
+        "name": "Active Listening",
+        "impact": "gained",
+        "relevance": 80
+      },
+      {
+        "id": "critical-thinking",
+        "name": "Critical Thinking",
+        "impact": "gained",
+        "relevance": 90
+      },
+      {
+        "id": "social-perceptiveness",
+        "name": "Social Perceptiveness",
+        "impact": "gained",
+        "relevance": 78
+      },
+      {
+        "id": "information-synthesis",
+        "name": "Information Synthesis",
+        "impact": "transformed",
+        "relevance": 92
+      },
+      {
+        "id": "fact-checking",
+        "name": "Fact-Checking and Verification",
+        "impact": "transformed",
+        "relevance": 88
+      },
+      {
+        "id": "time-management",
+        "name": "Time Management",
+        "impact": "transformed",
+        "relevance": 75
+      },
+      {
+        "id": "data-journalism",
+        "name": "Data Journalism and Analytics",
+        "impact": "gained",
+        "relevance": 70
+      },
+      {
+        "id": "routine-reporting",
+        "name": "Routine/Formulaic Reporting",
+        "impact": "displaced",
+        "relevance": 60
+      }
+    ],
+    "exposureScore": {
+      "overall": 73,
+      "automationRisk": 47,
+      "augmentationPotential": 73,
+      "netDisplacement": -27,
+      "complementarityScore": 68,
+      "routineTaskIntensity": -1.42,
+      "timeline": "near-term",
+      "wageEffect": -8,
+      "confidence": "medium"
+    },
+    "bottleneckTaskIds": [
+      "nara-source-relationship-management",
+      "nara-on-air-presenting"
+    ],
+    "similarOccupationIds": [
+      "intelligence-analyst",
+      "program-analyst",
+      "college-professor",
+      "lawyers",
+      "instructional-designer"
+    ]
   }
 ]

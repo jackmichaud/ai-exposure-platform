@@ -14,7 +14,6 @@ export default function DebateArena() {
   const { state, dispatch } = useDebateContext()
   const [searchParams] = useSearchParams()
   const [selectedOccupationId, setSelectedOccupationId] = useState<string>('')
-  const [synthesisText, setSynthesisText] = useState('')
   const abortControllerRef = useRef<AbortController | null>(null)
 
   const occupations = getOccupations()
@@ -61,11 +60,7 @@ export default function DebateArena() {
     abortControllerRef.current?.abort()
     const ctrl = new AbortController()
     abortControllerRef.current = ctrl
-    setSynthesisText('')
-
-    await runDebate(selectedOccupationId, dispatch, ctrl.signal, (token) => {
-      setSynthesisText((prev) => prev + token)
-    })
+    await runDebate(selectedOccupationId, dispatch, ctrl.signal)
   }
 
   function handleCancel() {
@@ -171,7 +166,6 @@ export default function DebateArena() {
       {showSummaryPanel && (
         <DebateSummaryPanel
           summary={state.summary}
-          synthesisText={synthesisText}
           isSynthesizing={state.status === 'summarizing'}
         />
       )}

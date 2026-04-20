@@ -1,0 +1,215 @@
+{
+  "id": "film-and-video-editors",
+  "title": "Film and Video Editors",
+  "industryId": "creative",
+  "socCode": "27-4032",
+  "medianWage": 62360,
+  "educationLevel": "bachelor",
+  "description": "Film and video editors assemble raw footage into polished final products by selecting, trimming, and sequencing shots according to director or producer instructions. They integrate music, dialogue, sound effects, and visual effects to create cohesive narratives. The role demands both technical proficiency with editing software and strong aesthetic judgment.",
+  "tasks": [
+    {
+      "id": "fave-footage-assembly",
+      "name": "Organize and Assemble Raw Footage",
+      "description": "Review, organize, and string together raw footage into a continuous, coherent sequence following scripts and director/producer instructions. Involves ingesting media, logging clips, and building rough cuts.",
+      "category": "cognitive",
+      "timeWeight": 0.3,
+      "llmExposureTier": "E2",
+      "automationRisk": 64,
+      "augmentationPotential": 79,
+      "automationSubScores": {
+        "routineness": 10,
+        "dataIntensity": 18,
+        "physicalBottleneck": 22,
+        "socialBottleneck": 14
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 20,
+        "decisionSupport": 18,
+        "creativeLeverage": 20,
+        "productivityMultiplier": 21
+      }
+    },
+    {
+      "id": "fave-creative-cutting",
+      "name": "Creative Editing and Shot Selection",
+      "description": "Select the most effective shots from each scene, cut sequences to different angles, and craft seamless transitions to maximize narrative impact and emotional resonance. Requires strong aesthetic and storytelling judgment.",
+      "category": "cognitive",
+      "timeWeight": 0.3,
+      "llmExposureTier": "E2",
+      "automationRisk": 57,
+      "augmentationPotential": 80,
+      "automationSubScores": {
+        "routineness": 5,
+        "dataIntensity": 14,
+        "physicalBottleneck": 23,
+        "socialBottleneck": 15
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 18,
+        "decisionSupport": 20,
+        "creativeLeverage": 24,
+        "productivityMultiplier": 18
+      }
+    },
+    {
+      "id": "fave-audio-visual-sync",
+      "name": "Audio-Visual Integration and Sound Editing",
+      "description": "Edit and synchronize music, dialogue, and sound effects with visual footage, manipulating audio tracks and collaborating with sound, music, and special effects departments to produce a unified final product.",
+      "category": "cognitive",
+      "timeWeight": 0.2,
+      "llmExposureTier": "E2",
+      "automationRisk": 63,
+      "augmentationPotential": 74,
+      "automationSubScores": {
+        "routineness": 12,
+        "dataIntensity": 17,
+        "physicalBottleneck": 22,
+        "socialBottleneck": 12
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 17,
+        "decisionSupport": 16,
+        "creativeLeverage": 21,
+        "productivityMultiplier": 20
+      }
+    },
+    {
+      "id": "fave-technical-operations",
+      "name": "Technical Equipment Operation and Quality Review",
+      "description": "Set up and operate editing systems, electronic titling, video switching, and digital effects units; verify key numbers and time codes; review assembled edits on monitors to identify and correct errors.",
+      "category": "cognitive",
+      "timeWeight": 0.12,
+      "llmExposureTier": "E2",
+      "automationRisk": 71,
+      "augmentationPotential": 54,
+      "automationSubScores": {
+        "routineness": 17,
+        "dataIntensity": 16,
+        "physicalBottleneck": 20,
+        "socialBottleneck": 18
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 13,
+        "decisionSupport": 14,
+        "creativeLeverage": 8,
+        "productivityMultiplier": 19
+      }
+    },
+    {
+      "id": "fave-director-collaboration",
+      "name": "Collaboration with Directors and Producers",
+      "description": "Communicate with directors, producers, and cross-functional creative teams to interpret creative vision, incorporate feedback, and align editorial decisions with the overall production goals.",
+      "category": "interpersonal",
+      "timeWeight": 0.08,
+      "llmExposureTier": "E0",
+      "automationRisk": 37,
+      "augmentationPotential": 55,
+      "automationSubScores": {
+        "routineness": 6,
+        "dataIntensity": 8,
+        "physicalBottleneck": 18,
+        "socialBottleneck": 5
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 14,
+        "decisionSupport": 15,
+        "creativeLeverage": 16,
+        "productivityMultiplier": 10
+      }
+    }
+  ],
+  "skills": [
+    {
+      "id": "creative-storytelling",
+      "name": "Creative Storytelling and Narrative Judgment",
+      "impact": "transformed",
+      "relevance": 95
+    },
+    {
+      "id": "nle-software",
+      "name": "Non-Linear Editing Software (Premiere, Avid, DaVinci)",
+      "impact": "transformed",
+      "relevance": 90
+    },
+    {
+      "id": "critical-thinking",
+      "name": "Critical Thinking and Aesthetic Judgment",
+      "impact": "transformed",
+      "relevance": 88
+    },
+    {
+      "id": "audio-editing",
+      "name": "Audio Editing and Sound Synchronization",
+      "impact": "transformed",
+      "relevance": 80
+    },
+    {
+      "id": "media-logging",
+      "name": "Media Logging and Clip Organization",
+      "impact": "displaced",
+      "relevance": 72
+    },
+    {
+      "id": "time-management",
+      "name": "Time Management Under Deadline Pressure",
+      "impact": "gained",
+      "relevance": 70
+    },
+    {
+      "id": "active-listening",
+      "name": "Active Listening and Director Communication",
+      "impact": "gained",
+      "relevance": 68
+    },
+    {
+      "id": "ai-tool-prompting",
+      "name": "AI-Assisted Editing Tool Prompting and Curation",
+      "impact": "gained",
+      "relevance": 85
+    },
+    {
+      "id": "metadata-verification",
+      "name": "Timecode and Key Number Verification",
+      "impact": "displaced",
+      "relevance": 55
+    },
+    {
+      "id": "color-grading",
+      "name": "Color Grading and Visual Effects Coordination",
+      "impact": "transformed",
+      "relevance": 65
+    }
+  ],
+  "exposureScore": {
+    "overall": 73,
+    "automationRisk": 60,
+    "augmentationPotential": 73,
+    "netDisplacement": -13,
+    "complementarityScore": 72,
+    "routineTaskIntensity": -0.62,
+    "timeline": "mid-term",
+    "wageEffect": 5,
+    "confidence": "medium"
+  },
+  "bottleneckTaskIds": [
+    "fave-director-collaboration",
+    "fave-creative-cutting"
+  ],
+  "similarOccupationIds": [
+    "instructional-designer",
+    "software-developer",
+    "intelligence-analyst",
+    "program-analyst"
+  ],
+  "_reasoning": {
+    "footage-assembly": "High dataIntensity (18) because AI tools like auto-transcription and scene detection can parse large media libraries; physicalBottleneck high (22) as work is fully digital; routineness moderate (10) because while ingestion is procedural, organizational decisions require judgment. E2 because specialized AI editing tools (e.g., Adobe Sensei, Descript) can accelerate rough-cut assembly significantly.",
+    "creative-cutting": "Routineness very low (5) — shot selection is a highly non-routine aesthetic judgment call every time. creativeLeverage near-max (24) because this is the core creative output of the role. E2 rather than E0 because AI can suggest cuts and pacing, but human creative direction remains essential; augmentation is strong but automation is limited.",
+    "audio-visual-sync": "Moderate routineness (12) — syncing has procedural elements but creative audio decisions vary. AI tools for auto-sync and stem separation raise productivityMultiplier (20). socialBottleneck moderate-low (12) because collaboration with sound departments is required but not deeply trust-dependent.",
+    "technical-operations": "Higher routineness (17) for verification tasks like timecode checking — these are procedural and automatable. physicalBottleneck (20) reflects fully digital workflow. Lower creativeLeverage (8) as this is largely technical QC work. E2 because automated QC tools can flag errors efficiently.",
+    "director-collaboration": "E0 because this task is fundamentally interpersonal — interpreting creative vision, managing relationships, and incorporating subjective feedback cannot be meaningfully accelerated by LLMs alone. socialBottleneck very low (5) reflecting deep interpersonal trust requirement. routineness very low (6) as every project and director relationship is unique.",
+    "routineTaskIntensity": "Calculated as ln(routine_cognitive≈25 + routine_manual≈5 + 0.01) − ln(nonroutine_analytical≈55 + nonroutine_interpersonal≈20 + 0.01) ≈ ln(30.01) − ln(75.01) ≈ 3.40 − 4.32 ≈ −0.62. Negative value reflects the strongly non-routine, creative nature of the occupation.",
+    "complementarityScore": "Score of 72 reflects strong augmentation potential — AI tools for rough-cut assembly, auto-transcription, scene detection, and audio separation can dramatically boost editor productivity and creative exploration, but the core aesthetic judgment and director relationship remain human-centric.",
+    "wageEffect": "Modest positive wage effect (+5%) projected: top editors who master AI tools will command premium rates for faster turnaround and expanded creative capacity, but mid-tier editors face wage pressure as AI reduces hours needed for routine assembly tasks.",
+    "timeline": "Mid-term (3–7 years): AI editing tools are already emerging (Runway, Adobe Firefly, Descript) but full integration into professional workflows and displacement of significant editor time requires further tool maturation and industry adoption."
+  }
+}

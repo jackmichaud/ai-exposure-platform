@@ -1,0 +1,215 @@
+{
+  "id": "paralegals-and-legal-assistants",
+  "title": "Paralegals and Legal Assistants",
+  "industryId": "legal",
+  "socCode": "23-2011",
+  "medianWage": 59200,
+  "educationLevel": "associate",
+  "description": "Paralegals and legal assistants support attorneys by researching legal precedent, drafting and organizing legal documents, and managing case files. They conduct factual investigations, communicate with clients and court personnel, and prepare materials for trials and hearings. The role is heavily document- and research-intensive, operating almost entirely in digital and office environments.",
+  "tasks": [
+    {
+      "id": "pala-legal-doc-drafting",
+      "name": "Drafting and Editing Legal Documents",
+      "description": "Prepare, edit, and review legal documents including briefs, pleadings, contracts, wills, and correspondence. Organize and maintain documents in paper or electronic filing systems.",
+      "category": "cognitive",
+      "timeWeight": 0.3,
+      "llmExposureTier": "E1",
+      "automationRisk": 71,
+      "augmentationPotential": 77,
+      "automationSubScores": {
+        "routineness": 14,
+        "dataIntensity": 18,
+        "physicalBottleneck": 23,
+        "socialBottleneck": 16
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 18,
+        "decisionSupport": 16,
+        "creativeLeverage": 20,
+        "productivityMultiplier": 23
+      }
+    },
+    {
+      "id": "pala-legal-research",
+      "name": "Legal Research and Case Investigation",
+      "description": "Investigate facts and law of cases by searching statutes, case decisions, public records, and legal databases to determine causes of action and support case strategy. Gather and analyze legal articles, codes, and documents.",
+      "category": "cognitive",
+      "timeWeight": 0.28,
+      "llmExposureTier": "E2",
+      "automationRisk": 75,
+      "augmentationPotential": 80,
+      "automationSubScores": {
+        "routineness": 10,
+        "dataIntensity": 21,
+        "physicalBottleneck": 24,
+        "socialBottleneck": 20
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 24,
+        "decisionSupport": 20,
+        "creativeLeverage": 14,
+        "productivityMultiplier": 22
+      }
+    },
+    {
+      "id": "pala-trial-preparation",
+      "name": "Trial and Hearing Preparation",
+      "description": "Organize exhibits, prepare trial binders, file pleadings with court clerks, and coordinate logistics such as subpoena delivery and witness scheduling. Ensure all materials are accurate and submitted on time.",
+      "category": "cognitive",
+      "timeWeight": 0.2,
+      "llmExposureTier": "E2",
+      "automationRisk": 68,
+      "augmentationPotential": 62,
+      "automationSubScores": {
+        "routineness": 17,
+        "dataIntensity": 16,
+        "physicalBottleneck": 18,
+        "socialBottleneck": 17
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 16,
+        "decisionSupport": 15,
+        "creativeLeverage": 10,
+        "productivityMultiplier": 21
+      }
+    },
+    {
+      "id": "pala-client-professional-communication",
+      "name": "Client and Professional Communication",
+      "description": "Meet with clients, attorneys, witnesses, and other professionals to discuss case details, gather information, and relay updates. Conduct telephone and written correspondence with courts, opposing counsel, and external parties.",
+      "category": "interpersonal",
+      "timeWeight": 0.14,
+      "llmExposureTier": "E0",
+      "automationRisk": 41,
+      "augmentationPotential": 51,
+      "automationSubScores": {
+        "routineness": 9,
+        "dataIntensity": 12,
+        "physicalBottleneck": 15,
+        "socialBottleneck": 5
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 14,
+        "decisionSupport": 13,
+        "creativeLeverage": 10,
+        "productivityMultiplier": 14
+      }
+    },
+    {
+      "id": "pala-admin-case-management",
+      "name": "Administrative and Case Management",
+      "description": "Direct and coordinate law office activities, manage calendars and deadlines, maintain filing systems, and perform administrative tasks such as billing support and records management.",
+      "category": "cognitive",
+      "timeWeight": 0.08,
+      "llmExposureTier": "E2",
+      "automationRisk": 76,
+      "augmentationPotential": 50,
+      "automationSubScores": {
+        "routineness": 20,
+        "dataIntensity": 15,
+        "physicalBottleneck": 23,
+        "socialBottleneck": 18
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 12,
+        "decisionSupport": 11,
+        "creativeLeverage": 7,
+        "productivityMultiplier": 20
+      }
+    }
+  ],
+  "skills": [
+    {
+      "id": "writing",
+      "name": "Legal Writing",
+      "impact": "transformed",
+      "relevance": 92
+    },
+    {
+      "id": "reading-comprehension",
+      "name": "Reading Comprehension",
+      "impact": "transformed",
+      "relevance": 88
+    },
+    {
+      "id": "legal-research",
+      "name": "Legal Research",
+      "impact": "transformed",
+      "relevance": 90
+    },
+    {
+      "id": "critical-thinking",
+      "name": "Critical Thinking",
+      "impact": "gained",
+      "relevance": 82
+    },
+    {
+      "id": "active-listening",
+      "name": "Active Listening",
+      "impact": "gained",
+      "relevance": 75
+    },
+    {
+      "id": "document-management",
+      "name": "Document Management",
+      "impact": "displaced",
+      "relevance": 70
+    },
+    {
+      "id": "complex-problem-solving",
+      "name": "Complex Problem Solving",
+      "impact": "gained",
+      "relevance": 68
+    },
+    {
+      "id": "ai-tool-proficiency",
+      "name": "AI Tool Proficiency (LegalTech)",
+      "impact": "gained",
+      "relevance": 85
+    },
+    {
+      "id": "speaking",
+      "name": "Speaking and Client Communication",
+      "impact": "gained",
+      "relevance": 72
+    },
+    {
+      "id": "judgment-decision-making",
+      "name": "Judgment and Decision Making",
+      "impact": "transformed",
+      "relevance": 65
+    }
+  ],
+  "exposureScore": {
+    "overall": 69,
+    "automationRisk": 68,
+    "augmentationPotential": 69,
+    "netDisplacement": -1,
+    "complementarityScore": 78,
+    "routineTaskIntensity": -0.41,
+    "timeline": "near-term",
+    "wageEffect": 8,
+    "confidence": "high"
+  },
+  "bottleneckTaskIds": [
+    "pala-client-professional-communication",
+    "pala-trial-preparation"
+  ],
+  "similarOccupationIds": [
+    "lawyers",
+    "insurance-adjuster",
+    "loan-officer",
+    "intelligence-analyst",
+    "program-analyst"
+  ],
+  "_reasoning": {
+    "legal-doc-drafting": "High physicalBottleneck (23) because work is fully digital. Routineness is moderate (14) — documents follow templates but require legal judgment. LLM alone (E1) can draft and edit standard legal documents with significant time savings. High productivityMultiplier (23) because AI can generate first drafts, reducing paralegal time substantially. creativeLeverage is high (20) because drafting briefs and contracts involves structured argumentation and language choices.",
+    "legal-research": "dataIntensity is very high (21) given rich structured legal databases. physicalBottleneck near max (24) — fully digital. socialBottleneck high (20) — research is largely solitary. E2 tier because specialized legal research tools (Westlaw AI, Lexis+AI) combined with LLMs can dramatically accelerate case law synthesis. informationSynthesis scored 24 — this is the quintessential multi-source synthesis task.",
+    "trial-preparation": "Routineness higher (17) — organizing exhibits and filing follow defined procedures. E2 because workflow automation tools plus LLMs can handle checklist-driven preparation. physicalBottleneck moderate (18) — some physical handling of exhibits still required. productivityMultiplier high (21) because AI can auto-generate exhibit lists, cross-reference documents, and flag missing items.",
+    "client-professional-communication": "E0 because deep interpersonal trust, nuanced communication, and real-time social judgment are required. socialBottleneck very low (5) — human interaction is the core of this task. routineness low (9) — each client interaction is contextually unique. augmentation scores are moderate; AI can help prepare talking points but cannot replace the interaction itself.",
+    "admin-case-management": "Routineness highest (20) — scheduling, filing, and billing follow fixed procedures. E2 because practice management software with AI can automate most of these workflows. productivityMultiplier high (20). creativeLeverage low (7) — minimal creative output required.",
+    "routineTaskIntensity": "Routine cognitive tasks (doc drafting, admin) are significant but non-routine analytical tasks (legal research, case strategy support) and interpersonal tasks (client communication) are also substantial. Net RTI is slightly negative, indicating a moderately non-routine profile overall.",
+    "complementarityScore": "Scored 78 because the role is heavily information-synthesis and document-production oriented — exactly where LLMs provide the greatest leverage. However, the interpersonal and judgment components cap the score below 90.",
+    "wageEffect": "Positive wage effect (+8%) projected: paralegals who adopt AI tools will handle higher-complexity work and greater caseloads, commanding premium wages. However, demand for entry-level document-processing paralegals may decline, compressing the lower end of the wage distribution."
+  }
+}

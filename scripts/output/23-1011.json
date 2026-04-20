@@ -1,0 +1,221 @@
+{
+  "id": "lawyers",
+  "title": "Lawyers",
+  "industryId": "legal",
+  "socCode": "23-1011",
+  "medianWage": 135740,
+  "educationLevel": "doctoral",
+  "description": "Lawyers represent clients in criminal and civil litigation and other legal proceedings, draft legal documents, and advise clients on legal transactions and rights. They interpret laws, analyze case precedents, negotiate settlements, and advocate before courts and government agencies. The role demands deep legal expertise, strategic judgment, and strong interpersonal skills across a wide range of practice areas.",
+  "tasks": [
+    {
+      "id": "l-legal-research-analysis",
+      "name": "Legal Research and Case Analysis",
+      "description": "Research statutes, case law, regulations, and legal precedents to assess the merits of a case and develop legal strategy. Synthesize complex multi-source legal information to advise clients and prepare arguments.",
+      "category": "cognitive",
+      "timeWeight": 0.25,
+      "llmExposureTier": "E2",
+      "automationRisk": 71,
+      "augmentationPotential": 86,
+      "automationSubScores": {
+        "routineness": 8,
+        "dataIntensity": 22,
+        "physicalBottleneck": 23,
+        "socialBottleneck": 18
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 25,
+        "decisionSupport": 22,
+        "creativeLeverage": 16,
+        "productivityMultiplier": 23
+      }
+    },
+    {
+      "id": "l-document-drafting-review",
+      "name": "Drafting and Reviewing Legal Documents",
+      "description": "Prepare, draft, and review legal instruments such as contracts, wills, deeds, pleadings, and briefs. Ensure accuracy, compliance with legal standards, and alignment with client objectives.",
+      "category": "cognitive",
+      "timeWeight": 0.25,
+      "llmExposureTier": "E2",
+      "automationRisk": 76,
+      "augmentationPotential": 84,
+      "automationSubScores": {
+        "routineness": 13,
+        "dataIntensity": 20,
+        "physicalBottleneck": 24,
+        "socialBottleneck": 19
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 21,
+        "decisionSupport": 18,
+        "creativeLeverage": 20,
+        "productivityMultiplier": 25
+      }
+    },
+    {
+      "id": "l-client-counsel-advising",
+      "name": "Client Counseling and Legal Advising",
+      "description": "Advise clients on legal rights, obligations, risks, and strategies related to business transactions, disputes, or regulatory matters. Build trust-based relationships requiring nuanced judgment and empathy.",
+      "category": "interpersonal",
+      "timeWeight": 0.2,
+      "llmExposureTier": "E1",
+      "automationRisk": 46,
+      "augmentationPotential": 75,
+      "automationSubScores": {
+        "routineness": 6,
+        "dataIntensity": 16,
+        "physicalBottleneck": 20,
+        "socialBottleneck": 4
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 22,
+        "decisionSupport": 23,
+        "creativeLeverage": 14,
+        "productivityMultiplier": 16
+      }
+    },
+    {
+      "id": "l-courtroom-advocacy",
+      "name": "Courtroom Representation and Oral Advocacy",
+      "description": "Represent clients before courts, tribunals, or government agencies through oral arguments, examination of witnesses, and presentation of evidence. Requires real-time adaptive judgment and persuasive communication.",
+      "category": "interpersonal",
+      "timeWeight": 0.18,
+      "llmExposureTier": "E0",
+      "automationRisk": 30,
+      "augmentationPotential": 69,
+      "automationSubScores": {
+        "routineness": 5,
+        "dataIntensity": 14,
+        "physicalBottleneck": 8,
+        "socialBottleneck": 3
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 18,
+        "decisionSupport": 22,
+        "creativeLeverage": 17,
+        "productivityMultiplier": 12
+      }
+    },
+    {
+      "id": "l-negotiation-settlement",
+      "name": "Negotiation and Settlement",
+      "description": "Negotiate with opposing counsel, parties, and mediators to resolve civil disputes, reach plea agreements, or finalize transactional terms. Requires strategic interpersonal skill, persuasion, and real-time judgment.",
+      "category": "interpersonal",
+      "timeWeight": 0.12,
+      "llmExposureTier": "E1",
+      "automationRisk": 37,
+      "augmentationPotential": 71,
+      "automationSubScores": {
+        "routineness": 5,
+        "dataIntensity": 15,
+        "physicalBottleneck": 14,
+        "socialBottleneck": 3
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 19,
+        "decisionSupport": 23,
+        "creativeLeverage": 15,
+        "productivityMultiplier": 14
+      }
+    }
+  ],
+  "skills": [
+    {
+      "id": "legal-research",
+      "name": "Legal Research",
+      "impact": "transformed",
+      "relevance": 95
+    },
+    {
+      "id": "document-drafting",
+      "name": "Legal Document Drafting",
+      "impact": "transformed",
+      "relevance": 92
+    },
+    {
+      "id": "critical-thinking",
+      "name": "Critical Thinking",
+      "impact": "gained",
+      "relevance": 90
+    },
+    {
+      "id": "reading-comprehension",
+      "name": "Reading Comprehension",
+      "impact": "transformed",
+      "relevance": 88
+    },
+    {
+      "id": "oral-advocacy",
+      "name": "Oral Advocacy and Persuasion",
+      "impact": "gained",
+      "relevance": 85
+    },
+    {
+      "id": "negotiation",
+      "name": "Negotiation",
+      "impact": "gained",
+      "relevance": 82
+    },
+    {
+      "id": "writing",
+      "name": "Legal Writing",
+      "impact": "transformed",
+      "relevance": 80
+    },
+    {
+      "id": "case-strategy",
+      "name": "Case Strategy Development",
+      "impact": "gained",
+      "relevance": 88
+    },
+    {
+      "id": "client-relations",
+      "name": "Client Relationship Management",
+      "impact": "gained",
+      "relevance": 78
+    },
+    {
+      "id": "ai-tool-proficiency",
+      "name": "AI-Assisted Legal Tool Proficiency",
+      "impact": "gained",
+      "relevance": 75
+    },
+    {
+      "id": "document-review",
+      "name": "Document Review and Due Diligence",
+      "impact": "displaced",
+      "relevance": 70
+    }
+  ],
+  "exposureScore": {
+    "overall": 78,
+    "automationRisk": 56,
+    "augmentationPotential": 78,
+    "netDisplacement": -23,
+    "complementarityScore": 72,
+    "routineTaskIntensity": -1.42,
+    "timeline": "mid-term",
+    "wageEffect": 8,
+    "confidence": "high"
+  },
+  "bottleneckTaskIds": [
+    "l-courtroom-advocacy",
+    "l-negotiation-settlement"
+  ],
+  "similarOccupationIds": [
+    "financial-analyst",
+    "intelligence-analyst",
+    "program-analyst",
+    "accountant",
+    "insurance-adjuster"
+  ],
+  "_reasoning": {
+    "legal-research-analysis": "High dataIntensity (22) reflects rich structured legal databases; physicalBottleneck near max (23) as fully digital; socialBottleneck moderate-high (18) since research is largely solo; routineness low (8) because each case requires novel synthesis. E2 tier because LLM + specialized legal research tools (Westlaw AI, Lexis+) can dramatically accelerate this task. Augmentation scores very high—informationSynthesis at 25 reflects multi-source legal synthesis as the core of this task.",
+    "document-drafting-review": "Routineness moderate (13) as many documents follow templates but require customization; physicalBottleneck very high (24) as fully digital work; productivityMultiplier at max (25) because AI drafting tools provide enormous throughput gains. E2 tier—LLM + contract AI tools can reduce drafting time by >50%. creativeLeverage elevated (20) for bespoke transactional documents.",
+    "client-counsel-advising": "socialBottleneck very low (4) because deep interpersonal trust is essential—clients share sensitive information and rely on personal rapport. routineness low (6) as each client situation is unique. E1 tier because AI can help prepare talking points and synthesize relevant law, but the human advisory relationship remains central. decisionSupport high (23) as AI can surface relevant precedents and risk factors.",
+    "courtroom-advocacy": "E0 tier—real-time physical presence, adaptive oral performance, reading jurors/judges, and credibility are irreplaceable by AI. physicalBottleneck very low (8) reflecting mandatory in-person presence. socialBottleneck at 3 because human trust and persuasion are the entire point. routineness at 5 as no two courtroom moments are identical. productivityMultiplier low (12) as throughput is constrained by real-time proceedings.",
+    "negotiation-settlement": "E1 tier—AI can assist with preparation, scenario modeling, and drafting term sheets, but live negotiation requires human judgment and relationship dynamics. socialBottleneck at 3 reflecting deep interpersonal dependency. decisionSupport high (23) as AI can model settlement ranges and litigation risk. routineness very low (5) as each negotiation is contextually unique.",
+    "routineTaskIntensity": "Calculated as ln(routine_cognitive≈8 + routine_manual≈2 + 0.01) − ln(nonroutine_analytical≈35 + nonroutine_interpersonal≈30 + 0.01) = ln(10.01) − ln(65.01) ≈ 2.304 − 4.174 = −1.87, adjusted to −1.42 reflecting moderate routine document work offsetting highly non-routine analytical and interpersonal tasks.",
+    "complementarityScore": "Score of 72 reflects strong augmentation potential in research and drafting (the largest time-weighted tasks) while courtroom and negotiation tasks anchor significant irreplaceable human value, preventing a higher score.",
+    "wageEffect": "Positive wage effect (+8%) projected as AI tools increase productivity and allow lawyers to handle more complex, higher-value work; routine document review and basic research roles may be displaced but senior lawyers leveraging AI tools should see wage gains. Wage compression possible at junior associate level."
+  }
+}

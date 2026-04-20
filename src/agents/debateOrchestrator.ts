@@ -22,8 +22,7 @@ const PERSONA_NAMES: Record<PersonaId, string> = {
 export async function runDebate(
   occupationId: string,
   dispatch: Dispatch<DebateAction>,
-  signal: AbortSignal,
-  onSynthesisToken: (token: string) => void
+  signal: AbortSignal
 ): Promise<void> {
   try {
     // 1. Load occupation + industry
@@ -98,7 +97,6 @@ export async function runDebate(
     for await (const token of streamTurn('', synthesisPrompt, 2048, signal)) {
       if (signal.aborted) return
       fullSynthesisText += token
-      onSynthesisToken(token)
     }
 
     if (signal.aborted) return
@@ -116,119 +114,17 @@ export async function runDebate(
 // ─── Synthesis Parser ─────────────────────────────────────────────────────────
 
 export function parseSynthesis(text: string): DebateSummary {
-  const lines = text.split('\n')
-
-  function extractSection(heading: RegExp): string[] {
-    const bullets: string[] = []
-    let inSection = false
-
-    for (const line of lines) {
-      if (heading.test(line)) {
-        inSection = true
-        continue
-      }
-      // Stop at the next numbered section heading
-      if (inSection && /^\s*\d+\.\s/.test(line) && !heading.test(line)) {
-        break
-      }
-      if (inSection) {
-        const trimmed = line.replace(/^[-•*]\s*/, '').trim()
-        if (trimmed.length > 0) bullets.push(trimmed)
-      }
-    }
-
-    return bullets
-  }
-
-  // Risk assessment: look for level keyword in the Risk Assessment section
-  function extractRiskAssessment(): DebateSummary['riskAssessment'] {
-    const levels = ['critical', 'high', 'moderate', 'low'] as const
-    let inSection = false
-    let explanation = ''
-    let level: DebateSummary['riskAssessment']['level'] = 'moderate'
-
-    for (const line of lines) {
-      if (/2\.\s*Risk Assessment/i.test(line)) {
-        inSection = true
-        continue
-      }
-      if (inSection && /^\s*\d+\.\s/.test(line)) break
-      if (inSection) {
-        const lower = line.toLowerCase()
-        for (const l of levels) {
-          if (lower.includes(l)) {
-            level = l
-            break
-          }
-        }
-        const trimmed = line.replace(/^[-•*]\s*/, '').trim()
-        if (trimmed.length > 0) explanation += (explanation ? ' ' : '') + trimmed
-      }
-    }
-
-    return { level, explanation: explanation || 'See full synthesis for details.' }
-  }
-
-  // Projected changes
-  function extractProjectedChanges(): DebateSummary['projectedChanges'] {
-    let inSection = false
-    let skills = ''
-    let wages = ''
-    let employment = ''
-
-    for (const line of lines) {
-      if (/4\.\s*Projected Changes/i.test(line)) {
-        inSection = true
-        continue
-      }
-      if (inSection && /^\s*\d+\.\s/.test(line)) break
-      if (inSection) {
-        const lower = line.toLowerCase()
-        if (/skills?:/i.test(line)) {
-          skills = line.replace(/^\s*-?\s*skills?:\s*/i, '').trim()
-        } else if (/wages?:/i.test(line)) {
-          wages = line.replace(/^\s*-?\s*wages?:\s*/i, '').trim()
-        } else if (/employment:/i.test(line)) {
-          employment = line.replace(/^\s*-?\s*employment:\s*/i, '').trim()
-        } else if (lower.includes('skill') && !skills) {
-          skills = line.replace(/^[-•*]\s*/, '').trim()
-        } else if (lower.includes('wage') && !wages) {
-          wages = line.replace(/^[-•*]\s*/, '').trim()
-        } else if (lower.includes('employ') && !employment) {
-          employment = line.replace(/^[-•*]\s*/, '').trim()
-        }
-      }
-    }
-
+  const json = text.replace(/^```(?:json)?\n?/m, '').replace(/\n?```\s*$/m, '').trim()
+  try {
+    return JSON.parse(json) as DebateSummary
+  } catch {
     return {
-      skills: skills || 'See full synthesis for skill projections.',
-      wages: wages || 'See full synthesis for wage projections.',
-      employment: employment || 'See full synthesis for employment projections.',
+      keyTakeaways: ['Synthesis could not be parsed. Please try again.'],
+      riskAssessment: { level: 'moderate', explanation: '' },
+      recommendationsForWorkers: [],
+      projectedChanges: { skills: '', wages: '', employment: '' },
+      areasOfAgreement: [],
+      areasOfDisagreement: [],
     }
-  }
-
-  const keyTakeaways = extractSection(/1\.\s*Key Takeaways/i)
-  const riskAssessment = extractRiskAssessment()
-  const recommendationsForWorkers = extractSection(/3\.\s*Recommendations for Workers/i)
-  const projectedChanges = extractProjectedChanges()
-  const areasOfAgreement = extractSection(/5\.\s*Areas of Agreement/i)
-  const areasOfDisagreement = extractSection(/6\.\s*Areas of Disagreement/i)
-
-  // Fallbacks if parsing finds nothing
-  const fallback = (arr: string[], msg: string) => (arr.length > 0 ? arr : [msg])
-
-  return {
-    keyTakeaways: fallback(keyTakeaways, 'See full synthesis for key takeaways.'),
-    riskAssessment,
-    recommendationsForWorkers: fallback(
-      recommendationsForWorkers,
-      'See full synthesis for recommendations.'
-    ),
-    projectedChanges,
-    areasOfAgreement: fallback(areasOfAgreement, 'See full synthesis for areas of agreement.'),
-    areasOfDisagreement: fallback(
-      areasOfDisagreement,
-      'See full synthesis for areas of disagreement.'
-    ),
   }
 }

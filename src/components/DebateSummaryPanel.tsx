@@ -2,7 +2,6 @@ import type { DebateSummary } from '../types'
 
 interface Props {
   summary: DebateSummary | null
-  synthesisText?: string
   isSynthesizing: boolean
 }
 
@@ -22,16 +21,10 @@ function riskBadgeClasses(level: DebateSummary['riskAssessment']['level']): stri
 export default function DebateSummaryPanel({ summary, synthesisText, isSynthesizing }: Props) {
   if (isSynthesizing) {
     return (
-      <div className="bg-slate-900 border border-indigo-800 rounded-xl p-6 space-y-4 ring-1 ring-indigo-800 animate-pulse-border">
-        <div className="flex items-center gap-2">
-          <div className="w-4 h-4 border-2 border-indigo-400 border-t-transparent rounded-full animate-spin" />
+      <div className="bg-slate-900 border border-indigo-800 rounded-xl p-6 ring-1 ring-indigo-800 animate-pulse-border">
+        <div className="flex items-center gap-3">
+          <div className="w-4 h-4 border-2 border-indigo-400 border-t-transparent rounded-full animate-spin shrink-0" />
           <h2 className="text-slate-200 font-semibold">Generating Synthesis…</h2>
-        </div>
-        <div className="bg-slate-800/60 rounded-lg p-4">
-          <p className="whitespace-pre-wrap text-slate-300 text-sm leading-relaxed">
-            {synthesisText}
-            <span className="inline-block w-0.5 h-4 bg-indigo-400 ml-0.5 animate-pulse align-middle" />
-          </p>
         </div>
       </div>
     )

@@ -40,5 +40,23 @@
     "name": "Environmental & Energy",
     "description": "Energy systems, environmental science, conservation, and climate research",
     "occupationCount": 5
+  },
+  {
+    "id": "legal",
+    "name": "Legal",
+    "description": "Law practice, litigation, legal counsel, and regulatory compliance",
+    "occupationCount": 4
+  },
+  {
+    "id": "transportation",
+    "name": "Transportation & Logistics",
+    "description": "Freight movement, supply chain, fleet operations, and infrastructure management",
+    "occupationCount": 4
+  },
+  {
+    "id": "creative",
+    "name": "Creative & Media",
+    "description": "Writing, design, journalism, film, and digital content production",
+    "occupationCount": 4
   }
 ]

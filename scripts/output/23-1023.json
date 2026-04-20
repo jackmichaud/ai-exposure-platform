@@ -1,0 +1,214 @@
+{
+  "id": "judges-magistrate-judges-and-magistrates",
+  "title": "Judges, Magistrate Judges, and Magistrates",
+  "industryId": "legal",
+  "socCode": "23-1023",
+  "medianWage": 148030,
+  "educationLevel": "doctoral",
+  "description": "Judges preside over legal proceedings in courts of law, arbitrating disputes, ruling on the admissibility of evidence, and administering justice in criminal and civil cases. They interpret and apply statutes, precedents, and constitutional principles to render decisions and write legal opinions. Their role demands deep legal expertise, impartiality, and high-stakes judgment under significant public accountability.",
+  "tasks": [
+    {
+      "id": "jmja-legal-research-opinion-writing",
+      "name": "Legal Research and Opinion Writing",
+      "description": "Judges research applicable statutes, case law, and legal precedents to write formal opinions and decisions on motions, appeals, and cases. This involves synthesizing complex multi-source legal information into authoritative written rulings.",
+      "category": "cognitive",
+      "timeWeight": 0.28,
+      "llmExposureTier": "E2",
+      "automationRisk": 67,
+      "augmentationPotential": 89,
+      "automationSubScores": {
+        "routineness": 6,
+        "dataIntensity": 21,
+        "physicalBottleneck": 22,
+        "socialBottleneck": 18
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 24,
+        "decisionSupport": 22,
+        "creativeLeverage": 20,
+        "productivityMultiplier": 23
+      }
+    },
+    {
+      "id": "jmja-adjudication-sentencing",
+      "name": "Adjudication and Sentencing",
+      "description": "Judges evaluate evidence, apply legal standards, and render binding verdicts or sentences in criminal and civil proceedings. This requires nuanced judgment about facts, credibility, proportionality, and statutory compliance under conditions of high public consequence.",
+      "category": "cognitive",
+      "timeWeight": 0.3,
+      "llmExposureTier": "E0",
+      "automationRisk": 47,
+      "augmentationPotential": 75,
+      "automationSubScores": {
+        "routineness": 5,
+        "dataIntensity": 18,
+        "physicalBottleneck": 20,
+        "socialBottleneck": 4
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 23,
+        "decisionSupport": 25,
+        "creativeLeverage": 12,
+        "productivityMultiplier": 15
+      }
+    },
+    {
+      "id": "jmja-courtroom-proceedings-management",
+      "name": "Courtroom Proceedings Management",
+      "description": "Judges preside over hearings, rule on evidentiary objections, instruct juries, and ensure procedural compliance throughout trials. This task is deeply interpersonal and situationally dynamic, requiring real-time judgment in a public forum.",
+      "category": "interpersonal",
+      "timeWeight": 0.25,
+      "llmExposureTier": "E0",
+      "automationRisk": 32,
+      "augmentationPotential": 58,
+      "automationSubScores": {
+        "routineness": 7,
+        "dataIntensity": 14,
+        "physicalBottleneck": 8,
+        "socialBottleneck": 3
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 18,
+        "decisionSupport": 22,
+        "creativeLeverage": 8,
+        "productivityMultiplier": 10
+      }
+    },
+    {
+      "id": "jmja-case-document-review",
+      "name": "Case Document and Pleading Review",
+      "description": "Judges read and analyze pleadings, motions, briefs, and evidentiary submissions to ascertain facts, legal issues, and procedural posture before and during proceedings. This is a high-volume information-processing task with structured legal inputs.",
+      "category": "cognitive",
+      "timeWeight": 0.12,
+      "llmExposureTier": "E2",
+      "automationRisk": 75,
+      "augmentationPotential": 71,
+      "automationSubScores": {
+        "routineness": 10,
+        "dataIntensity": 22,
+        "physicalBottleneck": 23,
+        "socialBottleneck": 20
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 23,
+        "decisionSupport": 18,
+        "creativeLeverage": 8,
+        "productivityMultiplier": 22
+      }
+    },
+    {
+      "id": "jmja-advisory-counsel-interaction",
+      "name": "Advisory Interaction with Counsel and Court Personnel",
+      "description": "Judges advise attorneys, litigants, juries, and court staff on conduct, procedural issues, and legal standards, often in real-time during proceedings or in pre-trial conferences. This task is fundamentally interpersonal and authority-dependent.",
+      "category": "interpersonal",
+      "timeWeight": 0.05,
+      "llmExposureTier": "E0",
+      "automationRisk": 33,
+      "augmentationPotential": 50,
+      "automationSubScores": {
+        "routineness": 8,
+        "dataIntensity": 12,
+        "physicalBottleneck": 10,
+        "socialBottleneck": 3
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 16,
+        "decisionSupport": 18,
+        "creativeLeverage": 7,
+        "productivityMultiplier": 9
+      }
+    }
+  ],
+  "skills": [
+    {
+      "id": "critical-thinking",
+      "name": "Critical Thinking",
+      "impact": "transformed",
+      "relevance": 98
+    },
+    {
+      "id": "legal-research",
+      "name": "Legal Research",
+      "impact": "transformed",
+      "relevance": 95
+    },
+    {
+      "id": "opinion-writing",
+      "name": "Legal Opinion Writing",
+      "impact": "transformed",
+      "relevance": 92
+    },
+    {
+      "id": "active-listening",
+      "name": "Active Listening",
+      "impact": "gained",
+      "relevance": 90
+    },
+    {
+      "id": "judgment-decision-making",
+      "name": "Judgment and Decision Making",
+      "impact": "gained",
+      "relevance": 88
+    },
+    {
+      "id": "reading-comprehension",
+      "name": "Reading Comprehension",
+      "impact": "displaced",
+      "relevance": 85
+    },
+    {
+      "id": "social-perceptiveness",
+      "name": "Social Perceptiveness",
+      "impact": "gained",
+      "relevance": 80
+    },
+    {
+      "id": "complex-problem-solving",
+      "name": "Complex Problem Solving",
+      "impact": "transformed",
+      "relevance": 78
+    },
+    {
+      "id": "document-review",
+      "name": "Document Review and Summarization",
+      "impact": "displaced",
+      "relevance": 75
+    },
+    {
+      "id": "ai-tool-literacy",
+      "name": "AI-Assisted Legal Research Literacy",
+      "impact": "gained",
+      "relevance": 70
+    }
+  ],
+  "exposureScore": {
+    "overall": 73,
+    "automationRisk": 52,
+    "augmentationPotential": 73,
+    "netDisplacement": -21,
+    "complementarityScore": 62,
+    "routineTaskIntensity": -1.47,
+    "timeline": "long-term",
+    "wageEffect": 5,
+    "confidence": "medium"
+  },
+  "bottleneckTaskIds": [
+    "jmja-courtroom-proceedings-management",
+    "jmja-advisory-counsel-interaction"
+  ],
+  "similarOccupationIds": [
+    "lawyers",
+    "intelligence-analyst",
+    "program-analyst"
+  ],
+  "_reasoning": {
+    "legal-research-opinion-writing": "High dataIntensity (21) and physicalBottleneck (22) because this is largely a desk-based, document-intensive task with rich structured legal inputs. socialBottleneck is high (18) because the output is a written document, not a live interaction. LLM+tools (E2) can dramatically accelerate case law retrieval, citation checking, and draft opinion generation. augmentationSubScores are near-maximum because this is exactly the synthesis-and-drafting task LLMs excel at.",
+    "adjudication-sentencing": "Routineness is very low (5) because each case involves novel fact patterns and high-stakes discretionary judgment. socialBottleneck is near-zero (4) because the act of sentencing is a deeply public, trust-laden, constitutionally significant human act that society requires a human to perform. E0 because no AI can substitute for the legitimacy and accountability of a human judge rendering a verdict. decisionSupport is maximal (25) as AI can inform but not replace this judgment.",
+    "courtroom-proceedings-management": "physicalBottleneck is low (8) because the judge must be physically present in the courtroom. socialBottleneck is near-zero (3) because real-time interpersonal authority and credibility are essential. E0 because the task is inherently embodied and socially constituted. augmentationSubScores are moderate — AI could assist with real-time precedent lookup but cannot manage the courtroom.",
+    "case-document-review": "This is the most automatable task: high physicalBottleneck (23, fully digital), high socialBottleneck (20, no interaction needed), and high dataIntensity (22, structured legal documents). E2 because LLM+document-AI tools can summarize, flag issues, and extract key facts at scale. productivityMultiplier is very high (22) as throughput scales directly with AI assistance.",
+    "advisory-counsel-interaction": "Low timeWeight (0.05) as this is a minor but important interpersonal task. socialBottleneck is near-zero (3) because advisory authority depends on the judge's institutional role and human presence. E0 because the interaction is live, contextual, and authority-dependent. Augmentation scores are moderate — AI could prepare the judge but cannot substitute for the interaction itself.",
+    "routineTaskIntensity": "Calculated as ln(routine_cognitive[~15] + routine_manual[~2] + 0.01) − ln(nonroutine_analytical[~85] + nonroutine_interpersonal[~70] + 0.01) ≈ ln(17.01) − ln(155.01) ≈ 2.83 − 5.04 = −1.47. Strongly nonroutine occupation.",
+    "complementarityScore": "Scored 62 because while the core adjudicative and courtroom tasks are E0 and AI-resistant, the substantial research, writing, and document-review components (40% of time) are highly augmentable, creating meaningful productivity gains without displacing the role's core legitimacy function.",
+    "timeline": "Long-term because judicial roles are constitutionally protected, socially legitimized, and institutionally resistant to automation. AI will augment research and drafting well before any structural displacement occurs.",
+    "wageEffect": "Slight positive (+5%) because AI tools will increase the throughput and quality of judicial output (faster docket clearance, better-researched opinions) without reducing headcount, potentially increasing the value and demand for judicial services."
+  }
+}

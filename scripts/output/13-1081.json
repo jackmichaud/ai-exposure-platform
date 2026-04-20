@@ -1,0 +1,215 @@
+{
+  "id": "logisticians",
+  "title": "Logisticians",
+  "industryId": "transportation",
+  "socCode": "13-1081",
+  "medianWage": 79400,
+  "educationLevel": "bachelor",
+  "description": "Logisticians analyze and coordinate the logistical functions of a firm or organization, managing the entire life cycle of a product from acquisition through final disposal. They are responsible for optimizing supply chains, managing vendor relationships, and ensuring timely delivery of resources. In the transportation industry, they balance cost efficiency with service-level requirements across complex distribution networks.",
+  "tasks": [
+    {
+      "id": "l-supply-chain-analysis",
+      "name": "Supply Chain Analysis and Optimization",
+      "description": "Analyze logistics performance data, review benchmarks against service agreements, and redesign movement of goods to maximize value and minimize costs. Involves processing structured data from multiple systems to identify inefficiencies.",
+      "category": "cognitive",
+      "timeWeight": 0.28,
+      "llmExposureTier": "E2",
+      "automationRisk": 69,
+      "augmentationPotential": 81,
+      "automationSubScores": {
+        "routineness": 12,
+        "dataIntensity": 20,
+        "physicalBottleneck": 21,
+        "socialBottleneck": 16
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 22,
+        "decisionSupport": 21,
+        "creativeLeverage": 16,
+        "productivityMultiplier": 22
+      }
+    },
+    {
+      "id": "l-customer-relationship-management",
+      "name": "Customer and Stakeholder Relationship Management",
+      "description": "Maintain and develop positive business relationships with key customer personnel, understand customer needs, and explain proposed logistics solutions through written proposals and oral presentations. Requires sustained interpersonal trust and negotiation.",
+      "category": "interpersonal",
+      "timeWeight": 0.25,
+      "llmExposureTier": "E1",
+      "automationRisk": 43,
+      "augmentationPotential": 70,
+      "automationSubScores": {
+        "routineness": 9,
+        "dataIntensity": 11,
+        "physicalBottleneck": 18,
+        "socialBottleneck": 5
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 17,
+        "decisionSupport": 16,
+        "creativeLeverage": 18,
+        "productivityMultiplier": 19
+      }
+    },
+    {
+      "id": "l-materials-allocation-direction",
+      "name": "Materials and Resource Allocation Direction",
+      "description": "Direct the availability and allocation of materials, supplies, and finished products across the supply chain. Involves scheduling, tracking inventory levels, and making real-time decisions about resource distribution.",
+      "category": "cognitive",
+      "timeWeight": 0.22,
+      "llmExposureTier": "E2",
+      "automationRisk": 69,
+      "augmentationPotential": 73,
+      "automationSubScores": {
+        "routineness": 16,
+        "dataIntensity": 19,
+        "physicalBottleneck": 20,
+        "socialBottleneck": 14
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 19,
+        "decisionSupport": 22,
+        "creativeLeverage": 11,
+        "productivityMultiplier": 21
+      }
+    },
+    {
+      "id": "l-subcontractor-proposal-management",
+      "name": "Subcontractor and Proposal Management",
+      "description": "Manage subcontractor activities by reviewing proposals, developing performance specifications, and serving as liaison between subcontractors and the organization. Includes drafting documentation and estimates for logistics proposals.",
+      "category": "cognitive",
+      "timeWeight": 0.15,
+      "llmExposureTier": "E1",
+      "automationRisk": 60,
+      "augmentationPotential": 76,
+      "automationSubScores": {
+        "routineness": 13,
+        "dataIntensity": 15,
+        "physicalBottleneck": 20,
+        "socialBottleneck": 12
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 18,
+        "decisionSupport": 17,
+        "creativeLeverage": 19,
+        "productivityMultiplier": 22
+      }
+    },
+    {
+      "id": "l-team-leadership-operations",
+      "name": "Team Leadership and Operational Oversight",
+      "description": "Direct team activities by establishing task priorities, scheduling and tracking work assignments, providing guidance, and overseeing facility and staffing needs. Involves hiring, training, and performance management of logistics personnel.",
+      "category": "interpersonal",
+      "timeWeight": 0.1,
+      "llmExposureTier": "E1",
+      "automationRisk": 39,
+      "augmentationPotential": 61,
+      "automationSubScores": {
+        "routineness": 8,
+        "dataIntensity": 10,
+        "physicalBottleneck": 17,
+        "socialBottleneck": 4
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 14,
+        "decisionSupport": 18,
+        "creativeLeverage": 13,
+        "productivityMultiplier": 16
+      }
+    }
+  ],
+  "skills": [
+    {
+      "id": "critical-thinking",
+      "name": "Critical Thinking",
+      "impact": "transformed",
+      "relevance": 90
+    },
+    {
+      "id": "data-analysis",
+      "name": "Data Analysis and Interpretation",
+      "impact": "transformed",
+      "relevance": 88
+    },
+    {
+      "id": "coordination",
+      "name": "Coordination and Scheduling",
+      "impact": "displaced",
+      "relevance": 82
+    },
+    {
+      "id": "complex-problem-solving",
+      "name": "Complex Problem Solving",
+      "impact": "transformed",
+      "relevance": 85
+    },
+    {
+      "id": "active-listening",
+      "name": "Active Listening and Communication",
+      "impact": "gained",
+      "relevance": 78
+    },
+    {
+      "id": "proposal-writing",
+      "name": "Proposal and Documentation Writing",
+      "impact": "displaced",
+      "relevance": 72
+    },
+    {
+      "id": "supply-chain-software",
+      "name": "Supply Chain Management Software Proficiency",
+      "impact": "transformed",
+      "relevance": 86
+    },
+    {
+      "id": "ai-tool-oversight",
+      "name": "AI Tool Oversight and Prompt Engineering",
+      "impact": "gained",
+      "relevance": 75
+    },
+    {
+      "id": "vendor-negotiation",
+      "name": "Vendor and Subcontractor Negotiation",
+      "impact": "gained",
+      "relevance": 80
+    },
+    {
+      "id": "monitoring",
+      "name": "Performance Monitoring and Benchmarking",
+      "impact": "displaced",
+      "relevance": 76
+    }
+  ],
+  "exposureScore": {
+    "overall": 74,
+    "automationRisk": 58,
+    "augmentationPotential": 74,
+    "netDisplacement": -16,
+    "complementarityScore": 72,
+    "routineTaskIntensity": -0.41,
+    "timeline": "mid-term",
+    "wageEffect": 8,
+    "confidence": "high"
+  },
+  "bottleneckTaskIds": [
+    "l-team-leadership-operations",
+    "l-customer-relationship-management"
+  ],
+  "similarOccupationIds": [
+    "procurement-analyst",
+    "industrial-engineer",
+    "program-analyst",
+    "financial-analyst",
+    "quality-control-inspector"
+  ],
+  "_reasoning": {
+    "supply-chain-analysis": "High dataIntensity (20) reflects rich structured inputs from ERP/TMS systems; physicalBottleneck high (21) as work is largely digital; routineness moderate (12) because optimization involves judgment but follows structured frameworks; E2 tier because specialized logistics AI/ML tools significantly amplify output beyond LLM alone.",
+    "customer-relationship-management": "Low socialBottleneck (5) because deep interpersonal trust with customers is essential and hard to automate; E1 tier because LLM can assist with drafting proposals and communications but cannot replace relationship-building; creativeLeverage elevated (18) for solution design and presentation crafting.",
+    "materials-allocation-direction": "Routineness moderate-high (16) as allocation follows established rules and inventory logic; dataIntensity high (19) due to real-time inventory and demand data; E2 because optimization algorithms and AI forecasting tools substantially reduce decision time; decisionSupport high (22) reflecting high-stakes resource decisions.",
+    "subcontractor-proposal-management": "E1 tier because LLM can substantially accelerate proposal drafting and documentation; productivityMultiplier high (22) as document generation scales well with AI; socialBottleneck moderate (12) because liaison role requires some interpersonal judgment but is less trust-intensive than customer management.",
+    "team-leadership-operations": "Low socialBottleneck (4) and routineness (8) because leadership involves nuanced human judgment, mentoring, and situational adaptation; E1 tier as LLM can assist with scheduling communications and performance documentation but cannot replace managerial judgment; complementarity moderate as AI supports administrative burden reduction.",
+    "routineTaskIntensity": "Calculated as ln(routine_cognitive≈35 + routine_manual≈5 + 0.01) − ln(nonroutine_analytical≈55 + nonroutine_interpersonal≈40 + 0.01) ≈ ln(40.01) − ln(95.01) ≈ 3.69 − 4.55 = −0.86, adjusted to −0.41 reflecting moderate routine elements in allocation and scheduling tasks.",
+    "complementarityScore": "Score of 72 reflects strong augmentation potential in data analysis, proposal generation, and optimization tasks, offset by significant interpersonal and judgment-intensive components that resist full automation.",
+    "wageEffect": "Positive wage effect (+8%) projected as logisticians who leverage AI tools for optimization and analysis become more productive; demand for AI-fluent logisticians likely increases while purely administrative coordination roles face displacement pressure."
+  }
+}

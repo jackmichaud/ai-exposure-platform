@@ -126,21 +126,35 @@ export function buildSynthesisPrompt(
   industryName: string,
   allRoundResponses: string
 ): string {
-  return `You are an objective analyst summarizing a structured debate about AI's impact
-on the occupation of ${occupation.title} in ${industryName}.
+  return `You are an objective analyst summarizing a structured debate about AI's impact on the occupation of ${occupation.title} in ${industryName}.
 
 Full debate transcript:
 ${allRoundResponses}
 
-Produce a structured summary with:
-1. Key Takeaways (3-5 bullets)
-2. Risk Assessment (low/moderate/high/critical + explanation)
-3. Recommendations for Workers (3-5 actionable items)
-4. Projected Changes (skills, wages, employment)
-5. Areas of Agreement
-6. Areas of Disagreement
+Return ONLY valid JSON — no markdown, no explanation, no code fences. Use plain prose sentences only: no **bold**, no ## headers, no bullet characters, no numbered prefixes, no tables, no horizontal rules.
 
-Be balanced and specific. Reference points made by each participant.`
+{
+  "keyTakeaways": ["string (1–2 sentences each)", ...],
+  "riskAssessment": {
+    "level": "low" | "moderate" | "high" | "critical",
+    "explanation": "2–4 sentence plain prose explanation"
+  },
+  "recommendationsForWorkers": ["string (1 actionable sentence each)", ...],
+  "projectedChanges": {
+    "skills": "1–2 sentence plain prose",
+    "wages": "1–2 sentence plain prose",
+    "employment": "1–2 sentence plain prose"
+  },
+  "areasOfAgreement": ["string (1 sentence each)", ...],
+  "areasOfDisagreement": ["string (1 sentence each)", ...]
+}
+
+Rules:
+- keyTakeaways: 3–5 items, reference specific participant arguments
+- recommendationsForWorkers: 3–5 items, concrete and actionable, no leading numbers
+- areasOfAgreement: 2–4 items
+- areasOfDisagreement: 2–4 items
+- Be balanced and specific`
 }
 
 // ─── Prior Round Formatter ────────────────────────────────────────────────────

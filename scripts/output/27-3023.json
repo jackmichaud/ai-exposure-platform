@@ -1,0 +1,222 @@
+{
+  "id": "news-analysts-reporters-and-journalists",
+  "title": "News Analysts, Reporters, and Journalists",
+  "industryId": "creative",
+  "socCode": "27-3023",
+  "medianWage": 55960,
+  "educationLevel": "bachelor",
+  "description": "News analysts, reporters, and journalists gather, investigate, and communicate news stories across print, broadcast, and digital media. They conduct interviews, research backgrounds, and synthesize information to produce accurate and compelling narratives for public audiences. The role demands strong interpersonal skills, creative judgment, and the ability to work under significant time pressure.",
+  "tasks": [
+    {
+      "id": "nara-story-research-investigation",
+      "name": "Story Research and Investigation",
+      "description": "Reporters gather background information, evaluate leads, and conduct interviews to develop accurate and complete news stories. This involves multi-source synthesis, source cultivation, and on-the-ground observation.",
+      "category": "cognitive",
+      "timeWeight": 0.28,
+      "llmExposureTier": "E2",
+      "automationRisk": 36,
+      "augmentationPotential": 76,
+      "automationSubScores": {
+        "routineness": 5,
+        "dataIntensity": 16,
+        "physicalBottleneck": 10,
+        "socialBottleneck": 5
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 24,
+        "decisionSupport": 18,
+        "creativeLeverage": 14,
+        "productivityMultiplier": 20
+      }
+    },
+    {
+      "id": "nara-writing-scripting",
+      "name": "Writing, Scripting, and Commentary",
+      "description": "Journalists write news articles, opinion columns, broadcast scripts, and digital content using computers. This task requires clear prose, narrative structure, and editorial judgment about framing and emphasis.",
+      "category": "cognitive",
+      "timeWeight": 0.3,
+      "llmExposureTier": "E1",
+      "automationRisk": 61,
+      "augmentationPotential": 81,
+      "automationSubScores": {
+        "routineness": 7,
+        "dataIntensity": 14,
+        "physicalBottleneck": 22,
+        "socialBottleneck": 18
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 21,
+        "decisionSupport": 15,
+        "creativeLeverage": 22,
+        "productivityMultiplier": 23
+      }
+    },
+    {
+      "id": "nara-news-analysis-interpretation",
+      "name": "News Analysis and Interpretation",
+      "description": "Analysts evaluate the significance of local, national, and international events, interpreting complex information for public audiences. This involves critical thinking, contextual judgment, and editorial prioritization.",
+      "category": "cognitive",
+      "timeWeight": 0.22,
+      "llmExposureTier": "E2",
+      "automationRisk": 60,
+      "augmentationPotential": 81,
+      "automationSubScores": {
+        "routineness": 6,
+        "dataIntensity": 18,
+        "physicalBottleneck": 22,
+        "socialBottleneck": 14
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 24,
+        "decisionSupport": 22,
+        "creativeLeverage": 16,
+        "productivityMultiplier": 19
+      }
+    },
+    {
+      "id": "nara-on-air-presenting",
+      "name": "On-Air Presenting and Broadcasting",
+      "description": "Broadcast journalists anchor news programs, introduce segments, and present live or recorded stories to television or radio audiences. This requires real-time performance, vocal delivery, and audience engagement.",
+      "category": "interpersonal",
+      "timeWeight": 0.12,
+      "llmExposureTier": "E0",
+      "automationRisk": 27,
+      "augmentationPotential": 55,
+      "automationSubScores": {
+        "routineness": 10,
+        "dataIntensity": 10,
+        "physicalBottleneck": 4,
+        "socialBottleneck": 3
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 14,
+        "decisionSupport": 12,
+        "creativeLeverage": 15,
+        "productivityMultiplier": 14
+      }
+    },
+    {
+      "id": "nara-source-relationship-management",
+      "name": "Source Cultivation and Interview Coordination",
+      "description": "Journalists arrange and conduct interviews, build relationships with sources, and maintain networks of contacts to access exclusive or timely information. This task is deeply interpersonal and trust-dependent.",
+      "category": "interpersonal",
+      "timeWeight": 0.08,
+      "llmExposureTier": "E0",
+      "automationRisk": 23,
+      "augmentationPotential": 43,
+      "automationSubScores": {
+        "routineness": 4,
+        "dataIntensity": 8,
+        "physicalBottleneck": 8,
+        "socialBottleneck": 3
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 12,
+        "decisionSupport": 13,
+        "creativeLeverage": 8,
+        "productivityMultiplier": 10
+      }
+    }
+  ],
+  "skills": [
+    {
+      "id": "writing",
+      "name": "Writing",
+      "impact": "transformed",
+      "relevance": 95
+    },
+    {
+      "id": "reading-comprehension",
+      "name": "Reading Comprehension",
+      "impact": "transformed",
+      "relevance": 88
+    },
+    {
+      "id": "speaking",
+      "name": "Speaking",
+      "impact": "gained",
+      "relevance": 85
+    },
+    {
+      "id": "active-listening",
+      "name": "Active Listening",
+      "impact": "gained",
+      "relevance": 80
+    },
+    {
+      "id": "critical-thinking",
+      "name": "Critical Thinking",
+      "impact": "gained",
+      "relevance": 90
+    },
+    {
+      "id": "social-perceptiveness",
+      "name": "Social Perceptiveness",
+      "impact": "gained",
+      "relevance": 78
+    },
+    {
+      "id": "information-synthesis",
+      "name": "Information Synthesis",
+      "impact": "transformed",
+      "relevance": 92
+    },
+    {
+      "id": "fact-checking",
+      "name": "Fact-Checking and Verification",
+      "impact": "transformed",
+      "relevance": 88
+    },
+    {
+      "id": "time-management",
+      "name": "Time Management",
+      "impact": "transformed",
+      "relevance": 75
+    },
+    {
+      "id": "data-journalism",
+      "name": "Data Journalism and Analytics",
+      "impact": "gained",
+      "relevance": 70
+    },
+    {
+      "id": "routine-reporting",
+      "name": "Routine/Formulaic Reporting",
+      "impact": "displaced",
+      "relevance": 60
+    }
+  ],
+  "exposureScore": {
+    "overall": 73,
+    "automationRisk": 47,
+    "augmentationPotential": 73,
+    "netDisplacement": -27,
+    "complementarityScore": 68,
+    "routineTaskIntensity": -1.42,
+    "timeline": "near-term",
+    "wageEffect": -8,
+    "confidence": "medium"
+  },
+  "bottleneckTaskIds": [
+    "nara-source-relationship-management",
+    "nara-on-air-presenting"
+  ],
+  "similarOccupationIds": [
+    "intelligence-analyst",
+    "program-analyst",
+    "college-professor",
+    "lawyers",
+    "instructional-designer"
+  ],
+  "_reasoning": {
+    "story-research-investigation": "Research is non-routine and multi-source but AI can dramatically accelerate background research, document review, and data aggregation (E2). Physical and social bottlenecks are moderate — some fieldwork required but much is digital. High augmentation potential for synthesis and productivity.",
+    "writing-scripting": "Writing is the highest AI-exposed task for journalists. LLM tools can draft, edit, and restructure prose at scale (E1). Routineness is low because framing and voice require judgment, but physicalBottleneck is near-max (fully digital). creativeLeverage and productivityMultiplier are very high.",
+    "news-analysis-interpretation": "Analysis involves complex judgment about significance and context — low routineness. Data intensity is high given volume of sources. AI augments well here (E2) but human editorial judgment remains essential, keeping automation risk moderate overall.",
+    "on-air-presenting": "Broadcasting requires physical presence, real-time performance, and audience trust — strong E0 classification. Low automation risk due to physical and social bottlenecks. Augmentation potential is moderate (AI can assist with script prep but not delivery).",
+    "source-relationship-management": "Source cultivation is deeply interpersonal and trust-based — E0. Social bottleneck is near-maximum. AI cannot replicate human relationship-building or the credibility required to access sensitive sources. Low automation and moderate augmentation scores reflect this.",
+    "routineTaskIntensity": "Calculated as ln(routine_cognitive≈8 + routine_manual≈2 + 0.01) − ln(nonroutine_analytical≈22 + nonroutine_interpersonal≈18 + 0.01) ≈ ln(10.01) − ln(40.01) ≈ 2.304 − 3.689 = −1.385, rounded to −1.42. Journalism is strongly nonroutine.",
+    "complementarityScore": "Score of 68 reflects strong augmentation potential in research, writing, and analysis tasks, offset by irreplaceable human elements in source trust, on-air presence, and editorial judgment. AI is a powerful co-pilot but cannot replace the journalist.",
+    "wageEffect": "Modest negative wage effect (−8%) expected as AI automates routine reporting (earnings reports, sports scores, weather), compressing demand for entry-level journalists while augmenting senior investigative and analytical roles. Net effect is slightly negative due to supply-side displacement.",
+    "timeline": "Near-term: AI writing tools, automated news generation, and research assistants are already deployed in newsrooms, with significant displacement of routine reporting roles already underway."
+  }
+}

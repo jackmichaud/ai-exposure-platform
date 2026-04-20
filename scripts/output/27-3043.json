@@ -1,0 +1,216 @@
+{
+  "id": "writers-and-authors",
+  "title": "Writers and Authors",
+  "industryId": "creative",
+  "socCode": "27-3043",
+  "medianWage": 73690,
+  "educationLevel": "bachelor",
+  "description": "Writers and authors originate and prepare written material including scripts, stories, advertisements, and promotional content across a wide range of media and industries. They research topics, craft narratives or persuasive copy, and collaborate with clients, editors, and creative teams to refine and deliver polished written work. The role demands strong command of language, audience awareness, and creative ideation.",
+  "tasks": [
+    {
+      "id": "waa-creative-drafting",
+      "name": "Creative Writing and Content Drafting",
+      "description": "Compose original written material including stories, scripts, articles, and promotional copy, adapting tone and style to suit the medium and audience. This is the core creative output of the occupation.",
+      "category": "cognitive",
+      "timeWeight": 0.35,
+      "llmExposureTier": "E1",
+      "automationRisk": 56,
+      "augmentationPotential": 78,
+      "automationSubScores": {
+        "routineness": 6,
+        "dataIntensity": 10,
+        "physicalBottleneck": 23,
+        "socialBottleneck": 17
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 18,
+        "decisionSupport": 14,
+        "creativeLeverage": 24,
+        "productivityMultiplier": 22
+      }
+    },
+    {
+      "id": "waa-research-ideation",
+      "name": "Research and Ideation",
+      "description": "Gather factual information, review consumer surveys, advertising trends, and conduct interviews to inform written content and identify the most compelling angles or selling features. Synthesizes diverse sources into coherent creative direction.",
+      "category": "cognitive",
+      "timeWeight": 0.2,
+      "llmExposureTier": "E2",
+      "automationRisk": 64,
+      "augmentationPotential": 78,
+      "automationSubScores": {
+        "routineness": 8,
+        "dataIntensity": 18,
+        "physicalBottleneck": 22,
+        "socialBottleneck": 16
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 24,
+        "decisionSupport": 16,
+        "creativeLeverage": 18,
+        "productivityMultiplier": 20
+      }
+    },
+    {
+      "id": "waa-client-collaboration",
+      "name": "Client Consultation and Presentation",
+      "description": "Present drafts and creative concepts to clients, discuss advertising themes and methods, and incorporate feedback to align written work with client goals and brand identity. Requires persuasion, active listening, and interpersonal trust.",
+      "category": "interpersonal",
+      "timeWeight": 0.2,
+      "llmExposureTier": "E0",
+      "automationRisk": 36,
+      "augmentationPotential": 52,
+      "automationSubScores": {
+        "routineness": 9,
+        "dataIntensity": 8,
+        "physicalBottleneck": 14,
+        "socialBottleneck": 5
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 14,
+        "decisionSupport": 16,
+        "creativeLeverage": 12,
+        "productivityMultiplier": 10
+      }
+    },
+    {
+      "id": "waa-campaign-strategy",
+      "name": "Advertising Campaign Development",
+      "description": "Develop overarching advertising campaigns in collaboration with creative directors and art directors, determining messaging strategy, tone, and channel-specific adaptations. Involves high-level creative and strategic decision-making.",
+      "category": "cognitive",
+      "timeWeight": 0.15,
+      "llmExposureTier": "E2",
+      "automationRisk": 54,
+      "augmentationPotential": 80,
+      "automationSubScores": {
+        "routineness": 7,
+        "dataIntensity": 15,
+        "physicalBottleneck": 22,
+        "socialBottleneck": 10
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 20,
+        "decisionSupport": 20,
+        "creativeLeverage": 22,
+        "productivityMultiplier": 18
+      }
+    },
+    {
+      "id": "waa-editing-revision",
+      "name": "Editing, Revision, and Quality Review",
+      "description": "Review and refine drafts for clarity, consistency, grammar, and alignment with brand or editorial standards, incorporating feedback from editors, clients, or collaborators. Ensures final output meets professional quality benchmarks.",
+      "category": "cognitive",
+      "timeWeight": 0.1,
+      "llmExposureTier": "E1",
+      "automationRisk": 66,
+      "augmentationPotential": 65,
+      "automationSubScores": {
+        "routineness": 13,
+        "dataIntensity": 12,
+        "physicalBottleneck": 23,
+        "socialBottleneck": 18
+      },
+      "augmentationSubScores": {
+        "informationSynthesis": 15,
+        "decisionSupport": 13,
+        "creativeLeverage": 14,
+        "productivityMultiplier": 23
+      }
+    }
+  ],
+  "skills": [
+    {
+      "id": "writing",
+      "name": "Writing",
+      "impact": "transformed",
+      "relevance": 95
+    },
+    {
+      "id": "reading-comprehension",
+      "name": "Reading Comprehension",
+      "impact": "transformed",
+      "relevance": 80
+    },
+    {
+      "id": "critical-thinking",
+      "name": "Critical Thinking",
+      "impact": "gained",
+      "relevance": 78
+    },
+    {
+      "id": "active-listening",
+      "name": "Active Listening",
+      "impact": "gained",
+      "relevance": 72
+    },
+    {
+      "id": "persuasion",
+      "name": "Persuasion",
+      "impact": "gained",
+      "relevance": 70
+    },
+    {
+      "id": "research",
+      "name": "Research and Information Synthesis",
+      "impact": "transformed",
+      "relevance": 75
+    },
+    {
+      "id": "time-management",
+      "name": "Time Management",
+      "impact": "transformed",
+      "relevance": 65
+    },
+    {
+      "id": "prompt-engineering",
+      "name": "AI Prompt Engineering and Editing",
+      "impact": "gained",
+      "relevance": 85
+    },
+    {
+      "id": "social-perceptiveness",
+      "name": "Social Perceptiveness",
+      "impact": "gained",
+      "relevance": 68
+    },
+    {
+      "id": "coordination",
+      "name": "Coordination with Creative Teams",
+      "impact": "gained",
+      "relevance": 60
+    }
+  ],
+  "exposureScore": {
+    "overall": 72,
+    "automationRisk": 54,
+    "augmentationPotential": 72,
+    "netDisplacement": -17,
+    "complementarityScore": 74,
+    "routineTaskIntensity": -0.82,
+    "timeline": "near-term",
+    "wageEffect": -8,
+    "confidence": "high"
+  },
+  "bottleneckTaskIds": [
+    "waa-client-collaboration",
+    "waa-campaign-strategy"
+  ],
+  "similarOccupationIds": [
+    "instructional-designer",
+    "intelligence-analyst",
+    "program-analyst",
+    "lawyers",
+    "college-professor"
+  ],
+  "_reasoning": {
+    "creative-drafting": "Core creative writing is highly exposed to LLM assistance (E1) because LLMs can draft, rephrase, and stylize text at scale. However, routineness is low (6) because each piece demands novel judgment about voice, audience, and narrative. physicalBottleneck is high (23) as the task is fully digital. socialBottleneck is moderate (17) since minimal direct human interaction is needed during drafting itself. creativeLeverage is near-maximum (24) as this is the paradigmatic LLM augmentation use case.",
+    "research-ideation": "Research tasks are E2 because LLMs plus retrieval-augmented tools can dramatically accelerate information gathering and synthesis. dataIntensity is high (18) given structured data sources like surveys and trend reports. informationSynthesis is very high (24) as multi-source synthesis is the core activity.",
+    "client-collaboration": "Client-facing consultation is E0 due to deep interpersonal trust requirements; socialBottleneck is low (5) reflecting that human relationship is essential. physicalBottleneck is moderate (14) since meetings can be virtual but still require real human presence. augmentation scores are moderate as AI can help prepare materials but cannot substitute for the relational dynamic.",
+    "campaign-strategy": "Campaign development is E2 because AI tools can model audience segments, generate concept variants, and benchmark against trends, but human creative direction remains essential. decisionSupport and creativeLeverage are both high (20, 22) reflecting the high-stakes, multi-variable nature of strategic creative decisions.",
+    "editing-revision": "Editing is E1 because LLMs excel at grammar, consistency, and style checks. routineness is moderate (13) as there are established quality standards to apply. productivityMultiplier is very high (23) since AI editing tools can process and flag issues at scale, dramatically accelerating throughput.",
+    "routineTaskIntensity": "Calculated as ln(routine_cognitive≈15 + routine_manual≈2 + 0.01) − ln(nonroutine_analytical≈35 + nonroutine_interpersonal≈20 + 0.01) ≈ ln(17.01) − ln(55.01) ≈ 2.83 − 4.01 = −0.82, reflecting a strongly non-routine, analytically and interpersonally driven occupation.",
+    "complementarityScore": "Score of 74 reflects that AI substantially augments research, drafting speed, and editing quality, but the occupation's value increasingly shifts to creative direction, client relationships, and brand voice judgment — areas where human writers remain essential co-pilots rather than being displaced.",
+    "wageEffect": "Modest negative wage effect (−8%) projected as AI commoditizes routine content generation, compressing wages at the lower end of the market, while top-tier writers with strong creative voice and client relationships may see wage stability or gains. Net effect is slightly negative due to supply-side expansion of AI-assisted writers.",
+    "timeline": "Near-term disruption is already underway with generative AI tools widely adopted in marketing and content industries, making this a current rather than future exposure."
+  }
+}
