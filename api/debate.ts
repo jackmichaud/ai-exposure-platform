@@ -8,7 +8,7 @@ export default async function handler(req: Request): Promise<Response> {
   }
   if (req.method !== 'POST') return new Response('Method not allowed', { status: 405 })
 
-  const apiKey = process.env.CLAUDE_API_KEY
+  const apiKey = process.env.ANTHROPIC_API_KEY
   if (!apiKey) return new Response('API key not configured', { status: 500 })
 
   const { system, userPrompt, maxTokens = 1024 } = await req.json()

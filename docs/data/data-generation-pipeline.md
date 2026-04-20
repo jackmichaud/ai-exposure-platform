@@ -2,130 +2,107 @@
 
 ## Purpose
 
-Scale the dataset from the initial 19 hand-curated occupations to 50-100+ occupations with consistent scoring quality. Uses O*NET structural data as input and Claude as a scoring engine, with human review for quality assurance.
+Scale the dataset from the initial hand-curated occupations to 50-100+ occupations with
+consistent, data-grounded scoring. Uses O*NET survey data as quantitative anchors and
+Claude as the scoring engine, with rollup formulas computed deterministically in the script.
 
-## Pipeline Overview
+## Architecture
 
 ```
-O*NET + BLS data → Structured input → Claude scoring → JSON output → Human review → occupations.json
+O*NET Web Services API → structured survey data
+       ↓
+scripts/generate-occupation.ts
+       ↓ (Claude with O*NET anchors)
+Task-level sub-scores (0–25 each) + metadata
+       ↓ (deterministic formulas in script)
+automationRisk, augmentationPotential, overall, netDisplacement per task
+       ↓ (weighted average)
+Occupation ExposureScore
+       ↓
+scripts/output/<soc>.json → human review → src/data/occupations.json
 ```
 
-## Step 1: Structural Data Collection
+## What O*NET provides (real data)
 
-Pull occupation metadata programmatically from public sources:
+Fetched via the O*NET Web Services REST API (free, requires registration):
 
-| Field | Source | Method |
-|-------|--------|--------|
-| SOC code, title, description | O*NET (onetonline.org) | Web Services API or bulk CSV download |
-| Task descriptions + importance | O*NET Task Statements | API by SOC code |
-| Skills + importance ratings | O*NET Skills | API by SOC code |
-| Median wage, employment count | BLS OES (bls.gov/oes) | Annual CSV download |
-| Education level | O*NET Education/Training | API by SOC code |
+| Field | O*NET Endpoint | Maps to sub-dimension |
+|-------|---------------|----------------------|
+| Work Activities importance (1–5) | `/details/work_activities` | All 8 sub-dimensions |
+| Work Context importance (1–5) | `/details/work_context` | physicalBottleneck, socialBottleneck |
+| Task statements (top 15) | `/details/tasks` | Task list basis |
+| Skills importance (top 10) | `/details/skills` | Skills array |
+| Occupation title + description | `/occupations/{soc}` | title, description |
 
-**O*NET API**: Free, requires registration at `services.onetcenter.org`. Returns JSON. Rate limit: 3 req/sec.
+O*NET API: `services.onetcenter.org` — register for free credentials.
 
-**BLS data**: Download `oesm_nat.xlsx` from `bls.gov/oes/tables.htm`. Join on SOC code.
+## What Claude provides (judgment)
 
-### Target industries for expansion
+Claude receives the full O*NET data and must:
+- Group O*NET task statements into 3–5 representative tasks
+- Assign each of the 8 sub-dimension scores, **explicitly anchored to the O*NET importance values**
+- Classify each task as E0/E1/E2 (Eloundou et al. exposure tiers)
+- Estimate routineTaskIntensity, complementarityScore, timeline, wageEffect, confidence
+- Suggest similarOccupationIds from the existing dataset
+
+## What the script computes (deterministic)
+
+These values are recomputed from Claude's sub-scores to ensure formula integrity:
+
+```
+automationRisk (task)    = routineness + dataIntensity + physicalBottleneck + socialBottleneck
+augmentationPotential (task) = informationSynthesis + decisionSupport + creativeLeverage + productivityMultiplier
+
+automationRisk (occupation)    = Σ(task.automationRisk × task.timeWeight) / Σ(timeWeight)
+augmentationPotential (occupation) = Σ(task.augmentationPotential × task.timeWeight) / Σ(timeWeight)
+overall          = max(automationRisk, augmentationPotential)
+netDisplacement  = automationRisk − augmentationPotential
+```
+
+## Usage
+
+```bash
+# Register at services.onetcenter.org for O*NET credentials
+export ONET_USERNAME=your_username
+export ONET_PASSWORD=your_password
+export ANTHROPIC_API_KEY=sk-ant-...
+
+# Generate a single occupation
+npm run generate-occupation -- --soc 29-1141 --industry healthcare
+
+# With wage override (from BLS OES data)
+npm run generate-occupation -- --soc 23-1011 --industry legal --wage 148030
+```
+
+Output is written to `scripts/output/<soc>.json`. Review, strip the `_reasoning` field,
+then copy into `src/data/occupations.json`.
+
+## Target industries for expansion
 
 | Industry | Current | Target | Priority |
 |----------|---------|--------|----------|
-| Healthcare | 4 | 8-10 | Expand |
-| Finance & Insurance | 4 | 8-10 | Expand |
-| Technology | 4 | 8-10 | Expand |
-| Education | 3 | 6-8 | Expand |
-| Manufacturing | 4 | 8-10 | Expand |
-| Legal | 0 | 4-6 | New |
-| Transportation & Logistics | 0 | 4-6 | New |
-| Creative & Media | 0 | 4-6 | New |
+| Healthcare | 6 | 10–12 | Expand |
+| Finance & Insurance | 4 | 8–10 | Expand |
+| Technology | 4 | 8–10 | Expand |
+| Education | 3 | 6–8 | Expand |
+| Manufacturing | 5 | 8–10 | Expand |
+| Legal | 0 | 4–6 | New |
+| Transportation & Logistics | 0 | 4–6 | New |
+| Creative & Media | 0 | 4–6 | New |
 
-## Step 2: Claude Scoring
+## Cross-validation sources
 
-For each occupation, send O*NET task data to Claude with our rubric and receive scored output.
+Compare generated scores against these published datasets as a sanity check:
 
-### Input format
+| Dataset | Coverage | Use for |
+|---------|----------|---------|
+| Felten AIOE index | 800+ occupations | Overall exposure ranking |
+| Eloundou GPT tiers | 1,000+ occupations | E0/E1/E2 tier assignment |
+| Frey & Osborne probabilities | 702 occupations | Automation risk ranking |
 
-```
-Occupation: {title} ({socCode})
-Industry: {industry}
-Median wage: {wage}
-Education: {education}
+Scores that diverge significantly from all three warrant human review.
 
-Tasks from O*NET (with importance/frequency ratings):
-1. {task_description} — Importance: {1-5}, Frequency: {1-5}
-2. ...
+## Cost estimate
 
-Skills from O*NET:
-1. {skill_name} — Importance: {1-5}
-2. ...
-```
-
-### Scoring prompt (system)
-
-```
-You are an expert labor economist scoring occupations for AI exposure using
-a structured rubric. For each task, score 8 sub-dimensions (0-25 each).
-Be consistent across occupations. Reference the rubric definitions exactly.
-
-Output valid JSON matching the Occupation interface. Include justifications
-for each sub-score as a separate "reasoning" field (stripped before production use).
-```
-
-The user prompt includes the full rubric tables from `indicator-definitions.md` and the worked example from `scoring-example.md` as a reference point for calibration.
-
-### Output format
-
-Claude returns a complete `Occupation` JSON object per our data model, plus a `_reasoning` field:
-
-```json
-{
-  "id": "paralegal",
-  "title": "Paralegal",
-  "tasks": [{ "...all fields per data-model.md..." }],
-  "exposureScore": { "...all fields..." },
-  "_reasoning": {
-    "task-legal-research": {
-      "routineness": "Score 18: follows established search patterns but requires judgment on relevance..."
-    }
-  }
-}
-```
-
-### Calibration
-
-- Include 2-3 already-scored occupations (e.g., Registered Nurse, Software Developer) in the prompt as few-shot examples
-- Run each occupation through Claude twice and flag any sub-score with >5 point divergence for human review
-- Use `temperature: 0` for consistency
-
-## Step 3: Human Review
-
-### Review process
-
-1. **Auto-pass**: Scores where both runs agree within 5 points on all sub-dimensions
-2. **Flag for review**: Any sub-score divergence >5, any occupation where `netDisplacement` sign flips between runs, or any `confidence: "low"` output
-3. **Cross-validate**: Compare `automationRisk` rankings against Felten et al. AIOE index and Eloundou et al. GPT exposure tiers (available by SOC code). Flag occupations that rank very differently.
-
-### Academic cross-validation sources
-
-| Dataset | Coverage | Available at |
-|---------|----------|-------------|
-| Felten AIOE index | 800+ occupations | Published paper supplementary data |
-| Eloundou GPT exposure | 1,000+ occupations | arXiv:2303.10130 supplementary |
-| Frey & Osborne probabilities | 702 occupations | Published paper appendix |
-
-These are used for **validation only** — our scores use our own rubric, not theirs.
-
-## Step 4: Integration
-
-1. Merge reviewed JSON into `src/data/occupations.json`
-2. Add new industries to `src/data/industries.json`
-3. Pre-compute `similarOccupationIds` using the Jaccard algorithm (see `../features/occupation-profile.md`)
-4. Run the dev server and verify heatmap, profiles, and filters
-
-## Pipeline Script Location
-
-Place in `scripts/generate-occupation-data.ts`. Not part of the production bundle.
-
-## Cost Estimate
-
-Per occupation: ~2,000 input tokens (task list + rubric) × 2 runs + ~3,000 output tokens × 2 runs = ~10,000 tokens total. At 100 occupations: ~1M tokens. Estimated cost: < $5 using Claude Sonnet.
+Per occupation: ~3,000 input tokens (O*NET data + rubric) + ~2,000 output tokens ≈ 5,000 tokens.
+At 100 occupations: ~500K tokens. Estimated cost: < $2 using Claude Sonnet.

@@ -16,10 +16,16 @@ cd ai-exposure-platform
 npm install
 ```
 
-Create `.env.local` in the project root:
+Copy `.env.example` to `.env` and fill in your credentials:
+
+```bash
+cp .env.example .env
+```
 
 ```
-CLAUDE_API_KEY=sk-ant-...
+ANTHROPIC_API_KEY=sk-ant-...      # used by the debate arena and data generation script
+ONET_USERNAME=your_onet_username  # free at services.onetcenter.org
+ONET_PASSWORD=your_onet_password
 ```
 
 ## Running locally

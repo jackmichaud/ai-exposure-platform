@@ -27,7 +27,7 @@ function debateApiPlugin(apiKey: string) {
 
         if (!apiKey) {
           res.writeHead(500)
-          res.end('CLAUDE_API_KEY not set in .env')
+          res.end('ANTHROPIC_API_KEY not set in .env')
           return
         }
 
@@ -66,6 +66,6 @@ function debateApiPlugin(apiKey: string) {
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
   return {
-    plugins: [react(), debateApiPlugin(env.CLAUDE_API_KEY)],
+    plugins: [react(), debateApiPlugin(env.ANTHROPIC_API_KEY)],
   }
 })

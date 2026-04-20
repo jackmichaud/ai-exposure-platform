@@ -6,6 +6,18 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Added
+
+- **O*NET-grounded occupation generation pipeline** (`scripts/generate-occupation.ts`)
+  - Fetches real Work Activities, Work Context, task statements, and skills from the O*NET Web Services API for any SOC code
+  - Passes structured O*NET importance scores to Claude as explicit anchors for all 8 sub-dimension scores (routineness, dataIntensity, physicalBottleneck, socialBottleneck, informationSynthesis, decisionSupport, creativeLeverage, productivityMultiplier)
+  - Rollup formulas (automationRisk, augmentationPotential, overall, netDisplacement) are computed deterministically in the script — not by Claude — ensuring formula integrity
+  - Outputs a reviewed JSON file to `scripts/output/` ready for insertion into `src/data/occupations.json`
+  - Run: `npm run generate-occupation -- --soc <code> --industry <id> [--wage <number>]`
+  - Requires `ONET_USERNAME`, `ONET_PASSWORD` (free at services.onetcenter.org), and `ANTHROPIC_API_KEY`
+  - Added `tsx` devDependency for script execution
+  - Updated `docs/data/data-generation-pipeline.md` to reflect the hybrid data approach
+
 ### Changed
 
 - `vite.config.ts` — replaced `/api` proxy (required `vercel dev`) with a Vite plugin middleware that serves `/api/debate` directly from the dev server; `CLAUDE_API_KEY` is loaded via `loadEnv` so no separate process or Vercel account is needed to run the debate arena locally
