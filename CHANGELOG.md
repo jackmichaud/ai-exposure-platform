@@ -6,6 +6,11 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Changed
+
+- `vite.config.ts` — replaced `/api` proxy (required `vercel dev`) with a Vite plugin middleware that serves `/api/debate` directly from the dev server; `CLAUDE_API_KEY` is loaded via `loadEnv` so no separate process or Vercel account is needed to run the debate arena locally
+- `docs/api/claude-integration.md` — updated API key / local dev section to document the new Vite middleware approach
+
 ### Added
 
 - **Data Expansion — Defense & Environmental/Energy industries**

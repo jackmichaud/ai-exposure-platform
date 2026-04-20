@@ -22,19 +22,20 @@ const client = new Anthropic({
 
 **Critical**: The API key must never be bundled in the client-side JavaScript.
 
-### MVP Approach: Proxy Endpoint
+### Local Dev: Vite Plugin Middleware
 
-Use a lightweight serverless function (Vercel/Netlify function or Cloudflare Worker) as a proxy:
+The `/api/debate` endpoint is served directly by the Vite dev server via a plugin in `vite.config.ts`. No separate process or Vercel account is required:
 
 ```
-Client → /api/debate → Serverless Function → Claude API
+Client → /api/debate → Vite middleware (Node.js) → Claude API
 ```
 
-The serverless function holds the API key in its environment. The client never sees it.
+1. Copy `.env.example` to `.env` and set `CLAUDE_API_KEY`
+2. Run `npm run dev` — the debate endpoint is live at `http://localhost:5173/api/debate`
 
 ### Environment Variables
 
-- `VITE_CLAUDE_API_KEY` — only used in the proxy/server context, never in client builds
+- `CLAUDE_API_KEY` — loaded by `vite.config.ts` via `loadEnv`; stays server-side only
 - `.env` file for local development (added to `.gitignore`)
 
 ## Streaming
