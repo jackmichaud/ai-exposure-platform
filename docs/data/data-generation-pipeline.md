@@ -64,7 +64,7 @@ netDisplacement  = automationRisk − augmentationPotential
 ```bash
 # Register at services.onetcenter.org for O*NET credentials
 export ONET_USERNAME=your_username
-export ONET_PASSWORD=your_password
+export ONET_API_KEY=your_password
 export ANTHROPIC_API_KEY=sk-ant-...
 
 # Generate a single occupation

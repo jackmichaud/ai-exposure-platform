@@ -17,8 +17,7 @@
  *   --output    Output file path (default: scripts/output/<soc>.json)
  *
  * Environment variables required:
- *   ONET_USERNAME     Register free at https://services.onetcenter.org/developer/
- *   ONET_PASSWORD
+ *   ONET_API_KEY      From https://services.onetcenter.org/developer/
  *   ANTHROPIC_API_KEY
  */
 
@@ -55,14 +54,13 @@ function parseArgs() {
 interface OnetElement {
   id: string;
   name: string;
-  importance: number | null; // 1–5 scale
-  level: number | null;      // 0–7 scale
+  importance: number | null; // 0–100 scale
 }
 
 interface OnetTask {
   id: number;
-  name: string;
-  importance: number | null;
+  title: string;
+  importance: number | null; // 0–100 scale
 }
 
 interface OnetData {
@@ -75,42 +73,41 @@ interface OnetData {
   skills: OnetElement[];
 }
 
-function onetAuthHeader(): string {
-  const user = process.env.ONET_USERNAME;
-  const pass = process.env.ONET_PASSWORD;
-  if (!user || !pass) {
-    throw new Error(
-      'ONET_USERNAME and ONET_PASSWORD required. Register free at https://services.onetcenter.org/developer/'
-    );
+function onetApiKey(): string {
+  const key = process.env.ONET_API_KEY;
+  if (!key) {
+    throw new Error('ONET_API_KEY required. Get yours at https://services.onetcenter.org/developer/');
   }
-  return 'Basic ' + Buffer.from(`${user}:${pass}`).toString('base64');
+  return key;
 }
 
-async function onetGet(endpoint: string): Promise<unknown> {
-  const url = `https://services.onetcenter.org/ws${endpoint}`;
+async function onetGet(endpoint: string, attempt = 1): Promise<unknown> {
+  const url = `https://api-v2.onetcenter.org${endpoint}`;
   const res = await fetch(url, {
-    headers: { Authorization: onetAuthHeader(), Accept: 'application/json' },
+    headers: {
+      'X-API-Key': onetApiKey(),
+      'Accept': 'application/json',
+      'User-Agent': 'ai-exposure-platform/1.0 (bot)',
+    },
   });
+  if (res.status === 429 && attempt <= 5) {
+    const delay = 200 * 2 ** (attempt - 1);
+    console.warn(`O*NET 429 — retrying in ${delay}ms (attempt ${attempt}/5)`);
+    await sleep(delay);
+    return onetGet(endpoint, attempt + 1);
+  }
   if (!res.ok) throw new Error(`O*NET ${res.status}: ${url}`);
   return res.json();
 }
 
-function pickScore(scores: unknown, scaleId: string): number | null {
-  if (!Array.isArray(scores)) return null;
-  const match = scores.find((s: Record<string, unknown>) => (s?.scale as Record<string, unknown>)?.id === scaleId);
-  return typeof (match as Record<string, unknown>)?.value === 'number'
-    ? ((match as Record<string, unknown>).value as number)
-    : null;
-}
-
-function parseElements(data: Record<string, unknown>, key = 'element'): OnetElement[] {
+function parseElements(data: Record<string, unknown>, key = 'element', valueField = 'importance'): OnetElement[] {
   return ((data[key] as unknown[]) || []).map((el: unknown) => {
     const e = el as Record<string, unknown>;
+    const val = e[valueField];
     return {
       id: (e.id as string) ?? '',
       name: (e.name as string) ?? '',
-      importance: pickScore(e.score, 'IM'),
-      level: pickScore(e.score, 'LV'),
+      importance: typeof val === 'number' ? val : null,
     };
   });
 }
@@ -123,19 +120,20 @@ async function fetchOnetData(rawSoc: string): Promise<OnetData> {
   console.log(`\nFetching O*NET data for ${soc}…`);
 
   // Sequential requests to respect 3 req/sec rate limit
-  const summary = await onetGet(`/occupations/${soc}`) as Record<string, unknown>;
+  const summary = await onetGet(`/online/occupations/${soc}/`) as Record<string, unknown>;
   await sleep(400);
-  const workActivitiesRaw = await onetGet(`/occupations/${soc}/details/work_activities`) as Record<string, unknown>;
+  const workActivitiesRaw = await onetGet(`/online/occupations/${soc}/details/work_activities`) as Record<string, unknown>;
   await sleep(400);
-  const workContextRaw = await onetGet(`/occupations/${soc}/details/work_context`) as Record<string, unknown>;
+  const workContextRaw = await onetGet(`/online/occupations/${soc}/details/work_context`) as Record<string, unknown>;
   await sleep(400);
-  const tasksRaw = await onetGet(`/occupations/${soc}/details/tasks`) as Record<string, unknown>;
+  const tasksRaw = await onetGet(`/online/occupations/${soc}/details/tasks`) as Record<string, unknown>;
   await sleep(400);
-  const skillsRaw = await onetGet(`/occupations/${soc}/details/skills`) as Record<string, unknown>;
+  const skillsRaw = await onetGet(`/online/occupations/${soc}/details/skills`) as Record<string, unknown>;
 
   const allTasks: OnetTask[] = ((tasksRaw.task as unknown[]) || []).map((t: unknown) => {
     const task = t as Record<string, unknown>;
-    return { id: task.id as number, name: task.name as string, importance: pickScore(task.score, 'IM') };
+    const imp = task.importance;
+    return { id: task.id as number, title: (task.title as string) ?? '', importance: typeof imp === 'number' ? imp : null };
   });
   const topTasks = allTasks
     .sort((a, b) => (b.importance ?? 0) - (a.importance ?? 0))
@@ -146,7 +144,7 @@ async function fetchOnetData(rawSoc: string): Promise<OnetData> {
     title: (summary.title as string) ?? '',
     description: (summary.description as string) ?? '',
     workActivities: parseElements(workActivitiesRaw),
-    workContext: parseElements(workContextRaw),
+    workContext: parseElements(workContextRaw, 'element', 'context'),
     tasks: topTasks,
     skills: parseElements(skillsRaw).slice(0, 10),
   };
@@ -155,7 +153,7 @@ async function fetchOnetData(rawSoc: string): Promise<OnetData> {
 // ─── Claude scoring ───────────────────────────────────────────────────────────
 
 const SYSTEM_PROMPT = `You are a labor economist scoring occupations for AI disruption exposure.
-You receive O*NET survey data (Work Activities and Work Context, rated on importance 1–5) and
+You receive O*NET survey data (Work Activities and Work Context, rated on importance 0–100) and
 produce a structured JSON scoring for the occupation.
 
 ## Sub-dimensions to score per task (each 0–25)
@@ -186,11 +184,11 @@ augmentationPotential per task = sum of 4 augmentation sub-scores
 
 ## O*NET importance → sub-dimension score guidance
 Use these as starting anchors, adjust ±3 for task-specific context:
-  1.0–1.9 → 2–6
-  2.0–2.9 → 7–12
-  3.0–3.9 → 13–17
-  4.0–4.9 → 18–22
-  5.0     → 23–25
+   0–19  → 2–6
+  20–39  → 7–12
+  40–59  → 13–17
+  60–79  → 18–22
+  80–100 → 23–25
 
 ## LLM Exposure Tiers (Eloundou et al.)
 - E0: AI cannot reduce task time ≥50% (physical, social, or highly novel)
@@ -265,14 +263,14 @@ function formatPrompt(data: OnetData, industryId: string, wage: number | undefin
     data.description ? `Description: ${data.description}` : '',
     wage ? `Median annual wage (BLS): $${wage.toLocaleString()}` : '',
     '',
-    '## O*NET Work Activities (importance 1–5)',
-    ...topActivities.map(a => `  [${a.importance!.toFixed(2)}] ${a.name}`),
+    '## O*NET Work Activities (importance 0–100)',
+    ...topActivities.map(a => `  [${a.importance}] ${a.name}`),
     '',
-    '## O*NET Work Context (importance 1–5)',
-    ...topContext.map(c => `  [${c.importance!.toFixed(2)}] ${c.name}`),
+    '## O*NET Work Context (importance 0–100)',
+    ...topContext.map(c => `  [${c.importance}] ${c.name}`),
     '',
     '## O*NET Task Statements (top 15 by importance)',
-    ...data.tasks.map((t, i) => `  ${i + 1}. [${t.importance?.toFixed(2) ?? 'n/a'}] ${t.name}`),
+    ...data.tasks.map((t, i) => `  ${i + 1}. [${t.importance ?? 'n/a'}] ${t.title}`),
     '',
     '## O*NET Skills (top 10)',
     ...data.skills.map(s => `  [${s.importance?.toFixed(2) ?? 'n/a'}] ${s.name}`),

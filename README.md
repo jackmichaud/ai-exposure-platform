@@ -24,8 +24,7 @@ cp .env.example .env
 
 ```
 ANTHROPIC_API_KEY=sk-ant-...      # used by the debate arena and data generation script
-ONET_USERNAME=your_onet_username  # free at services.onetcenter.org
-ONET_PASSWORD=your_onet_password
+ONET_API_KEY=your_onet_key     # free at services.onetcenter.org/developer/
 ```
 
 ## Running locally
