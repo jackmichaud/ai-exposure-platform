@@ -4,23 +4,35 @@ import { useContainerSize } from '../../hooks/useContainerSize'
 import { useNavigate } from 'react-router-dom'
 
 interface Point {
+  id?: string
   occupation: string
   aioe: number
   wage: number
   industry: string
-  employment: number
+  employment?: number
 }
 
 interface Props {
   data: Point[]
 }
 
-const MARGIN = { top: 16, right: 120, bottom: 48, left: 72 }
+const MARGIN = { top: 16, right: 128, bottom: 48, left: 72 }
 
 const INDUSTRY_COLORS: Record<string, string> = {
-  Technology: '#4F46E5', Finance: '#D97706', Healthcare: '#059669',
-  Legal: '#7C3AED', Business: '#6B7280', Engineering: '#0891B2',
-  Trades: '#92400E', Education: '#BE185D', Media: '#DC2626',
+  Technology: '#4F46E5',
+  'Finance & Insurance': '#D97706',
+  Healthcare: '#059669',
+  Legal: '#7C3AED',
+  'Creative & Media': '#DC2626',
+  'Transportation & Logistics': '#0369A1',
+  'Skilled Trades': '#92400E',
+  Education: '#BE185D',
+  Manufacturing: '#065F46',
+  'Defense & National Security': '#1E40AF',
+  'Environmental & Energy': '#15803D',
+  'Public Safety': '#B91C1C',
+  Business: '#6B7280',
+  Engineering: '#0891B2',
 }
 
 export default function WageScatterPlot({ data }: Props) {
@@ -43,7 +55,10 @@ export default function WageScatterPlot({ data }: Props) {
 
     const x = d3.scaleLinear().domain([0, 100]).range([0, innerW])
     const y = d3.scaleLinear().domain([0, d3.max(data, d => d.wage)! * 1.1]).range([innerH, 0])
-    const r = d3.scaleSqrt().domain([0, d3.max(data, d => d.employment)!]).range([3, 18])
+    const hasEmployment = data.some(d => (d.employment ?? 0) > 0)
+    const r = hasEmployment
+      ? d3.scaleSqrt().domain([0, d3.max(data, d => d.employment ?? 0)!]).range([3, 16])
+      : () => 6
 
     // Gridlines
     g.append('g').call(d3.axisLeft(y).ticks(5).tickSize(-innerW).tickFormat(() => ''))
@@ -74,7 +89,7 @@ export default function WageScatterPlot({ data }: Props) {
       .attr('opacity', 0.75)
       .attr('cursor', 'pointer')
       .transition().duration(500).ease(d3.easeCubicOut)
-      .attr('r', d => r(d.employment))
+      .attr('r', d => r(d.employment ?? 0))
 
     // Tooltip interactions (after transition)
     const circles = g.selectAll<SVGCircleElement, Point>('circle')
@@ -85,7 +100,7 @@ export default function WageScatterPlot({ data }: Props) {
         tooltip.style.display = 'block'
         tooltip.innerHTML = `<p class="font-semibold text-white text-sm">${d.occupation}</p>
           <p class="text-gray-300 text-xs">${d.industry}</p>
-          <p class="text-gray-300 text-xs mt-1">AIOE: <span class="font-mono text-white">${d.aioe}</span></p>
+          <p class="text-gray-300 text-xs mt-1">Exposure: <span class="font-mono text-white">${d.aioe}</span></p>
           <p class="text-gray-300 text-xs">Wage: <span class="font-mono text-white">$${(d.wage / 1000).toFixed(0)}k</span></p>`
         d3.select(event.currentTarget).attr('opacity', 1).attr('stroke', '#fff').attr('stroke-width', 1.5)
       })
@@ -102,7 +117,7 @@ export default function WageScatterPlot({ data }: Props) {
         d3.select(event.currentTarget).attr('opacity', 0.75).attr('stroke', 'none')
       })
       .on('click', (_event, d) => {
-        navigate(`/occupation/${d.occupation.toLowerCase().replace(/\s+/g, '-')}`)
+        navigate(`/occupation/${d.id ?? d.occupation.toLowerCase().replace(/\s+/g, '-')}`)
       })
 
     // Axes
@@ -119,7 +134,7 @@ export default function WageScatterPlot({ data }: Props) {
     // Axis labels
     g.append('text').attr('x', innerW / 2).attr('y', innerH + 38)
       .attr('text-anchor', 'middle').style('font-size', '12px').style('fill', '#94A3B8')
-      .text('AIOE Score (0–100)')
+      .text('Exposure Score (0–100)')
     g.append('text').attr('transform', 'rotate(-90)').attr('x', -innerH / 2).attr('y', -52)
       .attr('text-anchor', 'middle').style('font-size', '12px').style('fill', '#94A3B8')
       .text('Median Wage')

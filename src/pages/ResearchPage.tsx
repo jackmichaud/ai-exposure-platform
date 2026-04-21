@@ -1,4 +1,5 @@
 import findings from '../data/research-findings.json'
+import { getOccupations, getIndustries } from '../api/dataApi'
 import ExposureHistogram from '../components/charts/ExposureHistogram'
 import WageScatterPlot from '../components/charts/WageScatterPlot'
 import ModelAgreementMatrix from '../components/charts/ModelAgreementMatrix'
@@ -72,6 +73,27 @@ function Callout({ children }: { children: React.ReactNode }) {
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
 export default function ResearchPage() {
+  const occupations = getOccupations()
+  const industriesData = getIndustries()
+  const industryNameMap = Object.fromEntries(industriesData.map(i => [i.id, i.name]))
+
+  const BINS = ['0–10','10–20','20–30','30–40','40–50','50–60','60–70','70–80','80–90','90–100']
+  const liveExposureDistribution = BINS.map((bin, idx) => {
+    const lo = idx * 10, hi = lo + 10
+    return { bin, count: occupations.filter(o => { const s = o.exposureScore.overall; return s >= lo && (idx === 9 ? s <= 100 : s < hi) }).length }
+  })
+
+  const liveWageScatter = occupations.map(o => ({
+    id: o.id,
+    occupation: o.title,
+    aioe: Math.round(o.exposureScore.overall),
+    wage: o.medianWage,
+    industry: industryNameMap[o.industryId] ?? o.industryId,
+  }))
+
+  const avgScore = Math.round(occupations.reduce((s, o) => s + o.exposureScore.overall, 0) / occupations.length)
+  const pctDisplacement = Math.round(occupations.filter(o => o.exposureScore.netDisplacement > 0).length / occupations.length * 100)
+
   return (
     <article className="pb-24 max-w-3xl mx-auto">
 
@@ -133,8 +155,9 @@ export default function ResearchPage() {
         <P>
           This paper proceeds as follows. Section 2 develops the core theoretical frameworks in detail,
           deriving wage and employment predictions from each. Section 3 describes how the theoretical
-          constructs are operationalized in recent exposure indices. Section 4 presents the empirical
-          analysis. Section 5 discusses the null-result puzzle and distributional implications.
+          constructs are operationalized in recent exposure indices. Section 4 presents this platform's
+          scoring model and its relationship to the academic frameworks. Section 5 presents the empirical
+          analysis. Section 6 discusses the null-result puzzle and distributional implications.
         </P>
       </Prose>
 
@@ -450,40 +473,126 @@ export default function ResearchPage() {
         <LiteratureTimeline data={findings.literatureTimeline} />
       </Figure>
 
-      {/* ── 4. Empirical Analysis ── */}
-      <SectionTitle num="4.">Empirical Analysis</SectionTitle>
+      {/* ── 4. Platform Scoring Model ── */}
+      <SectionTitle num="4.">Platform Scoring Model</SectionTitle>
 
-      <SubsectionTitle num="4.1">Data</SubsectionTitle>
+      <SubsectionTitle num="4.1">Sub-dimension Architecture</SubsectionTitle>
       <Prose>
         <P>
-          The empirical sample consists of 19 occupations spanning 9 industries, selected to provide
-          coverage across the full wage and exposure distribution. Exposure scores are drawn from the Felten
-          et al. AIOE dataset (SSRN replication files) and the Massenkoff and McCrory (2026) Observed
-          Exposure estimates. Wage and employment data are from the Bureau of Labor Statistics Occupational
-          Employment and Wage Statistics survey (BLS OES 2023), matched by 6-digit SOC code. Routine Task
-          Intensity is computed from O*NET 28.0 task importance weights following equation (4).
+          This platform operationalizes the Acemoglu-Restrepo displacement/reinstatement decomposition
+          at the task level, grounded in O*NET Work Activities and Work Context survey data (importance
+          scale 0–100). Each occupation is decomposed into 3–5 representative tasks. For each task,
+          eight sub-dimension scores (0–25 each) are assigned by Claude Sonnet anchored to the relevant
+          O*NET importance values and the scoring rubric derived from the theoretical frameworks above.
+        </P>
+        <P>
+          Four sub-dimensions operationalize <em>displacement potential</em> — the left-hand displacement
+          term in equation (3): <strong>routineness</strong> (following ALM: high score = fixed procedure
+          with no novel judgment, the canonical automatable task); <strong>dataIntensity</strong> (rich
+          structured data inputs that LLMs process efficiently); <strong>physicalBottleneck</strong>
+          (inverted: low score = dexterous on-site presence required, high = fully digital — the primary
+          reason electricians score near zero); and <strong>socialBottleneck</strong> (inverted: low score
+          = deep interpersonal trust essential, the bottleneck that protects therapists and advocates).
+        </P>
+        <P>
+          Four sub-dimensions operationalize <em>augmentation potential</em> — the reinstatement
+          effect: <strong>informationSynthesis</strong> (multi-source cognitive integration where LLMs
+          excel); <strong>decisionSupport</strong> (high-stakes analytical decisions enriched by AI
+          outputs); <strong>creativeLeverage</strong> (drafting, ideation, design); and{' '}
+          <strong>productivityMultiplier</strong> (output that scales super-linearly with AI tool access).
+          Per-task rollup is additive within each group:
+        </P>
+      </Prose>
+      <DisplayEq
+        tex="AR_t = r_t + d_t + p_t + s_t \qquad AP_t = \iota_t + \delta_t + c_t + \mu_t"
+        label="(14)"
+      />
+      <Prose>
+        <P>
+          where <InlineEq tex="r_t" /> = routineness, <InlineEq tex="d_t" /> = dataIntensity,{' '}
+          <InlineEq tex="p_t" /> = physicalBottleneck, <InlineEq tex="s_t" /> = socialBottleneck,{' '}
+          <InlineEq tex="\iota_t" /> = informationSynthesis, <InlineEq tex="\delta_t" /> = decisionSupport,{' '}
+          <InlineEq tex="c_t" /> = creativeLeverage, and <InlineEq tex="\mu_t" /> = productivityMultiplier.
+          Each sub-score lies in [0, 25], so task-level <InlineEq tex="AR_t,\,AP_t \in [0, 100]" />.
         </P>
       </Prose>
 
-      <SubsectionTitle num="4.2">Exposure Distribution</SubsectionTitle>
+      <SubsectionTitle num="4.2">Occupation-Level Aggregation</SubsectionTitle>
       <Prose>
         <P>
-          Figure 3 plots the distribution of AIOE scores across our occupation sample. The distribution is
-          right-skewed, with a mode in the 50–70 range and a long left tail of low-exposure manual and
-          interpersonal occupations. Color coding follows the net displacement classification: blue bins
-          (AIOE &lt; 30) indicate augmentation-dominant occupations; amber (30–60) indicates the contested
-          zone where theoretical predictions are indeterminate; red (&gt; 60) indicates displacement-dominant.
-          Approximately 42 percent of occupations fall in the displacement-dominant zone by AIOE, consistent
-          with the Frey-Osborne estimate when extended to the LLM capability set.
+          Task scores are aggregated to occupation level using time-on-task weights{' '}
+          <InlineEq tex="w_t" /> (summing to 1), following the Eloundou et al. (2023) convention
+          of weighting task exposure by the share of working time spent on each task:
+        </P>
+      </Prose>
+      <DisplayEq
+        tex="\overline{AR} = \sum_t w_t\,AR_t \qquad \overline{AP} = \sum_t w_t\,AP_t"
+        label="(15)"
+      />
+      <Prose>
+        <P>
+          The summary exposure score and net displacement index are then:
+        </P>
+      </Prose>
+      <DisplayEq
+        tex="\text{overall} = \max\!\left(\overline{AR},\,\overline{AP}\right) \qquad \text{netDisplacement} = \overline{AR} - \overline{AP}"
+        label="(16)"
+      />
+      <Prose>
+        <P>
+          <strong>netDisplacement directly operationalizes the sign of equation (3).</strong> When{' '}
+          <InlineEq tex="\text{netDisplacement} < 0" />, augmentation potential exceeds automation risk
+          — the reinstatement effect dominates and wages are predicted to rise. When positive, displacement
+          dominates. The platform also computes RTI following equation (4) exactly, using Claude's
+          task-category assignments (cognitive/physical/interpersonal) as the routine vs. non-routine
+          partition.
+        </P>
+        <P>
+          Each task additionally receives an Eloundou et al. (2023) tier assignment (E0/E1/E2) as a
+          cross-validation anchor against the published index. Tier assignments are provided to the
+          debate agents as grounding for their arguments, alongside the sub-dimension scores and
+          academic research context from this section.
         </P>
       </Prose>
 
-      <Figure num={3} caption="Distribution of AIOE scores across 19 occupations. Blue = augmentation-dominant (AIOE < 30), amber = contested (30–60), red = displacement-dominant (> 60). 42% of occupations exceed the displacement threshold.">
-        <h3 className="text-slate-300 mb-1 text-sm font-semibold">Figure 3 — AIOE Score Distribution</h3>
-        <ExposureHistogram data={findings.exposureDistribution} />
+      {/* ── 5. Empirical Analysis ── */}
+      <SectionTitle num="5.">Empirical Analysis</SectionTitle>
+
+      <SubsectionTitle num="5.1">Data</SubsectionTitle>
+      <Prose>
+        <P>
+          The empirical sample consists of {occupations.length} occupations spanning {industriesData.length} industries,
+          generated via the O*NET-grounded pipeline described in Section 4. Exposure scores reflect
+          the platform's own scoring model (equations 14–16), grounded in O*NET Work Activities and Work
+          Context data from the O*NET Web Services API. Wage data are from the Bureau of Labor Statistics
+          Occupational Employment and Wage Statistics survey (BLS OES 2023), matched by 6-digit SOC code
+          or estimated by Claude Sonnet where BLS data were unavailable. Routine Task Intensity is
+          computed from O*NET task importance weights following equation (4). The sample mean exposure
+          score is {avgScore}/100; {pctDisplacement}% of occupations are displacement-dominant
+          (netDisplacement &gt; 0).
+        </P>
+      </Prose>
+
+      <SubsectionTitle num="5.2">Exposure Distribution</SubsectionTitle>
+      <Prose>
+        <P>
+          Figure 3 plots the distribution of platform exposure scores (equation 16) across the full
+          occupation sample. Color coding follows the net displacement classification: blue bins
+          (score &lt; 30) indicate augmentation-dominant occupations where physical and social bottlenecks
+          dominate; amber (30–60) indicates the contested zone where theoretical predictions are
+          indeterminate; red (&gt; 60) indicates displacement-dominant occupations. The distribution is
+          bimodal, with concentrations in the 30–50 range (physical/interpersonal occupations) and the
+          60–80 range (cognitive, data-intensive occupations) — consistent with the TBTC prediction of
+          a rightward shift in the hollowing-out pattern.
+        </P>
+      </Prose>
+
+      <Figure num={3} caption={`Distribution of platform exposure scores across ${occupations.length} occupations. Blue = augmentation-dominant (< 30), amber = contested (30–60), red = displacement-dominant (> 60).`}>
+        <h3 className="text-slate-300 mb-1 text-sm font-semibold">Figure 3 — Exposure Score Distribution</h3>
+        <ExposureHistogram data={liveExposureDistribution} />
       </Figure>
 
-      <SubsectionTitle num="4.3">The Wage-Exposure Relationship</SubsectionTitle>
+      <SubsectionTitle num="5.3">The Wage-Exposure Relationship</SubsectionTitle>
       <Prose>
         <P>
           The theoretical framework generates a nuanced prediction about the wage-exposure relationship.
@@ -494,22 +603,23 @@ export default function ResearchPage() {
           previously occupied only by highly educated professionals.
         </P>
         <P>
-          Figure 4 confirms this prediction. The OLS regression line has positive slope, driven largely
-          by the upper-right cluster of high-wage, high-exposure occupations: software engineers
-          ($124k, AIOE=82), lawyers ($127k, AIOE=68), and financial analysts ($96k, AIOE=74). The
-          lower-left cluster — electricians, plumbers, teachers — shows both low wages and low exposure,
-          consistent with ALM's prediction that physical and interpersonal tasks resist automation. Notably,
-          radiologists ($339k, AIOE=71) occupy a prominent position in the high-wage, high-exposure
-          quadrant — the clearest illustration of TBTC in our sample.
+          Figure 4 confirms this prediction across the full {occupations.length}-occupation sample.
+          The OLS regression line has positive slope, driven by the upper-right cluster of high-wage,
+          high-exposure occupations: software engineers, lawyers, financial analysts, and radiologists
+          all score above 70 on the exposure index. The lower-left cluster — electricians, plumbers,
+          nursing assistants, firefighters — shows both lower wages and low exposure (30–50 range),
+          consistent with ALM's prediction that physical and interpersonal bottlenecks resist automation.
+          The clearest TBTC illustration remains the radiologist: $339k median wage, exposure score
+          above 70 — a high-education, high-wage occupation now at the frontier of AI capability.
         </P>
       </Prose>
 
-      <Figure num={4} caption="Median wage vs. AIOE score. Circle size proportional to employment (millions). Dashed line = OLS fit. Click any occupation to open its full profile.">
-        <h3 className="text-slate-300 mb-1 text-sm font-semibold">Figure 4 — Wage × AI Exposure Scatter</h3>
-        <WageScatterPlot data={findings.wageScatter} />
+      <Figure num={4} caption="Median wage vs. platform exposure score. Dashed line = OLS fit. Click any occupation to open its full profile.">
+        <h3 className="text-slate-300 mb-1 text-sm font-semibold">Figure 4 — Wage × Exposure Score</h3>
+        <WageScatterPlot data={liveWageScatter} />
       </Figure>
 
-      <SubsectionTitle num="4.4">Regression Results</SubsectionTitle>
+      <SubsectionTitle num="5.4">Regression Results</SubsectionTitle>
       <Prose>
         <P>
           To isolate the partial effects of each theoretical construct, we estimate the following
@@ -559,9 +669,9 @@ export default function ResearchPage() {
       </Figure>
 
       {/* ── 5. Discussion ── */}
-      <SectionTitle num="5.">Discussion</SectionTitle>
+      <SectionTitle num="6.">Discussion</SectionTitle>
 
-      <SubsectionTitle num="5.1">The Null-Result Puzzle</SubsectionTitle>
+      <SubsectionTitle num="6.1">The Null-Result Puzzle</SubsectionTitle>
       <Prose>
         <P>
           The regression results above confirm that AI exposure indices are strongly correlated with
@@ -587,7 +697,7 @@ export default function ResearchPage() {
         </P>
       </Prose>
 
-      <SubsectionTitle num="5.2">Distributional Implications</SubsectionTitle>
+      <SubsectionTitle num="6.2">Distributional Implications</SubsectionTitle>
       <Prose>
         <P>
           Even absent aggregate employment effects, the distributional implications of TBTC are significant.
@@ -607,7 +717,7 @@ export default function ResearchPage() {
         </P>
       </Prose>
 
-      <SubsectionTitle num="5.3">Limitations</SubsectionTitle>
+      <SubsectionTitle num="6.3">Limitations</SubsectionTitle>
       <Prose>
         <P>
           Several limitations constrain inference. First, the cross-sectional OLS specification in
@@ -628,7 +738,7 @@ export default function ResearchPage() {
       </Prose>
 
       {/* ── 6. Conclusion ── */}
-      <SectionTitle num="6.">Conclusion</SectionTitle>
+      <SectionTitle num="7.">Conclusion</SectionTitle>
       <Prose>
         <P>
           The theoretical economics literature delivers a sobering message: the net labor market effects
