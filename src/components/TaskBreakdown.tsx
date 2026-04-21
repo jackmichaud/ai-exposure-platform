@@ -131,7 +131,7 @@ export default function TaskBreakdown({ tasks }: Props) {
                     </div>
                   </td>
                   <td className="px-3 py-2.5 text-xs text-slate-400 font-mono">
-                    {Math.round(task.timeWeight)}%
+                    {Math.round(task.timeWeight * 100)}%
                   </td>
                 </tr>
               )
@@ -175,7 +175,7 @@ export default function TaskBreakdown({ tasks }: Props) {
                 </div>
                 <div>
                   Time:{' '}
-                  <span className="text-slate-300 font-mono">{Math.round(task.timeWeight)}%</span>
+                  <span className="text-slate-300 font-mono">{Math.round(task.timeWeight * 100)}%</span>
                 </div>
               </div>
             </div>
