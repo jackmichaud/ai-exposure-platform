@@ -62,8 +62,9 @@ export async function runDebate(
         }
 
         let accumulatedText = ''
+        const maxTok = roundNum === 3 ? 1536 : 1024
 
-        for await (const token of streamTurn(system, userPrompt, 1024, signal)) {
+        for await (const token of streamTurn(system, userPrompt, maxTok, signal)) {
           if (signal.aborted) return
           accumulatedText += token
           dispatch({ type: 'APPEND_TOKEN', payload: { personaId, token, round: roundNum } })
