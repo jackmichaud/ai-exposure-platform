@@ -2,7 +2,7 @@ import { useMemo } from 'react'
 import { useParams, Link, useNavigate } from 'react-router-dom'
 import { getOccupation, getIndustries } from '../api/dataApi'
 import { scoreToColor, ndToColor } from '../components/charts/utils/createColorScale'
-import { getTextColor, formatWage } from '../components/charts/utils/formatScore'
+import { getTextColor, getNdTextColor, formatWage } from '../components/charts/utils/formatScore'
 import AutomationGauge from '../components/charts/AutomationGauge'
 import SkillImpactBar from '../components/charts/SkillImpactBar'
 import WageProjection from '../components/charts/WageProjection'
@@ -119,7 +119,7 @@ export default function OccupationProfile() {
             { label: 'Complementarity', value: occupation.exposureScore.complementarityScore, isND: false },
           ].map(({ label, value, isND }) => {
             const c = isND ? ndToColor(value) : scoreToColor(value)
-            const tc = getTextColor(value)
+            const tc = isND ? getNdTextColor(value) : getTextColor(value)
             return (
               <div key={label} className="bg-slate-800 rounded-lg px-3 py-2.5 flex items-center gap-3">
                 <div
