@@ -68,6 +68,12 @@ export default function DebateArena() {
     dispatch({ type: 'SET_STATUS', payload: 'idle' })
   }
 
+  function handleReset() {
+    abortControllerRef.current?.abort()
+    setSelectedOccupationId('')
+    dispatch({ type: 'SET_STATUS', payload: 'idle' })
+  }
+
   const showSummaryPanel =
     state.status === 'summarizing' || state.status === 'complete'
 
@@ -140,6 +146,7 @@ export default function DebateArena() {
         currentRound={currentRound}
         onStart={handleStart}
         onCancel={handleCancel}
+        onReset={handleReset}
         occupationTitle={selectedOccupation?.title ?? ''}
       />
 

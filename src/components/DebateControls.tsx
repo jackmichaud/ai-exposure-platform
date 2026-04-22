@@ -7,6 +7,7 @@ interface Props {
   currentRound: number
   onStart: () => void
   onCancel: () => void
+  onReset: () => void
   occupationTitle: string
 }
 
@@ -16,6 +17,7 @@ export default function DebateControls({
   currentRound,
   onStart,
   onCancel,
+  onReset,
   occupationTitle,
 }: Props) {
   const currentPersona = currentSpeaker
@@ -105,7 +107,7 @@ export default function DebateControls({
           </span>
         </div>
         <button
-          onClick={onStart}
+          onClick={onReset}
           className="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg transition-colors text-sm"
         >
           Start New Debate
