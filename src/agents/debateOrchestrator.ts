@@ -114,7 +114,9 @@ export async function runDebate(
 // ─── Synthesis Parser ─────────────────────────────────────────────────────────
 
 export function parseSynthesis(text: string): DebateSummary {
-  const json = text.replace(/^```(?:json)?\n?/m, '').replace(/\n?```\s*$/m, '').trim()
+  const start = text.indexOf('{')
+  const end = text.lastIndexOf('}')
+  const json = start !== -1 && end > start ? text.slice(start, end + 1) : text.trim()
   try {
     return JSON.parse(json) as DebateSummary
   } catch {
