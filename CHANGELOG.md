@@ -8,6 +8,23 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
+- **Data Expansion — 24 new occupations across 3 new and 9 existing industries**
+  - `src/data/industries.json` — added Retail & Hospitality, Real Estate, and Agriculture & Food industries; updated occupationCounts for Technology (4→8), Healthcare (8→11), Finance (4→6), Legal (4→5), Education (3→4), Manufacturing (4→5), Transportation (4→5), Creative (4→5), Public Safety (2→3)
+  - `src/data/occupations.json` — 24 new fully scored occupations (total: 51→75):
+    - **Technology**: Cybersecurity Analyst, UX Designer, DevOps Engineer, ML/AI Engineer
+    - **Healthcare**: Surgeon, Mental Health Counselor, Dental Hygienist
+    - **Finance**: Actuary, Portfolio Manager
+    - **Legal**: Compliance Officer
+    - **Education**: School Counselor
+    - **Creative & Media**: Social Media Manager
+    - **Manufacturing**: Robotics Technician
+    - **Transportation & Logistics**: Supply Chain Analyst
+    - **Public Safety**: Emergency Medical Technician
+    - **Retail & Hospitality** *(new)*: Customer Service Representative, Chef/Head Cook, Retail Store Manager
+    - **Real Estate** *(new)*: Real Estate Agent, Property Manager, Real Estate Appraiser
+    - **Agriculture & Food** *(new)*: Farm Manager, Precision Agriculture Specialist, Food Scientist
+  - All entries include full task-level sub-scores, skills, exposure scores, timeline, wage effects, and cross-references
+
 - **O*NET-grounded occupation generation pipeline** (`scripts/generate-occupation.ts`)
   - Fetches real Work Activities, Work Context, task statements, and skills from the O*NET Web Services API for any SOC code
   - Passes structured O*NET importance scores to Claude as explicit anchors for all 8 sub-dimension scores (routineness, dataIntensity, physicalBottleneck, socialBottleneck, informationSynthesis, decisionSupport, creativeLeverage, productivityMultiplier)

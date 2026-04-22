@@ -2,32 +2,32 @@
   {
     "id": "healthcare",
     "name": "Healthcare",
-    "description": "Medical services, patient care, and health system operations",
-    "occupationCount": 8
+    "description": "Medical services, patient care, mental health, and health system operations",
+    "occupationCount": 11
   },
   {
     "id": "finance",
     "name": "Finance & Insurance",
-    "description": "Banking, investment, lending, and insurance services",
-    "occupationCount": 4
+    "description": "Banking, investment, lending, insurance, and actuarial services",
+    "occupationCount": 6
   },
   {
     "id": "technology",
     "name": "Technology",
-    "description": "Software development, data science, and IT infrastructure",
-    "occupationCount": 4
+    "description": "Software development, data science, IT infrastructure, and AI engineering",
+    "occupationCount": 8
   },
   {
     "id": "education",
     "name": "Education",
-    "description": "K-12 schools, higher education, and instructional design",
-    "occupationCount": 3
+    "description": "K-12 schools, higher education, instructional design, and student counseling",
+    "occupationCount": 4
   },
   {
     "id": "manufacturing",
     "name": "Manufacturing",
-    "description": "Industrial production, assembly, quality control, and engineering",
-    "occupationCount": 4
+    "description": "Industrial production, assembly, quality control, engineering, and robotics",
+    "occupationCount": 5
   },
   {
     "id": "defense",
@@ -44,20 +44,20 @@
   {
     "id": "legal",
     "name": "Legal",
-    "description": "Law practice, litigation, legal counsel, and regulatory compliance",
-    "occupationCount": 4
+    "description": "Law practice, litigation, legal counsel, regulatory compliance, and risk management",
+    "occupationCount": 5
   },
   {
     "id": "transportation",
     "name": "Transportation & Logistics",
     "description": "Freight movement, supply chain, fleet operations, and infrastructure management",
-    "occupationCount": 4
+    "occupationCount": 5
   },
   {
     "id": "creative",
     "name": "Creative & Media",
-    "description": "Writing, design, journalism, film, and digital content production",
-    "occupationCount": 4
+    "description": "Writing, design, journalism, film, digital content, and social media",
+    "occupationCount": 5
   },
   {
     "id": "trades",
@@ -69,6 +69,24 @@
     "id": "public-safety",
     "name": "Public Safety",
     "description": "Law enforcement, fire protection, emergency response, and public security",
-    "occupationCount": 2
+    "occupationCount": 3
+  },
+  {
+    "id": "retail",
+    "name": "Retail & Hospitality",
+    "description": "Consumer retail, food service, hotel management, and customer-facing commerce",
+    "occupationCount": 3
+  },
+  {
+    "id": "real-estate",
+    "name": "Real Estate",
+    "description": "Residential and commercial property sales, management, and valuation",
+    "occupationCount": 3
+  },
+  {
+    "id": "agriculture",
+    "name": "Agriculture & Food",
+    "description": "Farming, precision agriculture, food science, and agribusiness management",
+    "occupationCount": 3
   }
 ]
