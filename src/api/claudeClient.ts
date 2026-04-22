@@ -1,17 +1,18 @@
 const MAX_RETRIES = 3
 const RETRY_DELAYS_MS = [1000, 2000, 4000]
-const TIMEOUT_MS = 30_000
+const DEFAULT_TIMEOUT_MS = 30_000
 
 export async function* streamTurn(
   system: string,
   userPrompt: string,
   maxTokens: number,
-  signal?: AbortSignal
+  signal?: AbortSignal,
+  timeoutMs: number = DEFAULT_TIMEOUT_MS
 ): AsyncGenerator<string> {
   for (let attempt = 0; attempt < MAX_RETRIES; attempt++) {
     if (signal?.aborted) return
 
-    const timeoutSignal = AbortSignal.timeout(TIMEOUT_MS)
+    const timeoutSignal = AbortSignal.timeout(timeoutMs)
     const combinedSignal = signal
       ? AbortSignal.any([signal, timeoutSignal])
       : timeoutSignal

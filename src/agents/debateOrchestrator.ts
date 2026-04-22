@@ -94,7 +94,7 @@ export async function runDebate(
 
     let fullSynthesisText = ''
 
-    for await (const token of streamTurn('', synthesisPrompt, 8192, signal)) {
+    for await (const token of streamTurn('', synthesisPrompt, 8192, signal, 120_000)) {
       if (signal.aborted) return
       fullSynthesisText += token
     }

@@ -167,30 +167,30 @@ export function buildSynthesisPrompt(
 Full debate transcript:
 ${allRoundResponses}
 
-Return ONLY valid JSON — no markdown, no explanation, no code fences. Use plain prose sentences only: no **bold**, no ## headers, no bullet characters, no numbered prefixes, no tables, no horizontal rules.
+Return ONLY valid JSON — no markdown, no explanation, no code fences. Plain prose only: no bold, no headers, no bullets, no numbered prefixes.
 
 {
-  "keyTakeaways": ["string (1–2 sentences each)", ...],
+  "keyTakeaways": ["1 sentence each", ...],
   "riskAssessment": {
     "level": "low" | "moderate" | "high" | "critical",
-    "explanation": "2–4 sentence plain prose explanation"
+    "explanation": "2 sentences max"
   },
-  "recommendationsForWorkers": ["string (1 actionable sentence each)", ...],
+  "recommendationsForWorkers": ["1 actionable sentence each", ...],
   "projectedChanges": {
-    "skills": "1–2 sentence plain prose",
-    "wages": "1–2 sentence plain prose",
-    "employment": "1–2 sentence plain prose"
+    "skills": "1 sentence",
+    "wages": "1 sentence",
+    "employment": "1 sentence"
   },
-  "areasOfAgreement": ["string (1 sentence each)", ...],
-  "areasOfDisagreement": ["string (1 sentence each)", ...]
+  "areasOfAgreement": ["1 sentence each", ...],
+  "areasOfDisagreement": ["1 sentence each", ...]
 }
 
 Rules:
-- keyTakeaways: 3–5 items, reference specific participant arguments
-- recommendationsForWorkers: 3–5 items, concrete and actionable, no leading numbers
-- areasOfAgreement: 2–4 items
-- areasOfDisagreement: 2–4 items
-- Be balanced and specific`
+- keyTakeaways: exactly 3 items
+- recommendationsForWorkers: exactly 3 items
+- areasOfAgreement: exactly 2 items
+- areasOfDisagreement: exactly 2 items
+- Be specific, not generic`
 }
 
 // ─── Prior Round Formatter ────────────────────────────────────────────────────
