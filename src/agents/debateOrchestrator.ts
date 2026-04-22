@@ -94,7 +94,7 @@ export async function runDebate(
 
     let fullSynthesisText = ''
 
-    for await (const token of streamTurn('', synthesisPrompt, 2048, signal)) {
+    for await (const token of streamTurn('', synthesisPrompt, 8192, signal)) {
       if (signal.aborted) return
       fullSynthesisText += token
     }
@@ -102,6 +102,7 @@ export async function runDebate(
     if (signal.aborted) return
 
     // 5. Parse and dispatch summary
+    console.log('[synthesis] raw text:', fullSynthesisText)
     const summary = parseSynthesis(fullSynthesisText)
     dispatch({ type: 'SET_SUMMARY', payload: summary })
   } catch (err) {
@@ -119,7 +120,8 @@ export function parseSynthesis(text: string): DebateSummary {
   const json = start !== -1 && end > start ? text.slice(start, end + 1) : text.trim()
   try {
     return JSON.parse(json) as DebateSummary
-  } catch {
+  } catch (err) {
+    console.error('[synthesis] parse failed. extracted slice:', json, 'error:', err)
     return {
       keyTakeaways: ['Synthesis could not be parsed. Please try again.'],
       riskAssessment: { level: 'moderate', explanation: '' },
