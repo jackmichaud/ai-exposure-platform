@@ -18,7 +18,7 @@ function riskBadgeClasses(level: DebateSummary['riskAssessment']['level']): stri
   }
 }
 
-export default function DebateSummaryPanel({ summary, synthesisText, isSynthesizing }: Props) {
+export default function DebateSummaryPanel({ summary, isSynthesizing }: Props) {
   if (isSynthesizing) {
     return (
       <div className="bg-slate-900 border border-indigo-800 rounded-xl p-6 ring-1 ring-indigo-800 animate-pulse-border">
