@@ -17,7 +17,7 @@ export function formatWageShort(n: number): string {
 }
 
 export function getTextColor(score: number): string {
-  return score < 38 || score > 62 ? '#FFFFFF' : '#1E293B';
+  return score < 30 || score > 70 ? '#FFFFFF' : '#1E293B';
 }
 
 // For net displacement (-100 to +100): light zone is near 0
